@@ -1,3 +1,5 @@
+#ifndef SENSORS_H
+#define SENSORS_H
 #include "main.h"
 
 typedef struct {
@@ -13,3 +15,5 @@ quad left;
 quad right;
 
 void quadInit();
+
+#endif
