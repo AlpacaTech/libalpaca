@@ -1,11 +1,71 @@
+commit fe3ffb19aa4921bb9058700e703e7872e620fdfa
+Author: Ethan Wells <ethanialw@gmail.com>
+Date:   Sat Apr 22 23:02:51 2017 +0400
+
+    fixed inclusion issue with standard header guards
+
+:000000 100644 0000000... db7c07a... A	miniRerun/bin/auto.o
+:000000 100644 0000000... f11fe46... A	miniRerun/bin/init.o
+:000000 100644 0000000... 57f9d50... A	miniRerun/bin/opcontrol.o
+:000000 100644 0000000... b9dd591... A	miniRerun/bin/output.bin
+:000000 100644 0000000... cc39d52... A	miniRerun/bin/output.elf
+:000000 100644 0000000... 6dfdb62... A	miniRerun/bin/rerun.o
+:000000 100644 0000000... f2498cd... A	miniRerun/bin/sensors.o
+:100644 100644 02e9f8c... 70b12d9... M	miniRerun/include/motors.h
+:100644 100644 b13a524... 608c507... M	miniRerun/include/rerun.h
+:100644 100644 8547037... 1fb274b... M	miniRerun/include/sensors.h
+
+commit 5ad70ac34a2a80d0bb747b261d27930012ea0f68
+Author: Ethan Wells <ethanialw@gmail.com>
+Date:   Sat Apr 22 22:49:07 2017 +0400
+
+    added my webpage creater script in docs, generated log
+
+:000000 100644 0000000... 54ee455... A	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:000000 100644 0000000... 66a55c2... A	docs/__pycache__/cleanuphelp.cpython-36.pyc
+:000000 100644 0000000... e8ad7c6... A	docs/__pycache__/commit.cpython-35.pyc
+:000000 100644 0000000... 144b978... A	docs/__pycache__/commit.cpython-36.pyc
+:000000 100644 0000000... 76b394b... A	docs/__pycache__/dif.cpython-36.pyc
+:000000 100644 0000000... 8427266... A	docs/cleanup.py
+:000000 100644 0000000... d8aff69... A	docs/cleanuphelp.py
+:000000 100644 0000000... 7f74080... A	docs/commit.py
+:000000 100644 0000000... 0b801dd... A	docs/index.html
+:000000 100644 0000000... f0981ef... A	docs/log.json
+:000000 100644 0000000... 170cfb2... A	docs/log.txt
+
 commit 033b01a38ae59bbe1b8faa8ff4c366bdc2832629
 Author: Ethan Wells <ethanialw@gmail.com>
 Date:   Sat Apr 22 22:44:42 2017 +0400
 
     Created 2 motor pushbot rerun, modified README.md to be more descriptive
 
+:100644 100644 e7a79cb... 8c5fcca... M	README.md
+:000000 100644 0000000... ca53ff6... A	miniRerun/Makefile
+:000000 100644 0000000... 6c712a1... A	miniRerun/common.mk
+:000000 100644 0000000... 28e36ad... A	miniRerun/firmware/STM32F10x.ld
+:000000 100644 0000000... 8c800b9... A	miniRerun/firmware/cortex.ld
+:000000 100644 0000000... 28e36ad... A	miniRerun/firmware/firmware/STM32F10x.ld
+:000000 100644 0000000... 8c800b9... A	miniRerun/firmware/firmware/cortex.ld
+:000000 100644 0000000... 80ba9b0... A	miniRerun/firmware/firmware/uniflash.jar
+:000000 100644 0000000... dce639a... A	miniRerun/firmware/libpros.a
+:000000 100644 0000000... 80ba9b0... A	miniRerun/firmware/uniflash.jar
+:000000 100644 0000000... 7378a8d... A	miniRerun/include/API.h
+:000000 100644 0000000... 3f3d0ff... A	miniRerun/include/main.h
+:000000 100644 0000000... 02e9f8c... A	miniRerun/include/motors.h
+:000000 100644 0000000... b13a524... A	miniRerun/include/rerun.h
+:000000 100644 0000000... 8547037... A	miniRerun/include/sensors.h
+:000000 100644 0000000... 8375808... A	miniRerun/project.pros
+:000000 100644 0000000... 9e5b952... A	miniRerun/src/Makefile
+:000000 100644 0000000... 67df52a... A	miniRerun/src/auto.c
+:000000 100644 0000000... 75f6c2b... A	miniRerun/src/init.c
+:000000 100644 0000000... e721b29... A	miniRerun/src/opcontrol.c
+:000000 100644 0000000... e89dbb5... A	miniRerun/src/rerun.c
+:000000 100644 0000000... 67878f3... A	miniRerun/src/sensors.c
+
 commit f8790d394f5f2aada2067e14ba6d26671d1cb935
 Author: iuyte <iuyte@users.noreply.github.com>
 Date:   Sun Apr 23 06:40:39 2017 +0400
 
     Initial commit
+
+:000000 100644 0000000... e7a79cb... A	README.md
