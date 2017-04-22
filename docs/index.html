@@ -1,0 +1,119 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<style>
+    .body {
+        align: center;
+        background-color: #bfbfdf;
+        width: 100%;
+        margin: 0px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .link {
+       color: black;
+       text-decoration: none;
+       word-wrap: break-word;
+    }
+
+    .link:visited {
+       color: black;
+       text-decoration: none;
+       cursor: auto;
+    }
+
+    .link:hover {
+       color: #0000EE;
+       text-decoration: underline;
+       cursor: pointer;
+    }
+
+    .commit {
+        background-color: #efefef;
+        width: 50%;
+        align: center;
+        align-self: center;
+        align-content: center;
+        align-items: center;
+        border-color: #454585;
+        border-style: groove inset;
+        border-radius: 25px;
+        padding: 20px;
+        margin-left: 25%;
+        margin-right: 25%;
+        box-shadow: 10px 10px 5px #777777;
+    }
+
+    .em {
+        cursor: pointer;
+    }
+
+    .spacer {
+        height: 5%;
+    }
+
+    .bcon {
+       width: 8%;
+    }
+
+    .browse {
+       background-color: #454585;
+       color: white;
+       border: 2px solid #454585;
+       border-radius: 4px;
+       position: absolute;
+       right: 25%;
+       display: none;
+    }
+
+    .browse:hover {
+       background-color: #bfbfdf;
+       border-color: #9d9dbf;
+       color: black;
+    }
+
+    h1 {
+       font-size: 275%;
+    }
+
+    h2 {
+       font-size: 170%;
+    }
+
+    .centered {
+       text-align: center;
+    }
+
+</style>
+<title>Git Commit history</title>
+</head>
+<body style='background-color: #bfbfdf;' class='body'><div class='commit' id='top'>
+<h1 class='centered'>VEX Robotics Competition</h1>
+<h2 class='centered'>Team 709S Programming Log / Notebook<h2>
+</div>
+<br>
+<div class='commit' id='033b01a38ae59bbe1b8faa8ff4c366bdc2832629'><p><b style='cursor: pointer;' onclick='window.open("https://github.com/iuyte/VEX-709s/commit/033b01a38ae59bbe1b8faa8ff4c366bdc2832629")'>Commit:</b> <a class='link' href='https://iuyte.github.io/VEX-709s/2017/Planning/tools/git.html#033b01a38ae59bbe1b8faa8ff4c366bdc2832629'>033b01a38ae59bbe1b8faa8ff4c366bdc2832629</a></p><p><b>Date:</b>   Sat Apr 22 22:44:42 2017 +0400</p>
+<p><b>Author:</b>  Ethan Wells <ethanialw@gmail.com></p>
+<p><b>Description:</b><br>Created 2 motor pushbot rerun, modified README.md to be more descriptive</p>
+<br></div>
+<div class='spacer'></div><div class='commit' id='f8790d394f5f2aada2067e14ba6d26671d1cb935'><p><b style='cursor: pointer;' onclick='window.open("https://github.com/iuyte/VEX-709s/commit/f8790d394f5f2aada2067e14ba6d26671d1cb935")'>Commit:</b> <a class='link' href='https://iuyte.github.io/VEX-709s/2017/Planning/tools/git.html#f8790d394f5f2aada2067e14ba6d26671d1cb935'>f8790d394f5f2aada2067e14ba6d26671d1cb935</a></p><p><b>Date:</b>   Sun Apr 23 06:40:39 2017 +0400</p>
+<p><b>Author:</b>  iuyte <iuyte@users.noreply.github.com></p>
+<p><b>Description:</b><br>Initial commit</p>
+<br></div>
+<div class='spacer'></div>
+<script>
+    window.onload = function() {
+       if (window.location.href[0] == "f") {
+           var elements = document.querySelectorAll('h1');
+            for(var i=0; i<elements.length; i++){
+                elements[i].style.font-size = "188%";
+            }
+            elements = document.querySelectorAll('h2');
+            for(var ii=0; i<elements.length; i++){
+                elements[i].style.font-size = "117%";
+            }
+       }
+    }
+</script>
+</body>
+</html>
