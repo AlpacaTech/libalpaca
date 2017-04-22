@@ -116,19 +116,19 @@ def indexInStr(index, string):
 
 def styleContent(commit):
     out = "<div class='commit' id='" + commit.commitkey + "'>"
-    out += "<p><b style='cursor: pointer;' onclick='window.open(\"https://github.com/iuyte/VEX-709S" + year + "" + year + "" + year + "/commit/" + commit.commitkey + "\")'>Commit:</b> <a class='link' href='https://iuyte.github.io/VEX-709S" + year + "" + year + "/2017/Planning/tools/git.html#" + commit.commitkey + "'>" + commit.commitkey + "</a></p>"
+    out += "<p><b style='cursor: pointer;' onclick='window.open(\"https://github.com/iuyte/VEX-709S-" + year + "/commit/" + commit.commitkey + "\")'>Commit:</b> <a class='link' href='https://iuyte.github.io/VEX-709S" + year + "" + year + "/2017/Planning/tools/git.html#" + commit.commitkey + "'>" + commit.commitkey + "</a></p>"
     out += "<p><b>Date:</b> " + commit.date + "</p>\n"
     out += "<p><b>Author:</b> " + commit.author + "</p>\n"
     out += "<p><b>Description:</b><br>" + commit.description + "</p>\n"
     if len(commit.filesAdded) > 0:
         out += "<b>Files added:</b>\n<ul>\n"
         for i in range(len(commit.filesAdded)):
-            out += "<li><span class='link' onclick='window.open(\"https://github.com/iuyte/VEX-709S" + year + "" + year + "/tree/" + commit.commitkey + "/" + commit.filesAdded[i] + "\")'>" + commit.filesAdded[i] + "</span></li>\n"
+            out += "<li><span class='link' onclick='window.open(\"https://github.com/iuyte/VEX-709S-" + year + "/tree/" + commit.commitkey + "/" + commit.filesAdded[i] + "\")'>" + commit.filesAdded[i] + "</span></li>\n"
         out += "</ul>"
     if len(commit.filesModified) > 0:
         out += "<b>Files modified:</b>\n<ul>\n"
         for i in range(len(commit.filesModified)):
-            out += "<li><span class='link' onclick='window.open(\"https://github.com/iuyte/VEX-709S" + year + "" + year + "/tree/" + commit.commitkey + "/" + commit.filesModified[i] +"\")'>" + commit.filesModified[i] + "</span></li>\n"
+            out += "<li><span class='link' onclick='window.open(\"https://github.com/iuyte/VEX-709S-" + year + "/tree/" + commit.commitkey + "/" + commit.filesModified[i] +"\")'>" + commit.filesModified[i] + "</span></li>\n"
         out += "</ul>"
     if len(commit.filesDeleted) > 0:
         out += "<b>Files deleted:</b>\n<ul>\n"
