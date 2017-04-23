@@ -6,7 +6,7 @@ typedef struct {
   Encoder self;
   unsigned char ports[2];
   long zero;
-  bool inverted;
+  int8_t inverted;
   void(*reset)();
   long(*value)();
 } quad;

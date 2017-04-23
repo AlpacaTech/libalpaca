@@ -30,10 +30,16 @@
  * This task should never exit; it should end with some kind of infinite loop, even if empty.
  */
 void operatorControl() {
-	record();
-	while (1) {
-		motorSet(LEFT, joystickGetAnalog(1, 3) * (left.inverted ? -1 : 1));
-		motorSet(RIGHT, joystickGetAnalog(1, 2) * (right.inverted ? -1 : 1));
+	int ljoy, rjoy;
+	while (isEnabled()) {
+		if (joystickGetDigital(1, 7, JOY_DOWN)) {
+			record();
+		} else if (joystickGetDigital(1, 8, JOY_DOWN)) {
+			recordStop();
+		}
+		ljoy = joystickGetAnalog(1, 3);
+		rjoy = joystickGetAnalog(1, 2);
+		driveSet(ljoy, rjoy);
 		delay(20);
 	}
 	recordStop();

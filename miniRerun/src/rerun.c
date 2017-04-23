@@ -1,26 +1,32 @@
 #include "rerun.h"
 
-bool isDriver(void) {return (isOnline() && !isAutonomous());}
+bool isDriver(void) {
+  return (isOnline() && !isAutonomous());
+}
 
 void toPos(long leftP, long rightP) {
+  int leftpow, rightpow;
   if (left.value() > leftP) {
-    motorSet(LEFT, -127);
+    leftpow = -127;
   } else if (left.value() < leftP) {
-    motorSet(LEFT, 127);
+    leftpow = 127;
   } else {
-    motorStop(LEFT);
+    leftpow = 0;
   }
 
   if (right.value() > rightP) {
-    motorSet(RIGHT, -127);
+    rightpow = -127;
   } else if (right.value() < rightP) {
-    motorSet(RIGHT, 127);
+    rightpow = 127;
   } else {
-    motorStop(RIGHT);
+    rightpow = 0;
   }
+  driveSet(leftpow, rightpow);
 }
 
 void _record(void *nnone) {
+  left.reset();
+  right.reset();
   FILE *rerun;
   while (1) {
     if (isDriver()) {
@@ -50,6 +56,8 @@ void recordStop() {
 }
 
 void replay() {
+  left.reset();
+  right.reset();
   FILE *rerun;
   int leftR;
   int rightR;
