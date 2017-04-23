@@ -31,12 +31,8 @@
  */
 void operatorControl() {
 	int ljoy, rjoy;
+	record();
 	while (isEnabled()) {
-		if (joystickGetDigital(1, 7, JOY_DOWN)) {
-			record();
-		} else if (joystickGetDigital(1, 8, JOY_DOWN)) {
-			recordStop();
-		}
 		ljoy = joystickGetAnalog(1, 3);
 		rjoy = joystickGetAnalog(1, 2);
 		driveSet(ljoy, rjoy);

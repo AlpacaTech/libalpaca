@@ -1,3 +1,38 @@
+commit 2955d9f2a3245a746ee18efe4fada6e14d26038a
+Author: Ethan Wells <ethanialw@gmail.com>
+Date:   Sun Apr 23 07:44:19 2017 +0400
+
+    Adapted code for 4 motor drive
+
+:100644 100644 70b12d9... 551316c... M	miniRerun/include/motors.h
+:100644 100644 1fb274b... edb8bca... M	miniRerun/include/sensors.h
+:000000 100644 0000000... cb1c34a... A	miniRerun/src/drive.c
+:100644 100644 e721b29... 8b4fda9... M	miniRerun/src/opcontrol.c
+:100644 100644 e89dbb5... 74d6d9c... M	miniRerun/src/rerun.c
+:100644 100644 67878f3... 25b9835... M	miniRerun/src/sensors.c
+
+commit 8810eb12fe271f730590b6b4e9ae9ae0517a7f4f
+Author: Ethan Wells <ethanialw@gmail.com>
+Date:   Sat Apr 22 23:20:34 2017 +0400
+
+    Fixed still-broken links in webpage generator
+
+:100644 100644 1000b83... 0178ccc... M	docs/__pycache__/cleanuphelp.cpython-36.pyc
+:100644 100644 03b2030... 9b3b277... M	docs/cleanuphelp.py
+:100644 100644 ee370df... f17335a... M	docs/index.html
+
+commit 5f698f0f91d2580c141d7af06e842dd93cf41081
+Author: Ethan Wells <ethanialw@gmail.com>
+Date:   Sat Apr 22 23:14:16 2017 +0400
+
+    fixed links in webpage generator script
+
+:100644 100644 66a55c2... 1000b83... M	docs/__pycache__/cleanuphelp.cpython-36.pyc
+:100644 100644 d8aff69... 03b2030... M	docs/cleanuphelp.py
+:100644 100644 0b801dd... ee370df... M	docs/index.html
+:100644 100644 f0981ef... e6cfb8d... M	docs/log.json
+:100644 100644 170cfb2... 5ef3597... M	docs/log.txt
+
 commit fe3ffb19aa4921bb9058700e703e7872e620fdfa
 Author: Ethan Wells <ethanialw@gmail.com>
 Date:   Sat Apr 22 23:02:51 2017 +0400
