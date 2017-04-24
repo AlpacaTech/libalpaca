@@ -73,5 +73,6 @@ void replay() {
     rightR = fgetc(rerun);
     fseek(rerun, 1, SEEK_CUR);
     toPos(leftR, rightR);
+    delay(10);
   }
 }
