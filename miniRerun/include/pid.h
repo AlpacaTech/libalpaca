@@ -14,7 +14,10 @@ float pid_Kd;
 static float pidRequestedValue[2];
 bool pidEnabled;
 
-void pidController(void *none);
 TaskHandle pidControllerHandle;
+TaskHandle autoPidHandle;
+
+void pidController(void *none);
+void autoPid();
 
 #endif

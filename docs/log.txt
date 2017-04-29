@@ -1,3 +1,30 @@
+commit 04e01af7a61ee6641485896b94720d2e378ac01d
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat Apr 29 13:28:41 2017 -0400
+
+    Simplified rerun to use structs rather than text, making it easier to parse. Added PID draft to support rerun
+
+:100644 100644 54ee455... 9a9a538... M	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:100644 100644 e8ad7c6... da13c06... M	docs/__pycache__/commit.cpython-35.pyc
+:100644 100644 9ef955a... a72e00f... M	docs/index.html
+:100644 100644 b890370... 4190bb5... M	docs/log.json
+:100644 100644 a013140... df80c8b... M	docs/log.txt
+:100644 100644 f99375a... fd35d49... M	miniRerun/bin/auto.o
+:100644 100644 c18b55d... aa82d29... M	miniRerun/bin/init.o
+:100644 100644 e05c881... afdef09... M	miniRerun/bin/opcontrol.o
+:100755 100755 ddfaf79... 4ac74e5... M	miniRerun/bin/output.bin
+:100755 100755 73abad0... 1a17e0a... M	miniRerun/bin/output.elf
+:100644 100644 a41084c... c276704... M	miniRerun/bin/rerun.o
+:100644 100644 8c6a9e3... 4a7d80f... M	miniRerun/bin/sensors.o
+:100644 100644 3f3d0ff... 4386de4... M	miniRerun/include/main.h
+:100644 100644 551316c... b2b6c6e... M	miniRerun/include/motors.h
+:000000 100644 0000000... 1d7a35e... A	miniRerun/include/pid.h
+:100644 100644 608c507... 070754b... M	miniRerun/include/rerun.h
+:100644 100644 cb1c34a... 5429d72... M	miniRerun/src/drive.c
+:100644 100644 75f6c2b... 41c1cba... M	miniRerun/src/init.c
+:000000 100644 0000000... 60aebb7... A	miniRerun/src/pid.c
+:100644 100644 cdfce15... ad12a8a... M	miniRerun/src/rerun.c
+
 commit 29c55dc4d02c2e4bc634a3833b475ea5bef1fc10
 Author: iuyte <iuyte@gmail.com>
 Date:   Sun Apr 23 21:30:44 2017 -0400

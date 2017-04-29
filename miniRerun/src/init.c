@@ -38,6 +38,6 @@ void initializeIO() {
  */
 void initialize() {
   quadInit();
-  pidEnabled = false;
+  autoPidHandle = taskRunLoop(autoPid, 50);
   pidControllerHandle = taskCreate(pidController, TASK_DEFAULT_STACK_SIZE, NULL, TASK_PRIORITY_DEFAULT);
 }

@@ -6,7 +6,7 @@ bool isDriver(void) {
 
 void toPos(frame _frame) {
   pidRequestedValue[0] = _frame.left;
-  pidRequestedValue[0] = _frame.right;
+  pidRequestedValue[1] = _frame.right;
 }
 
 void _record(void *none) {
@@ -46,7 +46,6 @@ void recordStop() {
 void replay() {
   left.reset();
   right.reset();
-  pidEnabled = true;
   frame to;
   FILE *rerun;
   if ((rerun = fopen("rerun", "r")) == NULL) {
@@ -60,5 +59,4 @@ void replay() {
     toPos(to);
     delay(50);
   }
-  pidEnabled = false;
 }

@@ -16,6 +16,7 @@ void pidController(void *none) {
   left.reset();
   right.reset();
   quad *sides[2] = {&left, &right};
+  void(*sideSet[2])(unsigned long int) = {&leftSet, &rightSet};
 
   while (true) {
     if (pidEnabled) {
@@ -37,13 +38,13 @@ void pidController(void *none) {
           pidDrive[i] = PID_DRIVE_MAX;
         if (pidDrive[i] < PID_DRIVE_MIN)
           pidDrive[i] = PID_DRIVE_MIN;
-        if (sides[i] == &left) {
-          leftSet(pidDrive[i]);
-        } else {
-          rightSet(pidDrive[i]);
-        }
+        sideSet[i](pidDrive[i]);
       }
       delay(25);
     }
   }
+}
+
+void autoPid() {
+  pidEnabled = (isAutonomous() && isEnabled());
 }
