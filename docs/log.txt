@@ -1,3 +1,29 @@
+commit 29c55dc4d02c2e4bc634a3833b475ea5bef1fc10
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun Apr 23 21:30:44 2017 -0400
+
+    Added delay in replay function
+
+:100644 100644 db7c07a... f99375a... M	miniRerun/bin/auto.o
+:100644 100644 f11fe46... c18b55d... M	miniRerun/bin/init.o
+:100644 100644 57f9d50... e05c881... M	miniRerun/bin/opcontrol.o
+:100644 100755 b9dd591... ddfaf79... M	miniRerun/bin/output.bin
+:100644 100755 cc39d52... 73abad0... M	miniRerun/bin/output.elf
+:100644 100644 6dfdb62... a41084c... M	miniRerun/bin/rerun.o
+:100644 100644 f2498cd... 8c6a9e3... M	miniRerun/bin/sensors.o
+:100644 100644 74d6d9c... cdfce15... M	miniRerun/src/rerun.c
+
+commit a687907d49d9f39b249b3e2a6b43a8bb96101664
+Author: Ethan Wells <ethanialw@gmail.com>
+Date:   Sun Apr 23 13:29:04 2017 +0400
+
+    Automatic rerun enabling and disabling in opcontrol
+
+:100644 100644 f17335a... 9ef955a... M	docs/index.html
+:100644 100644 e6cfb8d... b890370... M	docs/log.json
+:100644 100644 5ef3597... a013140... M	docs/log.txt
+:100644 100644 8b4fda9... ef87f76... M	miniRerun/src/opcontrol.c
+
 commit 2955d9f2a3245a746ee18efe4fada6e14d26038a
 Author: Ethan Wells <ethanialw@gmail.com>
 Date:   Sun Apr 23 07:44:19 2017 +0400

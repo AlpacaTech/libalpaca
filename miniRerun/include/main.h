@@ -29,6 +29,7 @@
 #include "sensors.h"
 #include "motors.h"
 #include "rerun.h"
+#include "pid.h"
 
 // Allow usage of this file in C++ programs
 #ifdef __cplusplus

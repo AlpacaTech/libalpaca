@@ -2,6 +2,11 @@
 #define RERUN_H
 #include "main.h"
 
+typedef struct {
+  long left;
+  long right;
+} frame;
+
 TaskHandle rerunHandle;
 
 void record();
