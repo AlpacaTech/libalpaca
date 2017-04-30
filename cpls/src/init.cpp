@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 extern "C" {
   void __libc_init_array();
 }
@@ -10,4 +9,5 @@ void initializeIO() {
 }
 
 void initialize() {
+  sensors::init();
 }

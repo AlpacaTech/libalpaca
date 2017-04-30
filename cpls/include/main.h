@@ -44,6 +44,8 @@
 #define MAIN_H_
 
 #include <API.h>
+#include "sensors.h"
+#include "drive.h"
 
 // Allow usage of this file in C++ programs
 #ifdef __cplusplus
