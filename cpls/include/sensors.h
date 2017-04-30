@@ -12,7 +12,7 @@ namespace sensors {
     long(*value)();
     float request;
   };
-  sensors::quad left;
-  sensors::quad right;
+  extern sensors::quad left();
+  extern sensors::quad right();
   void init(void);
 }
