@@ -36,8 +36,12 @@ void initializeIO() {
  * will not start. An autonomous mode selection menu like the pre_auton() in other environments
  * can be implemented in this task if desired.
  */
+extern float pidRequestedValue[2];
 void initialize() {
   quadInit();
-  autoPidHandle = taskRunLoop(autoPid, 50);
+  pidRequestedValue[0] = 0;
+  pidRequestedValue[1] = 0;
+  //autoPidHandle = taskRunLoop(autoPid, 50);
+  pidEnabled = true;
   pidControllerHandle = taskCreate(pidController, TASK_DEFAULT_STACK_SIZE, NULL, TASK_PRIORITY_DEFAULT);
 }

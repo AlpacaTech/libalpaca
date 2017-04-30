@@ -11,7 +11,6 @@ float pid_Kp;
 float pid_Ki;
 float pid_Kd;
 
-static float pidRequestedValue[2];
 bool pidEnabled;
 
 TaskHandle pidControllerHandle;

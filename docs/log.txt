@@ -1,3 +1,26 @@
+commit be82604784a8a1165d4ebc89570a37ebd0219ade
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat Apr 29 15:51:31 2017 -0400
+
+    Changed management of whether pid is enabled, small pid changes and now adressing the right pid index in replay
+
+:100644 100644 a72e00f... 6f0b077... M	docs/index.html
+:100644 100644 4190bb5... a5e184d... M	docs/log.json
+:100644 100644 df80c8b... 5b3c0b1... M	docs/log.txt
+:100644 100644 fd35d49... dcb41c8... M	miniRerun/bin/auto.o
+:000000 100644 0000000... 92e0d5f... A	miniRerun/bin/drive.o
+:100644 100644 aa82d29... cb18953... M	miniRerun/bin/init.o
+:100644 100644 afdef09... abaadab... M	miniRerun/bin/opcontrol.o
+:100755 100755 4ac74e5... 7b41813... M	miniRerun/bin/output.bin
+:100755 100755 1a17e0a... 565ebf1... M	miniRerun/bin/output.elf
+:000000 100644 0000000... 4b4e11f... A	miniRerun/bin/pid.o
+:100644 100644 c276704... 9254b9c... M	miniRerun/bin/rerun.o
+:100644 100644 4a7d80f... d968250... M	miniRerun/bin/sensors.o
+:100644 100644 1d7a35e... ed4e77f... M	miniRerun/include/pid.h
+:100644 100644 41c1cba... fd323fe... M	miniRerun/src/init.c
+:100644 100644 60aebb7... 71a94bd... M	miniRerun/src/pid.c
+:100644 100644 ad12a8a... 1444afd... M	miniRerun/src/rerun.c
+
 commit 04e01af7a61ee6641485896b94720d2e378ac01d
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat Apr 29 13:28:41 2017 -0400

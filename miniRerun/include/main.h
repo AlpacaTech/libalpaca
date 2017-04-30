@@ -24,6 +24,7 @@
 
 // This prevents multiple inclusion, which isn't bad for this file but is good practice
 #define MAIN_H_
+#define clipNum(iInput, iHigh, iLow) ((iInput <= iLow) ? iLow : (iInput >= iHigh ? iHigh : iInput))
 
 #include <API.h>
 #include "sensors.h"

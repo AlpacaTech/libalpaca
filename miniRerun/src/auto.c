@@ -26,7 +26,11 @@
  * The autonomous task may exit, unlike operatorControl() which should never exit. If it does
  * so, the robot will await a switch to another mode or disable/enable cycle.
  */
+extern float pidRequestedValue[2];
 void autonomous() {
+  pidRequestedValue[0] = left.value();
+  pidRequestedValue[1] = right.value();
   replay();
+
   while (isAutonomous()) delay(20);
 }

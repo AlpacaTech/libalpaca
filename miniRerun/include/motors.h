@@ -6,8 +6,8 @@
 #define TRIGHT 4
 #define BRIGHT 5
 
-void driveSet(unsigned int l, unsigned int r);
-void leftSet(unsigned int l);
-void rightSet(unsigned int r);
+void driveSet(int l, int r);
+void leftSet(int l);
+void rightSet(int r);
 
 #endif

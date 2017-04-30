@@ -1,5 +1,7 @@
 #include "main.h"
 
+extern float pidRequestedValue[2];
+
 bool isDriver(void) {
   return (isOnline() && !isAutonomous());
 }
@@ -20,10 +22,10 @@ void _record(void *none) {
         ;
 
       while (isDriver()) {
-        now.left = left.value();
-        now.right = right.value();
+        now.left = pidRequestedValue[0];
+        now.right = pidRequestedValue[1];
         fwrite(&now, sizeof(now), 1, rerun);
-        printf("toPos(%ld, %ld);\n",  left.value(), right.value());
+        //printf("toPos(%ld, %ld);\n",  left.value(), right.value());
         delay(50);
       }
       fclose(rerun);

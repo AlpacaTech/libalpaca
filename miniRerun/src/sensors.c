@@ -23,7 +23,7 @@ void quadInit() {
   right.ports[1] = 4;
   left.inverted = 1;
   right.inverted = -1;
-  left.self = encoderInit(left.ports[0],left.ports[1], (left.inverted == 1));
+  left.self = encoderInit(left.ports[0],left.ports[1], (left.inverted != 1));
   right.self = encoderInit(right.ports[0],right.ports[1], (right.inverted == 1));
   left.value = &_lget;
   right.value = &_rget;

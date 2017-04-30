@@ -9,6 +9,7 @@ typedef struct {
   int8_t inverted;
   void(*reset)();
   long(*value)();
+  float request;
 } quad;
 
 quad left;

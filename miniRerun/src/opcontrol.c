@@ -29,14 +29,15 @@
  *
  * This task should never exit; it should end with some kind of infinite loop, even if empty.
  */
+extern float pidRequestedValue[2];
 void operatorControl() {
-	int ljoy, rjoy;
 	record();
+	pidRequestedValue[0] = left.value();
+	pidRequestedValue[2] = right.value();
 	while (isEnabled()) {
-		ljoy = joystickGetAnalog(1, 3);
-		rjoy = joystickGetAnalog(1, 2);
-		driveSet(ljoy, rjoy);
-		delay(20);
+		pidRequestedValue[0] = pidRequestedValue[0] + (float)(joystickGetAnalog(1, 3)/4);
+		pidRequestedValue[1] = pidRequestedValue[1] + (float)(joystickGetAnalog(1, 2)/4);
+		delay(50);
 	}
 	recordStop();
 }
