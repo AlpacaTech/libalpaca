@@ -1,3 +1,24 @@
+commit 5fffbb586454534c27646ca9692b1d8e8d7df10b
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat Apr 29 20:29:43 2017 -0400
+
+    Fixed PID, now works, may need tuning
+
+:100644 100644 6f0b077... 9456f94... M	docs/index.html
+:100644 100644 a5e184d... d5c1bd1... M	docs/log.json
+:100644 100644 5b3c0b1... 10a5375... M	docs/log.txt
+:100644 100644 4386de4... 30870a1... M	miniRerun/include/main.h
+:100644 100644 b2b6c6e... 32c94af... M	miniRerun/include/motors.h
+:100644 100644 ed4e77f... 69ab8fb... M	miniRerun/include/pid.h
+:100644 100644 edb8bca... 14ebe0e... M	miniRerun/include/sensors.h
+:100644 100644 67df52a... 252f6ef... M	miniRerun/src/auto.c
+:100644 100644 5429d72... 5c54af8... M	miniRerun/src/drive.c
+:100644 100644 fd323fe... 2d44874... M	miniRerun/src/init.c
+:100644 100644 ef87f76... beed687... M	miniRerun/src/opcontrol.c
+:100644 100644 71a94bd... 9d4167c... M	miniRerun/src/pid.c
+:100644 100644 1444afd... 3fb8bb1... M	miniRerun/src/rerun.c
+:100644 100644 25b9835... 8ff5586... M	miniRerun/src/sensors.c
+
 commit be82604784a8a1165d4ebc89570a37ebd0219ade
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat Apr 29 15:51:31 2017 -0400
