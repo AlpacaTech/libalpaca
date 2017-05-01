@@ -1,18 +1,18 @@
 #pragma once
-#include "main.h"
+#include "API.h"
 
 namespace sensors {
   class quad {
-  public:
-    Encoder self;
-    unsigned char ports[2];
-    long zero;
-    int8_t inverted;
-    void(*reset)();
-    long(*value)();
-    float request;
+    public:
+      Encoder enc;
+      unsigned char ports[2];
+      long zero;
+      int8_t inverted;
+      void reset(void);
+      long value(void);
+      float request;
   };
-  extern sensors::quad left();
-  extern sensors::quad right();
+  extern quad left;
+  extern quad right;
   void init(void);
 }

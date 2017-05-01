@@ -1,35 +1,29 @@
 #include "main.h"
 
-void _lreset() {
-  encoderReset(sensors::left.self);
-}
+namespace sensors {
 
-void _rreset() {
-  encoderReset(sensors::right.self);
-}
+  quad left;
+  quad right;
 
-long _lget() {
-  return encoderGet(sensors::left.self);
-}
+  void quad::reset(void) {
+    encoderReset(quad::enc);
+  }
 
-long _rget() {
-  return encoderGet(sensors::right.self);
-}
+  long quad::value(void) {
+    return encoderGet(quad::enc) - quad::zero;
+  }
 
-void sensors::init(void) {
-  sensors::left.ports[0] = 1;
-  sensors::left.ports[1] = 2;
-  sensors::right.ports[0] = 3;
-  sensors::right.ports[1] = 4;
-  sensors::left.inverted = 1;
-  sensors::right.inverted = -1;
-  sensors::left.self = encoderInit(left.ports[0],left.ports[1], (left.inverted != 1));
-  sensors::right.self = encoderInit(right.ports[0],right.ports[1], (right.inverted == 1));
-  sensors::left.value = &_lget;
-  sensors::right.value = &_rget;
-  sensors::left.zero = left.value();
-  sensors::right.zero = right.value();
-  sensors::left.reset = &_lreset;
-  sensors::right.reset = &_rreset;
+  void init(void) {
+    left.ports[0] = 1;
+    left.ports[1] = 2;
+    right.ports[0] = 3;
+    right.ports[1] = 4;
+    left.inverted = 1;
+    right.inverted = -1;
+    left.enc = encoderInit(left.ports[0],left.ports[1], (left.inverted != 1));
+    right.enc = encoderInit(right.ports[0],right.ports[1], (right.inverted == 1));
+    left.zero = 0;
+    right.zero = 0;
+  }
 
 }
