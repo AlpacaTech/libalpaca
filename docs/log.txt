@@ -1,3 +1,35 @@
+commit 5529f7b01ba91e1faa74f157345161816805459e
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 6 17:02:20 2017 -0400
+
+    Added easier motor support, PID
+
+:100644 100644 24a58c4... 9f1d9a0... M	cpls/bin/auto.o
+:000000 100644 0000000... 60be46b... A	cpls/bin/drive.o
+:100644 100644 e51f474... 73aac6f... M	cpls/bin/init.o
+:000000 100644 0000000... f0e3ce9... A	cpls/bin/motors.o
+:100644 100644 8316e7d... 1a5a026... M	cpls/bin/opcontrol.o
+:100755 100755 c29f4b5... 09a096e... M	cpls/bin/output.bin
+:100755 100755 518cf81... c916fcf... M	cpls/bin/output.elf
+:000000 100644 0000000... 227e40c... A	cpls/bin/pid.o
+:100644 100644 266afa3... ef163d4... M	cpls/bin/sensors.o
+:100644 100644 09528ed... 77704f8... M	cpls/include/drive.h
+:100644 100644 c4974f3... 4bb2b1b... M	cpls/include/main.h
+:000000 100644 0000000... b3a4047... A	cpls/include/motors.h
+:000000 100644 0000000... 1fabe25... A	cpls/include/pid.h
+:100644 100644 26c1abf... e434bd2... M	cpls/include/sensors.h
+:100644 100644 dee605b... 5197fb3... M	cpls/src/auto.cpp
+:100644 100644 f76ffd4... 54d7f53... M	cpls/src/drive.cpp
+:100644 100644 ebc77ea... 7964571... M	cpls/src/init.cpp
+:000000 100644 0000000... 1d64077... A	cpls/src/motors.cpp
+:100644 100644 a8366e3... 3573ae3... M	cpls/src/opcontrol.cpp
+:000000 100644 0000000... f3902fd... A	cpls/src/pid.cpp
+:100644 100644 da3cc1d... 28a174d... M	cpls/src/sensors.cpp
+:100644 100644 df79490... 6f6b358... M	docs/index.html
+:100644 100644 67aa180... 7ec3952... M	docs/log.json
+:100644 100644 ee41d3b... 23d86c6... M	docs/log.txt
+:100644 100644 fd28dd6... fdfaa4e... M	resources/cone.png
+
 commit 5195914c6b2c4abc3c43069769756e971a47bf37
 Author: iuyte <iuyte@gmail.com>
 Date:   Mon May 1 19:31:59 2017 -0400
