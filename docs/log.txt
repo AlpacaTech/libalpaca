@@ -1,3 +1,22 @@
+commit 5195914c6b2c4abc3c43069769756e971a47bf37
+Author: iuyte <iuyte@gmail.com>
+Date:   Mon May 1 19:31:59 2017 -0400
+
+    Fixed issue with sensors namespace and begun drive.cpp
+
+:100644 100644 2588860... e51f474... M	cpls/bin/init.o
+:000000 100644 0000000... 8316e7d... A	cpls/bin/opcontrol.o
+:100755 100755 9937d83... c29f4b5... M	cpls/bin/output.bin
+:000000 100755 0000000... 518cf81... A	cpls/bin/output.elf
+:100644 100644 05b0358... 266afa3... M	cpls/bin/sensors.o
+:100644 100644 65b9f93... 09528ed... M	cpls/include/drive.h
+:100644 100644 61783a4... 26c1abf... M	cpls/include/sensors.h
+:000000 100644 0000000... f76ffd4... A	cpls/src/drive.cpp
+:100644 100644 7791800... da3cc1d... M	cpls/src/sensors.cpp
+:100644 100644 28043b2... df79490... M	docs/index.html
+:100644 100644 30e32b9... ee41d3b... M	docs/log.txt
+:000000 100644 0000000... d61edbb... A	log.json
+
 commit 6e9de5d912b0f6dd5c04f7743d5b2501e36a0f7d
 Author: iuyte <iuyte@users.noreply.github.com>
 Date:   Mon May 1 00:29:58 2017 +0400

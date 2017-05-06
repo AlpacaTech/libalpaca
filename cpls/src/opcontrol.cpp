@@ -1,7 +1,9 @@
 #include "main.h"
 
 void operatorControl() {
+	sensors::reset();
 	while (1) {
-		delay(20);
+		drive::tank();
+		delay(50);
 	}
 }

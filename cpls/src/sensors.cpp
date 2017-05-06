@@ -10,7 +10,7 @@ namespace sensors {
   }
 
   long quad::value(void) {
-    return encoderGet(quad::enc) - quad::zero;
+    return (encoderGet(quad::enc) - quad::zero);
   }
 
   void init(void) {
@@ -26,4 +26,10 @@ namespace sensors {
     right.zero = 0;
   }
 
+  void reset(void) {
+    left.reset();
+    right.reset();
+    left.request = 0;
+    right.request = 0;
+  }
 }

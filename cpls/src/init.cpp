@@ -10,4 +10,6 @@ void initializeIO() {
 
 void initialize() {
   sensors::init();
+  drive::init();
+  pid::init();
 }
