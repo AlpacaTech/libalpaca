@@ -1,3 +1,31 @@
+commit 34b5e5bac90c3c82e07e675605384cc5fba639be
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 6 17:50:59 2017 -0400
+
+    Added .atom-build.yml to enable my ability to build the project with CTRL + ALT + B
+
+:000000 100644 0000000... 75894d1... A	cpls/.atom-build.yml
+
+commit 4a4a588cc819a71bc9ecc8078227b9103063505f
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 6 17:27:29 2017 -0400
+
+    Changed CCFLAGS:=-c -Wall $(MCUCFLAGS) -Os -ffunction-sections -fsigned-char -fomit-frame-pointer -fsingle-precision-constant to CCFLAGS:=-c -Wall $(MCUCFLAGS) -Os -ffunction-sections -fsigned-char -fomit-frame-pointer -fsingle-precision-constant -std=c++14 in common.mk because it's C++
+
+:100644 100644 18dfcf1... e6b1c62... M	cpls/common.mk
+:100644 000000 d61edbb... 0000000... D	log.json
+
+commit ac55f3ec527107a9f33a6208fe27bbff117ef157
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 6 17:24:47 2017 -0400
+
+    Created document.sh to almost completely automate documentation process
+
+:000000 100755 0000000... e30a0d5... A	docs/document.sh
+:100644 100644 6f6b358... 3023711... M	docs/index.html
+:100644 100644 7ec3952... 12b9db6... M	docs/log.json
+:100644 100644 23d86c6... fa293a9... M	docs/log.txt
+
 commit 5529f7b01ba91e1faa74f157345161816805459e
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 6 17:02:20 2017 -0400

@@ -44,7 +44,7 @@
 #define MAIN_H_
 
 #include <API.h>
-#include "pid.h"
+#include "rerun.h"
 
 // Allow usage of this file in C++ programs
 #ifdef __cplusplus
