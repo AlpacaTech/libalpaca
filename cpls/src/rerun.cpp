@@ -3,6 +3,7 @@
 bool isDriver(void) {
   return (isOnline() && !isAutonomous());
 }
+
 namespace rerun {
   TaskHandle rerunHandle;
 

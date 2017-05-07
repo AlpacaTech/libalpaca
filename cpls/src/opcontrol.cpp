@@ -3,9 +3,11 @@
 void operatorControl() {
 	sensors::reset();
 	rerun::record();
-	while (1) {
+
+	while (true) {
 		drive::tank();
 		delay(50);
 	}
+
 	rerun::stop();
 }

@@ -7,7 +7,7 @@ namespace sensors {
     Encoder enc;
     unsigned char ports[2];
     long zero;
-    int8_t inverted;
+    bool inverted;
     void reset(void);
     long value(void);
     float request;

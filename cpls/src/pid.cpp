@@ -9,7 +9,7 @@ int sgn(float __x) {
 namespace pid {
   float Kp = 0.8;
   float Ki = 0.04;
-  float Kd = 0.4;
+  float Kd = 0.35;
 
   bool enabled[2] = {true, true};
   TaskHandle pidHandle;

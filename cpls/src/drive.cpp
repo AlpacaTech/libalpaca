@@ -4,21 +4,21 @@ namespace drive {
   side left;
   side right;
 
-  void init(void) {
-    motors::init(&left.topM, 2, false, 127);
-    motors::init(&left.lowM, 3, true, 127);
-    motors::init(&left.lowM, 4, false, 127);
-    motors::init(&left.topM, 7, true, 127);
-    motors::init(&left.lowM, 8, false, 127);
-    motors::init(&left.lowM, 9, true, 127);
-    left.sensor = &sensors::left;
-    right.sensor = &sensors::right;
-  }
-
   void side::set(int power) {
     motors::set(side::topM, power);
     motors::set(side::midM, power);
     motors::set(side::lowM, power);
+  }
+
+  void init(void) {
+    left.topM = motors::init(2, 1, 127, .8);
+    left.midM = motors::init(3, -1, 127, .8);
+    left.lowM = motors::init(4, 1, 127, .8);
+    right.topM = motors::init(7, -1, 127, .8);
+    left.midM = motors::init(8, 1, 127, .8);
+    left.lowM = motors::init(9, -1, 127, .8);
+    left.sensor = &sensors::left;
+    right.sensor = &sensors::right;
   }
 
   void set(int lpower, int rpower) {
@@ -27,13 +27,16 @@ namespace drive {
   }
 
   void tank(void) {
-    int deadband = 10;
+    int deadband = 20;
     int lj = joystickGetAnalog(1, 3);
     int rj = joystickGetAnalog(1, 2);
-    if (lj < deadband && rj < deadband)
+    if (abs(lj) < deadband && abs(rj) < deadband) {
+      pid::enabled[0] = true;
+      pid::enabled[1] = true;
       return;
-    lj = (lj < deadband) ? 0 : lj;
-    rj = (rj < deadband) ? 0 : rj;
+    }
+    lj = (abs(lj) < deadband) ? 0 : lj;
+    rj = (abs(rj) < deadband) ? 0 : rj;
     pid::enabled[0] = (lj == 0);
     pid::enabled[1] = (rj == 0);
     if (lj != 0)

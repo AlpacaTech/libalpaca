@@ -1,3 +1,23 @@
+commit 732e7e6949e5bdc83e52f215806eb411634b5f97
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 6 20:20:20 2017 -0400
+
+    Added rerun functionality
+
+:100644 100644 9f1d9a0... d1da818... M	cpls/bin/auto.o
+:100644 100644 1a5a026... 4822ae4... M	cpls/bin/opcontrol.o
+:100755 100755 09a096e... 6b156b5... M	cpls/bin/output.bin
+:100755 100755 c916fcf... 2186c8d... M	cpls/bin/output.elf
+:000000 100644 0000000... ba9d956... A	cpls/bin/rerun.o
+:100644 100644 4bb2b1b... 6a4a837... M	cpls/include/main.h
+:000000 100644 0000000... a5b6abd... A	cpls/include/rerun.h
+:100644 100644 5197fb3... 06ea5fd... M	cpls/src/auto.cpp
+:100644 100644 3573ae3... 7e03be1... M	cpls/src/opcontrol.cpp
+:000000 100644 0000000... 25b7f77... A	cpls/src/rerun.cpp
+:100644 100644 3023711... a656df4... M	docs/index.html
+:100644 100644 12b9db6... 6724bb1... M	docs/log.json
+:100644 100644 fa293a9... 8b934e6... M	docs/log.txt
+
 commit 34b5e5bac90c3c82e07e675605384cc5fba639be
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 6 17:50:59 2017 -0400

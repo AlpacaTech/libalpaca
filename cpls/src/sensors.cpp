@@ -18,10 +18,10 @@ namespace sensors {
     left.ports[1] = 2;
     right.ports[0] = 3;
     right.ports[1] = 4;
-    left.inverted = 1;
-    right.inverted = -1;
-    left.enc = encoderInit(left.ports[0],left.ports[1], (left.inverted != 1));
-    right.enc = encoderInit(right.ports[0],right.ports[1], (right.inverted == 1));
+    left.inverted = false;
+    right.inverted = false;
+    left.enc = encoderInit(left.ports[0],left.ports[1], left.inverted);
+    right.enc = encoderInit(right.ports[0],right.ports[1], right.inverted);
     left.zero = 0;
     right.zero = 0;
   }
