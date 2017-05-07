@@ -1,3 +1,27 @@
+commit 70fc1ca9eeaf0abcf35dd328d0e9860068d13cd5
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun May 7 13:38:03 2017 -0400
+
+    Tested code, all but rerun works
+
+:100644 100644 60be46b... 0043beb... M	cpls/bin/drive.o
+:100644 100644 f0e3ce9... 9bf58a8... M	cpls/bin/motors.o
+:100755 100755 6b156b5... f72540e... M	cpls/bin/output.bin
+:100755 100755 2186c8d... e6e1e72... M	cpls/bin/output.elf
+:100644 100644 227e40c... 07db139... M	cpls/bin/pid.o
+:100644 100644 ef163d4... 4944917... M	cpls/bin/sensors.o
+:100644 100644 b3a4047... 5037978... M	cpls/include/motors.h
+:100644 100644 e434bd2... 8ded760... M	cpls/include/sensors.h
+:100644 100644 54d7f53... a4994f1... M	cpls/src/drive.cpp
+:100644 100644 1d64077... 5590c74... M	cpls/src/motors.cpp
+:100644 100644 7e03be1... a32e0eb... M	cpls/src/opcontrol.cpp
+:100644 100644 f3902fd... a901bde... M	cpls/src/pid.cpp
+:100644 100644 25b7f77... fd1f6d3... M	cpls/src/rerun.cpp
+:100644 100644 28a174d... 62d77d4... M	cpls/src/sensors.cpp
+:100644 100644 a656df4... bf24762... M	docs/index.html
+:100644 100644 6724bb1... 80624a0... M	docs/log.json
+:100644 100644 8b934e6... 1afc348... M	docs/log.txt
+
 commit 732e7e6949e5bdc83e52f215806eb411634b5f97
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 6 20:20:20 2017 -0400

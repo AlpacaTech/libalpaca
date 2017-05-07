@@ -3,11 +3,10 @@
 #include "motors.h"
 
 namespace drive {
-  class side {
-  public:
-    motor topM;
-    motor midM;
-    motor lowM;
+  struct side {
+    motor* topM;
+    motor* midM;
+    motor* lowM;
     void set(int power);
     sensors::quad* sensor;
   };

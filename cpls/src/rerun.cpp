@@ -8,8 +8,7 @@ namespace rerun {
   TaskHandle rerunHandle;
 
   void toPos(frame _frame) {
-    _frame.left = sensors::left.request;
-    _frame.right = sensors::right.request;
+    pid::request(_frame.left, _frame.right);
   }
 
   void _record(void *none) {
@@ -46,6 +45,8 @@ namespace rerun {
 
   void replay() {
     sensors::reset();
+    pid::enabled[0] = true;
+    pid::enabled[1] = true;
     frame to;
     PROS_FILE *rerun;
     if ((rerun = fopen("rerun", "r")) == NULL) {

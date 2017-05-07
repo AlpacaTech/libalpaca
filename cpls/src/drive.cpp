@@ -5,16 +5,16 @@ namespace drive {
   side right;
 
   void side::set(int power) {
-    motors::set(side::topM, power);
-    motors::set(side::midM, power);
-    motors::set(side::lowM, power);
+    motors::set(topM, power);
+    motors::set(midM, power);
+    motors::set(lowM, power);
   }
 
   void init(void) {
     left.topM = motors::init(2, 1, 127, .8);
     left.midM = motors::init(3, -1, 127, .8);
     left.lowM = motors::init(4, 1, 127, .8);
-    right.topM = motors::init(7, -1, 127, .8);
+    left.topM = motors::init(7, -1, 127, .8);
     left.midM = motors::init(8, 1, 127, .8);
     left.lowM = motors::init(9, -1, 127, .8);
     left.sensor = &sensors::left;

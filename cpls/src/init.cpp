@@ -9,6 +9,7 @@ void initializeIO() {
 }
 
 void initialize() {
+  //motors::slew::init();
   sensors::init();
   drive::init();
   pid::init();

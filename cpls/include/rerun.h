@@ -2,8 +2,7 @@
 #include "pid.h"
 
 namespace rerun {
-  class frame {
-  public:
+  struct frame {
     long left;
     long right;
   };
