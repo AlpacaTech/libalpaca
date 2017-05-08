@@ -10,4 +10,5 @@ namespace rerun {
   void stop();
   void replay();
   extern TaskHandle rerunHandle;
+  extern PROS_FILE *store;
 }

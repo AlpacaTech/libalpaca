@@ -6,6 +6,7 @@ bool isDriver(void) {
 
 namespace rerun {
   TaskHandle rerunHandle;
+  PROS_FILE *store;
 
   void toPos(frame _frame) {
     pid::request(_frame.left, _frame.right);
@@ -13,20 +14,19 @@ namespace rerun {
 
   void _record(void *none) {
     sensors::reset();
-    PROS_FILE *rerun;
     frame now;
     while (1) {
       if (isDriver()) {
-        while ((rerun = fopen("rerun", "w")) == NULL)
+        while ((store = fopen("rerun", "w")) == NULL)
           ;
 
         while (isDriver()) {
           now.left = sensors::left.request;
           now.right = sensors::right.request;
-          fwrite(&now, sizeof(now), 1, rerun);
+          fwrite(&now, sizeof(now), 1, store);
           delay(50);
         }
-        fclose(rerun);
+        fclose(store);
       }
     }
   }
@@ -48,17 +48,17 @@ namespace rerun {
     pid::enabled[0] = true;
     pid::enabled[1] = true;
     frame to;
-    PROS_FILE *rerun;
-    if ((rerun = fopen("rerun", "r")) == NULL) {
+    if ((store = fopen("rerun", "r")) == NULL) {
       return;
     }
 
     while (isAutonomous()) {
-      if (fread((void*)&to, sizeof(to), 1, rerun) < sizeof(to)) {
+      if (fread((void*)&to, sizeof(to), 1, store) < sizeof(to)) {
         return;
       }
       toPos(to);
       delay(50);
     }
+    fclose(store);
   }
 }

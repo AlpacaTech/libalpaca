@@ -1,3 +1,27 @@
+commit 976ba5da0b6d03483942e061f54fdc177b42270d
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun May 7 17:15:54 2017 -0400
+
+    Various code cleanups, abstracted to allow slewing
+
+:100644 100644 0043beb... a42be94... M	cpls/bin/drive.o
+:100644 100644 9bf58a8... 3d5bd6f... M	cpls/bin/motors.o
+:100644 100644 4822ae4... 0cae651... M	cpls/bin/opcontrol.o
+:100755 100755 f72540e... ee33b2b... M	cpls/bin/output.bin
+:100755 100755 e6e1e72... a36051f... M	cpls/bin/output.elf
+:100644 100644 ba9d956... 588cca2... M	cpls/bin/rerun.o
+:100644 100644 77704f8... b969e34... M	cpls/include/drive.h
+:100644 100644 5037978... 4338cb1... M	cpls/include/motors.h
+:100644 100644 a5b6abd... 5be04f4... M	cpls/include/rerun.h
+:100644 100644 a4994f1... ec6fa4c... M	cpls/src/drive.cpp
+:100644 100644 7964571... 773164c... M	cpls/src/init.cpp
+:100644 100644 5590c74... 48ef653... M	cpls/src/motors.cpp
+:100644 100644 a32e0eb... 659505d... M	cpls/src/opcontrol.cpp
+:100644 100644 fd1f6d3... f4daa5e... M	cpls/src/rerun.cpp
+:100644 100644 bf24762... 1b64ba2... M	docs/index.html
+:100644 100644 80624a0... 205fac8... M	docs/log.json
+:100644 100644 1afc348... a256aed... M	docs/log.txt
+
 commit 70fc1ca9eeaf0abcf35dd328d0e9860068d13cd5
 Author: iuyte <iuyte@gmail.com>
 Date:   Sun May 7 13:38:03 2017 -0400

@@ -10,18 +10,20 @@ namespace pid {
   float Kp = 0.8;
   float Ki = 0.04;
   float Kd = 0.35;
+  unsigned int deadband = 10;
 
   bool enabled[2] = {true, true};
+  unsigned int default_precision = 30;
   TaskHandle pidHandle;
 
   void controller(void *none) {
 
-    float pidCurrent[2];
-    float pidError[2];
-    float pidLastError[2] = {0, 0};
-    float pidIntegral[2] = {0, 0};
-    float pidDerivative[2];
-    float pidPower[2];
+    float current[2];
+    float error[2];
+    float lastError[2] = {0, 0};
+    float integral[2] = {0, 0};
+    float derivative[2];
+    float power[2];
 
     sensors::left.reset();
     sensors::right.reset();
@@ -31,18 +33,31 @@ namespace pid {
       printf("| %ld | %ld |\n", sensors::left.value(), sensors::right.value());
       for (size_t i = 0; i < 2; i++) {
         if (enabled[i]) {
-          pidCurrent[i] = sides[i]->value();
-          pidError[i] = sides[i]->request - pidCurrent[i];
-          pidIntegral[i] = (Ki != 0 && abs(pidError[i]) < INTEGRAL_LIMIT) ? (pidIntegral[i] + pidError[i]) : 0;
-          pidDerivative[i] = pidError[i] - pidLastError[i];
-          pidLastError[i] = pidError[i];
-          pidPower[i] = (Kp * pidError[i]) + (Ki * pidIntegral[i]) + (Kd * pidDerivative[i]);
-          pidPower[i] = (pidPower[i] <= DRIVE_MIN) ? DRIVE_MIN : ((pidPower[i] >= DRIVE_MAX) ? DRIVE_MAX : pidPower[i]);
-          (i == 0) ? drive::left.set(pidPower[i]) : drive::right.set(pidPower[i]);
+          current[i] = sides[i]->value();
+          error[i] = sides[i]->request - current[i];
+          if ((unsigned int)abs(error[i]) <= deadband) {
+            continue;
+          }
+          integral[i] = (Ki != 0 && abs(error[i]) < INTEGRAL_LIMIT) ? (integral[i] + error[i]) : 0;
+          derivative[i] = error[i] - lastError[i];
+          lastError[i] = error[i];
+          power[i] = (Kp * error[i]) + (Ki * integral[i]) + (Kd * derivative[i]);
+          power[i] = (power[i] <= DRIVE_MIN) ? DRIVE_MIN : ((power[i] >= DRIVE_MAX) ? DRIVE_MAX : power[i]);
+          (i == 0) ? drive::left.set(power[i]) : drive::right.set(power[i]);
         }
       }
       delay(25);
     }
+  }
+
+  void enable(void) {
+    enabled[0] = true;
+    enabled[1] = true;
+  }
+
+  void disable(void) {
+    enabled[0] = false;
+    enabled[1] = false;
   }
 
   void init(void) {
@@ -62,8 +77,16 @@ namespace pid {
     sensors::right.request = r;
   }
 
-  void wait(long precision) {
-    while (sensors::left.value() > sensors::left.request + precision || sensors::left.value() < sensors::left.request - precision || sensors::right.value() > sensors::right.request + precision || sensors::right.value() < sensors::right.request - precision)
-      delay(50);
+  void wait(long precision, unsigned long blockTime) {
+    if (blockTime > 0) {
+      auto start = millis();
+      while ((sensors::left.value() > sensors::left.request + precision || sensors::left.value() < sensors::left.request - precision || sensors::right.value() > sensors::right.request + precision || sensors::right.value() < sensors::right.request - precision) && millis() - start <= blockTime) {
+        delay(50);
+      }
+    } else {
+      while ((sensors::left.value() > sensors::left.request + precision || sensors::left.value() < sensors::left.request - precision || sensors::right.value() > sensors::right.request + precision || sensors::right.value() < sensors::right.request - precision)) {
+        delay(50);
+      }
+    }
   }
 }

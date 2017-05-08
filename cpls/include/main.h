@@ -6,11 +6,7 @@
  * necessarily having to see the code (and therefore causing a multiple definition). To make
  * a function in "opcontrol.c", "auto.c", "main.c", or any other C file visible to the core
  * implementation files, prototype it here.
- *
- * This file is included by default in the predefined stubs in each VEX Cortex PROS Project.
- *
- * Copyright (c) 2011-2014, Purdue University ACM SIG BOTS.
- * All rights reserved.
+ *main
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -44,7 +40,7 @@
 #define MAIN_H_
 
 #include <API.h>
-#include "rerun.h"
+#include "debug.h"
 
 // Allow usage of this file in C++ programs
 #ifdef __cplusplus
