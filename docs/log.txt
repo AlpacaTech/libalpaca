@@ -1,3 +1,15 @@
+commit ad829d49547909dfe37b34eb842385d4c585bc3f
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 20 18:16:10 2017 -0400
+
+    created commit script
+
+:000000 100755 0000000... e619635... A	commit.sh
+:000000 100644 0000000... f52dcfb... A	cpls/log.txt
+:100644 100644 89c0bf4... 4e9fbce... M	docs/index.html
+:100644 100644 7ce5c7c... 4ed664e... M	docs/log.json
+:100644 100644 105a106... f52dcfb... M	docs/log.txt
+
 commit 470082234b4eef9f8be84ecff3a66a1f96fb09c6
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 20 18:06:14 2017 -0400
