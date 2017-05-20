@@ -1,3 +1,14 @@
+commit 916a17d9938257639eab28e8ad7e5bd2a0290f8e
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 20 18:35:06 2017 -0400
+
+    Added json prettifier to the auto-document script
+
+:100755 100755 e30a0d5... 1b7ab32... M	docs/document.sh
+:100644 100644 4e9fbce... 5a3532d... M	docs/index.html
+:100644 100644 4ed664e... c81fabb... M	docs/log.json
+:100644 100644 f52dcfb... 379cb5e... M	docs/log.txt
+
 commit ad829d49547909dfe37b34eb842385d4c585bc3f
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 20 18:16:10 2017 -0400
