@@ -1,3 +1,14 @@
+commit 66b65daa43257108774874a428702a2c606dab3e
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 20 18:36:37 2017 -0400
+
+    Fixing json prettification
+
+:100755 100755 1b7ab32... 2bb738d... M	docs/document.sh
+:100644 100644 5a3532d... cc99301... M	docs/index.html
+:100644 100644 c81fabb... 434e7b7... M	docs/log.json
+:100644 100644 379cb5e... d6ea22a... M	docs/log.txt
+
 commit 916a17d9938257639eab28e8ad7e5bd2a0290f8e
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 20 18:35:06 2017 -0400

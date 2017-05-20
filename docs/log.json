@@ -1,6 +1,20 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "66b65daa43257108774874a428702a2c606dab3e",
+        "date": "  Sat May 20 18:36:37 2017 -0400",
+        "description": "Fixing json prettification",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/document.sh",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "916a17d9938257639eab28e8ad7e5bd2a0290f8e",
         "date": "  Sat May 20 18:35:06 2017 -0400",
         "description": "Added json prettifier to the auto-document script",
