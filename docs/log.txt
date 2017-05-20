@@ -1,3 +1,50 @@
+commit cd8d13ebf494e94fcef62cb7f80f8063c13a8dfc
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun May 7 21:12:31 2017 -0400
+
+    Re-added slew functionality, hopeful of success.
+    Also, added .gitignore file
+
+:000000 100644 0000000... c48df1c... A	.gitignore
+:100644 100644 faaf828... 6ef0055... M	cpls/bin/drive.o
+:100644 100644 03421b4... f7be8ae... M	cpls/bin/motors.o
+:100755 100755 00b2f0d... 2c39936... M	cpls/bin/output.bin
+:100755 100755 52789a2... 4baa745... M	cpls/bin/output.elf
+:100644 100644 553f5d2... 3f3aaac... M	cpls/include/motors.h
+:100644 100644 a73d60f... 9142c0e... M	cpls/src/motors.cpp
+
+commit 104883373f900eab9cb0d02ac08fcacd5f61ff98
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun May 7 20:54:30 2017 -0400
+
+    Fixed rerun issues, eliminated slewing (wasnt working), created debug mode to identify segfaults
+
+:100644 100644 d1da818... 3abf173... M	cpls/bin/auto.o
+:000000 100644 0000000... 724e183... A	cpls/bin/debug.o
+:100644 100644 a42be94... faaf828... M	cpls/bin/drive.o
+:100644 100644 3d5bd6f... 03421b4... M	cpls/bin/motors.o
+:100644 100644 0cae651... a566b92... M	cpls/bin/opcontrol.o
+:100755 100755 ee33b2b... 00b2f0d... M	cpls/bin/output.bin
+:100755 100755 a36051f... 52789a2... M	cpls/bin/output.elf
+:100644 100644 07db139... fa2c06b... M	cpls/bin/pid.o
+:100644 100644 588cca2... 84e185e... M	cpls/bin/rerun.o
+:000000 100644 0000000... c3be427... A	cpls/include/debug.h
+:100644 100644 b969e34... 94cc3a9... M	cpls/include/drive.h
+:100644 100644 6a4a837... e6643f3... M	cpls/include/main.h
+:100644 100644 4338cb1... 553f5d2... M	cpls/include/motors.h
+:100644 100644 1fabe25... 167c2af... M	cpls/include/pid.h
+:100644 100644 5be04f4... edaacd3... M	cpls/include/rerun.h
+:100644 100644 06ea5fd... c7dc323... M	cpls/src/auto.cpp
+:000000 100644 0000000... 8817710... A	cpls/src/debug.cpp
+:100644 100644 ec6fa4c... d18e5a9... M	cpls/src/drive.cpp
+:100644 100644 48ef653... a73d60f... M	cpls/src/motors.cpp
+:100644 100644 659505d... 7be6cd4... M	cpls/src/opcontrol.cpp
+:100644 100644 a901bde... 8c746d2... M	cpls/src/pid.cpp
+:100644 100644 f4daa5e... 7c0d5d6... M	cpls/src/rerun.cpp
+:100644 100644 1b64ba2... b3bd9ea... M	docs/index.html
+:100644 100644 205fac8... ce7700b... M	docs/log.json
+:100644 100644 a256aed... 131603d... M	docs/log.txt
+
 commit 976ba5da0b6d03483942e061f54fdc177b42270d
 Author: iuyte <iuyte@gmail.com>
 Date:   Sun May 7 17:15:54 2017 -0400

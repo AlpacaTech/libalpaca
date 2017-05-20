@@ -2,7 +2,7 @@
 #include "pid.h"
 
 namespace rerun {
-  struct frame {
+  struct frame_t {
     long left;
     long right;
   };
@@ -10,5 +10,4 @@ namespace rerun {
   void stop();
   void replay();
   extern TaskHandle rerunHandle;
-  extern PROS_FILE *store;
 }
