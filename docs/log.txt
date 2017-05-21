@@ -1,3 +1,14 @@
+commit 1988c03883b5c1b5d06d0088412e5e0a03f84f93
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 20 18:37:08 2017 -0400
+
+    Removed redundancy
+
+:100755 100755 2bb738d... bb5ee9d... M	docs/document.sh
+:100644 100644 cc99301... 6608612... M	docs/index.html
+:100644 100644 434e7b7... 497ea19... M	docs/log.json
+:100644 100644 d6ea22a... 07f029d... M	docs/log.txt
+
 commit 66b65daa43257108774874a428702a2c606dab3e
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 20 18:36:37 2017 -0400

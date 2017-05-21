@@ -1,15 +1,13 @@
 #include "main.h"
 
 extern "C" {
-  void __libc_init_array();
+void __libc_init_array();
 }
 
-void initializeIO() {
-  __libc_init_array();
-}
+void initializeIO() { __libc_init_array(); }
 
 void initialize() {
-  //motors::slew::init();
+  // motors::slew::init();
   sensors::init();
   drive::init();
   pid::init();
