@@ -1,3 +1,31 @@
+commit 5853c9ea4748da3bfccd16a8da5b47d10f950ccf
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun May 21 18:37:09 2017 -0400
+
+    adopted new style
+
+:100644 100644 c63cfc1... 040320e... M	cpls/bin/rerun.o
+:100644 100644 fa76064... a21d47a... M	cpls/include/API.h
+:100644 100644 c3be427... cde2bdc... M	cpls/include/debug.h
+:100644 100644 94cc3a9... 2512270... M	cpls/include/drive.h
+:100644 100644 e6643f3... 7d59a7d... M	cpls/include/main.h
+:100644 100644 3f3aaac... 849d889... M	cpls/include/motors.h
+:100644 100644 167c2af... 58ba6a4... M	cpls/include/pid.h
+:100644 100644 5f633f8... df9da64... M	cpls/include/rerun.h
+:100644 100644 8ded760... 25366fe... M	cpls/include/sensors.h
+:100644 000000 f52dcfb... 0000000... D	cpls/log.txt
+:100644 100644 8817710... 66a90b5... M	cpls/src/debug.cpp
+:100644 100644 d18e5a9... f004001... M	cpls/src/drive.cpp
+:100644 100644 773164c... b63dad3... M	cpls/src/init.cpp
+:100644 100644 9142c0e... 8e8ef5c... M	cpls/src/motors.cpp
+:100644 100644 7be6cd4... 957689d... M	cpls/src/opcontrol.cpp
+:100644 100644 8c746d2... 19f1af7... M	cpls/src/pid.cpp
+:100644 100644 7e58c87... 186aa53... M	cpls/src/rerun.cpp
+:100644 100644 62d77d4... 7be4c11... M	cpls/src/sensors.cpp
+:100644 100644 6608612... 1a5297d... M	docs/index.html
+:100644 100644 497ea19... e830722... M	docs/log.json
+:100644 100644 07f029d... 127c41d... M	docs/log.txt
+
 commit 1988c03883b5c1b5d06d0088412e5e0a03f84f93
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 20 18:37:08 2017 -0400

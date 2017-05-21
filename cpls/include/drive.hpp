@@ -1,6 +1,6 @@
 #pragma once
-#include "motors.h"
-#include "sensors.h"
+#include "motors.hpp"
+#include "sensors.hpp"
 
 namespace drive {
 struct side {

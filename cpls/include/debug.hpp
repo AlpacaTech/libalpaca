@@ -1,4 +1,4 @@
-#include "rerun.h"
+#include "rerun.hpp"
 
 namespace debug {
 extern uint32_t fault;

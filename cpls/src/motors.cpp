@@ -1,4 +1,4 @@
-#include "motors.h"
+#include "motors.hpp"
 
 void motor::set(int _power) {
   power = _power * inverted * scale;

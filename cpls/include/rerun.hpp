@@ -1,5 +1,5 @@
 #pragma once
-#include "pid.h"
+#include "pid.hpp"
 
 namespace rerun {
 struct frame_t {
