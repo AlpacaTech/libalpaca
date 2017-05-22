@@ -1,3 +1,14 @@
+commit 8b456fda3b22c38a7aa2a4b44a2f3a50e12b19fa
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun May 21 21:15:55 2017 -0400
+
+    Fixed minor ineffeciency
+
+:100644 100644 cc5142e... 518d361... M	cpls/include/sensors.hpp
+:100644 100644 44e7957... 1c09209... M	docs/index.html
+:100644 100644 afcaa56... ad4faa9... M	docs/log.json
+:100644 100644 72ffb00... 20c4dad... M	docs/log.txt
+
 commit fd344715a2b2ba12a1d3e3d5b544f0faab387165
 Author: iuyte <iuyte@gmail.com>
 Date:   Sun May 21 18:44:18 2017 -0400

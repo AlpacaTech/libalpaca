@@ -1,6 +1,20 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "8b456fda3b22c38a7aa2a4b44a2f3a50e12b19fa",
+        "date": "  Sun May 21 21:15:55 2017 -0400",
+        "description": "Fixed minor ineffeciency",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/sensors.hpp",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "fd344715a2b2ba12a1d3e3d5b544f0faab387165",
         "date": "  Sun May 21 18:44:18 2017 -0400",
         "description": "Renamed files to .hpp",

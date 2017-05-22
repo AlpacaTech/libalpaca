@@ -1,10 +1,9 @@
-cd ~/VEX-709S-2018/miniRerun
-pros make
-cd ~/VEX-709S-2018/cpls
-pros make
-cd ~/VEX-709S-2018/docs
+#!/bin/bash
+cd ~/VEX-709S-2018/
+./compile.py
+cd docs/
 ./document.sh
-cd ..
+cd ../
 git add *
 git commit -m "$@"
 git push
