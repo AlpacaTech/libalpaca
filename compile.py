@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 import os
 import subprocess
-import sys
-
 
 def main():
-    args = sys.argv[1:]
-    msg = ""
-    for arg in args:
-        msg += arg + " "
-    projects = ""
-    with open("projects.txt", mode="r") as file:
-        projects = file.read().split("\n")
-    projects.pop(-1)
+    projectss = os.listdir(".")
+    projects = []
+    for i in range(len(projectss)):
+        if "." not in projectss[i]:
+            projects.append(projectss[i])
+    projectss = projects
+    projects = []
+    for j in range(len(projectss)):
+        if os.path.isfile(projectss[j] + "/project.pros"):
+            projects.append(projectss[j])
     print("PROJECTS TO COMPILE:")
     for project in projects:
         print(project)

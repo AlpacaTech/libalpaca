@@ -1,27 +1,27 @@
 #include "motors.hpp"
 
-void motor::set(int _power) {
+void motor_t::set(int _power) {
   power = _power * inverted * scale;
   motors::slew::list[port].power = power;
 }
 
 namespace motors {
-void set(motor _motor, int power) { _motor.set(power); }
+void set(motor_t motor, int power) { motor.set(power); }
 
-int get(motor _motor) { return motorGet(_motor.port); }
+int get(motor_t motor) { return motorGet(motor.port); }
 
-motor init(unsigned char port, int inverted, long slewRate, float scale) {
-  motor _motor;
-  _motor.port = port;
-  _motor.inverted = inverted;
-  _motor.slewRate = slewRate;
-  _motor.scale = scale;
-  slew::list[_motor.port] = _motor;
-  return _motor;
+motor_t init(unsigned char port, int inverted, long slewRate, float scale) {
+  motor_t motor;
+  motor.port = port;
+  motor.inverted = inverted;
+  motor.slewRate = slewRate;
+  motor.scale = scale;
+  slew::list[motor.port] = motor;
+  return motor;
 }
 
 namespace slew {
-motor list[11];
+motor_t list[11];
 TaskHandle handle;
 
 void _slew(void *none) {
@@ -39,7 +39,7 @@ void _slew(void *none) {
 }
 
 void init(void) {
-  motor default_motor;
+  motor_t default_motor;
   default_motor.inverted = 1;
   default_motor.slewRate = 1;
   default_motor.scale = 0;

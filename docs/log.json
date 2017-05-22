@@ -1,6 +1,20 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "264671714dfe84d7c6b5829d5fecd2491c723b84",
+        "date": "  Sun May 21 22:34:53 2017 -0400",
+        "description": "fixing commit.sh",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "commit.sh",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "94d9f123dbeb3ead323be8e3353cef4c189808db",
         "date": "  Sun May 21 22:24:59 2017 -0400",
         "description": "fixing",

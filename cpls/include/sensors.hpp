@@ -2,7 +2,7 @@
 #include <API.h>
 
 namespace sensors {
-struct quad {
+struct quad_t {
   Encoder enc;
   unsigned char ports[2];
   long zero;
@@ -11,8 +11,8 @@ struct quad {
   long value(void);
   float request;
 };
-extern quad left;
-extern quad right;
+extern quad_t left;
+extern quad_t right;
 void init(void);
 void reset(void);
 }

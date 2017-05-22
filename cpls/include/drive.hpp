@@ -3,16 +3,16 @@
 #include "sensors.hpp"
 
 namespace drive {
-struct side {
-  motor topM;
-  motor midM;
-  motor lowM;
+struct side_t {
+  motor_t topM;
+  motor_t midM;
+  motor_t lowM;
   void set(int power);
-  sensors::quad *sensor;
+  sensors::quad_t *sensor;
 };
 extern double inch;
-extern side left;
-extern side right;
+extern side_t left;
+extern side_t right;
 void set(int lpower, int rpower);
 void init(void);
 void tank(void);

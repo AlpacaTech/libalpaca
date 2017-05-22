@@ -1,14 +1,14 @@
 #include "main.h"
 
 namespace drive {
-side left;
-side right;
+side_t left;
+side_t right;
 double inch = 28.64788975654116043839907740705258516620273623328216077458012735;
 
-void side::set(int power) {
-  motors::set(side::topM, power);
-  motors::set(side::midM, power);
-  motors::set(side::lowM, power);
+void side_t::set(int power) {
+  motors::set(side_t::topM, power);
+  motors::set(side_t::midM, power);
+  motors::set(side_t::lowM, power);
 }
 
 void init(void) {

@@ -29,7 +29,7 @@ void controller(void *none) {
 
   sensors::left.reset();
   sensors::right.reset();
-  sensors::quad *sides[2] = {&sensors::left, &sensors::right};
+  sensors::quad_t *sides[2] = {&sensors::left, &sensors::right};
 
   while (true) {
     printf("| %ld | %ld |\n", sensors::left.value(), sensors::right.value());

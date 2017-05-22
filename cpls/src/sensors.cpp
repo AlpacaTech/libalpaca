@@ -2,12 +2,12 @@
 
 namespace sensors {
 
-quad left;
-quad right;
+quad_t left;
+quad_t right;
 
-void quad::reset(void) { encoderReset(quad::enc); }
+void quad_t::reset(void) { encoderReset(quad_t::enc); }
 
-long quad::value(void) { return (encoderGet(quad::enc) - quad::zero); }
+long quad_t::value(void) { return (encoderGet(quad_t::enc) - quad_t::zero); }
 
 void init(void) {
   left.ports[0] = 1;
