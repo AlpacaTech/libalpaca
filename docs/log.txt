@@ -1,3 +1,20 @@
+commit debbb02eb84ee365b491c89577c67b0170c22655
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun May 21 22:23:40 2017 -0400
+
+    changes to commit system to add effeciency
+
+:000000 100644 0000000... d74801f... A	commit.py
+:100755 100755 2235bf0... 07b8c8b... M	commit.sh
+:000000 100755 0000000... d74801f... A	compile.py
+:000000 100755 0000000... 40adcfe... A	compile.sh
+:100644 100644 1c09209... ed9179b... M	docs/index.html
+:100644 100644 ad4faa9... 81431a2... M	docs/log.json
+:100644 100644 20c4dad... 2780f79... M	docs/log.txt
+:100755 100755 ab37fdc... 0e7d42a... M	miniRerun/bin/output.bin
+:100755 100755 4bf4c58... ec179a3... M	miniRerun/bin/output.elf
+:000000 100644 0000000... 812c954... A	projects.txt
+
 commit 8b456fda3b22c38a7aa2a4b44a2f3a50e12b19fa
 Author: iuyte <iuyte@gmail.com>
 Date:   Sun May 21 21:15:55 2017 -0400

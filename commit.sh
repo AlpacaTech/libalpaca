@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/VEX-709S-2018/
+cd "~/VEX-709S-2018/"
 ./compile.py
 cd docs/
 ./document.sh
