@@ -2,8 +2,7 @@
 #include <API.h>
 
 namespace sensors {
-class quad {
-public:
+struct quad {
   Encoder enc;
   unsigned char ports[2];
   long zero;

@@ -1,3 +1,30 @@
+commit fd344715a2b2ba12a1d3e3d5b544f0faab387165
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun May 21 18:44:18 2017 -0400
+
+    Renamed files to .hpp
+
+:100755 100755 e619635... 2235bf0... M	commit.sh
+:100644 000000 cde2bdc... 0000000... D	cpls/include/debug.h
+:000000 100644 0000000... 5df27da... A	cpls/include/debug.hpp
+:100644 000000 2512270... 0000000... D	cpls/include/drive.h
+:000000 100644 0000000... 30c06a9... A	cpls/include/drive.hpp
+:100644 100644 7d59a7d... 33d112b... M	cpls/include/main.h
+:100644 000000 849d889... 0000000... D	cpls/include/motors.h
+:000000 100644 0000000... 849d889... A	cpls/include/motors.hpp
+:100644 000000 58ba6a4... 0000000... D	cpls/include/pid.h
+:000000 100644 0000000... eadee3e... A	cpls/include/pid.hpp
+:100644 000000 df9da64... 0000000... D	cpls/include/rerun.h
+:000000 100644 0000000... cbeb750... A	cpls/include/rerun.hpp
+:100644 000000 25366fe... 0000000... D	cpls/include/sensors.h
+:000000 100644 0000000... cc5142e... A	cpls/include/sensors.hpp
+:100644 100644 66a90b5... cdbbde5... M	cpls/src/debug.cpp
+:100644 100644 8e8ef5c... caad4aa... M	cpls/src/motors.cpp
+:100644 100644 19f1af7... d2ee270... M	cpls/src/pid.cpp
+:100644 100644 1a5297d... 44e7957... M	docs/index.html
+:100644 100644 e830722... afcaa56... M	docs/log.json
+:100644 100644 127c41d... 72ffb00... M	docs/log.txt
+
 commit 5853c9ea4748da3bfccd16a8da5b47d10f950ccf
 Author: iuyte <iuyte@gmail.com>
 Date:   Sun May 21 18:37:09 2017 -0400
