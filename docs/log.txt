@@ -1,3 +1,14 @@
+commit 94d9f123dbeb3ead323be8e3353cef4c189808db
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun May 21 22:24:59 2017 -0400
+
+    fixing
+
+:100755 100755 07b8c8b... 93787cc... M	commit.sh
+:100644 100644 ed9179b... 1ddd7f4... M	docs/index.html
+:100644 100644 81431a2... 50ca939... M	docs/log.json
+:100644 100644 2780f79... a5561dc... M	docs/log.txt
+
 commit debbb02eb84ee365b491c89577c67b0170c22655
 Author: iuyte <iuyte@gmail.com>
 Date:   Sun May 21 22:23:40 2017 -0400
