@@ -1,3 +1,36 @@
+commit 91666d0d582b3f1c99d5b9a303c94064a114df61
+Author: iuyte <iuyte@gmail.com>
+Date:   Tue May 23 01:01:40 2017 -0400
+
+    More sensor classes
+
+:100644 100644 f4f7a1c... 720d535... M	cpls/include/sensors.hpp
+:100644 100644 1dbd733... a41f8d7... M	cpls/src/sensors.cpp
+
+commit d9c726384d0e4d25070110ccb8c0d22a5013ea29
+Author: iuyte <iuyte@gmail.com>
+Date:   Mon May 22 01:07:33 2017 -0400
+
+    modified compile.py to automatically detect which folders are projects and compiles them on the running of my commitscript
+
+:100755 100755 d74801f... 08e028e... M	compile.py
+:100644 100644 6ef0055... 620cf42... M	cpls/bin/drive.o
+:100644 100644 a0a3bd0... 865bf2d... M	cpls/bin/motors.o
+:100755 100755 0f8b3e3... 845e671... M	cpls/bin/output.bin
+:100755 100755 10204b3... e9fc06b... M	cpls/bin/output.elf
+:100644 100644 fa2c06b... 8b5e737... M	cpls/bin/pid.o
+:100644 100644 4944917... d4d6773... M	cpls/bin/sensors.o
+:100644 100644 30c06a9... 3ccf0cc... M	cpls/include/drive.hpp
+:100644 100644 849d889... 92886b5... M	cpls/include/motors.hpp
+:100644 100644 518d361... f4f7a1c... M	cpls/include/sensors.hpp
+:100644 100644 f004001... 3013945... M	cpls/src/drive.cpp
+:100644 100644 caad4aa... b6c6c64... M	cpls/src/motors.cpp
+:100644 100644 d2ee270... cee9de8... M	cpls/src/pid.cpp
+:100644 100644 7be4c11... 1dbd733... M	cpls/src/sensors.cpp
+:100644 100644 59f2365... 3b1197a... M	docs/index.html
+:100644 100644 389fffe... 8ba8d29... M	docs/log.json
+:100644 100644 0c695a1... 6bb3449... M	docs/log.txt
+
 commit 264671714dfe84d7c6b5829d5fecd2491c723b84
 Author: iuyte <iuyte@gmail.com>
 Date:   Sun May 21 22:34:53 2017 -0400

@@ -1,6 +1,45 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "91666d0d582b3f1c99d5b9a303c94064a114df61",
+        "date": "  Tue May 23 01:01:40 2017 -0400",
+        "description": "More sensor classes",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/sensors.hpp",
+            "cpls/src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "d9c726384d0e4d25070110ccb8c0d22a5013ea29",
+        "date": "  Mon May 22 01:07:33 2017 -0400",
+        "description": "modified compile.py to automatically detect which folders are projects and compiles them on the running of my commitscript",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "compile.py",
+            "cpls/bin/drive.o",
+            "cpls/bin/motors.o",
+            "cpls/bin/output.bin",
+            "cpls/bin/output.elf",
+            "cpls/bin/pid.o",
+            "cpls/bin/sensors.o",
+            "cpls/include/drive.hpp",
+            "cpls/include/motors.hpp",
+            "cpls/include/sensors.hpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/motors.cpp",
+            "cpls/src/pid.cpp",
+            "cpls/src/sensors.cpp",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "264671714dfe84d7c6b5829d5fecd2491c723b84",
         "date": "  Sun May 21 22:34:53 2017 -0400",
         "description": "fixing commit.sh",

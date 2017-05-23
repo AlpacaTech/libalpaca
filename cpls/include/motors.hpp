@@ -1,3 +1,4 @@
+#pragma once
 #include <API.h>
 
 struct motor_t {
