@@ -1,6 +1,25 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "79f4d3b5cc8386e7b32fda2ff67380cf0bd2da33",
+        "date": "  Sat May 27 15:16:41 2017 -0400",
+        "description": "fixed compile.py",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "compile.sh",
+            "cpls/bin/drive.o",
+            "cpls/bin/opcontrol.o",
+            "cpls/bin/output.bin",
+            "cpls/bin/output.elf",
+            "cpls/bin/rerun.o",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "081320b57acc357354a818958a2cc026ffe999f9",
         "date": "  Sat May 27 14:40:37 2017 -0400",
         "description": "added rerun::enabled bool, changed motors::set() to side_t::<motor>::set() in drive",

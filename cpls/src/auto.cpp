@@ -2,5 +2,7 @@
 
 void autonomous() {
   sensors::reset();
-  rerun::replay();
+  if (rerun::enabled)
+    rerun::replay();
+  drive::inches(12);
 }

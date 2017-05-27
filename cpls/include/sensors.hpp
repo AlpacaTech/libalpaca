@@ -56,8 +56,4 @@ void reset(void);
 
 extern quad_t left;
 extern quad_t right;
-extern gyro_t gyro;
-extern pot_t pot;
-extern sonic_t sonic;
-extern button_t button;
 }

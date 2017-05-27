@@ -4,10 +4,6 @@ namespace sensors {
 
 quad_t left(1, 2, false);
 quad_t right(3, 4, false);
-gyro_t gyro(1, 198);
-pot_t pot(2, false);
-button_t button(5, false);
-sonic_t sonic(6, 7);
 
 quad_t::quad_t(unsigned char port1, unsigned char port2, bool _inverted) {
   ports[0] = port1;
@@ -75,16 +71,10 @@ bool button_t::value(void) {
 void init(void) {
   left.init();
   right.init();
-  gyro.init();
-  pot.init();
-  sonic.init();
-  button.init();
 }
 
 void reset(void) {
   left.reset();
   right.reset();
-  gyro.reset();
-  pot.reset();
 }
 }

@@ -1,3 +1,19 @@
+commit 79f4d3b5cc8386e7b32fda2ff67380cf0bd2da33
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 27 15:16:41 2017 -0400
+
+    fixed compile.py
+
+:100755 100755 40adcfe... 8d75a2d... M	compile.sh
+:100644 100644 620cf42... a980ddf... M	cpls/bin/drive.o
+:100644 100644 a566b92... cfc9216... M	cpls/bin/opcontrol.o
+:100755 100755 561db22... b9b3cb3... M	cpls/bin/output.bin
+:100755 100755 f08108d... 3a85ebd... M	cpls/bin/output.elf
+:100644 100644 040320e... d3463cd... M	cpls/bin/rerun.o
+:100644 100644 a931514... 7e94dd0... M	docs/index.html
+:100644 100644 f41e7d9... 48cc87a... M	docs/log.json
+:100644 100644 4bbcc6c... 674d6cc... M	docs/log.txt
+
 commit 081320b57acc357354a818958a2cc026ffe999f9
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 27 14:40:37 2017 -0400
