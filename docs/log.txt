@@ -1,3 +1,20 @@
+commit 081320b57acc357354a818958a2cc026ffe999f9
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 27 14:40:37 2017 -0400
+
+    added rerun::enabled bool, changed motors::set() to side_t::<motor>::set() in drive
+
+:100755 100755 b41a147... 561db22... M	cpls/bin/output.bin
+:100755 100755 0dfa9f6... f08108d... M	cpls/bin/output.elf
+:100644 100644 481c448... 213498e... M	cpls/bin/sensors.o
+:100644 100644 cbeb750... 28cb610... M	cpls/include/rerun.hpp
+:100644 100644 3013945... add6782... M	cpls/src/drive.cpp
+:100644 100644 957689d... 7aed0df... M	cpls/src/opcontrol.cpp
+:100644 100644 186aa53... 0534b1f... M	cpls/src/rerun.cpp
+:100644 100644 701f7f5... a931514... M	docs/index.html
+:100644 100644 57d4b04... f41e7d9... M	docs/log.json
+:100644 100644 85e2228... 4bbcc6c... M	docs/log.txt
+
 commit 76d1c5a87d1aa32b22828a89d503ec4ac9817bba
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 27 07:33:22 2017 -0400

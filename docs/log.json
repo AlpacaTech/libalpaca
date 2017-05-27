@@ -1,6 +1,26 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "081320b57acc357354a818958a2cc026ffe999f9",
+        "date": "  Sat May 27 14:40:37 2017 -0400",
+        "description": "added rerun::enabled bool, changed motors::set() to side_t::<motor>::set() in drive",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/bin/output.bin",
+            "cpls/bin/output.elf",
+            "cpls/bin/sensors.o",
+            "cpls/include/rerun.hpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/opcontrol.cpp",
+            "cpls/src/rerun.cpp",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "76d1c5a87d1aa32b22828a89d503ec4ac9817bba",
         "date": "  Sat May 27 07:33:22 2017 -0400",
         "description": "Added class for ultrasonics",

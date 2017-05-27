@@ -1,2 +1,3 @@
 #!/bin/bash
-pros make "$PWD/$@"
+cd "$PWD/$@"
+pros make
