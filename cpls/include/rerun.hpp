@@ -9,5 +9,6 @@ struct frame_t {
 void record();
 void stop();
 void replay();
+extern bool enabled;
 extern TaskHandle rerunHandle;
 }

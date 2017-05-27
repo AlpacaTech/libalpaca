@@ -6,9 +6,9 @@ side_t right;
 double inch = 28.64788975654116043839907740705258516620273623328216077458012735;
 
 void side_t::set(int power) {
-  motors::set(side_t::topM, power);
-  motors::set(side_t::midM, power);
-  motors::set(side_t::lowM, power);
+  side_t::topM.set(power);
+  side_t::midM.set(power);
+  side_t::lowM.set(power);
 }
 
 void init(void) {

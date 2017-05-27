@@ -2,7 +2,8 @@
 
 void operatorControl() {
   sensors::reset();
-  rerun::record();
+  if (rerun::enabled)
+    rerun::record();
 
   while (true) {
     drive::tank();
@@ -10,5 +11,6 @@ void operatorControl() {
     delay(50);
   }
 
-  rerun::stop();
+  if (rerun::enabled)
+    rerun::stop();
 }

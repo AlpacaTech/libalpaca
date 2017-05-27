@@ -1,6 +1,21 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "76d1c5a87d1aa32b22828a89d503ec4ac9817bba",
+        "date": "  Sat May 27 07:33:22 2017 -0400",
+        "description": "Added class for ultrasonics",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/sensors.hpp",
+            "cpls/src/sensors.cpp",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "42620000dab121220e5be649854a44cb44b15e41",
         "date": "  Tue May 23 01:02:26 2017 -0400",
         "description": "slewing fix and actually enabling it in init.cpp",

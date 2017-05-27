@@ -1,3 +1,15 @@
+commit 76d1c5a87d1aa32b22828a89d503ec4ac9817bba
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 27 07:33:22 2017 -0400
+
+    Added class for ultrasonics
+
+:100644 100644 720d535... aa0eab8... M	cpls/include/sensors.hpp
+:100644 100644 a41f8d7... f3ccbbc... M	cpls/src/sensors.cpp
+:100644 100644 0a67d9f... 701f7f5... M	docs/index.html
+:100644 100644 1dab1f9... 57d4b04... M	docs/log.json
+:100644 100644 2d54741... 85e2228... M	docs/log.txt
+
 commit 42620000dab121220e5be649854a44cb44b15e41
 Author: iuyte <iuyte@gmail.com>
 Date:   Tue May 23 01:02:26 2017 -0400
