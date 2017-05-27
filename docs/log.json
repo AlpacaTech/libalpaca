@@ -1,6 +1,36 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "3b0397b3396f3ca115306ffd5dbaa5be6ca8eaa2",
+        "date": "  Sat May 27 15:28:54 2017 -0400",
+        "description": "made code runnable, added to autonomous",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "compile.sh",
+            "cpls/bin/auto.o",
+            "cpls/bin/output.bin",
+            "cpls/bin/output.elf",
+            "cpls/bin/sensors.o",
+            "cpls/include/sensors.hpp",
+            "cpls/src/auto.cpp",
+            "cpls/src/sensors.cpp",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt",
+            "miniRerun/bin/auto.o",
+            "miniRerun/bin/drive.o",
+            "miniRerun/bin/init.o",
+            "miniRerun/bin/opcontrol.o",
+            "miniRerun/bin/output.bin",
+            "miniRerun/bin/output.elf",
+            "miniRerun/bin/pid.o",
+            "miniRerun/bin/rerun.o",
+            "miniRerun/bin/sensors.o"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "79f4d3b5cc8386e7b32fda2ff67380cf0bd2da33",
         "date": "  Sat May 27 15:16:41 2017 -0400",
         "description": "fixed compile.py",

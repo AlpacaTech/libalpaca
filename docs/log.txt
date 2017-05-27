@@ -1,3 +1,30 @@
+commit 3b0397b3396f3ca115306ffd5dbaa5be6ca8eaa2
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 27 15:28:54 2017 -0400
+
+    made code runnable, added to autonomous
+
+:100755 100755 8d75a2d... 2ff536e... M	compile.sh
+:100644 100644 3abf173... d03c407... M	cpls/bin/auto.o
+:100755 100755 b9b3cb3... 056e18c... M	cpls/bin/output.bin
+:100755 100755 3a85ebd... 6e9801c... M	cpls/bin/output.elf
+:100644 100644 213498e... 465c24b... M	cpls/bin/sensors.o
+:100644 100644 aa0eab8... 2c9716d... M	cpls/include/sensors.hpp
+:100644 100644 c7dc323... 6c463ec... M	cpls/src/auto.cpp
+:100644 100644 f3ccbbc... 86433a7... M	cpls/src/sensors.cpp
+:100644 100644 7e94dd0... e970ec9... M	docs/index.html
+:100644 100644 48cc87a... 90286f9... M	docs/log.json
+:100644 100644 674d6cc... 2bc6731... M	docs/log.txt
+:100644 100644 65c17cd... 8b02631... M	miniRerun/bin/auto.o
+:100644 100644 8131cfd... 5647328... M	miniRerun/bin/drive.o
+:100644 100644 e51b5ea... d1631a3... M	miniRerun/bin/init.o
+:100644 100644 bb5608f... 73ba874... M	miniRerun/bin/opcontrol.o
+:100755 100755 0e7d42a... e449d61... M	miniRerun/bin/output.bin
+:100755 100755 ec179a3... a9d7a19... M	miniRerun/bin/output.elf
+:100644 100644 138114d... 1763354... M	miniRerun/bin/pid.o
+:100644 100644 45ff99f... 51d5b21... M	miniRerun/bin/rerun.o
+:100644 100644 5be7822... 2224d38... M	miniRerun/bin/sensors.o
+
 commit 79f4d3b5cc8386e7b32fda2ff67380cf0bd2da33
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 27 15:16:41 2017 -0400
