@@ -1,3 +1,19 @@
+commit 42620000dab121220e5be649854a44cb44b15e41
+Author: iuyte <iuyte@gmail.com>
+Date:   Tue May 23 01:02:26 2017 -0400
+
+    slewing fix and actually enabling it in init.cpp
+
+:100644 100644 73aac6f... 125f8e1... M	cpls/bin/init.o
+:100755 100755 845e671... b41a147... M	cpls/bin/output.bin
+:100755 100755 e9fc06b... 0dfa9f6... M	cpls/bin/output.elf
+:100644 100644 d4d6773... 481c448... M	cpls/bin/sensors.o
+:100644 100644 92886b5... bdf774e... M	cpls/include/motors.hpp
+:100644 100644 b63dad3... 4b92229... M	cpls/src/init.cpp
+:100644 100644 3b1197a... 0a67d9f... M	docs/index.html
+:100644 100644 8ba8d29... 1dab1f9... M	docs/log.json
+:100644 100644 6bb3449... 2d54741... M	docs/log.txt
+
 commit 91666d0d582b3f1c99d5b9a303c94064a114df61
 Author: iuyte <iuyte@gmail.com>
 Date:   Tue May 23 01:01:40 2017 -0400

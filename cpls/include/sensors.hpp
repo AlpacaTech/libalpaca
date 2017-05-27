@@ -37,6 +37,13 @@ struct pot_t {
   void init(void);
   pot_t(unsigned char _port, bool _inverted);
 };
+struct sonic_t {
+  Ultrasonic sonic;
+  unsigned char ports[2];
+  long value(void);
+  void init(void);
+  sonic_t(unsigned char port1, unsigned char port2);
+};
 struct button_t {
   unsigned char port;
   bool inverted;
@@ -51,5 +58,6 @@ extern quad_t left;
 extern quad_t right;
 extern gyro_t gyro;
 extern pot_t pot;
+extern sonic_t sonic;
 extern button_t button;
 }

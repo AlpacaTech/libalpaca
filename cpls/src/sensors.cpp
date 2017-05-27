@@ -7,6 +7,7 @@ quad_t right(3, 4, false);
 gyro_t gyro(1, 198);
 pot_t pot(2, false);
 button_t button(5, false);
+sonic_t sonic(6, 7);
 
 quad_t::quad_t(unsigned char port1, unsigned char port2, bool _inverted) {
   ports[0] = port1;
@@ -52,6 +53,15 @@ void pot_t::reset(void) {
   request = 0;
 }
 
+sonic_t::sonic_t(unsigned char port1, unsigned char port2) {
+  ports[0] = port1;
+  ports[1] = port2;
+}
+void sonic_t::init(void) {
+  sonic = ultrasonicInit(sonic_t::ports[0], sonic_t::ports[1]);
+}
+long sonic_t::value(void) { return ultrasonicGet(sonic); }
+
 button_t::button_t(unsigned char _port, bool _inverted) {
   port = _port;
   inverted = _inverted;
@@ -67,6 +77,7 @@ void init(void) {
   right.init();
   gyro.init();
   pot.init();
+  sonic.init();
   button.init();
 }
 

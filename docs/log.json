@@ -1,6 +1,25 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "42620000dab121220e5be649854a44cb44b15e41",
+        "date": "  Tue May 23 01:02:26 2017 -0400",
+        "description": "slewing fix and actually enabling it in init.cpp",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/bin/init.o",
+            "cpls/bin/output.bin",
+            "cpls/bin/output.elf",
+            "cpls/bin/sensors.o",
+            "cpls/include/motors.hpp",
+            "cpls/src/init.cpp",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "91666d0d582b3f1c99d5b9a303c94064a114df61",
         "date": "  Tue May 23 01:01:40 2017 -0400",
         "description": "More sensor classes",
