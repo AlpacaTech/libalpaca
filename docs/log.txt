@@ -1,3 +1,14 @@
+commit 763e1053099ae354a8ae936975b3d8140ccc7d17
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 27 20:17:05 2017 -0400
+
+    Deleted odd file from beautification script error
+
+:100644 000000 e69de29... 0000000... D	cpls/include/.atom-beautify.motors.hpp
+:100644 100644 a5e4027... d5c2235... M	docs/index.html
+:100644 100644 4c64157... 201a1cc... M	docs/log.json
+:100644 100644 ef13490... 57a61b5... M	docs/log.txt
+
 commit 11c20785e5a72e729e541ea92f2ec137c5680bf9
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 27 20:13:17 2017 -0400

@@ -1,6 +1,21 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "763e1053099ae354a8ae936975b3d8140ccc7d17",
+        "date": "  Sat May 27 20:17:05 2017 -0400",
+        "description": "Deleted odd file from beautification script error",
+        "filesAdded": [],
+        "filesDeleted": [
+            "cpls/include/.atom-beautify.motors.hpp"
+        ],
+        "filesModified": [
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "11c20785e5a72e729e541ea92f2ec137c5680bf9",
         "date": "  Sat May 27 20:13:17 2017 -0400",
         "description": "Fixed bad practice",
