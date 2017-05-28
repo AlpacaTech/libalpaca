@@ -47,6 +47,31 @@ void tank(void) {
                (rj == 0) ? right.sensor->request : right.sensor->value());
 }
 
+namespace accel {
+long x = 0;
+long y = 0;
+long prevX = 0;
+long prevY = 0;
+void drive(void) {
+  prevX = x;
+  prevY = y;
+  x = 0 - joystickGetAnalog(1, ACCEL_X);
+  y = 0 - joystickGetAnalog(1, ACCEL_Y);
+  int threshold = 20;
+  int multiplier = 1.1;
+
+  if (abs(x) < threshold)
+    x = 0;
+  if (abs(y) < threshold)
+    y = 0;
+
+  x *= multiplier;
+  y *= (multiplier * 1.25);
+
+  set(x - y, x + y);
+}
+}
+
 void inches(long inches) {
   pid::enable();
   left.sensor->request += inches * inch;

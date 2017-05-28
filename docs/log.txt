@@ -1,3 +1,14 @@
+commit 8727970b7682ebbdf1f81fc1f4f1ef891718065d
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun May 28 17:35:03 2017 -0400
+
+    added license
+
+:000000 100644 0000000... b7de6e1... A	LICENSE
+:100644 100644 d5c2235... 995b14f... M	docs/index.html
+:100644 100644 201a1cc... ba61e91... M	docs/log.json
+:100644 100644 57a61b5... 8fc1075... M	docs/log.txt
+
 commit 763e1053099ae354a8ae936975b3d8140ccc7d17
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 27 20:17:05 2017 -0400

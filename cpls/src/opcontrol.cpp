@@ -1,4 +1,5 @@
 #include "main.h"
+static const bool tank = true;
 
 void operatorControl() {
   sensors::reset();
@@ -6,7 +7,11 @@ void operatorControl() {
     rerun::record();
 
   while (true) {
-    drive::tank();
+    if (tank) {
+      drive::tank();
+    } else {
+      drive::accel::drive();
+    }
     debug::debug();
     delay(50);
   }

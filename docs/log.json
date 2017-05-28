@@ -1,6 +1,21 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "8727970b7682ebbdf1f81fc1f4f1ef891718065d",
+        "date": "  Sun May 28 17:35:03 2017 -0400",
+        "description": "added license",
+        "filesAdded": [
+            "LICENSE"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "763e1053099ae354a8ae936975b3d8140ccc7d17",
         "date": "  Sat May 27 20:17:05 2017 -0400",
         "description": "Deleted odd file from beautification script error",
