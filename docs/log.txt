@@ -1,3 +1,22 @@
+commit 4803fd41216658a77c013396da55078223487f48
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 27 20:07:01 2017 -0400
+
+    Finally got slewing working
+
+:100644 100644 a980ddf... 7a1bb1d... M	cpls/bin/drive.o
+:100644 100644 125f8e1... 859d6ef... M	cpls/bin/init.o
+:100644 100644 865bf2d... 58e6c53... M	cpls/bin/motors.o
+:100755 100755 056e18c... 427cdbc... M	cpls/bin/output.bin
+:100755 100755 6e9801c... 83dcc68... M	cpls/bin/output.elf
+:100644 100644 bdf774e... efa8b53... M	cpls/include/motors.hpp
+:100644 100644 add6782... 6637e35... M	cpls/src/drive.cpp
+:100644 100644 4b92229... 04e75f7... M	cpls/src/init.cpp
+:100644 100644 b6c6c64... ef668a5... M	cpls/src/motors.cpp
+:100644 100644 3f5bb3a... 9b811ea... M	docs/index.html
+:100644 100644 d8b5c14... b669a6e... M	docs/log.json
+:100644 100644 e24c864... 7bab6d6... M	docs/log.txt
+
 commit 842d2831621a447128e6b9a5d1f91c622adcd54f
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 27 15:51:42 2017 -0400

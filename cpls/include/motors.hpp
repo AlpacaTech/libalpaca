@@ -16,6 +16,7 @@ void set(motor_t motor, int power);
 int get(motor_t motor);
 motor_t init(unsigned char port, int inverted, float slewRate, float scale);
 namespace slew {
+static const unsigned char slewWait = 10;
 extern motor_t list[11];
 extern TaskHandle handle;
 void init(void);

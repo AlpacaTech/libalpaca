@@ -1,6 +1,28 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "4803fd41216658a77c013396da55078223487f48",
+        "date": "  Sat May 27 20:07:01 2017 -0400",
+        "description": "Finally got slewing working",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/bin/drive.o",
+            "cpls/bin/init.o",
+            "cpls/bin/motors.o",
+            "cpls/bin/output.bin",
+            "cpls/bin/output.elf",
+            "cpls/include/motors.hpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/init.cpp",
+            "cpls/src/motors.cpp",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "842d2831621a447128e6b9a5d1f91c622adcd54f",
         "date": "  Sat May 27 15:51:42 2017 -0400",
         "description": "removed unnecessary files",

@@ -25,7 +25,6 @@ motor_t list[11];
 TaskHandle handle;
 
 void _slew(void *none) {
-#define slewWait 10
   unsigned long int current;
   while (true) {
     current = millis();
