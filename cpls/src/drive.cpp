@@ -12,12 +12,12 @@ void side_t::set(int power) {
 }
 
 void init(void) {
-  left.topM = motors::init(2, 1, 127, .8);
-  left.midM = motors::init(3, -1, 127, .8);
-  left.lowM = motors::init(4, 1, 127, .8);
-  right.topM = motors::init(7, -1, 127, .8);
-  right.midM = motors::init(8, 1, 127, .8);
-  right.lowM = motors::init(9, -1, 127, .8);
+  left.topM = motors::init(2, 1, .5, .8);
+  left.midM = motors::init(3, -1, .5, .8);
+  left.lowM = motors::init(4, 1, .5, .8);
+  right.topM = motors::init(7, -1, .5, .8);
+  right.midM = motors::init(8, 1, .5, .8);
+  right.lowM = motors::init(9, -1, .5, .8);
   left.sensor = &sensors::left;
   right.sensor = &sensors::right;
 }
@@ -32,8 +32,7 @@ void tank(void) {
   int lj = joystickGetAnalog(1, 3);
   int rj = joystickGetAnalog(1, 2);
   if (abs(lj) < deadband && abs(rj) < deadband) {
-    pid::enabled[0] = true;
-    pid::enabled[1] = true;
+    pid::enable();
     return;
   }
   lj = (abs(lj) < deadband) ? 0 : lj;
@@ -53,5 +52,6 @@ void inches(long inches) {
   left.sensor->request += inches * inch;
   right.sensor->request += inches * inch;
   pid::wait(pid::default_precision, inches * inches * 8);
+  pid::disable();
 }
 }

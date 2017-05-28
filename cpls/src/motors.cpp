@@ -10,7 +10,7 @@ void set(motor_t motor, int power) { motor.set(power); }
 
 int get(motor_t motor) { return motorGet(motor.port); }
 
-motor_t init(unsigned char port, int inverted, long slewRate, float scale) {
+motor_t init(unsigned char port, int inverted, float slewRate, float scale) {
   motor_t motor;
   motor.port = port;
   motor.inverted = inverted;
@@ -25,16 +25,16 @@ motor_t list[11];
 TaskHandle handle;
 
 void _slew(void *none) {
+#define slewWait 10
   unsigned long int current;
   while (true) {
     current = millis();
     for (size_t i = 1; i <= 11; i++) {
-      if (current - list[i].tlast < list[i].slewRate) {
-        continue;
-      }
-      motorSet(list[i].port, list[i].power);
+      motorSet(i, (int)(((list[i].power - motorGet(i)) * list[i].slewRate) +
+                        (current - list[i].tlast - slewWait) + motorGet(i)));
       list[i].tlast = current;
     }
+    delay(slewWait);
   }
 }
 
@@ -44,8 +44,8 @@ void init(void) {
   default_motor.slewRate = 1;
   default_motor.scale = 0;
   for (size_t i = 1; i <= 11; i++) {
-    default_motor.port = i;
     list[i] = default_motor;
+    default_motor.port = i;
   }
   handle = taskCreate(&_slew, TASK_DEFAULT_STACK_SIZE, NULL,
                       TASK_PRIORITY_DEFAULT + 1);

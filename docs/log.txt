@@ -1,3 +1,15 @@
+commit 842d2831621a447128e6b9a5d1f91c622adcd54f
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 27 15:51:42 2017 -0400
+
+    removed unnecessary files
+
+:100644 000000 d74801f... 0000000... D	commit.py
+:100644 100644 e970ec9... 3f5bb3a... M	docs/index.html
+:100644 100644 90286f9... d8b5c14... M	docs/log.json
+:100644 100644 2bc6731... e24c864... M	docs/log.txt
+:100644 000000 812c954... 0000000... D	projects.txt
+
 commit 3b0397b3396f3ca115306ffd5dbaa5be6ca8eaa2
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 27 15:28:54 2017 -0400

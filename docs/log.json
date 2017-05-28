@@ -1,6 +1,22 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "842d2831621a447128e6b9a5d1f91c622adcd54f",
+        "date": "  Sat May 27 15:51:42 2017 -0400",
+        "description": "removed unnecessary files",
+        "filesAdded": [],
+        "filesDeleted": [
+            "commit.py",
+            "projects.txt"
+        ],
+        "filesModified": [
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "3b0397b3396f3ca115306ffd5dbaa5be6ca8eaa2",
         "date": "  Sat May 27 15:28:54 2017 -0400",
         "description": "made code runnable, added to autonomous",
