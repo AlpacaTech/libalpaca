@@ -1,6 +1,23 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "11c20785e5a72e729e541ea92f2ec137c5680bf9",
+        "date": "  Sat May 27 20:13:17 2017 -0400",
+        "description": "Fixed bad practice",
+        "filesAdded": [
+            "cpls/include/.atom-beautify.motors.hpp"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/motors.hpp",
+            "cpls/src/motors.cpp",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "4803fd41216658a77c013396da55078223487f48",
         "date": "  Sat May 27 20:07:01 2017 -0400",
         "description": "Finally got slewing working",

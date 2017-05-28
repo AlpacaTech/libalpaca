@@ -1,3 +1,16 @@
+commit 11c20785e5a72e729e541ea92f2ec137c5680bf9
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat May 27 20:13:17 2017 -0400
+
+    Fixed bad practice
+
+:000000 100644 0000000... e69de29... A	cpls/include/.atom-beautify.motors.hpp
+:100644 100644 efa8b53... ae2e0b1... M	cpls/include/motors.hpp
+:100644 100644 ef668a5... e5566dc... M	cpls/src/motors.cpp
+:100644 100644 9b811ea... a5e4027... M	docs/index.html
+:100644 100644 b669a6e... 4c64157... M	docs/log.json
+:100644 100644 7bab6d6... ef13490... M	docs/log.txt
+
 commit 4803fd41216658a77c013396da55078223487f48
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat May 27 20:07:01 2017 -0400
