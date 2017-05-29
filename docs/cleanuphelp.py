@@ -3,107 +3,24 @@ from commit import Commit, printCommit, saveList
 
 year = "2018"
 
-style = """<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<style>
-    .body {
-        align: center;
-        background-color: #bfbfdf;
-        width: 100%;
-        margin: 0px;
-        font-family: 'Open Sans', sans-serif;
-    }
+style = ""
+with open("style.css", mode="r") as stylefyle:
+	style = stylefyle.read()
+	
+script = ""
+with open("main.js", mode="r") as scriptfile:
+	script = scriptfile.read()
 
-    .link {
-       color: black;
-       text-decoration: none;
-       word-wrap: break-word;
-    }
-
-    .link:visited {
-       color: black;
-       text-decoration: none;
-       cursor: auto;
-    }
-
-    .link:hover {
-       color: #0000EE;
-       text-decoration: underline;
-       cursor: pointer;
-    }
-
-    .commit {
-        background-color: #efefef;
-        width: 50%;
-        align: center;
-        align-self: center;
-        align-content: center;
-        align-items: center;
-        border-color: #454585;
-        border-style: groove inset;
-        border-radius: 25px;
-        padding: 20px;
-        margin-left: 25%;
-        margin-right: 25%;
-        box-shadow: 10px 10px 5px #777777;
-    }
-
-    .em {
-        cursor: pointer;
-    }
-
-    .spacer {
-        height: 5%;
-    }
-
-    .bcon {
-       width: 8%;
-    }
-
-    .browse {
-       background-color: #454585;
-       color: white;
-       border: 2px solid #454585;
-       border-radius: 4px;
-       position: absolute;
-       right: 25%;
-       display: none;
-    }
-
-    .browse:hover {
-       background-color: #bfbfdf;
-       border-color: #9d9dbf;
-       color: black;
-    }
-
-    h1 {
-       font-size: 275%;
-    }
-
-    h2 {
-       font-size: 170%;
-    }
-
-    .centered {
-       text-align: center;
-    }
-
-</style>
+commitTemp =\
 """
-script="""
-<script>
-    window.onload = function() {
-       if (window.location.href[0] == "f") {
-           var elements = document.querySelectorAll('h1');
-            for(var i=0; i<elements.length; i++){
-                elements[i].style.font-size = "188%";
-            }
-            elements = document.querySelectorAll('h2');
-            for(var ii=0; i<elements.length; i++){
-                elements[i].style.font-size = "117%";
-            }
-       }
-    }
-</script>
+<div class='commit' id='{1}'>
+<p><b style='cursor: pointer;' onclick='window.open(\"https://github.com/iuyte/VEX-709S-{2}/commit/{3}\")'>Commit:</b> <a class='link' href='https://iuyte.github.io/VEX-709S-{2}#{3}'>{3}</a></p>
+<p><b>Date:</b> {4}</p>
+<p><b>Author:</b> {5}</p>
+<p><b>Description:</b><br>{6}</p>
+<b>Files added:</b>
+<ul>
+
 """
 
 def indexInStr(index, string):

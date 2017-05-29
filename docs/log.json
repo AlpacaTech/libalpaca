@@ -1,6 +1,21 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "56fe16f613509762b984328b03f6f4561e23d3ae",
+        "date": "  Sun May 28 20:05:47 2017 -0400",
+        "description": "Fixed minor logical optimization and removed unnecessary include",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/sensors.hpp",
+            "cpls/src/opcontrol.cpp",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "99417e376e0be846904cb0f59630aae89b425db4",
         "date": "  Sun May 28 18:03:27 2017 -0400",
         "description": "added ability to use accelerometers in joysticks to drive",

@@ -1,3 +1,15 @@
+commit 56fe16f613509762b984328b03f6f4561e23d3ae
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun May 28 20:05:47 2017 -0400
+
+    Fixed minor logical optimization and removed unnecessary include
+
+:100644 100644 2c9716d... b1d4a26... M	cpls/include/sensors.hpp
+:100644 100644 84fd966... 9653e00... M	cpls/src/opcontrol.cpp
+:100644 100644 45d0027... 3a47248... M	docs/index.html
+:100644 100644 083e9b5... e4cad05... M	docs/log.json
+:100644 100644 611dca9... 7394817... M	docs/log.txt
+
 commit 99417e376e0be846904cb0f59630aae89b425db4
 Author: iuyte <iuyte@gmail.com>
 Date:   Sun May 28 18:03:27 2017 -0400
