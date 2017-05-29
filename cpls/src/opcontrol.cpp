@@ -9,7 +9,7 @@ void operatorControl() {
   while (true) {
     if (tank) {
       drive::tank();
-    } else {
+    } else if (!tank) {
       drive::accel::drive();
     }
     debug::debug();

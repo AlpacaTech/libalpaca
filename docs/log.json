@@ -1,6 +1,25 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "99417e376e0be846904cb0f59630aae89b425db4",
+        "date": "  Sun May 28 18:03:27 2017 -0400",
+        "description": "added ability to use accelerometers in joysticks to drive",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/bin/drive.o",
+            "cpls/bin/output.bin",
+            "cpls/bin/output.elf",
+            "cpls/include/drive.hpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/opcontrol.cpp",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "8727970b7682ebbdf1f81fc1f4f1ef891718065d",
         "date": "  Sun May 28 17:35:03 2017 -0400",
         "description": "added license",

@@ -1,6 +1,5 @@
 #pragma once
 #include <API.h>
-#include <vector>
 
 namespace sensors {
 struct quad_t {

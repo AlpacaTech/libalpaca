@@ -1,3 +1,19 @@
+commit 99417e376e0be846904cb0f59630aae89b425db4
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun May 28 18:03:27 2017 -0400
+
+    added ability to use accelerometers in joysticks to drive
+
+:100644 100644 7a1bb1d... e0bfc93... M	cpls/bin/drive.o
+:100755 100755 427cdbc... e4e2369... M	cpls/bin/output.bin
+:100755 100755 83dcc68... 44b5a18... M	cpls/bin/output.elf
+:100644 100644 3ccf0cc... 3f4d612... M	cpls/include/drive.hpp
+:100644 100644 6637e35... 428e38b... M	cpls/src/drive.cpp
+:100644 100644 7aed0df... 84fd966... M	cpls/src/opcontrol.cpp
+:100644 100644 995b14f... 45d0027... M	docs/index.html
+:100644 100644 ba61e91... 083e9b5... M	docs/log.json
+:100644 100644 8fc1075... 611dca9... M	docs/log.txt
+
 commit 8727970b7682ebbdf1f81fc1f4f1ef891718065d
 Author: iuyte <iuyte@gmail.com>
 Date:   Sun May 28 17:35:03 2017 -0400
