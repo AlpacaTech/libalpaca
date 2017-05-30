@@ -1,4 +1,4 @@
-#include "debug.hpp"
+#include "../include/debug.hpp"
 
 namespace debug {
 uint32_t fault = 0;

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "../include/main.h"
 
 extern "C" {
 void __libc_init_array();

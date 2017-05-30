@@ -1,4 +1,4 @@
-#include "main.h"
+#include "../include/main.h"
 
 namespace drive {
 side_t left;

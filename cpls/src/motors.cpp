@@ -1,4 +1,4 @@
-#include "motors.hpp"
+#include "../include/motors.hpp"
 
 void motor_t::set(int _power) {
   power = _power * inverted * scale;
@@ -28,7 +28,7 @@ void _slew(void *none) {
   unsigned long int current;
   while (true) {
     current = millis();
-    for (size_t i = 1; i <= 11; i++) {
+    for (size_t i = 1; i <= 10; i++) {
       motorSet(i, (int)(((list[i].power - motorGet(i)) * list[i].slewRate) +
                         (current - list[i].tlast - slewWait) + motorGet(i)));
       list[i].tlast = current;

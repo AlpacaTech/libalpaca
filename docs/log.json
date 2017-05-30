@@ -1,6 +1,31 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "76ef13d5dd85d656a4862c58e2f6f8e8360f97ba",
+        "date": "  Sun May 28 20:29:42 2017 -0400",
+        "description": "reorganized commiting scripts, system, files",
+        "filesAdded": [
+            "docs/main.js",
+            "docs/style.css",
+            "tools/commit.sh",
+            "tools/compile.py",
+            "tools/compile.sh"
+        ],
+        "filesDeleted": [
+            "commit.sh",
+            "compile.py",
+            "compile.sh"
+        ],
+        "filesModified": [
+            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
+            "docs/cleanuphelp.py",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "56fe16f613509762b984328b03f6f4561e23d3ae",
         "date": "  Sun May 28 20:05:47 2017 -0400",
         "description": "Fixed minor logical optimization and removed unnecessary include",

@@ -1,3 +1,23 @@
+commit 76ef13d5dd85d656a4862c58e2f6f8e8360f97ba
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun May 28 20:29:42 2017 -0400
+
+    reorganized commiting scripts, system, files
+
+:100755 000000 2f00f38... 0000000... D	commit.sh
+:100755 000000 08e028e... 0000000... D	compile.py
+:100755 000000 2ff536e... 0000000... D	compile.sh
+:100644 100644 9a9a538... af94214... M	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:100644 100644 9b3b277... c109401... M	docs/cleanuphelp.py
+:100644 100644 3a47248... 31ee94b... M	docs/index.html
+:100644 100644 e4cad05... 11aa1fa... M	docs/log.json
+:100644 100644 7394817... 52dd5e4... M	docs/log.txt
+:000000 100644 0000000... b005919... A	docs/main.js
+:000000 100644 0000000... 3b90f50... A	docs/style.css
+:000000 100755 0000000... 2f00f38... A	tools/commit.sh
+:000000 100755 0000000... 08e028e... A	tools/compile.py
+:000000 100755 0000000... 2ff536e... A	tools/compile.sh
+
 commit 56fe16f613509762b984328b03f6f4561e23d3ae
 Author: iuyte <iuyte@gmail.com>
 Date:   Sun May 28 20:05:47 2017 -0400
