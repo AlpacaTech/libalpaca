@@ -1,6 +1,33 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "ce0c7b71920fb8e8e527e35dc12102fdb0362f89",
+        "date": "  Tue May 30 19:07:07 2017 -0400",
+        "description": "Changes include *.hpp to include ../include/*.hpp, also fixed extra iteration of slewing loop",
+        "filesAdded": [
+            "cpls/src/.debug.cpp.swp"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/bin/motors.o",
+            "cpls/bin/output.bin",
+            "cpls/bin/output.elf",
+            "cpls/src/auto.cpp",
+            "cpls/src/debug.cpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/init.cpp",
+            "cpls/src/motors.cpp",
+            "cpls/src/opcontrol.cpp",
+            "cpls/src/pid.cpp",
+            "cpls/src/rerun.cpp",
+            "cpls/src/sensors.cpp",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "76ef13d5dd85d656a4862c58e2f6f8e8360f97ba",
         "date": "  Sun May 28 20:29:42 2017 -0400",
         "description": "reorganized commiting scripts, system, files",

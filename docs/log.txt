@@ -1,3 +1,26 @@
+commit ce0c7b71920fb8e8e527e35dc12102fdb0362f89
+Author: iuyte <iuyte@gmail.com>
+Date:   Tue May 30 19:07:07 2017 -0400
+
+    Changes include *.hpp to include ../include/*.hpp, also fixed extra iteration of slewing loop
+
+:100644 100644 58e6c53... 7af36ae... M	cpls/bin/motors.o
+:100755 100755 e4e2369... 64159d4... M	cpls/bin/output.bin
+:100755 100755 44b5a18... 6b369b1... M	cpls/bin/output.elf
+:000000 100644 0000000... c26ace2... A	cpls/src/.debug.cpp.swp
+:100644 100644 6c463ec... 19f9f8b... M	cpls/src/auto.cpp
+:100644 100644 cdbbde5... 6873ef3... M	cpls/src/debug.cpp
+:100644 100644 428e38b... 81a42d8... M	cpls/src/drive.cpp
+:100644 100644 04e75f7... 50a0082... M	cpls/src/init.cpp
+:100644 100644 e5566dc... 150b8b8... M	cpls/src/motors.cpp
+:100644 100644 9653e00... a8e528e... M	cpls/src/opcontrol.cpp
+:100644 100644 cee9de8... 9044e8d... M	cpls/src/pid.cpp
+:100644 100644 0534b1f... f48d3cc... M	cpls/src/rerun.cpp
+:100644 100644 86433a7... 260c146... M	cpls/src/sensors.cpp
+:100644 100644 31ee94b... 6b0924d... M	docs/index.html
+:100644 100644 11aa1fa... 1e20bd2... M	docs/log.json
+:100644 100644 52dd5e4... feafe30... M	docs/log.txt
+
 commit 76ef13d5dd85d656a4862c58e2f6f8e8360f97ba
 Author: iuyte <iuyte@gmail.com>
 Date:   Sun May 28 20:29:42 2017 -0400
