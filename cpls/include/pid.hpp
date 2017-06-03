@@ -2,8 +2,8 @@
 #include "drive.hpp"
 
 namespace pid {
-static const int DRIVE_MAX = 127;
-static const int DRIVE_MIN = -127;
+static const int DRIVE_MAX      = 127;
+static const int DRIVE_MIN      = -127;
 static const int INTEGRAL_LIMIT = 50;
 extern float Kp;
 extern float Ki;
@@ -12,7 +12,7 @@ extern unsigned int default_precision;
 extern bool enabled[2];
 void enable(void);
 void disable(void);
-void controller(void *none);
+void controller(void* none);
 void init(void);
 void stop(void);
 void go(void);

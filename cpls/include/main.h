@@ -47,8 +47,8 @@
 // practice
 #define MAIN_H_
 
-#include "debug.hpp"
 #include <API.h>
+#include "debug.hpp"
 
 // Allow usage of this file in C++ programs
 #ifdef __cplusplus

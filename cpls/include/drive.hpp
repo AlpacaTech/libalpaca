@@ -8,7 +8,7 @@ struct side_t {
   motor_t midM;
   motor_t lowM;
   void set(int power);
-  sensors::quad_t *sensor;
+  sensors::quad_t* sensor;
 };
 extern double inch;
 extern side_t left;

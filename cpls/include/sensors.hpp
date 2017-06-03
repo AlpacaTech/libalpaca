@@ -16,7 +16,7 @@ struct quad_t {
 class gyro_t {
   int calibration;
 
-public:
+ public:
   Gyro gyro;
   unsigned char port;
   long zero;

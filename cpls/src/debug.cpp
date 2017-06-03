@@ -3,7 +3,7 @@
 namespace debug {
 uint32_t fault = 0;
 void debug(void) {
-  PROS_FILE *fd = fopen("FAULT_PC", "r");
+  PROS_FILE* fd = fopen("FAULT_PC", "r");
   if (fd) {
     fault = unserialize<uint32_t>(fd);
     if (!fault) {

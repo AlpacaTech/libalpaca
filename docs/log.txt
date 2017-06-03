@@ -1,3 +1,14 @@
+commit 5c38955616284fbf8d6abdd1db84729ef6f984a3
+Author: iuyte <iuyte@gmail.com>
+Date:   Thu Jun 1 20:25:54 2017 -0400
+
+    deleted odd file
+
+:100644 000000 c26ace2... 0000000... D	cpls/src/.debug.cpp.swp
+:100644 100644 6b0924d... b4cf963... M	docs/index.html
+:100644 100644 1e20bd2... 39dd3f9... M	docs/log.json
+:100644 100644 feafe30... 88c7302... M	docs/log.txt
+
 commit ce0c7b71920fb8e8e527e35dc12102fdb0362f89
 Author: iuyte <iuyte@gmail.com>
 Date:   Tue May 30 19:07:07 2017 -0400

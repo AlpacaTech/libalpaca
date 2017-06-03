@@ -1,6 +1,21 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "5c38955616284fbf8d6abdd1db84729ef6f984a3",
+        "date": "  Thu Jun 1 20:25:54 2017 -0400",
+        "description": "deleted odd file",
+        "filesAdded": [],
+        "filesDeleted": [
+            "cpls/src/.debug.cpp.swp"
+        ],
+        "filesModified": [
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "ce0c7b71920fb8e8e527e35dc12102fdb0362f89",
         "date": "  Tue May 30 19:07:07 2017 -0400",
         "description": "Changes include *.hpp to include ../include/*.hpp, also fixed extra iteration of slewing loop",

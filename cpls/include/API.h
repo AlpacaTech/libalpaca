@@ -153,7 +153,7 @@ unsigned int powerLevelMain();
  * @param name a string containing the team name; only the first eight
  * characters will be shown
  */
-void setTeamName(const char *name);
+void setTeamName(const char* name);
 
 // -------------------- Pin control functions --------------------
 
@@ -528,7 +528,7 @@ void speakerInit();
  *
  * @param songs an array of up to three (3) RTTTL songs as string values to play
  */
-void speakerPlayArray(const char **songs);
+void speakerPlayArray(const char** songs);
 /**
  * Plays an RTTTL (Ring Tone Text Transfer Language) song over the VEX speaker.
  * Many simple
@@ -546,7 +546,7 @@ void speakerPlayArray(const char **songs);
  *
  * @param song the RTTTL song as a string value to play
  */
-void speakerPlayRtttl(const char *song);
+void speakerPlayRtttl(const char* song);
 /**
  * Powers down and disables the VEX speaker.
  *
@@ -619,7 +619,7 @@ unsigned int imeInitializeAll();
  * *value is valid;
  * false otherwise
  */
-bool imeGet(unsigned char address, int *value);
+bool imeGet(unsigned char address, int* value);
 /**
  * Gets the current rotational velocity of the specified IME.
  *
@@ -650,7 +650,7 @@ bool imeGet(unsigned char address, int *value);
  * *value is valid;
  * false otherwise
  */
-bool imeGetVelocity(unsigned char address, int *value);
+bool imeGetVelocity(unsigned char address, int* value);
 /**
  * Resets the specified IME's counters to zero.
  *
@@ -679,7 +679,7 @@ void imeShutdown();
  * this is a
  * pointer type, it can be safely passed or stored by value.
  */
-typedef void *Gyro;
+typedef void* Gyro;
 
 /**
  * Gets the current gyro angle in degrees, rounded to the nearest degree.
@@ -748,7 +748,7 @@ void gyroShutdown(Gyro gyro);
  * as this is a
  * pointer type, it can be safely passed or stored by value.
  */
-typedef void *Encoder;
+typedef void* Encoder;
 /**
  * Gets the number of ticks recorded by the encoder.
  *
@@ -805,7 +805,7 @@ void encoderShutdown(Encoder enc);
  * memory; as this is a
  * pointer type, it can be safely passed or stored by value.
  */
-typedef void *Ultrasonic;
+typedef void* Ultrasonic;
 /**
  * Gets the current ultrasonic sensor value in centimeters.
  *
@@ -863,7 +863,7 @@ void ultrasonicShutdown(Ultrasonic ult);
  * usefulness. Consider i2cReadRegister instead for the vast majority of
  * applications.
  */
-bool i2cRead(uint8_t addr, uint8_t *data, uint16_t count);
+bool i2cRead(uint8_t addr, uint8_t* data, uint16_t count);
 /**
  * i2cReadRegister - Reads the specified amount of data from the given register
  * address on
@@ -882,7 +882,7 @@ bool i2cRead(uint8_t addr, uint8_t *data, uint16_t count);
  * to improve code
  * reliability, even if a few intermediate values need to be thrown away.
  */
-bool i2cReadRegister(uint8_t addr, uint8_t reg, uint8_t *value, uint16_t count);
+bool i2cReadRegister(uint8_t addr, uint8_t reg, uint8_t* value, uint16_t count);
 /**
  * i2cWrite - Writes the specified number of data bytes to the specified 7-bit
  * I2C address.
@@ -902,7 +902,7 @@ bool i2cReadRegister(uint8_t addr, uint8_t reg, uint8_t *value, uint16_t count);
  * the first byte written from the data buffer should have the register address
  * to use.
  */
-bool i2cWrite(uint8_t addr, uint8_t *data, uint16_t count);
+bool i2cWrite(uint8_t addr, uint8_t* data, uint16_t count);
 /**
  * i2cWriteRegister - Writes the specified data byte to a register address on
  * the specified
@@ -981,7 +981,7 @@ typedef int PROS_FILE;
  * stop, and data
  * bits
  */
-void usartInit(PROS_FILE *usart, unsigned int baud, unsigned int flags);
+void usartInit(PROS_FILE* usart, unsigned int baud, unsigned int flags);
 /**
  * Disables the specified USART interface.
  *
@@ -993,26 +993,26 @@ void usartInit(PROS_FILE *usart, unsigned int baud, unsigned int flags);
  *
  * @param usart the port to close, either "uart1" or "uart2"
  */
-void usartShutdown(PROS_FILE *usart);
+void usartShutdown(PROS_FILE* usart);
 
 // -------------------- Character input and output --------------------
 
 /**
  * The standard output stream uses the PC debug terminal.
  */
-#define stdout ((PROS_FILE *)3)
+#define stdout ((PROS_FILE*)3)
 /**
  * The standard input stream uses the PC debug terminal.
  */
-#define stdin ((PROS_FILE *)3)
+#define stdin ((PROS_FILE*)3)
 /**
  * UART 1 on the Cortex; must be opened first using usartInit().
  */
-#define uart1 ((PROS_FILE *)1)
+#define uart1 ((PROS_FILE*)1)
 /**
  * UART 2 on the Cortex; must be opened first using usartInit().
  */
-#define uart2 ((PROS_FILE *)2)
+#define uart2 ((PROS_FILE*)2)
 
 #ifndef EOF
 /**
@@ -1053,7 +1053,7 @@ void usartShutdown(PROS_FILE *usart);
  *
  * @param stream the file descriptor to close from fopen()
  */
-void fclose(PROS_FILE *stream);
+void fclose(PROS_FILE* stream);
 /**
  * Returns the number of characters that can be read without blocking (the
  * number of
@@ -1071,7 +1071,7 @@ void fclose(PROS_FILE *stream);
  * cannot be
  * determined, returns 0
  */
-int fcount(PROS_FILE *stream);
+int fcount(PROS_FILE* stream);
 /**
  * Delete the specified file if it exists and is not currently open.
  *
@@ -1084,7 +1084,7 @@ int fcount(PROS_FILE *stream);
  * @param file the file name to erase
  * @return 0 if the file was deleted, or 1 if the file could not be found
  */
-int fdelete(const char *file);
+int fdelete(const char* file);
 /**
  * Checks to see if the specified stream is at its end. This only works for
  * communication ports
@@ -1094,7 +1094,7 @@ int fdelete(const char *file);
  * Read mode)
  * @return 0 if the stream is not at EOF, or 1 otherwise.
  */
-int feof(PROS_FILE *stream);
+int feof(PROS_FILE* stream);
 /**
  * Flushes the data on the specified file channel open in Write mode. This
  * function has no
@@ -1109,7 +1109,7 @@ int feof(PROS_FILE *stream);
  * @param stream the channel to flush (an open file in Write mode)
  * @return 0 if the data was successfully flushed, EOF otherwise
  */
-int fflush(PROS_FILE *stream);
+int fflush(PROS_FILE* stream);
 /**
  * Reads and returns one character from the specified stream, blocking until
  * complete.
@@ -1120,7 +1120,7 @@ int fflush(PROS_FILE *stream);
  * Read mode)
  * @return the next character from 0 to 255, or -1 if no character can be read
  */
-int fgetc(PROS_FILE *stream);
+int fgetc(PROS_FILE* stream);
 /**
  * Reads a string from the specified stream, storing the characters into the
  * memory at str.
@@ -1140,7 +1140,7 @@ int fgetc(PROS_FILE *stream);
  * Read mode)
  * @return str, or NULL if zero characters could be read
  */
-char *fgets(char *str, int num, PROS_FILE *stream);
+char* fgets(char* str, int num, PROS_FILE* stream);
 /**
  * Opens the given file in the specified mode. The file name is truncated to
  * eight characters.
@@ -1176,7 +1176,7 @@ char *fgets(char *str, int num, PROS_FILE *stream);
  * @return a file descriptor pointing to the new file, or NULL if the file could
  * not be opened
  */
-PROS_FILE *fopen(const char *file, const char *mode);
+PROS_FILE* fopen(const char* file, const char* mode);
 /**
  * Prints the simple string to the specified stream.
  *
@@ -1188,7 +1188,7 @@ PROS_FILE *fopen(const char *file, const char *mode);
  * @param stream the stream to write (stdout, uart1, uart2, or an open file in
  * Write mode)
  */
-void fprint(const char *string, PROS_FILE *stream);
+void fprint(const char* string, PROS_FILE* stream);
 /**
  * Writes one character to the specified stream.
  *
@@ -1199,7 +1199,7 @@ void fprint(const char *string, PROS_FILE *stream);
  * Write mode)
  * @return the character written
  */
-int fputc(int value, PROS_FILE *stream);
+int fputc(int value, PROS_FILE* stream);
 /**
  * Behaves the same as the "fprint" function, and appends a trailing newline
  * ("\n").
@@ -1211,7 +1211,7 @@ int fputc(int value, PROS_FILE *stream);
  * Write mode)
  * @return the number of characters written, excluding the new line
  */
-int fputs(const char *string, PROS_FILE *stream);
+int fputs(const char* string, PROS_FILE* stream);
 /**
  * Reads data from a stream into memory. Returns the number of bytes thus read.
  *
@@ -1225,7 +1225,7 @@ int fputs(const char *string, PROS_FILE *stream);
  * Read mode)
  * @return the number of bytes successfully read
  */
-size_t fread(void *ptr, size_t size, size_t count, PROS_FILE *stream);
+size_t fread(void* ptr, size_t size, size_t count, PROS_FILE* stream);
 /**
  * Seeks within a file open in Read mode. This function will fail when used on a
  * file in Write
@@ -1237,7 +1237,7 @@ size_t fread(void *ptr, size_t size, size_t count, PROS_FILE *stream);
  * SEEK_END
  * @return 0 if the seek was successful, or 1 otherwise
  */
-int fseek(PROS_FILE *stream, long int offset, int origin);
+int fseek(PROS_FILE* stream, long int offset, int origin);
 /**
  * Returns the current position of the stream. This function works on files in
  * either Read or
@@ -1246,7 +1246,7 @@ int fseek(PROS_FILE *stream, long int offset, int origin);
  * @param stream the stream to check
  * @return the offset of the stream, or -1 if the offset could not be determined
  */
-long int ftell(PROS_FILE *stream);
+long int ftell(PROS_FILE* stream);
 /**
  * Writes data from memory to a stream. Returns the number of bytes thus
  * written.
@@ -1261,7 +1261,7 @@ long int ftell(PROS_FILE *stream);
  * Write mode)
  * @return the number of bytes successfully written
  */
-size_t fwrite(const void *ptr, size_t size, size_t count, PROS_FILE *stream);
+size_t fwrite(const void* ptr, size_t size, size_t count, PROS_FILE* stream);
 /**
  * Reads and returns one character from "stdin", which is the PC debug terminal.
  *
@@ -1275,7 +1275,7 @@ int getchar();
  *
  * @param string the string to write
  */
-void print(const char *string);
+void print(const char* string);
 /**
  * Writes one character to "stdout", which is the PC debug terminal, and returns
  * the input
@@ -1296,7 +1296,7 @@ int putchar(int value);
  * @param string the string to write
  * @return the number of characters written, excluding the new line
  */
-int puts(const char *string);
+int puts(const char* string);
 
 /**
  * Prints the formatted string to the specified output stream.
@@ -1331,14 +1331,14 @@ int puts(const char *string);
  * @param formatString the format string as specified above
  * @return the number of characters written
  */
-int fprintf(PROS_FILE *stream, const char *formatString, ...);
+int fprintf(PROS_FILE* stream, const char* formatString, ...);
 /**
  * Prints the formatted string to the debug stream (the PC terminal).
  *
  * @param formatString the format string as specified in fprintf()
  * @return the number of characters written
  */
-int printf(const char *formatString, ...);
+int printf(const char* formatString, ...);
 /**
  * Prints the formatted string to the string buffer with the specified length
  * limit.
@@ -1354,7 +1354,7 @@ int printf(const char *formatString, ...);
  * @param formatString the format string as specified in fprintf()
  * @return the number of characters stored
  */
-int snprintf(char *buffer, size_t limit, const char *formatString, ...);
+int snprintf(char* buffer, size_t limit, const char* formatString, ...);
 /**
  * Prints the formatted string to the string buffer.
  *
@@ -1366,7 +1366,7 @@ int snprintf(char *buffer, size_t limit, const char *formatString, ...);
  * @param formatString the format string as specified in fprintf()
  * @return the number of characters stored
  */
-int sprintf(char *buffer, const char *formatString, ...);
+int sprintf(char* buffer, const char* formatString, ...);
 
 /**
  * LEFT button on LCD for use with lcdReadButtons()
@@ -1390,7 +1390,7 @@ int sprintf(char *buffer, const char *formatString, ...);
  *
  * @param lcdPort the LCD to clear, either uart1 or uart2
  */
-void lcdClear(PROS_FILE *lcdPort);
+void lcdClear(PROS_FILE* lcdPort);
 /**
  * Initializes the LCD port, but does not change the text or settings.
  *
@@ -1401,7 +1401,7 @@ void lcdClear(PROS_FILE *lcdPort);
  *
  * @param lcdPort the LCD to initialize, either uart1 or uart2
  */
-void lcdInit(PROS_FILE *lcdPort);
+void lcdInit(PROS_FILE* lcdPort);
 /**
  * Prints the formatted string to the attached LCD.
  *
@@ -1416,11 +1416,11 @@ void lcdInit(PROS_FILE *lcdPort);
  * @param formatString the format string as specified in fprintf()
  */
 #ifdef DOXYGEN
-void lcdPrint(PROS_FILE *lcdPort, unsigned char line, const char *formatString,
+void lcdPrint(PROS_FILE* lcdPort, unsigned char line, const char* formatString,
               ...);
 #else
 void __attribute__((format(printf, 3, 4)))
-lcdPrint(PROS_FILE *lcdPort, unsigned char line, const char *formatString, ...);
+lcdPrint(PROS_FILE* lcdPort, unsigned char line, const char* formatString, ...);
 #endif
 /**
  * Reads the user button status from the LCD display.
@@ -1432,7 +1432,7 @@ lcdPrint(PROS_FILE *lcdPort, unsigned char line, const char *formatString, ...);
  * @param lcdPort the LCD to poll, either uart1 or uart2
  * @return the buttons pressed as a bit mask
  */
-unsigned int lcdReadButtons(PROS_FILE *lcdPort);
+unsigned int lcdReadButtons(PROS_FILE* lcdPort);
 /**
  * Sets the specified LCD backlight to be on or off.
  *
@@ -1442,7 +1442,7 @@ unsigned int lcdReadButtons(PROS_FILE *lcdPort);
  * @param lcdPort the LCD to adjust, either uart1 or uart2
  * @param backlight true to turn the backlight on, or false to turn it off
  */
-void lcdSetBacklight(PROS_FILE *lcdPort, bool backlight);
+void lcdSetBacklight(PROS_FILE* lcdPort, bool backlight);
 /**
  * Prints the string buffer to the attached LCD.
  *
@@ -1456,13 +1456,13 @@ void lcdSetBacklight(PROS_FILE *lcdPort, bool backlight);
  * @param line the LCD line to write, either 1 or 2
  * @param buffer the string to write
  */
-void lcdSetText(PROS_FILE *lcdPort, unsigned char line, const char *buffer);
+void lcdSetText(PROS_FILE* lcdPort, unsigned char line, const char* buffer);
 /**
  * Shut down the specified LCD port.
  *
  * @param lcdPort the LCD to stop, either uart1 or uart2
  */
-void lcdShutdown(PROS_FILE *lcdPort);
+void lcdShutdown(PROS_FILE* lcdPort);
 
 // -------------------- Real-time scheduler functions --------------------
 /**
@@ -1556,19 +1556,19 @@ void lcdShutdown(PROS_FILE *lcdPort);
  *
  * As this is a pointer type, it can be safely passed or stored by value.
  */
-typedef void *TaskHandle;
+typedef void* TaskHandle;
 /**
  * Type by which mutexes are referenced.
  *
  * As this is a pointer type, it can be safely passed or stored by value.
  */
-typedef void *Mutex;
+typedef void* Mutex;
 /**
  * Type by which semaphores are referenced.
  *
  * As this is a pointer type, it can be safely passed or stored by value.
  */
-typedef void *Semaphore;
+typedef void* Semaphore;
 /**
  * Type for defining task functions. Task functions must accept one parameter of
  * type
@@ -1580,7 +1580,7 @@ typedef void *Semaphore;
  *     while (1);
  * }
  */
-typedef void (*TaskCode)(void *);
+typedef void (*TaskCode)(void*);
 
 /**
  * Creates a new task and add it to the list of tasks that are ready to run.
@@ -1596,7 +1596,7 @@ typedef void (*TaskCode)(void *);
  * @return a handle to the created task, or NULL if an error occurred
  */
 TaskHandle taskCreate(TaskCode taskCode, const unsigned int stackDepth,
-                      void *parameters, const unsigned int priority);
+                      void* parameters, const unsigned int priority);
 /**
  * Delays the current task for a given number of milliseconds.
  *
@@ -1647,7 +1647,7 @@ void taskDelay(const unsigned long msToDelay);
  * @param cycleTime the number of milliseconds to wait, with 1000 milliseconds
  * per second
  */
-void taskDelayUntil(unsigned long *previousWakeTime,
+void taskDelayUntil(unsigned long* previousWakeTime,
                     const unsigned long cycleTime);
 /**
  * Kills and removes the specified task from the kernel task list.
@@ -1929,7 +1929,7 @@ void wait(const unsigned long time);
  * @param time the duration of the delay in milliseconds (1 000 milliseconds per
  * second)
  */
-void waitUntil(unsigned long *previousWakeTime, const unsigned long time);
+void waitUntil(unsigned long* previousWakeTime, const unsigned long time);
 /**
  * Enables IWDG watchdog timer which will reset the cortex if it locks up due to
  * static shock

@@ -8,9 +8,9 @@ TaskHandle rerunHandle;
 
 void toPos(frame_t frame) { pid::request(frame.left, frame.right); }
 
-void _record(void *none) {
+void _record(void* none) {
   if (enabled) {
-    PROS_FILE *store;
+    PROS_FILE* store;
     sensors::reset();
     frame_t now;
     while (1) {
@@ -19,7 +19,7 @@ void _record(void *none) {
           ;
 
         while (isDriver()) {
-          now.left = sensors::left.request;
+          now.left  = sensors::left.request;
           now.right = sensors::right.request;
           fwrite(&now, sizeof(now), 1, store);
           delay(50);
@@ -35,7 +35,7 @@ void record() {
       taskCreate(_record, TASK_DEFAULT_STACK_SIZE, NULL, TASK_PRIORITY_DEFAULT);
 }
 
-void _recordStop(void *none) { taskDelete(rerunHandle); }
+void _recordStop(void* none) { taskDelete(rerunHandle); }
 
 void stop() {
   taskCreate(_recordStop, TASK_DEFAULT_STACK_SIZE, NULL, TASK_PRIORITY_DEFAULT);
@@ -43,7 +43,7 @@ void stop() {
 
 void replay() {
   if (enabled) {
-    PROS_FILE *store;
+    PROS_FILE* store;
     sensors::reset();
     pid::enabled[0] = true;
     pid::enabled[1] = true;
@@ -53,7 +53,7 @@ void replay() {
     }
 
     while (isAutonomous()) {
-      if (fread((void *)&to, sizeof(to), 1, store) < sizeof(to)) {
+      if (fread((void*)&to, sizeof(to), 1, store) < sizeof(to)) {
         return;
       }
       toPos(to);
