@@ -1,6 +1,18 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "9b91d35702bfc3b9aee017a9408854015aa101f1",
+        "date": "  Sat Jun 3 10:55:21 2017 -0400",
+        "description": "Modified cleanuphelp.py such that the webpage no longer shows it's own files under files modified",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
+            "docs/cleanuphelp.py"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "a56487993a04a72e7e1097dd21fc4cbe14b770c6",
         "date": "  Sat Jun 3 10:44:46 2017 -0400",
         "description": "redid project .clang-format and applied changes",

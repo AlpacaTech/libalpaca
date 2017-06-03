@@ -1,3 +1,15 @@
+commit 9b91d35702bfc3b9aee017a9408854015aa101f1
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat Jun 3 10:55:21 2017 -0400
+
+    Modified cleanuphelp.py such that the webpage no longer shows it's own files under files modified
+
+:100644 100644 af94214... 88cb858... M	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:100644 100644 c109401... 8da4377... M	docs/cleanuphelp.py
+:100644 100644 679f4db... 938b3ec... M	docs/index.html
+:100644 100644 57cc84b... b07491f... M	docs/log.json
+:100644 100644 0bd3381... 7cfe61c... M	docs/log.txt
+
 commit a56487993a04a72e7e1097dd21fc4cbe14b770c6
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat Jun 3 10:44:46 2017 -0400

@@ -48,10 +48,11 @@ void tank(void) {
 }
 
 namespace accel {
-long x     = 0;
-long y     = 0;
-long prevX = 0;
-long prevY = 0;
+int deadband = 20;
+long x       = 0;
+long y       = 0;
+long prevX   = 0;
+long prevY   = 0;
 void drive(void) {
   prevX          = x;
   prevY          = y;
@@ -68,7 +69,18 @@ void drive(void) {
   x *= multiplier;
   y *= (multiplier * 1.25);
 
-  set(x - y, x + y);
+  int lj          = x - y;
+  int rj          = x + y;
+  lj              = (abs(lj) < deadband) ? 0 : lj;
+  rj              = (abs(rj) < deadband) ? 0 : rj;
+  pid::enabled[0] = (lj == 0);
+  pid::enabled[1] = (rj == 0);
+  if (lj != 0)
+    left.set(lj);
+  if (rj != 0)
+    right.set(rj);
+  pid::request((lj == 0) ? left.sensor->request : left.sensor->value(),
+               (rj == 0) ? right.sensor->request : right.sensor->value());
 }
 }
 

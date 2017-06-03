@@ -37,4 +37,7 @@
 *.bin
 *.elf
 
+# Vim stuff
+*.swp
+
 # End of https://www.gitignore.io/api/c++
