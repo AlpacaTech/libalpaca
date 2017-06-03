@@ -103,12 +103,14 @@ def parseContent(content):
         filesAdded = []
         filesDeleted = []
         for aline in range(aline, len(lines)):
+            curline = lines[aline][39:]
             if ". M" in lines[aline]:
-                filesModified.append(lines[aline][39:])
+                if "docs/index.html" not in curline and "docs/log.txt" not in curline and "docs/log.json" not in curline:
+                    filesModified.append(curline)
             elif ". A" in lines[aline]:
-                filesAdded.append(lines[aline][39:])
+                filesAdded.append(curline)
             elif ". D" in lines[aline]:
-                filesDeleted.append(lines[aline][39:])
+                filesDeleted.append(curline)
         tcommit = Commit(date, commitkey, author, description, filesModified, filesAdded, filesDeleted)
         lcommits.append(tcommit)
         out += styleContent(tcommit) + "<div class='spacer'></div>"

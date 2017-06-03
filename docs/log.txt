@@ -1,3 +1,27 @@
+commit a56487993a04a72e7e1097dd21fc4cbe14b770c6
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat Jun 3 10:44:46 2017 -0400
+
+    redid project .clang-format and applied changes
+
+:100644 000000 75894d1... 0000000... D	cpls/.atom-build.yml
+:000000 100644 0000000... 480d2af... A	cpls/.clang-format
+:100644 100644 a21d47a... 53e216e... M	cpls/include/API.h
+:100644 100644 5df27da... 10dce1b... M	cpls/include/debug.hpp
+:100644 100644 3f4d612... 8492700... M	cpls/include/drive.hpp
+:100644 100644 33d112b... a0789a6... M	cpls/include/main.h
+:100644 100644 eadee3e... 9b45df1... M	cpls/include/pid.hpp
+:100644 100644 b1d4a26... 9116085... M	cpls/include/sensors.hpp
+:100644 100644 6873ef3... 9cf1c1e... M	cpls/src/debug.cpp
+:100644 100644 81a42d8... 332d424... M	cpls/src/drive.cpp
+:100644 100644 150b8b8... bac379d... M	cpls/src/motors.cpp
+:100644 100644 9044e8d... e282d32... M	cpls/src/pid.cpp
+:100644 100644 f48d3cc... c938c08... M	cpls/src/rerun.cpp
+:100644 100644 260c146... 58d7393... M	cpls/src/sensors.cpp
+:100644 100644 b4cf963... 679f4db... M	docs/index.html
+:100644 100644 39dd3f9... 57cc84b... M	docs/log.json
+:100644 100644 88c7302... 0bd3381... M	docs/log.txt
+
 commit 5c38955616284fbf8d6abdd1db84729ef6f984a3
 Author: iuyte <iuyte@gmail.com>
 Date:   Thu Jun 1 20:25:54 2017 -0400

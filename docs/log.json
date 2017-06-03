@@ -1,6 +1,32 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "a56487993a04a72e7e1097dd21fc4cbe14b770c6",
+        "date": "  Sat Jun 3 10:44:46 2017 -0400",
+        "description": "redid project .clang-format and applied changes",
+        "filesAdded": [
+            "cpls/.clang-format"
+        ],
+        "filesDeleted": [
+            "cpls/.atom-build.yml"
+        ],
+        "filesModified": [
+            "cpls/include/API.h",
+            "cpls/include/debug.hpp",
+            "cpls/include/drive.hpp",
+            "cpls/include/main.h",
+            "cpls/include/pid.hpp",
+            "cpls/include/sensors.hpp",
+            "cpls/src/debug.cpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/motors.cpp",
+            "cpls/src/pid.cpp",
+            "cpls/src/rerun.cpp",
+            "cpls/src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "5c38955616284fbf8d6abdd1db84729ef6f984a3",
         "date": "  Thu Jun 1 20:25:54 2017 -0400",
         "description": "deleted odd file",
@@ -8,11 +34,7 @@
         "filesDeleted": [
             "cpls/src/.debug.cpp.swp"
         ],
-        "filesModified": [
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
-        ]
+        "filesModified": []
     },
     {
         "author": " iuyte <iuyte@gmail.com>",
@@ -35,10 +57,7 @@
             "cpls/src/opcontrol.cpp",
             "cpls/src/pid.cpp",
             "cpls/src/rerun.cpp",
-            "cpls/src/sensors.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/sensors.cpp"
         ]
     },
     {
@@ -60,10 +79,7 @@
         ],
         "filesModified": [
             "docs/__pycache__/cleanuphelp.cpython-35.pyc",
-            "docs/cleanuphelp.py",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "docs/cleanuphelp.py"
         ]
     },
     {
@@ -75,10 +91,7 @@
         "filesDeleted": [],
         "filesModified": [
             "cpls/include/sensors.hpp",
-            "cpls/src/opcontrol.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/opcontrol.cpp"
         ]
     },
     {
@@ -94,10 +107,7 @@
             "cpls/bin/output.elf",
             "cpls/include/drive.hpp",
             "cpls/src/drive.cpp",
-            "cpls/src/opcontrol.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/opcontrol.cpp"
         ]
     },
     {
@@ -109,11 +119,7 @@
             "LICENSE"
         ],
         "filesDeleted": [],
-        "filesModified": [
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
-        ]
+        "filesModified": []
     },
     {
         "author": " iuyte <iuyte@gmail.com>",
@@ -124,11 +130,7 @@
         "filesDeleted": [
             "cpls/include/.atom-beautify.motors.hpp"
         ],
-        "filesModified": [
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
-        ]
+        "filesModified": []
     },
     {
         "author": " iuyte <iuyte@gmail.com>",
@@ -141,10 +143,7 @@
         "filesDeleted": [],
         "filesModified": [
             "cpls/include/motors.hpp",
-            "cpls/src/motors.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/motors.cpp"
         ]
     },
     {
@@ -163,10 +162,7 @@
             "cpls/include/motors.hpp",
             "cpls/src/drive.cpp",
             "cpls/src/init.cpp",
-            "cpls/src/motors.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/motors.cpp"
         ]
     },
     {
@@ -179,11 +175,7 @@
             "commit.py",
             "projects.txt"
         ],
-        "filesModified": [
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
-        ]
+        "filesModified": []
     },
     {
         "author": " iuyte <iuyte@gmail.com>",
@@ -201,9 +193,6 @@
             "cpls/include/sensors.hpp",
             "cpls/src/auto.cpp",
             "cpls/src/sensors.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt",
             "miniRerun/bin/auto.o",
             "miniRerun/bin/drive.o",
             "miniRerun/bin/init.o",
@@ -228,10 +217,7 @@
             "cpls/bin/opcontrol.o",
             "cpls/bin/output.bin",
             "cpls/bin/output.elf",
-            "cpls/bin/rerun.o",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/bin/rerun.o"
         ]
     },
     {
@@ -248,10 +234,7 @@
             "cpls/include/rerun.hpp",
             "cpls/src/drive.cpp",
             "cpls/src/opcontrol.cpp",
-            "cpls/src/rerun.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/rerun.cpp"
         ]
     },
     {
@@ -263,10 +246,7 @@
         "filesDeleted": [],
         "filesModified": [
             "cpls/include/sensors.hpp",
-            "cpls/src/sensors.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/sensors.cpp"
         ]
     },
     {
@@ -282,10 +262,7 @@
             "cpls/bin/output.elf",
             "cpls/bin/sensors.o",
             "cpls/include/motors.hpp",
-            "cpls/src/init.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/init.cpp"
         ]
     },
     {
@@ -321,10 +298,7 @@
             "cpls/src/drive.cpp",
             "cpls/src/motors.cpp",
             "cpls/src/pid.cpp",
-            "cpls/src/sensors.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/sensors.cpp"
         ]
     },
     {
@@ -335,10 +309,7 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "commit.sh",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "commit.sh"
         ]
     },
     {
@@ -349,10 +320,7 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "commit.sh",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "commit.sh"
         ]
     },
     {
@@ -372,10 +340,7 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "cpls/include/sensors.hpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/include/sensors.hpp"
         ]
     },
     {
@@ -404,10 +369,7 @@
             "cpls/include/main.h",
             "cpls/src/debug.cpp",
             "cpls/src/motors.cpp",
-            "cpls/src/pid.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/pid.cpp"
         ]
     },
     {
@@ -436,10 +398,7 @@
             "cpls/src/opcontrol.cpp",
             "cpls/src/pid.cpp",
             "cpls/src/rerun.cpp",
-            "cpls/src/sensors.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/sensors.cpp"
         ]
     },
     {
@@ -450,10 +409,7 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "docs/document.sh",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "docs/document.sh"
         ]
     },
     {
@@ -464,10 +420,7 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "docs/document.sh",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "docs/document.sh"
         ]
     },
     {
@@ -478,10 +431,7 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "docs/document.sh",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "docs/document.sh"
         ]
     },
     {
@@ -506,10 +456,7 @@
             "cpls/bin/output.elf",
             "cpls/bin/rerun.o",
             "cpls/include/rerun.h",
-            "cpls/src/rerun.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/rerun.cpp"
         ]
     },
     {
@@ -560,10 +507,7 @@
             "cpls/src/motors.cpp",
             "cpls/src/opcontrol.cpp",
             "cpls/src/pid.cpp",
-            "cpls/src/rerun.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/rerun.cpp"
         ]
     },
     {
@@ -587,10 +531,7 @@
             "cpls/src/init.cpp",
             "cpls/src/motors.cpp",
             "cpls/src/opcontrol.cpp",
-            "cpls/src/rerun.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/rerun.cpp"
         ]
     },
     {
@@ -614,10 +555,7 @@
             "cpls/src/opcontrol.cpp",
             "cpls/src/pid.cpp",
             "cpls/src/rerun.cpp",
-            "cpls/src/sensors.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/sensors.cpp"
         ]
     },
     {
@@ -638,10 +576,7 @@
             "cpls/bin/output.elf",
             "cpls/include/main.h",
             "cpls/src/auto.cpp",
-            "cpls/src/opcontrol.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "cpls/src/opcontrol.cpp"
         ]
     },
     {
@@ -677,11 +612,7 @@
             "docs/document.sh"
         ],
         "filesDeleted": [],
-        "filesModified": [
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
-        ]
+        "filesModified": []
     },
     {
         "author": " iuyte <iuyte@gmail.com>",
@@ -713,9 +644,6 @@
             "cpls/src/init.cpp",
             "cpls/src/opcontrol.cpp",
             "cpls/src/sensors.cpp",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt",
             "resources/cone.png"
         ]
     },
@@ -737,9 +665,7 @@
             "cpls/bin/sensors.o",
             "cpls/include/drive.h",
             "cpls/include/sensors.h",
-            "cpls/src/sensors.cpp",
-            "docs/index.html",
-            "docs/log.txt"
+            "cpls/src/sensors.cpp"
         ]
     },
     {
@@ -841,11 +767,7 @@
             "cpls/src/opcontrol.cpp"
         ],
         "filesDeleted": [],
-        "filesModified": [
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
-        ]
+        "filesModified": []
     },
     {
         "author": " iuyte <iuyte@gmail.com>",
@@ -855,9 +777,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt",
             "miniRerun/include/main.h",
             "miniRerun/include/motors.h",
             "miniRerun/include/pid.h",
@@ -882,9 +801,6 @@
         ],
         "filesDeleted": [],
         "filesModified": [
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt",
             "miniRerun/bin/auto.o",
             "miniRerun/bin/init.o",
             "miniRerun/bin/opcontrol.o",
@@ -911,9 +827,6 @@
         "filesModified": [
             "docs/__pycache__/cleanuphelp.cpython-35.pyc",
             "docs/__pycache__/commit.cpython-35.pyc",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt",
             "miniRerun/bin/auto.o",
             "miniRerun/bin/init.o",
             "miniRerun/bin/opcontrol.o",
@@ -955,9 +868,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt",
             "miniRerun/src/opcontrol.c"
         ]
     },
@@ -987,8 +897,7 @@
         "filesDeleted": [],
         "filesModified": [
             "docs/__pycache__/cleanuphelp.cpython-36.pyc",
-            "docs/cleanuphelp.py",
-            "docs/index.html"
+            "docs/cleanuphelp.py"
         ]
     },
     {
@@ -1000,10 +909,7 @@
         "filesDeleted": [],
         "filesModified": [
             "docs/__pycache__/cleanuphelp.cpython-36.pyc",
-            "docs/cleanuphelp.py",
-            "docs/index.html",
-            "docs/log.json",
-            "docs/log.txt"
+            "docs/cleanuphelp.py"
         ]
     },
     {
