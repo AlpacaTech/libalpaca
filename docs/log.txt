@@ -1,3 +1,16 @@
+commit 21cd9813eb4ae0f741ccb9e96e0095e68b1aef8d
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun Jun 4 15:21:26 2017 -0400
+
+    Changed standard to C++14 in Makefile
+
+:100644 100644 89368c7... 17cffb6... M	Makefile
+:100644 100644 88cb858... f3ae14b... M	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:100644 100644 da13c06... ce2ea08... M	docs/__pycache__/commit.cpython-35.pyc
+:100644 100644 e89b356... 8e3db5c... M	docs/index.html
+:100644 100644 06dd62b... e92beea... M	docs/log.json
+:100644 100644 4eb868c... e6f74dd... M	docs/log.txt
+
 commit d3ee336a50bd391ff80cb4535f143092c62386e9
 Author: iuyte <iuyte@gmail.com>
 Date:   Sun Jun 4 14:12:12 2017 -0400
