@@ -66,4 +66,4 @@ $(COBJ): $(BINDIR)/%.o: %.$(CEXT) $(HEADERS)
 
 $(CPPOBJ): $(BINDIR)/%.o: %.$(CPPEXT) $(HEADERS)
 	@echo CPC $(INCLUDE) $<
-	@$(CPPCC) $(INCLUDE) $(CPPFLAGS) -o $@ $<
+	@$(CPPCC) $(INCLUDE) $(CPPFLAGS) -o $@ $< -std=c++14

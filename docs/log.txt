@@ -1,3 +1,135 @@
+commit d3ee336a50bd391ff80cb4535f143092c62386e9
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun Jun 4 14:12:12 2017 -0400
+
+    Changed project structure
+
+:000000 100644 0000000... 89368c7... A	Makefile
+:000000 100644 0000000... d03c407... A	bin/auto.o
+:000000 100644 0000000... 724e183... A	bin/debug.o
+:000000 100644 0000000... 18a3e59... A	bin/drive.o
+:000000 100644 0000000... 859d6ef... A	bin/init.o
+:000000 100644 0000000... 7af36ae... A	bin/motors.o
+:000000 100644 0000000... cfc9216... A	bin/opcontrol.o
+:000000 100755 0000000... 6667552... A	bin/output.bin
+:000000 100755 0000000... c705870... A	bin/output.elf
+:000000 100644 0000000... 8b5e737... A	bin/pid.o
+:000000 100644 0000000... d3463cd... A	bin/rerun.o
+:000000 100644 0000000... 465c24b... A	bin/sensors.o
+:000000 100644 0000000... e6b1c62... A	common.mk
+:100644 000000 480d2af... 0000000... D	cpls/.clang-format
+:100644 000000 89368c7... 0000000... D	cpls/Makefile
+:100644 000000 d03c407... 0000000... D	cpls/bin/auto.o
+:100644 000000 724e183... 0000000... D	cpls/bin/debug.o
+:100644 000000 18a3e59... 0000000... D	cpls/bin/drive.o
+:100644 000000 859d6ef... 0000000... D	cpls/bin/init.o
+:100644 000000 7af36ae... 0000000... D	cpls/bin/motors.o
+:100644 000000 cfc9216... 0000000... D	cpls/bin/opcontrol.o
+:100755 000000 6667552... 0000000... D	cpls/bin/output.bin
+:100755 000000 c705870... 0000000... D	cpls/bin/output.elf
+:100644 000000 8b5e737... 0000000... D	cpls/bin/pid.o
+:100644 000000 d3463cd... 0000000... D	cpls/bin/rerun.o
+:100644 000000 465c24b... 0000000... D	cpls/bin/sensors.o
+:100644 000000 e6b1c62... 0000000... D	cpls/common.mk
+:100644 000000 e6caa0d... 0000000... D	cpls/firmware/STM32F10x.ld
+:100644 000000 36d5aa5... 0000000... D	cpls/firmware/cortex.ld
+:100644 000000 80fdc88... 0000000... D	cpls/firmware/libpros.a
+:100644 000000 80ba9b0... 0000000... D	cpls/firmware/uniflash.jar
+:100644 000000 53e216e... 0000000... D	cpls/include/API.h
+:100644 000000 10dce1b... 0000000... D	cpls/include/debug.hpp
+:100644 000000 8492700... 0000000... D	cpls/include/drive.hpp
+:100644 000000 a0789a6... 0000000... D	cpls/include/main.h
+:100644 000000 ae2e0b1... 0000000... D	cpls/include/motors.hpp
+:100644 000000 9b45df1... 0000000... D	cpls/include/pid.hpp
+:100644 000000 28cb610... 0000000... D	cpls/include/rerun.hpp
+:100644 000000 9116085... 0000000... D	cpls/include/sensors.hpp
+:100644 000000 8375808... 0000000... D	cpls/project.pros
+:100644 000000 9e5b952... 0000000... D	cpls/src/Makefile
+:100644 000000 19f9f8b... 0000000... D	cpls/src/auto.cpp
+:100644 000000 9cf1c1e... 0000000... D	cpls/src/debug.cpp
+:100644 000000 a776528... 0000000... D	cpls/src/drive.cpp
+:100644 000000 50a0082... 0000000... D	cpls/src/init.cpp
+:100644 000000 bac379d... 0000000... D	cpls/src/motors.cpp
+:100644 000000 a8e528e... 0000000... D	cpls/src/opcontrol.cpp
+:100644 000000 e282d32... 0000000... D	cpls/src/pid.cpp
+:100644 000000 c938c08... 0000000... D	cpls/src/rerun.cpp
+:100644 000000 05930a4... 0000000... D	cpls/src/sensors.cpp
+:000000 100644 0000000... e6caa0d... A	firmware/STM32F10x.ld
+:000000 100644 0000000... 36d5aa5... A	firmware/cortex.ld
+:000000 100644 0000000... 80fdc88... A	firmware/libpros.a
+:000000 100644 0000000... 80ba9b0... A	firmware/uniflash.jar
+:000000 100644 0000000... 53e216e... A	include/API.h
+:000000 100644 0000000... 10dce1b... A	include/debug.hpp
+:000000 100644 0000000... 8492700... A	include/drive.hpp
+:000000 100644 0000000... a0789a6... A	include/main.h
+:000000 100644 0000000... ae2e0b1... A	include/motors.hpp
+:000000 100644 0000000... 9b45df1... A	include/pid.hpp
+:000000 100644 0000000... 28cb610... A	include/rerun.hpp
+:000000 100644 0000000... 9116085... A	include/sensors.hpp
+:100644 000000 ca53ff6... 0000000... D	miniRerun/Makefile
+:100644 000000 8b02631... 0000000... D	miniRerun/bin/auto.o
+:100644 000000 5647328... 0000000... D	miniRerun/bin/drive.o
+:100644 000000 d1631a3... 0000000... D	miniRerun/bin/init.o
+:100644 000000 73ba874... 0000000... D	miniRerun/bin/opcontrol.o
+:100755 000000 e449d61... 0000000... D	miniRerun/bin/output.bin
+:100755 000000 a9d7a19... 0000000... D	miniRerun/bin/output.elf
+:100644 000000 1763354... 0000000... D	miniRerun/bin/pid.o
+:100644 000000 51d5b21... 0000000... D	miniRerun/bin/rerun.o
+:100644 000000 2224d38... 0000000... D	miniRerun/bin/sensors.o
+:100644 000000 6c712a1... 0000000... D	miniRerun/common.mk
+:100644 000000 28e36ad... 0000000... D	miniRerun/firmware/STM32F10x.ld
+:100644 000000 8c800b9... 0000000... D	miniRerun/firmware/cortex.ld
+:100644 000000 28e36ad... 0000000... D	miniRerun/firmware/firmware/STM32F10x.ld
+:100644 000000 8c800b9... 0000000... D	miniRerun/firmware/firmware/cortex.ld
+:100644 000000 80ba9b0... 0000000... D	miniRerun/firmware/firmware/uniflash.jar
+:100644 000000 dce639a... 0000000... D	miniRerun/firmware/libpros.a
+:100644 000000 80ba9b0... 0000000... D	miniRerun/firmware/uniflash.jar
+:100644 000000 7378a8d... 0000000... D	miniRerun/include/API.h
+:100644 000000 30870a1... 0000000... D	miniRerun/include/main.h
+:100644 000000 32c94af... 0000000... D	miniRerun/include/motors.h
+:100644 000000 69ab8fb... 0000000... D	miniRerun/include/pid.h
+:100644 000000 070754b... 0000000... D	miniRerun/include/rerun.h
+:100644 000000 14ebe0e... 0000000... D	miniRerun/include/sensors.h
+:100644 000000 8375808... 0000000... D	miniRerun/project.pros
+:100644 000000 9e5b952... 0000000... D	miniRerun/src/Makefile
+:100644 000000 252f6ef... 0000000... D	miniRerun/src/auto.c
+:100644 000000 5c54af8... 0000000... D	miniRerun/src/drive.c
+:100644 000000 2d44874... 0000000... D	miniRerun/src/init.c
+:100644 000000 beed687... 0000000... D	miniRerun/src/opcontrol.c
+:100644 000000 9d4167c... 0000000... D	miniRerun/src/pid.c
+:100644 000000 3fb8bb1... 0000000... D	miniRerun/src/rerun.c
+:100644 000000 8ff5586... 0000000... D	miniRerun/src/sensors.c
+:000000 100644 0000000... 8375808... A	project.pros
+:000000 100644 0000000... 9e5b952... A	src/Makefile
+:000000 100644 0000000... 19f9f8b... A	src/auto.cpp
+:000000 100644 0000000... 9cf1c1e... A	src/debug.cpp
+:000000 100644 0000000... a776528... A	src/drive.cpp
+:000000 100644 0000000... 50a0082... A	src/init.cpp
+:000000 100644 0000000... bac379d... A	src/motors.cpp
+:000000 100644 0000000... a8e528e... A	src/opcontrol.cpp
+:000000 100644 0000000... e282d32... A	src/pid.cpp
+:000000 100644 0000000... c938c08... A	src/rerun.cpp
+:000000 100644 0000000... 05930a4... A	src/sensors.cpp
+:100755 100755 2f00f38... 8e24072... M	tools/commit.sh
+:100755 000000 08e028e... 0000000... D	tools/compile.py
+:100755 000000 2ff536e... 0000000... D	tools/compile.sh
+
+commit 669b18131ee82bf3a8cddadb76c56823c0c1b89d
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat Jun 3 12:16:02 2017 -0400
+
+    Added PID drive support in accelerometer drive
+
+:100644 100644 c48df1c... 8cc3116... M	.gitignore
+:100644 100644 e0bfc93... 18a3e59... M	cpls/bin/drive.o
+:100755 100755 64159d4... 6667552... M	cpls/bin/output.bin
+:100755 100755 6b369b1... c705870... M	cpls/bin/output.elf
+:100644 100644 332d424... a776528... M	cpls/src/drive.cpp
+:100644 100644 58d7393... 05930a4... M	cpls/src/sensors.cpp
+:100644 100644 938b3ec... e89b356... M	docs/index.html
+:100644 100644 b07491f... 06dd62b... M	docs/log.json
+:100644 100644 7cfe61c... 4eb868c... M	docs/log.txt
+
 commit 9b91d35702bfc3b9aee017a9408854015aa101f1
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat Jun 3 10:55:21 2017 -0400
