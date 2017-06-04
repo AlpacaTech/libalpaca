@@ -1,6 +1,17 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "4e76d380328a88557d84a71aa1d8296faa5d2847",
+        "date": "  Sun Jun 4 16:01:45 2017 -0400",
+        "description": "Re-added .clang-format for style that had dissappeared",
+        "filesAdded": [
+            ".clang-format"
+        ],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "21cd9813eb4ae0f741ccb9e96e0095e68b1aef8d",
         "date": "  Sun Jun 4 15:21:26 2017 -0400",
         "description": "Changed standard to C++14 in Makefile",
