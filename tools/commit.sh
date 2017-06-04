@@ -1,6 +1,6 @@
 #!/bin/bash
 cd /home/ethan/VEX-709S-2018/
-./compile.py
+pros make
 cd docs/
 ./document.sh
 cd ../
