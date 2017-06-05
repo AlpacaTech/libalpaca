@@ -17,10 +17,10 @@ void set(int lpower, int rpower);
 void init(void);
 void tank(void);
 namespace accel {
-extern long x;
-extern long y;
-extern long prevX;
-extern long prevY;
+extern int x;
+extern int y;
+extern int prevX;
+extern int prevY;
 void drive(void);
 }
 void inches(long inches);

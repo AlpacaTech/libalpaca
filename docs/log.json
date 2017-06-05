@@ -1,6 +1,17 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "5cee757caf15f96f1b1a463907b158247909ef50",
+        "date": "  Sun Jun 4 16:07:52 2017 -0400",
+        "description": "Removed trailing \"\"\" in main.css",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/style.css"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "4e76d380328a88557d84a71aa1d8296faa5d2847",
         "date": "  Sun Jun 4 16:01:45 2017 -0400",
         "description": "Re-added .clang-format for style that had dissappeared",

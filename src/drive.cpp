@@ -49,17 +49,17 @@ void tank(void) {
 
 namespace accel {
 int deadband = 20;
-long x       = 0;
-long y       = 0;
-long prevX   = 0;
-long prevY   = 0;
+int x       = 0;
+int y       = 0;
+int prevX   = 0;
+int prevY   = 0;
 void drive(void) {
   prevX          = x;
   prevY          = y;
   x              = 0 - joystickGetAnalog(1, ACCEL_X);
   y              = 0 - joystickGetAnalog(1, ACCEL_Y);
   int threshold  = 20;
-  int multiplier = 1.1;
+  double multiplier = 1.1;
 
   if (abs(x) < threshold)
     x = 0;

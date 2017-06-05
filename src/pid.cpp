@@ -36,10 +36,10 @@ void controller(void* none) {
       if (enabled[i]) {
         current[i] = sides[i]->value();
         error[i]   = sides[i]->request - current[i];
-        if ((unsigned int)abs(error[i]) <= deadband) {
+        if ((unsigned int)abs((int)error[i]) <= deadband) {
           continue;
         }
-        integral[i] = (Ki != 0 && abs(error[i]) < INTEGRAL_LIMIT)
+        integral[i] = (Ki != 0 && abs((int)error[i]) < INTEGRAL_LIMIT)
                           ? (integral[i] + error[i])
                           : 0;
         derivative[i] = error[i] - lastError[i];
@@ -53,6 +53,7 @@ void controller(void* none) {
     }
     delay(25);
   }
+  free(none);
 }
 
 void enable(void) {
