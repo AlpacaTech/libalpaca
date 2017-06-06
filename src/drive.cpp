@@ -22,11 +22,15 @@ void init(void) {
   right.sensor = &sensors::right;
 }
 
+/* Set both sides of the drive at their requested powers
+ */
 void set(int lpower, int rpower) {
   left.set(lpower);
   right.set(rpower);
 }
 
+/* Tank control that can (and should) be in a while loop
+ */
 void tank(void) {
   int deadband = 20;
   int lj       = joystickGetAnalog(1, 3);
@@ -49,16 +53,16 @@ void tank(void) {
 
 namespace accel {
 int deadband = 20;
-int x       = 0;
-int y       = 0;
-int prevX   = 0;
-int prevY   = 0;
+int x        = 0;
+int y        = 0;
+int prevX    = 0;
+int prevY    = 0;
 void drive(void) {
-  prevX          = x;
-  prevY          = y;
-  x              = 0 - joystickGetAnalog(1, ACCEL_X);
-  y              = 0 - joystickGetAnalog(1, ACCEL_Y);
-  int threshold  = 20;
+  prevX             = x;
+  prevY             = y;
+  x                 = 0 - joystickGetAnalog(1, ACCEL_X);
+  y                 = 0 - joystickGetAnalog(1, ACCEL_Y);
+  int threshold     = 20;
   double multiplier = 1.1;
 
   if (abs(x) < threshold)
@@ -84,6 +88,8 @@ void drive(void) {
 }
 }
 
+/* Drive a specific number of inches
+ */
 void inches(long inches) {
   pid::enable();
   left.sensor->request += inches * inch;

@@ -1,6 +1,29 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "1d3446b2988038b8fedf4f86767eccc4f62c06c2",
+        "date": "  Mon Jun 5 15:28:15 2017 -0400",
+        "description": "small cleanup portions",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "bin/drive.o",
+            "bin/output.bin",
+            "bin/output.elf",
+            "bin/rerun.o",
+            "bin/sensors.o",
+            "include/drive.hpp",
+            "include/motors.hpp",
+            "include/sensors.hpp",
+            "src/drive.cpp",
+            "src/motors.cpp",
+            "src/pid.cpp",
+            "src/rerun.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "5cee757caf15f96f1b1a463907b158247909ef50",
         "date": "  Sun Jun 4 16:07:52 2017 -0400",
         "description": "Removed trailing \"\"\" in main.css",
