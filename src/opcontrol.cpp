@@ -1,5 +1,6 @@
 #include "../include/main.h"
-static const bool tank = true;
+bool tank     = true;
+bool wpressed = false;
 
 void operatorControl() {
   sensors::reset();
@@ -11,6 +12,11 @@ void operatorControl() {
       drive::tank();
     } else if (!tank) {
       drive::accel::drive();
+    }
+    if (!wpressed && joystickGetDigital(1, 7, JOY_DOWN)) {
+      tank = !tank;
+    } else {
+      wpressed = joystickGetDigital(1, 7, JOY_DOWN);
     }
     debug::debug();
     delay(50);

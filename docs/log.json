@@ -1,6 +1,64 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "1d3446b2988038b8fedf4f86767eccc4f62c06c2",
+        "date": "  Mon Jun 5 15:28:15 2017 -0400",
+        "description": "small cleanup portions",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "bin/drive.o",
+            "bin/output.bin",
+            "bin/output.elf",
+            "bin/rerun.o",
+            "bin/sensors.o",
+            "include/drive.hpp",
+            "include/motors.hpp",
+            "include/sensors.hpp",
+            "src/drive.cpp",
+            "src/motors.cpp",
+            "src/pid.cpp",
+            "src/rerun.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "5cee757caf15f96f1b1a463907b158247909ef50",
+        "date": "  Sun Jun 4 16:07:52 2017 -0400",
+        "description": "Removed trailing \"\"\" in main.css",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/style.css"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "4e76d380328a88557d84a71aa1d8296faa5d2847",
+        "date": "  Sun Jun 4 16:01:45 2017 -0400",
+        "description": "Re-added .clang-format for style that had dissappeared",
+        "filesAdded": [
+            ".clang-format"
+        ],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "21cd9813eb4ae0f741ccb9e96e0095e68b1aef8d",
+        "date": "  Sun Jun 4 15:21:26 2017 -0400",
+        "description": "Changed standard to C++14 in Makefile",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "Makefile",
+            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
+            "docs/__pycache__/commit.cpython-35.pyc"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "d3ee336a50bd391ff80cb4535f143092c62386e9",
         "date": "  Sun Jun 4 14:12:12 2017 -0400",
         "description": "Changed project structure",

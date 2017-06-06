@@ -35,6 +35,7 @@ void _slew(void* none) {
     }
     delay(slewWait);
   }
+  free(none);
 }
 
 void init(void) {

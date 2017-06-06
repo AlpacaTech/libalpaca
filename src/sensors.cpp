@@ -42,7 +42,7 @@ pot_t::pot_t(unsigned char _port, bool _inverted) {
 }
 void pot_t::init(void) { analogCalibrate(port); }
 long pot_t::value(void) {
-  return ((analogReadCalibrated(port) - zero) * (inverted) ? -1 : 1);
+  return ((analogReadCalibrated(port) - zero) * ((inverted) ? -1 : 1));
 }
 void pot_t::reset(void) {
   zero    = analogReadCalibrated(port);

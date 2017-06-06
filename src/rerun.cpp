@@ -28,6 +28,7 @@ void _record(void* none) {
       }
     }
   }
+  free(none);
 }
 
 void record() {
@@ -35,7 +36,10 @@ void record() {
       taskCreate(_record, TASK_DEFAULT_STACK_SIZE, NULL, TASK_PRIORITY_DEFAULT);
 }
 
-void _recordStop(void* none) { taskDelete(rerunHandle); }
+void _recordStop(void* none) {
+  taskDelete(rerunHandle);
+  free(none);
+}
 
 void stop() {
   taskCreate(_recordStop, TASK_DEFAULT_STACK_SIZE, NULL, TASK_PRIORITY_DEFAULT);
