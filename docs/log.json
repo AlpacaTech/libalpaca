@@ -1,6 +1,25 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "b29c8f1ab9c9dde1ff94cc2a393d4ef8553d08e7",
+        "date": "  Tue Jun 6 07:09:28 2017 -0400",
+        "description": "Started commenting functions, added switching between accel and tank drive",
+        "filesAdded": [
+            "src/.opcontrol.cpp.swp"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "bin/opcontrol.o",
+            "bin/output.bin",
+            "bin/output.elf",
+            "include/drive.hpp",
+            "src/drive.cpp",
+            "src/opcontrol.cpp",
+            "tools/commit.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "1d3446b2988038b8fedf4f86767eccc4f62c06c2",
         "date": "  Mon Jun 5 15:28:15 2017 -0400",
         "description": "small cleanup portions",

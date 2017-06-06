@@ -1,3 +1,19 @@
+// drive.cpp: Source file for utilities relating to the drive
+// Copyright (C) 2017 Ethan Wells
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 #include "../include/main.h"
 
 namespace drive {
@@ -22,15 +38,11 @@ void init(void) {
   right.sensor = &sensors::right;
 }
 
-/* Set both sides of the drive at their requested powers
- */
 void set(int lpower, int rpower) {
   left.set(lpower);
   right.set(rpower);
 }
 
-/* Tank control that can (and should) be in a while loop
- */
 void tank(void) {
   int deadband = 20;
   int lj       = joystickGetAnalog(1, 3);
@@ -88,8 +100,6 @@ void drive(void) {
 }
 }
 
-/* Drive a specific number of inches
- */
 void inches(long inches) {
   pid::enable();
   left.sensor->request += inches * inch;

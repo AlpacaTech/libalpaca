@@ -1,3 +1,21 @@
+commit b29c8f1ab9c9dde1ff94cc2a393d4ef8553d08e7
+Author: iuyte <iuyte@gmail.com>
+Date:   Tue Jun 6 07:09:28 2017 -0400
+
+    Started commenting functions, added switching between accel and tank drive
+
+:100644 100644 cfc9216... d99e430... M	bin/opcontrol.o
+:100755 100755 26c6044... 84478b8... M	bin/output.bin
+:100755 100755 d586488... fcdb390... M	bin/output.elf
+:100644 100644 8473da9... df94b53... M	docs/index.html
+:100644 100644 ec3a873... 4223ae2... M	docs/log.json
+:100644 100644 c1f85c7... 337fe2d... M	docs/log.txt
+:100644 100644 b9716a8... fad1a2c... M	include/drive.hpp
+:000000 100644 0000000... 6add0d2... A	src/.opcontrol.cpp.swp
+:100644 100644 bf4440e... bac1d20... M	src/drive.cpp
+:100644 100644 a8e528e... 85f9cbe... M	src/opcontrol.cpp
+:100755 100755 8e24072... fc7f988... M	tools/commit.sh
+
 commit 1d3446b2988038b8fedf4f86767eccc4f62c06c2
 Author: iuyte <iuyte@gmail.com>
 Date:   Mon Jun 5 15:28:15 2017 -0400
