@@ -1,3 +1,29 @@
+commit 64aaf8dbc4881e414a67dc0311dfe7f7d7ff0c9d
+Author: iuyte <iuyte@gmail.com>
+Date:   Tue Jun 6 21:18:49 2017 -0400
+
+    Added namespace, class, function, variable and constant comments describing funtion of them
+
+:100644 100644 f109d4f... f1453e3... M	bin/debug.o
+:100644 100644 7af36ae... 5b3432d... M	bin/motors.o
+:100755 100755 94290af... 732357b... M	bin/output.bin
+:100755 000000 2a703f2... 0000000... D	bin/output.elf
+:100644 100644 8b5e737... a215fba... M	bin/pid.o
+:100644 100644 60c89d2... 87f596e... M	docs/index.html
+:100644 100644 6d7dcfd... ebf4baa... M	docs/log.json
+:100644 100644 ffcaeaa... c2e4826... M	docs/log.txt
+:100644 100644 cf20239... c850e82... M	include/debug.hpp
+:100644 100644 16ecd1f... e7707c1... M	include/drive.hpp
+:100644 100644 d24f98f... f5a6b87... M	include/motors.hpp
+:100644 100644 ec7ed6f... b21b6a2... M	include/pid.hpp
+:100644 100644 3993156... f2e74a6... M	include/rerun.hpp
+:100644 100644 26fec5d... a29b3cf... M	include/sensors.hpp
+:000000 100644 0000000... 027230c... A	src/.drive.cpp.swp
+:100644 000000 4899714... 0000000... D	src/.sensors.cpp.swp
+:100644 100644 b92c7f2... 31c689a... M	src/debug.cpp
+:100644 100644 752773b... ab78a05... M	src/motors.cpp
+:100644 100644 3a8027f... f5976c4... M	src/pid.cpp
+
 commit 25545ec9c215f06b15941218473a8fa3cbcec1f5
 Author: iuyte <iuyte@gmail.com>
 Date:   Tue Jun 6 17:28:54 2017 -0400
