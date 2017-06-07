@@ -59,8 +59,8 @@ void go(void);
 void request(long l, long r);
 
 /** Wait until pid reaches specified precision, for no longer than the specified
- * blockTime. If 0 is passed to precision, it will go to a default precision. If
- * 0 is passed to blockTime, it will wait indefinately */
+ * blockTime. If 0 is passed to blockTime, it will wait indefinately until the
+ * requested values are met */
 void wait(unsigned long precision, unsigned long blockTime);
 /** TaskHandle for the pid task */
 extern TaskHandle pidHandle;

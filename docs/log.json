@@ -1,6 +1,21 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "338e4f71b7cb81e724aa3d1052745d87689d5502",
+        "date": "  Tue Jun 6 21:25:54 2017 -0400",
+        "description": "Project management fixing",
+        "filesAdded": [
+            ".ycm_extra_conf.py"
+        ],
+        "filesDeleted": [
+            "src/.drive.cpp.swp"
+        ],
+        "filesModified": [
+            ".gitignore"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "64aaf8dbc4881e414a67dc0311dfe7f7d7ff0c9d",
         "date": "  Tue Jun 6 21:18:49 2017 -0400",
         "description": "Added namespace, class, function, variable and constant comments describing funtion of them",

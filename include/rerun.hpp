@@ -20,12 +20,14 @@
 /** Contains components of rerun */
 namespace rerun {
 /** Class of a rerun frame. Rerun frames consist of the pid requested value for
- * the left and right sides of the drive. */
+ * the left and right sides of the drive */
 struct frame_t {
   /** Left pid requested value for the frame */
   long left;
   /** Right pid requested value for the frame */
   long right;
+  /** Constructor for a rerun frame */
+  frame_t(long left, long right);
 };
 
 /** Begin recording rerun into memory */

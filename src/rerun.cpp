@@ -22,21 +22,25 @@ namespace rerun {
 bool enabled;
 TaskHandle rerunHandle;
 
+frame_t::frame_t(long _left, long _right) {
+  left  = _left;
+  right = _right;
+}
+
 void toPos(frame_t frame) { pid::request(frame.left, frame.right); }
 
 void _record(void* none) {
   if (enabled) {
     PROS_FILE* store;
     sensors::reset();
-    frame_t now;
+    frame_t now(0, 0);
     while (1) {
       if (isDriver()) {
         while ((store = fopen("rerun", "w")) == NULL)
           ;
 
         while (isDriver()) {
-          now.left  = sensors::left.request;
-          now.right = sensors::right.request;
+          now = frame_t(sensors::left.request, sensors::right.request);
           fwrite(&now, sizeof(now), 1, store);
           delay(50);
         }
@@ -67,7 +71,7 @@ void replay() {
     sensors::reset();
     pid::enabled[0] = true;
     pid::enabled[1] = true;
-    frame_t to;
+    frame_t to(0, 0);
     if ((store = fopen("rerun", "r")) == NULL) {
       return;
     }

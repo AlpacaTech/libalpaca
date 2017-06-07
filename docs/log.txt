@@ -1,3 +1,16 @@
+commit 338e4f71b7cb81e724aa3d1052745d87689d5502
+Author: iuyte <iuyte@gmail.com>
+Date:   Tue Jun 6 21:25:54 2017 -0400
+
+    Project management fixing
+
+:100644 100644 8cc3116... acc9123... M	.gitignore
+:000000 100644 0000000... 93c3617... A	.ycm_extra_conf.py
+:100644 100644 87f596e... a624c47... M	docs/index.html
+:100644 100644 ebf4baa... 3efc979... M	docs/log.json
+:100644 100644 c2e4826... 24cf659... M	docs/log.txt
+:100644 000000 027230c... 0000000... D	src/.drive.cpp.swp
+
 commit 64aaf8dbc4881e414a67dc0311dfe7f7d7ff0c9d
 Author: iuyte <iuyte@gmail.com>
 Date:   Tue Jun 6 21:18:49 2017 -0400
