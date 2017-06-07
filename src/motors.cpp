@@ -24,7 +24,7 @@ void motor_t::set(int _power) {
 namespace motors {
 void set(motor_t motor, int power) { motor.set(power); }
 
-int get(motor_t motor) { return motorGet(motor.port); }
+int get(motor_t motor) { return motor.power; }
 
 motor_t init(unsigned char port, int inverted, float slewRate, float scale) {
   motor_t motor;
@@ -46,7 +46,10 @@ void _slew(void* none) {
     current = millis();
     for (size_t i = 1; i <= 10; i++) {
       motorSet(i, (int)(((list[i].power - motorGet(i)) * list[i].slewRate) +
-                        (current - list[i].tlast - slewWait) + motorGet(i)));
+                        ((list[i].power >= motorGet(i))
+                             ? (current - list[i].tlast - slewWait)
+                             : (-1 * (current - list[i].tlast - slewWait))) +
+                        motorGet(i)));
       list[i].tlast = current;
     }
     delay(slewWait);

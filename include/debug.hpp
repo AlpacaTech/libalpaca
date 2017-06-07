@@ -16,6 +16,7 @@
 
 #include "rerun.hpp"
 
+/** Contains debugging funtions, etc */
 namespace debug {
 extern uint32_t fault;
 
@@ -30,5 +31,6 @@ static inline T unserialize(PROS_FILE* stream) {
   return *out;
 }
 
+/** Debug the Cortex if something goes wrong */
 void debug(void);
 }

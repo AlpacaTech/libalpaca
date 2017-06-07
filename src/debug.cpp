@@ -27,6 +27,6 @@ void debug(void) {
     }
     fclose(fd);
   }
-  printf("%ud", fault);
+  printf("%lu", fault);
 }
 }

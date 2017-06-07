@@ -1,6 +1,39 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "25545ec9c215f06b15941218473a8fa3cbcec1f5",
+        "date": "  Tue Jun 6 17:28:54 2017 -0400",
+        "description": "added file boilerplates",
+        "filesAdded": [
+            "src/.sensors.cpp.swp"
+        ],
+        "filesDeleted": [
+            "src/.opcontrol.cpp.swp"
+        ],
+        "filesModified": [
+            "bin/debug.o",
+            "bin/opcontrol.o",
+            "bin/output.bin",
+            "bin/output.elf",
+            "include/debug.hpp",
+            "include/drive.hpp",
+            "include/motors.hpp",
+            "include/pid.hpp",
+            "include/rerun.hpp",
+            "include/sensors.hpp",
+            "src/auto.cpp",
+            "src/debug.cpp",
+            "src/drive.cpp",
+            "src/init.cpp",
+            "src/motors.cpp",
+            "src/opcontrol.cpp",
+            "src/pid.cpp",
+            "src/rerun.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "b29c8f1ab9c9dde1ff94cc2a393d4ef8553d08e7",
         "date": "  Tue Jun 6 07:09:28 2017 -0400",
         "description": "Started commenting functions, added switching between accel and tank drive",

@@ -96,7 +96,8 @@ void request(long l, long r) {
   sensors::right.request = r;
 }
 
-void wait(long precision, unsigned long blockTime) {
+void wait(unsigned long precision, unsigned long blockTime) {
+  precision = (precision == 0) ? default_precision : precision;
   if (blockTime > 0) {
     auto start = millis();
     while ((sensors::left.value() > sensors::left.request + precision ||

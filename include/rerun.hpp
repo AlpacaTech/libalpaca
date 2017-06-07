@@ -17,14 +17,27 @@
 #pragma once
 #include "pid.hpp"
 
+/** Contains components of rerun */
 namespace rerun {
+/** Class of a rerun frame. Rerun frames consist of the pid requested value for
+ * the left and right sides of the drive. */
 struct frame_t {
+  /** Left pid requested value for the frame */
   long left;
+  /** Right pid requested value for the frame */
   long right;
 };
+
+/** Begin recording rerun into memory */
 void record();
+
+/** Stop recording rerun into memory */
 void stop();
+
+/** Replay the recorded rerun */
 void replay();
+/** Whether or not rerun is enabled */
 extern bool enabled;
+/** The TaskHandle for the rerun task */
 extern TaskHandle rerunHandle;
 }
