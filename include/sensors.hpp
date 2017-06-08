@@ -15,6 +15,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
+#include <vector>
 #include "API.h"
 
 /** The namespace containing all information, functions, objects, relating to
@@ -32,7 +33,7 @@ struct quad_t {
   long zero;
   /** Whether or not the encoder is inverted */
   bool inverted;
-  /** Reset the zero on the encoder */
+  /** Reset the value to zero */
   void reset(void);
   /** Returns the relative value of the encoder. If added to the encoder's zero,
    * produces an absolute value of the encoder */
@@ -59,7 +60,7 @@ class gyro_t {
   /** The relative zero of the gyro, such that you can add it to the returned
    * value to obtain an absolute value */
   long zero;
-  /** Resets the zero to 0 */
+  /** Resets the value to 0 */
   void reset(void);
   /** Returns the current value of the gyro, relative to the zero */
   long value(void);
@@ -80,7 +81,7 @@ struct pot_t {
   long zero;
   /** Whether or not the potentioeter's value should be inverted */
   bool inverted;
-  /** Resets the zero to 0 */
+  /** Resets the value to 0 */
   void reset(void);
   /** Returns the relative value of the potentiometer */
   long value(void);
@@ -125,7 +126,8 @@ struct button_t {
 /** Initializes the sensor subsystem, calls all the funtions that need to be
  * called in initialize(). Call in initialize() */
 void init(void);
-/** Resets the sensors that typically need to be reset. */
+
+/** Resets the important sensors */
 void reset(void);
 
 /** left quad encoder on the drive */

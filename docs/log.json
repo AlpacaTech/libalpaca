@@ -1,6 +1,27 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "1cece1fac3a0833019de68e5f90ae11614c95830",
+        "date": "  Tue Jun 6 22:08:40 2017 -0400",
+        "description": "Rerun and pid work",
+        "filesAdded": [
+            "bin/output.elf",
+            "src/.rerun.cpp.swp"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "bin/drive.o",
+            "bin/output.bin",
+            "bin/pid.o",
+            "bin/rerun.o",
+            "include/pid.hpp",
+            "include/rerun.hpp",
+            "src/pid.cpp",
+            "src/rerun.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "338e4f71b7cb81e724aa3d1052745d87689d5502",
         "date": "  Tue Jun 6 21:25:54 2017 -0400",
         "description": "Project management fixing",

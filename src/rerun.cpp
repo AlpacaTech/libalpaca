@@ -69,8 +69,7 @@ void replay() {
   if (enabled) {
     PROS_FILE* store;
     sensors::reset();
-    pid::enabled[0] = true;
-    pid::enabled[1] = true;
+    pid::enable();
     frame_t to(0, 0);
     if ((store = fopen("rerun", "r")) == NULL) {
       return;

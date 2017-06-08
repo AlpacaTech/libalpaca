@@ -1,3 +1,23 @@
+commit 1cece1fac3a0833019de68e5f90ae11614c95830
+Author: iuyte <iuyte@gmail.com>
+Date:   Tue Jun 6 22:08:40 2017 -0400
+
+    Rerun and pid work
+
+:100644 100644 3db55df... 8fd6f8a... M	bin/drive.o
+:100755 100755 732357b... 99edd6b... M	bin/output.bin
+:000000 100755 0000000... d40b290... A	bin/output.elf
+:100644 100644 a215fba... 60bea15... M	bin/pid.o
+:100644 100644 cd289a1... da238c7... M	bin/rerun.o
+:100644 100644 a624c47... 058e520... M	docs/index.html
+:100644 100644 3efc979... 4afe99c... M	docs/log.json
+:100644 100644 24cf659... 6106da1... M	docs/log.txt
+:100644 100644 b21b6a2... ef3ba1b... M	include/pid.hpp
+:100644 100644 f2e74a6... 4bd0593... M	include/rerun.hpp
+:000000 100644 0000000... 7a0075c... A	src/.rerun.cpp.swp
+:100644 100644 f5976c4... ef00634... M	src/pid.cpp
+:100644 100644 5bed7e8... dcec6ed... M	src/rerun.cpp
+
 commit 338e4f71b7cb81e724aa3d1052745d87689d5502
 Author: iuyte <iuyte@gmail.com>
 Date:   Tue Jun 6 21:25:54 2017 -0400
