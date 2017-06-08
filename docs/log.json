@@ -1,6 +1,26 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "9941f2826110ccab816b7d91cab4e82ddc5dc153",
+        "date": "  Thu Jun 8 18:02:47 2017 -0400",
+        "description": "Small bug fixes",
+        "filesAdded": [
+            "src/.pid.cpp.swp"
+        ],
+        "filesDeleted": [
+            "src/.rerun.cpp.swp"
+        ],
+        "filesModified": [
+            "bin/output.bin",
+            "bin/output.elf",
+            "bin/rerun.o",
+            "include/sensors.hpp",
+            "src/rerun.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "1cece1fac3a0833019de68e5f90ae11614c95830",
         "date": "  Tue Jun 6 22:08:40 2017 -0400",
         "description": "Rerun and pid work",

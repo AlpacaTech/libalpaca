@@ -15,7 +15,6 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
-#include <vector>
 #include "API.h"
 
 /** The namespace containing all information, functions, objects, relating to

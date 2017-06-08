@@ -1,3 +1,21 @@
+commit 9941f2826110ccab816b7d91cab4e82ddc5dc153
+Author: iuyte <iuyte@gmail.com>
+Date:   Thu Jun 8 18:02:47 2017 -0400
+
+    Small bug fixes
+
+:100755 100755 99edd6b... c9666f4... M	bin/output.bin
+:100755 100755 d40b290... 4ea93d6... M	bin/output.elf
+:100644 100644 da238c7... 32f7d9e... M	bin/rerun.o
+:100644 100644 058e520... 99bfe3f... M	docs/index.html
+:100644 100644 4afe99c... cd25bd6... M	docs/log.json
+:100644 100644 6106da1... c78f308... M	docs/log.txt
+:100644 100644 a29b3cf... 938bab2... M	include/sensors.hpp
+:000000 100644 0000000... 5480c3a... A	src/.pid.cpp.swp
+:100644 000000 7a0075c... 0000000... D	src/.rerun.cpp.swp
+:100644 100644 dcec6ed... a6e9c3b... M	src/rerun.cpp
+:100644 100644 fd2e00c... 7553c8f... M	src/sensors.cpp
+
 commit 1cece1fac3a0833019de68e5f90ae11614c95830
 Author: iuyte <iuyte@gmail.com>
 Date:   Tue Jun 6 22:08:40 2017 -0400
