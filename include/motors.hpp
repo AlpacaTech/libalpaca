@@ -42,12 +42,15 @@ struct motor_t {
 namespace motors {
 /** Sets the motor to the power */
 void set(motor_t motor, int power);
+
 /** Gets the current power value requested of the motor, analogous of
  * motor.power */
 int get(motor_t motor);
+
 /** Returns an initialized motor_t object with the specified parameters, and
  * adds a duplicate of the motor to the motor list for slewing */
 motor_t init(unsigned char port, int inverted, float slewRate, float scale);
+
 /** Namespace relating to slewing the motors to save the gears and the PTCs */
 namespace slew {
 /** The wait time between each iteration of setting all of the motors */
@@ -56,6 +59,7 @@ static const unsigned char slewWait = 10;
 extern motor_t list[11];
 /** The TaskHandle for handling the slewing task */
 extern TaskHandle handle;
+
 /** Initialization function for slewing. Call in initialize() */
 void init(void);
 }

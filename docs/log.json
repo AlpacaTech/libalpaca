@@ -1,6 +1,23 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "9b7ebe8db5860c13f596a2f62f2c6868bdd4634e",
+        "date": "  Thu Jun 8 19:23:03 2017 -0400",
+        "description": "fixed typo and removed unnessecary include",
+        "filesAdded": [
+            "include/.sensors.hpp.swp"
+        ],
+        "filesDeleted": [
+            "src/.pid.cpp.swp"
+        ],
+        "filesModified": [
+            ".ycm_extra_conf.py",
+            "include/sensors.hpp",
+            "src/pid.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "9941f2826110ccab816b7d91cab4e82ddc5dc153",
         "date": "  Thu Jun 8 18:02:47 2017 -0400",
         "description": "Small bug fixes",

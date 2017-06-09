@@ -72,7 +72,6 @@ sonic_t::sonic_t(unsigned char port1, unsigned char port2) {
 void sonic_t::init(void) {
   sonic = ultrasonicInit(sonic_t::ports[0], sonic_t::ports[1]);
 }
-
 long sonic_t::value(void) { return ultrasonicGet(sonic); }
 
 button_t::button_t(unsigned char _port, bool _inverted) {

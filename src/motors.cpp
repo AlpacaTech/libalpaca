@@ -17,8 +17,7 @@
 #include "../include/motors.hpp"
 
 void motor_t::set(int _power) {
-  power                          = _power * inverted * scale;
-  motors::slew::list[port].power = power;
+  power = motors::slew::list[port].power = _power * inverted * scale;
 }
 
 namespace motors {
