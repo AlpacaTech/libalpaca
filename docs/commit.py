@@ -1,4 +1,6 @@
 import jsonpickle
+
+
 class Commit(object):
     date = ""
     commitkey = ""
@@ -7,7 +9,9 @@ class Commit(object):
     filesModified = []
     filesAdded = []
     filesDeleted = []
-    def __init__(self, date, commitkey, author, description, filesModified, filesAdded, filesDeleted):
+
+    def __init__(self, date, commitkey, author, description, filesModified,
+                 filesAdded, filesDeleted):
         self.date = date
         self.commitkey = commitkey
         self.author = author
@@ -16,9 +20,11 @@ class Commit(object):
         self.filesAdded = filesAdded
         self.filesDeleted = filesDeleted
 
+
 def printCommit(commit):
     frozen = jsonpickle.encode(commit)
     print(frozen)
+
 
 def saveList(listOfCommits):
     f = open("log.json", mode="w")

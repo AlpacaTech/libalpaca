@@ -1,6 +1,26 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "045f79181af1776ad59c720e3e26d75f1bc284eb",
+        "date": "  Thu Jun 8 21:16:23 2017 -0400",
+        "description": "Assignment optimizations in motors.cpp and style fixes elsewhere",
+        "filesAdded": [
+            "include/.motors.hpp.swp"
+        ],
+        "filesDeleted": [
+            "include/.sensors.hpp.swp"
+        ],
+        "filesModified": [
+            "bin/motors.o",
+            "bin/output.bin",
+            "bin/output.elf",
+            "include/motors.hpp",
+            "src/motors.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "9b7ebe8db5860c13f596a2f62f2c6868bdd4634e",
         "date": "  Thu Jun 8 19:23:03 2017 -0400",
         "description": "fixed typo and removed unnessecary include",

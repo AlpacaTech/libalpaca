@@ -38,6 +38,8 @@
 *.elf
 
 # Vim stuff
-.*.*.swp
+*.cpp.swp
+*.hpp.swp
+*.*.swp
 
 # End of https://www.gitignore.io/api/c++
