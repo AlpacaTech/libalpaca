@@ -5,11 +5,11 @@ year = "2018"
 
 style = ""
 with open("style.css", mode="r") as stylefyle:
-	style = stylefyle.read()
-	
+    style = stylefyle.read()
+
 script = ""
 with open("main.js", mode="r") as scriptfile:
-	script = scriptfile.read()
+    script = scriptfile.read()
 
 commitTemp =\
 """
@@ -23,6 +23,7 @@ commitTemp =\
 
 """
 
+
 def indexInStr(index, string):
     out = 0
     for i in range(len(string)):
@@ -31,9 +32,10 @@ def indexInStr(index, string):
         out += 1
     return out
 
+
 def styleContent(commit):
     out = "<div class='commit' id='" + commit.commitkey + "'>"
-    out += "<p><b style='cursor: pointer;' onclick='window.open(\"https://github.com/iuyte/VEX-709S-" + year + "/commit/" + commit.commitkey + "\")'>Commit:</b> <a class='link' href='https://iuyte.github.io/VEX-709S" + year + "" + year + "/2017/Planning/tools/git.html#" + commit.commitkey + "'>" + commit.commitkey + "</a></p>"
+    out += "<p><b style='cursor: pointer;' onclick='window.open(\"https://github.com/iuyte/VEX-709S-" + year + "/commit/" + commit.commitkey + "\")'>Commit:</b> <a class='link' href='https://iuyte.github.io/VEX-709S-" + year + "/#" + commit.commitkey + "'>" + commit.commitkey + "</a></p>"
     out += "<p><b>Date:</b> " + commit.date + "</p>\n"
     out += "<p><b>Author:</b> " + commit.author + "</p>\n"
     out += "<p><b>Description:</b><br>" + commit.description + "</p>\n"
@@ -45,7 +47,7 @@ def styleContent(commit):
     if len(commit.filesModified) > 0:
         out += "<b>Files modified:</b>\n<ul>\n"
         for i in range(len(commit.filesModified)):
-            out += "<li><span class='link' onclick='window.open(\"https://github.com/iuyte/VEX-709S-" + year + "/tree/" + commit.commitkey + "/" + commit.filesModified[i] +"\")'>" + commit.filesModified[i] + "</span></li>\n"
+            out += "<li><span class='link' onclick='window.open(\"https://github.com/iuyte/VEX-709S-" + year + "/tree/" + commit.commitkey + "/" + commit.filesModified[i] + "\")'>" + commit.filesModified[i] + "</span></li>\n"
         out += "</ul>"
     if len(commit.filesDeleted) > 0:
         out += "<b>Files deleted:</b>\n<ul>\n"
@@ -55,12 +57,14 @@ def styleContent(commit):
     out += "<br></div>\n"
     return out
 
+
 def removeSpaces(content):
     content = content.split(" ")
     out = ""
     for i in range(len(content)):
         out += content[i]
     return out
+
 
 def parseContent(content):
     if content == "":
@@ -111,7 +115,8 @@ def parseContent(content):
                 filesAdded.append(curline)
             elif ". D" in lines[aline]:
                 filesDeleted.append(curline)
-        tcommit = Commit(date, commitkey, author, description, filesModified, filesAdded, filesDeleted)
+        tcommit = Commit(date, commitkey, author, description, filesModified,
+                         filesAdded, filesDeleted)
         lcommits.append(tcommit)
         out += styleContent(tcommit) + "<div class='spacer'></div>"
     saveList(lcommits)

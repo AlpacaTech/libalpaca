@@ -1,6 +1,179 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "045f79181af1776ad59c720e3e26d75f1bc284eb",
+        "date": "  Thu Jun 8 21:16:23 2017 -0400",
+        "description": "Assignment optimizations in motors.cpp and style fixes elsewhere",
+        "filesAdded": [
+            "include/.motors.hpp.swp"
+        ],
+        "filesDeleted": [
+            "include/.sensors.hpp.swp"
+        ],
+        "filesModified": [
+            "bin/motors.o",
+            "bin/output.bin",
+            "bin/output.elf",
+            "include/motors.hpp",
+            "src/motors.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "9b7ebe8db5860c13f596a2f62f2c6868bdd4634e",
+        "date": "  Thu Jun 8 19:23:03 2017 -0400",
+        "description": "fixed typo and removed unnessecary include",
+        "filesAdded": [
+            "include/.sensors.hpp.swp"
+        ],
+        "filesDeleted": [
+            "src/.pid.cpp.swp"
+        ],
+        "filesModified": [
+            ".ycm_extra_conf.py",
+            "include/sensors.hpp",
+            "src/pid.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "9941f2826110ccab816b7d91cab4e82ddc5dc153",
+        "date": "  Thu Jun 8 18:02:47 2017 -0400",
+        "description": "Small bug fixes",
+        "filesAdded": [
+            "src/.pid.cpp.swp"
+        ],
+        "filesDeleted": [
+            "src/.rerun.cpp.swp"
+        ],
+        "filesModified": [
+            "bin/output.bin",
+            "bin/output.elf",
+            "bin/rerun.o",
+            "include/sensors.hpp",
+            "src/rerun.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "1cece1fac3a0833019de68e5f90ae11614c95830",
+        "date": "  Tue Jun 6 22:08:40 2017 -0400",
+        "description": "Rerun and pid work",
+        "filesAdded": [
+            "bin/output.elf",
+            "src/.rerun.cpp.swp"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "bin/drive.o",
+            "bin/output.bin",
+            "bin/pid.o",
+            "bin/rerun.o",
+            "include/pid.hpp",
+            "include/rerun.hpp",
+            "src/pid.cpp",
+            "src/rerun.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "338e4f71b7cb81e724aa3d1052745d87689d5502",
+        "date": "  Tue Jun 6 21:25:54 2017 -0400",
+        "description": "Project management fixing",
+        "filesAdded": [
+            ".ycm_extra_conf.py"
+        ],
+        "filesDeleted": [
+            "src/.drive.cpp.swp"
+        ],
+        "filesModified": [
+            ".gitignore"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "64aaf8dbc4881e414a67dc0311dfe7f7d7ff0c9d",
+        "date": "  Tue Jun 6 21:18:49 2017 -0400",
+        "description": "Added namespace, class, function, variable and constant comments describing funtion of them",
+        "filesAdded": [
+            "src/.drive.cpp.swp"
+        ],
+        "filesDeleted": [
+            "bin/output.elf",
+            "src/.sensors.cpp.swp"
+        ],
+        "filesModified": [
+            "bin/debug.o",
+            "bin/motors.o",
+            "bin/output.bin",
+            "bin/pid.o",
+            "include/debug.hpp",
+            "include/drive.hpp",
+            "include/motors.hpp",
+            "include/pid.hpp",
+            "include/rerun.hpp",
+            "include/sensors.hpp",
+            "src/debug.cpp",
+            "src/motors.cpp",
+            "src/pid.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "25545ec9c215f06b15941218473a8fa3cbcec1f5",
+        "date": "  Tue Jun 6 17:28:54 2017 -0400",
+        "description": "added file boilerplates",
+        "filesAdded": [
+            "src/.sensors.cpp.swp"
+        ],
+        "filesDeleted": [
+            "src/.opcontrol.cpp.swp"
+        ],
+        "filesModified": [
+            "bin/debug.o",
+            "bin/opcontrol.o",
+            "bin/output.bin",
+            "bin/output.elf",
+            "include/debug.hpp",
+            "include/drive.hpp",
+            "include/motors.hpp",
+            "include/pid.hpp",
+            "include/rerun.hpp",
+            "include/sensors.hpp",
+            "src/auto.cpp",
+            "src/debug.cpp",
+            "src/drive.cpp",
+            "src/init.cpp",
+            "src/motors.cpp",
+            "src/opcontrol.cpp",
+            "src/pid.cpp",
+            "src/rerun.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "b29c8f1ab9c9dde1ff94cc2a393d4ef8553d08e7",
+        "date": "  Tue Jun 6 07:09:28 2017 -0400",
+        "description": "Started commenting functions, added switching between accel and tank drive",
+        "filesAdded": [
+            "src/.opcontrol.cpp.swp"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "bin/opcontrol.o",
+            "bin/output.bin",
+            "bin/output.elf",
+            "include/drive.hpp",
+            "src/drive.cpp",
+            "src/opcontrol.cpp",
+            "tools/commit.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "1d3446b2988038b8fedf4f86767eccc4f62c06c2",
         "date": "  Mon Jun 5 15:28:15 2017 -0400",
         "description": "small cleanup portions",

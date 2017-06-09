@@ -1,3 +1,162 @@
+commit 045f79181af1776ad59c720e3e26d75f1bc284eb
+Author: iuyte <iuyte@gmail.com>
+Date:   Thu Jun 8 21:16:23 2017 -0400
+
+    Assignment optimizations in motors.cpp and style fixes elsewhere
+
+:100644 100644 5b3432d... f5ed9d6... M	bin/motors.o
+:100755 100755 c9666f4... 1e0bfd1... M	bin/output.bin
+:100755 100755 4ea93d6... 5be8876... M	bin/output.elf
+:100644 100644 44bef50... e55b84a... M	docs/index.html
+:100644 100644 b0cda31... e2b81ba... M	docs/log.json
+:100644 100644 a55c4d6... 82356fd... M	docs/log.txt
+:000000 100644 0000000... b9f75b9... A	include/.motors.hpp.swp
+:100644 000000 e4dbffc... 0000000... D	include/.sensors.hpp.swp
+:100644 100644 f5a6b87... da9a7d2... M	include/motors.hpp
+:100644 100644 ab78a05... c182df6... M	src/motors.cpp
+:100644 100644 7553c8f... fd2e00c... M	src/sensors.cpp
+
+commit 9b7ebe8db5860c13f596a2f62f2c6868bdd4634e
+Author: iuyte <iuyte@gmail.com>
+Date:   Thu Jun 8 19:23:03 2017 -0400
+
+    fixed typo and removed unnessecary include
+
+:100644 100644 93c3617... a348b3e... M	.ycm_extra_conf.py
+:100644 100644 99bfe3f... 44bef50... M	docs/index.html
+:100644 100644 cd25bd6... b0cda31... M	docs/log.json
+:100644 100644 c78f308... a55c4d6... M	docs/log.txt
+:000000 100644 0000000... e4dbffc... A	include/.sensors.hpp.swp
+:100644 100644 938bab2... c2fb5fd... M	include/sensors.hpp
+:100644 000000 5480c3a... 0000000... D	src/.pid.cpp.swp
+:100644 100644 ef00634... 5b39c0e... M	src/pid.cpp
+
+commit 9941f2826110ccab816b7d91cab4e82ddc5dc153
+Author: iuyte <iuyte@gmail.com>
+Date:   Thu Jun 8 18:02:47 2017 -0400
+
+    Small bug fixes
+
+:100755 100755 99edd6b... c9666f4... M	bin/output.bin
+:100755 100755 d40b290... 4ea93d6... M	bin/output.elf
+:100644 100644 da238c7... 32f7d9e... M	bin/rerun.o
+:100644 100644 058e520... 99bfe3f... M	docs/index.html
+:100644 100644 4afe99c... cd25bd6... M	docs/log.json
+:100644 100644 6106da1... c78f308... M	docs/log.txt
+:100644 100644 a29b3cf... 938bab2... M	include/sensors.hpp
+:000000 100644 0000000... 5480c3a... A	src/.pid.cpp.swp
+:100644 000000 7a0075c... 0000000... D	src/.rerun.cpp.swp
+:100644 100644 dcec6ed... a6e9c3b... M	src/rerun.cpp
+:100644 100644 fd2e00c... 7553c8f... M	src/sensors.cpp
+
+commit 1cece1fac3a0833019de68e5f90ae11614c95830
+Author: iuyte <iuyte@gmail.com>
+Date:   Tue Jun 6 22:08:40 2017 -0400
+
+    Rerun and pid work
+
+:100644 100644 3db55df... 8fd6f8a... M	bin/drive.o
+:100755 100755 732357b... 99edd6b... M	bin/output.bin
+:000000 100755 0000000... d40b290... A	bin/output.elf
+:100644 100644 a215fba... 60bea15... M	bin/pid.o
+:100644 100644 cd289a1... da238c7... M	bin/rerun.o
+:100644 100644 a624c47... 058e520... M	docs/index.html
+:100644 100644 3efc979... 4afe99c... M	docs/log.json
+:100644 100644 24cf659... 6106da1... M	docs/log.txt
+:100644 100644 b21b6a2... ef3ba1b... M	include/pid.hpp
+:100644 100644 f2e74a6... 4bd0593... M	include/rerun.hpp
+:000000 100644 0000000... 7a0075c... A	src/.rerun.cpp.swp
+:100644 100644 f5976c4... ef00634... M	src/pid.cpp
+:100644 100644 5bed7e8... dcec6ed... M	src/rerun.cpp
+
+commit 338e4f71b7cb81e724aa3d1052745d87689d5502
+Author: iuyte <iuyte@gmail.com>
+Date:   Tue Jun 6 21:25:54 2017 -0400
+
+    Project management fixing
+
+:100644 100644 8cc3116... acc9123... M	.gitignore
+:000000 100644 0000000... 93c3617... A	.ycm_extra_conf.py
+:100644 100644 87f596e... a624c47... M	docs/index.html
+:100644 100644 ebf4baa... 3efc979... M	docs/log.json
+:100644 100644 c2e4826... 24cf659... M	docs/log.txt
+:100644 000000 027230c... 0000000... D	src/.drive.cpp.swp
+
+commit 64aaf8dbc4881e414a67dc0311dfe7f7d7ff0c9d
+Author: iuyte <iuyte@gmail.com>
+Date:   Tue Jun 6 21:18:49 2017 -0400
+
+    Added namespace, class, function, variable and constant comments describing funtion of them
+
+:100644 100644 f109d4f... f1453e3... M	bin/debug.o
+:100644 100644 7af36ae... 5b3432d... M	bin/motors.o
+:100755 100755 94290af... 732357b... M	bin/output.bin
+:100755 000000 2a703f2... 0000000... D	bin/output.elf
+:100644 100644 8b5e737... a215fba... M	bin/pid.o
+:100644 100644 60c89d2... 87f596e... M	docs/index.html
+:100644 100644 6d7dcfd... ebf4baa... M	docs/log.json
+:100644 100644 ffcaeaa... c2e4826... M	docs/log.txt
+:100644 100644 cf20239... c850e82... M	include/debug.hpp
+:100644 100644 16ecd1f... e7707c1... M	include/drive.hpp
+:100644 100644 d24f98f... f5a6b87... M	include/motors.hpp
+:100644 100644 ec7ed6f... b21b6a2... M	include/pid.hpp
+:100644 100644 3993156... f2e74a6... M	include/rerun.hpp
+:100644 100644 26fec5d... a29b3cf... M	include/sensors.hpp
+:000000 100644 0000000... 027230c... A	src/.drive.cpp.swp
+:100644 000000 4899714... 0000000... D	src/.sensors.cpp.swp
+:100644 100644 b92c7f2... 31c689a... M	src/debug.cpp
+:100644 100644 752773b... ab78a05... M	src/motors.cpp
+:100644 100644 3a8027f... f5976c4... M	src/pid.cpp
+
+commit 25545ec9c215f06b15941218473a8fa3cbcec1f5
+Author: iuyte <iuyte@gmail.com>
+Date:   Tue Jun 6 17:28:54 2017 -0400
+
+    added file boilerplates
+
+:100644 100644 724e183... f109d4f... M	bin/debug.o
+:100644 100644 d99e430... 264249d... M	bin/opcontrol.o
+:100755 100755 84478b8... 94290af... M	bin/output.bin
+:100755 100755 fcdb390... 2a703f2... M	bin/output.elf
+:100644 100644 df94b53... 60c89d2... M	docs/index.html
+:100644 100644 4223ae2... 6d7dcfd... M	docs/log.json
+:100644 100644 337fe2d... ffcaeaa... M	docs/log.txt
+:100644 100644 10dce1b... cf20239... M	include/debug.hpp
+:100644 100644 fad1a2c... 16ecd1f... M	include/drive.hpp
+:100644 100644 aeb2b25... d24f98f... M	include/motors.hpp
+:100644 100644 9b45df1... ec7ed6f... M	include/pid.hpp
+:100644 100644 28cb610... 3993156... M	include/rerun.hpp
+:100644 100644 f7fd245... 26fec5d... M	include/sensors.hpp
+:100644 000000 6add0d2... 0000000... D	src/.opcontrol.cpp.swp
+:000000 100644 0000000... 4899714... A	src/.sensors.cpp.swp
+:100644 100644 19f9f8b... 79087ce... M	src/auto.cpp
+:100644 100644 9cf1c1e... b92c7f2... M	src/debug.cpp
+:100644 100644 bac1d20... 90f7141... M	src/drive.cpp
+:100644 100644 50a0082... 496b2fa... M	src/init.cpp
+:100644 100644 0d3789c... 752773b... M	src/motors.cpp
+:100644 100644 85f9cbe... bb29842... M	src/opcontrol.cpp
+:100644 100644 a8e8f2b... 3a8027f... M	src/pid.cpp
+:100644 100644 d00672a... 5bed7e8... M	src/rerun.cpp
+:100644 100644 b83d699... fd2e00c... M	src/sensors.cpp
+
+commit b29c8f1ab9c9dde1ff94cc2a393d4ef8553d08e7
+Author: iuyte <iuyte@gmail.com>
+Date:   Tue Jun 6 07:09:28 2017 -0400
+
+    Started commenting functions, added switching between accel and tank drive
+
+:100644 100644 cfc9216... d99e430... M	bin/opcontrol.o
+:100755 100755 26c6044... 84478b8... M	bin/output.bin
+:100755 100755 d586488... fcdb390... M	bin/output.elf
+:100644 100644 8473da9... df94b53... M	docs/index.html
+:100644 100644 ec3a873... 4223ae2... M	docs/log.json
+:100644 100644 c1f85c7... 337fe2d... M	docs/log.txt
+:100644 100644 b9716a8... fad1a2c... M	include/drive.hpp
+:000000 100644 0000000... 6add0d2... A	src/.opcontrol.cpp.swp
+:100644 100644 bf4440e... bac1d20... M	src/drive.cpp
+:100644 100644 a8e528e... 85f9cbe... M	src/opcontrol.cpp
+:100755 100755 8e24072... fc7f988... M	tools/commit.sh
+
 commit 1d3446b2988038b8fedf4f86767eccc4f62c06c2
 Author: iuyte <iuyte@gmail.com>
 Date:   Mon Jun 5 15:28:15 2017 -0400
