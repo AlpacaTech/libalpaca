@@ -16,13 +16,7 @@
 
 #include "../include/pid.hpp"
 
-int sgn(float __x) {
-  if (__x > 0)
-    return 1;
-  if (__x < 0)
-    return -1;
-  return 0;
-}
+int sgn(float __x);
 
 namespace pid {
 float Kp              = 0.8;
@@ -116,3 +110,12 @@ void wait(unsigned long precision, unsigned long blockTime) {
   }
 }
 }
+
+int sgn(float __x) {
+    if (__x > 0)
+          return 1;
+      if (__x < 0)
+            return -1; 
+        return 0;
+}
+

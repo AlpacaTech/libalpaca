@@ -1,6 +1,24 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "7e770b10cd3a43ac3f1fa9a9c8bc98c38e1ab109",
+        "date": "  Fri Jun 9 15:57:13 2017 -0400",
+        "description": "fixed bad link",
+        "filesAdded": [],
+        "filesDeleted": [
+            "include/.motors.hpp.swp"
+        ],
+        "filesModified": [
+            ".gitignore",
+            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
+            "docs/__pycache__/commit.cpython-35.pyc",
+            "docs/cleanup.py",
+            "docs/cleanuphelp.py",
+            "docs/commit.py"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "045f79181af1776ad59c720e3e26d75f1bc284eb",
         "date": "  Thu Jun 8 21:16:23 2017 -0400",
         "description": "Assignment optimizations in motors.cpp and style fixes elsewhere",

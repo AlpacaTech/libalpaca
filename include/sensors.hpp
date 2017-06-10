@@ -47,10 +47,6 @@ struct quad_t {
 
 /** Class for gyro objects */
 class gyro_t {
-  /** The calibration, a temporary placement between construction and
-   * initialization */
-  int calibration;
-
  public:
   /** The gyro struct used in funtions */
   Gyro gyro;
@@ -69,6 +65,11 @@ class gyro_t {
   void init(void);
   /** Class constructor, but it must not be forgotten to call init() */
   gyro_t(unsigned char _port, unsigned int _calibration);
+
+ private:
+  /** The calibration, a temporary placement between construction and
+   * initialization */
+  int calibration;
 };
 
 /** Class for potentiometers */
