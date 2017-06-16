@@ -38,84 +38,48 @@ extern "C" {
 
 // -------------------- VEX competition functions --------------------
 
-/**
- * DOWN button (valid on channels 5, 6, 7, 8)
- */
+/** DOWN button (valid on channels 5, 6, 7, 8) */
 #define JOY_DOWN 1
-/**
- * LEFT button (valid on channels 7, 8)
- */
+/** LEFT button (valid on channels 7, 8) */
 #define JOY_LEFT 2
-/**
- * UP button (valid on channels 5, 6, 7, 8)
- */
+/** UP button (valid on channels 5, 6, 7, 8) */
 #define JOY_UP 4
-/**
- * RIGHT button (valid on channels 7, 8)
- */
+/** RIGHT button (valid on channels 7, 8) */
 #define JOY_RIGHT 8
-/**
- * Analog axis for the X acceleration from the VEX Joystick.
- */
+/** Analog axis for the X acceleration from the VEX Joystick. */
 #define ACCEL_X 5
-/**
- * Analog axis for the Y acceleration from the VEX Joystick.
- */
+/** Analog axis for the Y acceleration from the VEX Joystick. */
 #define ACCEL_Y 6
 
-/**
- * Returns true if the robot is in autonomous mode, or false otherwise.
- *
- * While in autonomous mode, joystick inputs will return a neutral value, but
- * serial port
- * communications (even over VexNET) will still work properly.
- */
+/** Returns true if the robot is in autonomous mode, or false otherwise. While
+ * in autonomous mode, joystick inputs will return a neutral value, but serial
+ * port communications (even over VexNET) will still work properly. */
 bool isAutonomous();
-/**
- * Returns true if the robot is enabled, or false otherwise.
- *
- * While disabled via the VEX Competition Switch or VEX Field Controller, motors
- * will not
- * function. However, the digital I/O ports can still be changed, which may
- * indirectly affect
- * the robot state (e.g. solenoids). Avoid performing externally visible actions
- * while
- * disabled (the kernel should take care of this most of the time).
- */
+
+/** Returns true if the robot is enabled, or false otherwise. While disabled via
+ * the VEX Competition Switch or VEX Field Controller, motors will not function.
+ * However, the digital I/O ports can still be changed, which may indirectly
+ * affect the robot state (e.g. solenoids). Avoid performing externally visible
+ * actions while disabled (the kernel should take care of this most of the
+ * time). */
 bool isEnabled();
-/**
- * Returns true if a joystick is connected to the specified slot number (1 or
- * 2), or false
- * otherwise.
- *
- * Useful for automatically merging joysticks for one operator, or splitting for
- * two. This
- * function does not work properly during initialize() or initializeIO() and can
- * return false
- * positives. It should be checked once and stored at the beginning of
- * operatorControl().
- *
- * @param joystick the joystick slot to check
- */
+
+/** Returns true if a joystick is connected to the specified slot number (1 or
+ * 2), or false otherwise. Useful for automatically merging joysticks for one
+ * operator, or splitting for two. This function does not work properly during
+ * initialize() or initializeIO() and can return false positives. It should be
+ * checked once and stored at the beginning of operatorControl(). */
 bool isJoystickConnected(unsigned char joystick);
-/**
- * Returns true if a VEX field controller or competition switch is connected, or
- * false
- * otherwise.
- *
- * When in online mode, the switching between autonomous() and operatorControl()
- * tasks is
- * managed by the PROS kernel.
- */
+
+/** Returns true if a VEX field controller or competition switch is connected,
+ * or false otherwise. When in online mode, the switching between autonomous()
+ * and operatorControl() tasks is managed by the PROS kernel.*/
 bool isOnline();
-/**
- * Gets the value of a control axis on the VEX joystick. Returns the value from
- * -127 to 127,
- * or 0 if no joystick is connected to the requested slot.
- *
+
+/** Gets the value of a control axis on the VEX joystick. Returns the value from
+ * -127 to 127, or 0 if no joystick is connected to the requested slot.
  * @param joystick the joystick slot to check
- * @param axis one of 1, 2, 3, 4, ACCEL_X, or ACCEL_Y
- */
+ * @param axis one of 1, 2, 3, 4, ACCEL_X, or ACCEL_Y */
 int joystickGetAnalog(unsigned char joystick, unsigned char axis);
 /**
  * Gets the value of a button on the VEX joystick. Returns true if that button
@@ -128,8 +92,7 @@ int joystickGetAnalog(unsigned char joystick, unsigned char axis);
  * the joystick
  * @param button one of JOY_UP, JOY_DOWN, JOY_LEFT, or JOY_RIGHT; requesting
  * JOY_LEFT or
- * JOY_RIGHT for groups 5 or 6 will cause an undefined value to be returned
- */
+ * JOY_RIGHT for groups 5 or 6 will cause an undefined value to be returned */
 bool joystickGetDigital(unsigned char joystick, unsigned char buttonGroup,
                         unsigned char button);
 /**

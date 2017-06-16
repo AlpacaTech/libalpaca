@@ -19,70 +19,71 @@
 bool isDriver(void) { return (isOnline() && !isAutonomous()); }
 
 namespace rerun {
-bool enabled;
-TaskHandle rerunHandle;
+  bool enabled;
+  TaskHandle rerunHandle;
 
-frame_t::frame_t(long _left, long _right) {
-  left  = _left;
-  right = _right;
-}
+  frame_t::frame_t(long _left, long _right) {
+    left  = _left;
+    right = _right;
+  }
 
-void toPos(frame_t frame) { pid::request(frame.left, frame.right); }
+  void toPos(frame_t frame) { pid::request(frame.left, frame.right); }
 
-void _record(void* none) {
-  if (enabled) {
-    PROS_FILE* store;
-    sensors::reset();
-    frame_t now(0, 0);
-    while (1) {
-      if (isDriver()) {
-        while ((store = fopen("rerun", "w")) == NULL)
-          ;
+  void _record(void* none) {
+    if (enabled) {
+      PROS_FILE* store;
+      sensors::reset();
+      frame_t now(0, 0);
+      while (1) {
+        if (isDriver()) {
+          while ((store = fopen("rerun", "w")) == NULL)
+            ;
 
-        while (isDriver()) {
-          now = frame_t(sensors::left.request, sensors::right.request);
-          fwrite(&now, sizeof(now), 1, store);
-          delay(50);
+          while (isDriver()) {
+            now = frame_t(sensors::left.request, sensors::right.request);
+            fwrite(&now, sizeof(now), 1, store);
+            delay(50);
+          }
+          fclose(store);
         }
-        fclose(store);
       }
     }
+    free(none);
   }
-  free(none);
-}
 
-void record() {
-  rerunHandle =
-      taskCreate(_record, TASK_DEFAULT_STACK_SIZE, NULL, TASK_PRIORITY_DEFAULT);
-}
+  void record() {
+    rerunHandle = taskCreate(_record, TASK_DEFAULT_STACK_SIZE, NULL,
+                             TASK_PRIORITY_DEFAULT);
+  }
 
-void _recordStop(void* none) {
-  taskDelete(rerunHandle);
-  free(none);
-}
+  void _recordStop(void* none) {
+    taskDelete(rerunHandle);
+    free(none);
+  }
 
-void stop() {
-  taskCreate(_recordStop, TASK_DEFAULT_STACK_SIZE, NULL, TASK_PRIORITY_DEFAULT);
-}
+  void stop() {
+    taskCreate(_recordStop, TASK_DEFAULT_STACK_SIZE, NULL,
+               TASK_PRIORITY_DEFAULT);
+  }
 
-void replay() {
-  if (enabled) {
-    PROS_FILE* store;
-    sensors::reset();
-    pid::enable();
-    frame_t to(0, 0);
-    if ((store = fopen("rerun", "r")) == NULL) {
-      return;
-    }
-
-    while (isAutonomous()) {
-      if (fread((void*)&to, sizeof(to), 1, store) < sizeof(to)) {
+  void replay() {
+    if (enabled) {
+      PROS_FILE* store;
+      sensors::reset();
+      pid::enable();
+      frame_t to(0, 0);
+      if ((store = fopen("rerun", "r")) == NULL) {
         return;
       }
-      toPos(to);
-      delay(50);
+
+      while (isAutonomous()) {
+        if (fread((void*)&to, sizeof(to), 1, store) < sizeof(to)) {
+          return;
+        }
+        toPos(to);
+        delay(50);
+      }
+      fclose(store);
     }
-    fclose(store);
   }
-}
-}
+} // namespace rerun

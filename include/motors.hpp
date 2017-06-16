@@ -35,32 +35,32 @@ struct motor_t {
   unsigned long tlast;
   /** Set the motor to the specified power */
   void set(int power);
-};
+}; // struct motor_t
 
 /** Namespace relating to the motors and setting them, initializing them,
  * slewing, etc */
 namespace motors {
-/** Sets the motor to the power */
-void set(motor_t motor, int power);
+  /** Sets the motor to the power */
+  void set(motor_t motor, int power);
 
-/** Gets the current power value requested of the motor, analogous of
- * motor.power */
-int get(motor_t motor);
+  /** Gets the current power value requested of the motor, analogous of
+   * motor.power */
+  int get(motor_t motor);
 
-/** Returns an initialized motor_t object with the specified parameters, and
- * adds a duplicate of the motor to the motor list for slewing */
-motor_t init(unsigned char port, int inverted, float slewRate, float scale);
+  /** Returns an initialized motor_t object with the specified parameters, and
+   * adds a duplicate of the motor to the motor list for slewing */
+  motor_t init(unsigned char port, int inverted, float slewRate, float scale);
 
-/** Namespace relating to slewing the motors to save the gears and the PTCs */
-namespace slew {
-/** The wait time between each iteration of setting all of the motors */
-static const unsigned char slewWait = 10;
-/** The list of motors, as added to in motors::init() */
-extern motor_t list[11];
-/** The TaskHandle for handling the slewing task */
-extern TaskHandle handle;
+  /** Namespace relating to slewing the motors to save the gears and the PTCs */
+  namespace slew {
+    /** The wait time between each iteration of setting all of the motors */
+    static const unsigned char slewWait = 10;
+    /** The list of motors, as added to in motors::init() */
+    extern motor_t list[11];
+    /** The TaskHandle for handling the slewing task */
+    extern TaskHandle handle;
 
-/** Initialization function for slewing. Call in initialize() */
-void init(void);
-}
-}
+    /** Initialization function for slewing. Call in initialize() */
+    void init(void);
+  } // namespace slew
+} // namespace motors

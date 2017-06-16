@@ -19,49 +19,51 @@
 
 /** Consists of pid, and all subcomponents, etc */
 namespace pid {
-/** Maximum value for the drive */
-static const int DRIVE_MAX = 127;
-/** Minimum value for the drive */
-static const int DRIVE_MIN = -127;
-/** Limit for the integral value */
-static const int INTEGRAL_LIMIT = 50;
-/** p value */
-extern float Kp;
-/** i value */
-extern float Ki;
-/** d value */
-extern float Kd;
-/** Default precision for waiting on pid to reach value */
-extern unsigned int default_precision;
-/** Whether or not each side of the drive's pid is enabled, in the order of left
- * to right */
-extern bool enabled[2];
+  /** Maximum value for the drive */
+  static const int DRIVE_MAX = 127;
+  /** Minimum value for the drive */
+  static const int DRIVE_MIN = -127;
+  /** Limit for the integral value */
+  static const int INTEGRAL_LIMIT = 50;
+  /** p value */
+  extern float Kp;
+  /** i value */
+  extern float Ki;
+  /** d value */
+  extern float Kd;
+  /** Default precision for waiting on pid to reach value */
+  extern unsigned int default_precision;
+  /** Whether or not each side of the drive's pid is enabled, in the order of
+   * left
+   * to right */
+  extern bool enabled[2];
 
-/** Enables all pid */
-void enable(void);
+  /** Enables all pid */
+  void enable(void);
 
-/** Disables all pid */
-void disable(void);
+  /** Disables all pid */
+  void disable(void);
 
-/** Task to manage pid */
-void controller(void* none);
+  /** Task to manage pid */
+  void controller(void* none);
 
-/** Initialize pid. Call in initialize() */
-void init(void);
+  /** Initialize pid. Call in initialize() */
+  void init(void);
 
-/** Stops the pid task */
-void stop(void);
+  /** Stops the pid task */
+  void stop(void);
 
-/** (Re)starts the pid task */
-void go(void);
+  /** (Re)starts the pid task */
+  void go(void);
 
-/** Requests values for the left and right side of the drive */
-void request(long l, long r);
+  /** Requests values for the left and right side of the drive */
+  void request(long l, long r);
 
-/** Wait until pid reaches specified precision, for no longer than the specified
- * blockTime. If 0 is passed to blockTime, it will wait indefinately until the
- * requested values are met */
-void wait(unsigned long precision, unsigned long blockTime);
-/** TaskHandle for the pid task */
-extern TaskHandle pidHandle;
-}
+  /** Wait until pid reaches specified precision, for no longer than the
+   * specified
+   * blockTime. If 0 is passed to blockTime, it will wait indefinately until the
+   * requested values are met */
+  void wait(unsigned long precision, unsigned long blockTime);
+  /** TaskHandle for the pid task */
+  extern TaskHandle pidHandle;
+} // namespace pid
