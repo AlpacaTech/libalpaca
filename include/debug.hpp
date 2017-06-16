@@ -14,23 +14,23 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#include "rerun.hpp"
+#include "pid.hpp"
 
 /** Contains debugging funtions, etc */
 namespace debug {
-extern uint32_t fault;
+  extern uint32_t fault;
 
-template <class T>
-static inline T unserialize(PROS_FILE* stream) {
-  alignas(alignof(T)) char buf[sizeof(T)];
-  size_t nread = fread((void*)buf, sizeof(T), 1, stream);
-  if (nread < sizeof(T)) {
-    return T();
+  template <class T>
+  static inline T unserialize(PROS_FILE* stream) {
+    alignas(alignof(T)) char buf[sizeof(T)];
+    size_t nread = fread((void*)buf, sizeof(T), 1, stream);
+    if (nread < sizeof(T)) {
+      return T();
+    }
+    T* out = (T*)buf;
+    return *out;
   }
-  T* out = (T*)buf;
-  return *out;
-}
 
-/** Debug the Cortex if something goes wrong */
-void debug(void);
-}
+  /** Debug the Cortex if something goes wrong */
+  void debug(void);
+} // namespace debug

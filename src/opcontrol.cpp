@@ -20,8 +20,6 @@ bool wpressed = false;
 
 void operatorControl() {
   sensors::reset();
-  if (rerun::enabled)
-    rerun::record();
 
   while (true) {
     if (tank) {
@@ -38,6 +36,4 @@ void operatorControl() {
     delay(50);
   }
 
-  if (rerun::enabled)
-    rerun::stop();
 }
