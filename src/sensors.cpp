@@ -20,6 +20,7 @@ namespace sensors {
 
   quad_t left(1, 2, false);
   quad_t right(3, 4, false);
+  pot_t lift(1, false);
 
   quad_t::quad_t(unsigned char port1, unsigned char port2, bool _inverted) {
     ports[0] = port1;
@@ -87,6 +88,7 @@ namespace sensors {
   void init(void) {
     left.init();
     right.init();
+    lift.init();
   }
 
   void reset(void) {

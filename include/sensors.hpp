@@ -29,16 +29,14 @@ namespace sensors {
      * the removable cover is facing up */
     unsigned char ports[2];
     /** The relative zero from which the encoder's value will be returned. Can
-     * be
-     * added to returned value to produce a true value for the encoder */
+     * be added to returned value to produce a true value for the encoder */
     long zero;
     /** Whether or not the encoder is inverted */
     bool inverted;
     /** Reset the value to zero */
     void reset(void);
     /** Returns the relative value of the encoder. If added to the encoder's
-     * zero,
-     * produces an absolute value of the encoder */
+     * zero, produces an absolute value of the encoder */
     long value(void);
     /** The pid requested value of the encoder */
     float request;
@@ -138,4 +136,6 @@ namespace sensors {
   extern quad_t left;
   /** right quad encoder on the drive */
   extern quad_t right;
+  /** potentiometer on the lift */
+  extern pot_t lift;
 } // namespace sensors

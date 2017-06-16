@@ -1,6 +1,27 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "0da38ad7b2424ca3c77b6c89fb93e1f49a8d913d",
+        "date": "  Fri Jun 16 18:13:38 2017 -0400",
+        "description": "removed rerun (won't be accurate enough), will re-implement if it proves to be useful",
+        "filesAdded": [],
+        "filesDeleted": [
+            "include/rerun.hpp",
+            "src/rerun.cpp"
+        ],
+        "filesModified": [
+            "bin/auto.o",
+            "bin/opcontrol.o",
+            "bin/output.bin",
+            "bin/output.elf",
+            "include/debug.hpp",
+            "include/main.h",
+            "src/auto.cpp",
+            "src/opcontrol.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "f3580040542f040e229136b2462cc61fce788b97",
         "date": "  Fri Jun 16 18:07:59 2017 -0400",
         "description": "Redid style",
@@ -80,6 +101,17 @@
             "src/motors.cpp",
             "src/sensors.cpp"
         ]
+    },
+    {
+        "author": " iuyte <iuyte@users.noreply.github.com>",
+        "commitkey": "383155846c81dc9d00f6ceca74a42055da09791c",
+        "date": "  Thu Jun 8 21:10:40 2017 -0400",
+        "description": "Delete .opcontrol.cpp.swp",
+        "filesAdded": [],
+        "filesDeleted": [
+            "src/.opcontrol.cpp.swp"
+        ],
+        "filesModified": []
     },
     {
         "author": " iuyte <iuyte@gmail.com>",

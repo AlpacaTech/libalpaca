@@ -1,3 +1,23 @@
+commit 0da38ad7b2424ca3c77b6c89fb93e1f49a8d913d
+Author: iuyte <iuyte@gmail.com>
+Date:   Fri Jun 16 18:13:38 2017 -0400
+
+    removed rerun (won't be accurate enough), will re-implement if it proves to be useful
+
+:100644 100644 d03c407... 2232ae0... M	bin/auto.o
+:100644 100644 264249d... b793e67... M	bin/opcontrol.o
+:100755 100755 1e0bfd1... f4129f5... M	bin/output.bin
+:100755 100755 5be8876... 1dd58ef... M	bin/output.elf
+:100644 100644 9dacb80... 222eb00... M	docs/index.html
+:100644 100644 8b24dd1... 09567c8... M	docs/log.json
+:100644 100644 175599e... 096a7cf... M	docs/log.txt
+:100644 100644 e086eb2... 40def61... M	include/debug.hpp
+:100644 100644 a0789a6... 3f4cc8b... M	include/main.h
+:100644 000000 509eb5f... 0000000... D	include/rerun.hpp
+:100644 100644 79087ce... f2f08b9... M	src/auto.cpp
+:100644 100644 bb29842... 9d702da... M	src/opcontrol.cpp
+:100644 000000 003caa6... 0000000... D	src/rerun.cpp
+
 commit f3580040542f040e229136b2462cc61fce788b97
 Author: iuyte <iuyte@gmail.com>
 Date:   Fri Jun 16 18:07:59 2017 -0400
@@ -71,6 +91,14 @@ Date:   Thu Jun 8 21:16:23 2017 -0400
 :100644 100644 f5a6b87... da9a7d2... M	include/motors.hpp
 :100644 100644 ab78a05... c182df6... M	src/motors.cpp
 :100644 100644 7553c8f... fd2e00c... M	src/sensors.cpp
+
+commit 383155846c81dc9d00f6ceca74a42055da09791c
+Author: iuyte <iuyte@users.noreply.github.com>
+Date:   Thu Jun 8 21:10:40 2017 -0400
+
+    Delete .opcontrol.cpp.swp
+
+:100644 000000 6add0d2... 0000000... D	src/.opcontrol.cpp.swp
 
 commit 9b7ebe8db5860c13f596a2f62f2c6868bdd4634e
 Author: iuyte <iuyte@gmail.com>
