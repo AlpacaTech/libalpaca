@@ -1,3 +1,42 @@
+commit f3580040542f040e229136b2462cc61fce788b97
+Author: iuyte <iuyte@gmail.com>
+Date:   Fri Jun 16 18:07:59 2017 -0400
+
+    Redid style
+
+:100644 100644 cfedc96... 7029350... M	.clang-format
+:100644 000000 f0dcbc6... 0000000... D	include/.sensors.hpp.swp
+:100644 100644 53e216e... 778e284... M	include/API.h
+:100644 100644 c850e82... e086eb2... M	include/debug.hpp
+:100644 100644 e7707c1... c5b1c3d... M	include/drive.hpp
+:100644 100644 da9a7d2... 1632fb7... M	include/motors.hpp
+:100644 100644 ef3ba1b... 15611ae... M	include/pid.hpp
+:100644 100644 4bd0593... 509eb5f... M	include/rerun.hpp
+:100644 100644 d9bf07a... 922bb41... M	include/sensors.hpp
+:100644 100644 31c689a... 4dd8802... M	src/debug.cpp
+:100644 100644 90f7141... 0926c1b... M	src/drive.cpp
+:100644 100644 c182df6... 47c84e7... M	src/motors.cpp
+:100644 100644 b1f82a4... 845235e... M	src/pid.cpp
+:100644 100644 a6e9c3b... 003caa6... M	src/rerun.cpp
+:100644 100644 fd2e00c... 9def67f... M	src/sensors.cpp
+
+commit f62df479c07d11dbabe9ce88596aed611ea69809
+Author: iuyte <iuyte@gmail.com>
+Date:   Fri Jun 9 22:27:45 2017 -0400
+
+    Style fix in sensors.hpp and practice fix in pid.cpp
+
+:100644 100644 60bea15... 63b42e3... M	bin/pid.o
+:100644 100644 8089789... 035040f... M	bin/sensors.o
+:100644 100644 55db635... 4279e4f... M	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:100644 100644 78f4f55... 06793a5... M	docs/__pycache__/commit.cpython-35.pyc
+:100644 100644 ce35031... 9dacb80... M	docs/index.html
+:100644 100644 a4cd811... 8b24dd1... M	docs/log.json
+:100644 100644 21abaee... 175599e... M	docs/log.txt
+:000000 100644 0000000... f0dcbc6... A	include/.sensors.hpp.swp
+:100644 100644 c2fb5fd... d9bf07a... M	include/sensors.hpp
+:100644 100644 5b39c0e... b1f82a4... M	src/pid.cpp
+
 commit 7e770b10cd3a43ac3f1fa9a9c8bc98c38e1ab109
 Author: iuyte <iuyte@gmail.com>
 Date:   Fri Jun 9 15:57:13 2017 -0400

@@ -1,6 +1,50 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "f3580040542f040e229136b2462cc61fce788b97",
+        "date": "  Fri Jun 16 18:07:59 2017 -0400",
+        "description": "Redid style",
+        "filesAdded": [],
+        "filesDeleted": [
+            "include/.sensors.hpp.swp"
+        ],
+        "filesModified": [
+            ".clang-format",
+            "include/API.h",
+            "include/debug.hpp",
+            "include/drive.hpp",
+            "include/motors.hpp",
+            "include/pid.hpp",
+            "include/rerun.hpp",
+            "include/sensors.hpp",
+            "src/debug.cpp",
+            "src/drive.cpp",
+            "src/motors.cpp",
+            "src/pid.cpp",
+            "src/rerun.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "f62df479c07d11dbabe9ce88596aed611ea69809",
+        "date": "  Fri Jun 9 22:27:45 2017 -0400",
+        "description": "Style fix in sensors.hpp and practice fix in pid.cpp",
+        "filesAdded": [
+            "include/.sensors.hpp.swp"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "bin/pid.o",
+            "bin/sensors.o",
+            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
+            "docs/__pycache__/commit.cpython-35.pyc",
+            "include/sensors.hpp",
+            "src/pid.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "7e770b10cd3a43ac3f1fa9a9c8bc98c38e1ab109",
         "date": "  Fri Jun 9 15:57:13 2017 -0400",
         "description": "fixed bad link",
