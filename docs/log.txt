@@ -1,3 +1,26 @@
+commit 5177e894760f89e036182ec02e233f888c20acc6
+Author: iuyte <iuyte@gmail.com>
+Date:   Fri Jun 16 19:08:58 2017 -0400
+
+    added lift, sensor for lift
+
+:000000 100644 0000000... 5bdb9e3... A	bin/lift.o
+:100755 100755 f4129f5... b1be3d3... M	bin/output.bin
+:100755 100755 1dd58ef... 1fb2903... M	bin/output.elf
+:100644 000000 32f7d9e... 0000000... D	bin/rerun.o
+:100644 100644 035040f... f3d3802... M	bin/sensors.o
+:100644 100644 222eb00... fac9002... M	docs/index.html
+:100644 100644 09567c8... 005cfa1... M	docs/log.json
+:100644 100644 096a7cf... 6a7f1dc... M	docs/log.txt
+:000000 100644 0000000... c6e2727... A	include/.main.h.swp
+:100644 100644 40def61... f759a87... M	include/debug.hpp
+:000000 100644 0000000... f9ea65f... A	include/lift.hpp
+:100644 100644 15611ae... 5d08459... M	include/pid.hpp
+:100644 100644 922bb41... 5cc514d... M	include/sensors.hpp
+:000000 100644 0000000... ff023c9... A	src/lift.cpp
+:100644 100644 9def67f... f03dee4... M	src/sensors.cpp
+:000000 100755 0000000... fab3b10... A	vim.sh
+
 commit 0da38ad7b2424ca3c77b6c89fb93e1f49a8d913d
 Author: iuyte <iuyte@gmail.com>
 Date:   Fri Jun 16 18:13:38 2017 -0400

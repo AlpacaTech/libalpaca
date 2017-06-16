@@ -111,9 +111,9 @@ def parseContent(content):
             if ". M" in lines[aline]:
                 if "docs/index.html" not in curline and "docs/log.txt" not in curline and "docs/log.json" not in curline:
                     filesModified.append(curline)
-            elif ". A" in lines[aline]:
+            elif ". A" in lines[aline] and ".swp" not in curline:
                 filesAdded.append(curline)
-            elif ". D" in lines[aline]:
+            elif ". D" in lines[aline] and ".swp" not in curline:
                 filesDeleted.append(curline)
         tcommit = Commit(date, commitkey, author, description, filesModified,
                          filesAdded, filesDeleted)

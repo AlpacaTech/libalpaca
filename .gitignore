@@ -41,5 +41,6 @@
 *.cpp.swp
 *.hpp.swp
 *.*.swp
+*.sw?
 
 # End of https://www.gitignore.io/api/c++

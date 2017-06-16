@@ -1,6 +1,30 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "5177e894760f89e036182ec02e233f888c20acc6",
+        "date": "  Fri Jun 16 19:08:58 2017 -0400",
+        "description": "added lift, sensor for lift",
+        "filesAdded": [
+            "bin/lift.o",
+            "include/lift.hpp",
+            "src/lift.cpp",
+            "vim.sh"
+        ],
+        "filesDeleted": [
+            "bin/rerun.o"
+        ],
+        "filesModified": [
+            "bin/output.bin",
+            "bin/output.elf",
+            "bin/sensors.o",
+            "include/debug.hpp",
+            "include/pid.hpp",
+            "include/sensors.hpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "0da38ad7b2424ca3c77b6c89fb93e1f49a8d913d",
         "date": "  Fri Jun 16 18:13:38 2017 -0400",
         "description": "removed rerun (won't be accurate enough), will re-implement if it proves to be useful",
@@ -26,9 +50,7 @@
         "date": "  Fri Jun 16 18:07:59 2017 -0400",
         "description": "Redid style",
         "filesAdded": [],
-        "filesDeleted": [
-            "include/.sensors.hpp.swp"
-        ],
+        "filesDeleted": [],
         "filesModified": [
             ".clang-format",
             "include/API.h",
@@ -51,9 +73,7 @@
         "commitkey": "f62df479c07d11dbabe9ce88596aed611ea69809",
         "date": "  Fri Jun 9 22:27:45 2017 -0400",
         "description": "Style fix in sensors.hpp and practice fix in pid.cpp",
-        "filesAdded": [
-            "include/.sensors.hpp.swp"
-        ],
+        "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
             "bin/pid.o",
@@ -70,9 +90,7 @@
         "date": "  Fri Jun 9 15:57:13 2017 -0400",
         "description": "fixed bad link",
         "filesAdded": [],
-        "filesDeleted": [
-            "include/.motors.hpp.swp"
-        ],
+        "filesDeleted": [],
         "filesModified": [
             ".gitignore",
             "docs/__pycache__/cleanuphelp.cpython-35.pyc",
@@ -87,12 +105,8 @@
         "commitkey": "045f79181af1776ad59c720e3e26d75f1bc284eb",
         "date": "  Thu Jun 8 21:16:23 2017 -0400",
         "description": "Assignment optimizations in motors.cpp and style fixes elsewhere",
-        "filesAdded": [
-            "include/.motors.hpp.swp"
-        ],
-        "filesDeleted": [
-            "include/.sensors.hpp.swp"
-        ],
+        "filesAdded": [],
+        "filesDeleted": [],
         "filesModified": [
             "bin/motors.o",
             "bin/output.bin",
@@ -108,9 +122,7 @@
         "date": "  Thu Jun 8 21:10:40 2017 -0400",
         "description": "Delete .opcontrol.cpp.swp",
         "filesAdded": [],
-        "filesDeleted": [
-            "src/.opcontrol.cpp.swp"
-        ],
+        "filesDeleted": [],
         "filesModified": []
     },
     {
@@ -118,12 +130,8 @@
         "commitkey": "9b7ebe8db5860c13f596a2f62f2c6868bdd4634e",
         "date": "  Thu Jun 8 19:23:03 2017 -0400",
         "description": "fixed typo and removed unnessecary include",
-        "filesAdded": [
-            "include/.sensors.hpp.swp"
-        ],
-        "filesDeleted": [
-            "src/.pid.cpp.swp"
-        ],
+        "filesAdded": [],
+        "filesDeleted": [],
         "filesModified": [
             ".ycm_extra_conf.py",
             "include/sensors.hpp",
@@ -135,12 +143,8 @@
         "commitkey": "9941f2826110ccab816b7d91cab4e82ddc5dc153",
         "date": "  Thu Jun 8 18:02:47 2017 -0400",
         "description": "Small bug fixes",
-        "filesAdded": [
-            "src/.pid.cpp.swp"
-        ],
-        "filesDeleted": [
-            "src/.rerun.cpp.swp"
-        ],
+        "filesAdded": [],
+        "filesDeleted": [],
         "filesModified": [
             "bin/output.bin",
             "bin/output.elf",
@@ -156,8 +160,7 @@
         "date": "  Tue Jun 6 22:08:40 2017 -0400",
         "description": "Rerun and pid work",
         "filesAdded": [
-            "bin/output.elf",
-            "src/.rerun.cpp.swp"
+            "bin/output.elf"
         ],
         "filesDeleted": [],
         "filesModified": [
@@ -179,9 +182,7 @@
         "filesAdded": [
             ".ycm_extra_conf.py"
         ],
-        "filesDeleted": [
-            "src/.drive.cpp.swp"
-        ],
+        "filesDeleted": [],
         "filesModified": [
             ".gitignore"
         ]
@@ -191,12 +192,9 @@
         "commitkey": "64aaf8dbc4881e414a67dc0311dfe7f7d7ff0c9d",
         "date": "  Tue Jun 6 21:18:49 2017 -0400",
         "description": "Added namespace, class, function, variable and constant comments describing funtion of them",
-        "filesAdded": [
-            "src/.drive.cpp.swp"
-        ],
+        "filesAdded": [],
         "filesDeleted": [
-            "bin/output.elf",
-            "src/.sensors.cpp.swp"
+            "bin/output.elf"
         ],
         "filesModified": [
             "bin/debug.o",
@@ -219,12 +217,8 @@
         "commitkey": "25545ec9c215f06b15941218473a8fa3cbcec1f5",
         "date": "  Tue Jun 6 17:28:54 2017 -0400",
         "description": "added file boilerplates",
-        "filesAdded": [
-            "src/.sensors.cpp.swp"
-        ],
-        "filesDeleted": [
-            "src/.opcontrol.cpp.swp"
-        ],
+        "filesAdded": [],
+        "filesDeleted": [],
         "filesModified": [
             "bin/debug.o",
             "bin/opcontrol.o",
@@ -252,9 +246,7 @@
         "commitkey": "b29c8f1ab9c9dde1ff94cc2a393d4ef8553d08e7",
         "date": "  Tue Jun 6 07:09:28 2017 -0400",
         "description": "Started commenting functions, added switching between accel and tank drive",
-        "filesAdded": [
-            "src/.opcontrol.cpp.swp"
-        ],
+        "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
             "bin/opcontrol.o",
@@ -505,9 +497,7 @@
         "date": "  Thu Jun 1 20:25:54 2017 -0400",
         "description": "deleted odd file",
         "filesAdded": [],
-        "filesDeleted": [
-            "cpls/src/.debug.cpp.swp"
-        ],
+        "filesDeleted": [],
         "filesModified": []
     },
     {
@@ -515,9 +505,7 @@
         "commitkey": "ce0c7b71920fb8e8e527e35dc12102fdb0362f89",
         "date": "  Tue May 30 19:07:07 2017 -0400",
         "description": "Changes include *.hpp to include ../include/*.hpp, also fixed extra iteration of slewing loop",
-        "filesAdded": [
-            "cpls/src/.debug.cpp.swp"
-        ],
+        "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
             "cpls/bin/motors.o",
