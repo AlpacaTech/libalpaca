@@ -138,4 +138,6 @@ namespace sensors {
   extern quad_t right;
   /** potentiometer on the lift */
   extern pot_t lift;
+  /** gyro on the drive */
+  extern gyro_t gyro;
 } // namespace sensors

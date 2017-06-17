@@ -1,22 +1,29 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "d30be5271eb69e1182303355d09919a9c0e09b97",
+        "date": "  Fri Jun 16 19:17:40 2017 -0400",
+        "description": "Trying to ignore annoying vim temporary files in commits",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            ".gitignore",
+            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
+            "docs/cleanuphelp.py"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "5177e894760f89e036182ec02e233f888c20acc6",
         "date": "  Fri Jun 16 19:08:58 2017 -0400",
         "description": "added lift, sensor for lift",
         "filesAdded": [
-            "bin/lift.o",
             "include/lift.hpp",
             "src/lift.cpp",
             "vim.sh"
         ],
-        "filesDeleted": [
-            "bin/rerun.o"
-        ],
+        "filesDeleted": [],
         "filesModified": [
-            "bin/output.bin",
-            "bin/output.elf",
-            "bin/sensors.o",
             "include/debug.hpp",
             "include/pid.hpp",
             "include/sensors.hpp",
@@ -34,10 +41,6 @@
             "src/rerun.cpp"
         ],
         "filesModified": [
-            "bin/auto.o",
-            "bin/opcontrol.o",
-            "bin/output.bin",
-            "bin/output.elf",
             "include/debug.hpp",
             "include/main.h",
             "src/auto.cpp",
@@ -76,8 +79,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "bin/pid.o",
-            "bin/sensors.o",
             "docs/__pycache__/cleanuphelp.cpython-35.pyc",
             "docs/__pycache__/commit.cpython-35.pyc",
             "include/sensors.hpp",
@@ -108,9 +109,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "bin/motors.o",
-            "bin/output.bin",
-            "bin/output.elf",
             "include/motors.hpp",
             "src/motors.cpp",
             "src/sensors.cpp"
@@ -146,9 +144,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "bin/output.bin",
-            "bin/output.elf",
-            "bin/rerun.o",
             "include/sensors.hpp",
             "src/rerun.cpp",
             "src/sensors.cpp"
@@ -159,15 +154,9 @@
         "commitkey": "1cece1fac3a0833019de68e5f90ae11614c95830",
         "date": "  Tue Jun 6 22:08:40 2017 -0400",
         "description": "Rerun and pid work",
-        "filesAdded": [
-            "bin/output.elf"
-        ],
+        "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "bin/drive.o",
-            "bin/output.bin",
-            "bin/pid.o",
-            "bin/rerun.o",
             "include/pid.hpp",
             "include/rerun.hpp",
             "src/pid.cpp",
@@ -193,14 +182,8 @@
         "date": "  Tue Jun 6 21:18:49 2017 -0400",
         "description": "Added namespace, class, function, variable and constant comments describing funtion of them",
         "filesAdded": [],
-        "filesDeleted": [
-            "bin/output.elf"
-        ],
+        "filesDeleted": [],
         "filesModified": [
-            "bin/debug.o",
-            "bin/motors.o",
-            "bin/output.bin",
-            "bin/pid.o",
             "include/debug.hpp",
             "include/drive.hpp",
             "include/motors.hpp",
@@ -220,10 +203,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "bin/debug.o",
-            "bin/opcontrol.o",
-            "bin/output.bin",
-            "bin/output.elf",
             "include/debug.hpp",
             "include/drive.hpp",
             "include/motors.hpp",
@@ -249,9 +228,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "bin/opcontrol.o",
-            "bin/output.bin",
-            "bin/output.elf",
             "include/drive.hpp",
             "src/drive.cpp",
             "src/opcontrol.cpp",
@@ -266,11 +242,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "bin/drive.o",
-            "bin/output.bin",
-            "bin/output.elf",
-            "bin/rerun.o",
-            "bin/sensors.o",
             "include/drive.hpp",
             "include/motors.hpp",
             "include/sensors.hpp",
@@ -323,17 +294,6 @@
         "description": "Changed project structure",
         "filesAdded": [
             "Makefile",
-            "bin/auto.o",
-            "bin/debug.o",
-            "bin/drive.o",
-            "bin/init.o",
-            "bin/motors.o",
-            "bin/opcontrol.o",
-            "bin/output.bin",
-            "bin/output.elf",
-            "bin/pid.o",
-            "bin/rerun.o",
-            "bin/sensors.o",
             "common.mk",
             "firmware/STM32F10x.ld",
             "firmware/cortex.ld",
@@ -362,17 +322,6 @@
         "filesDeleted": [
             "cpls/.clang-format",
             "cpls/Makefile",
-            "cpls/bin/auto.o",
-            "cpls/bin/debug.o",
-            "cpls/bin/drive.o",
-            "cpls/bin/init.o",
-            "cpls/bin/motors.o",
-            "cpls/bin/opcontrol.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
-            "cpls/bin/pid.o",
-            "cpls/bin/rerun.o",
-            "cpls/bin/sensors.o",
             "cpls/common.mk",
             "cpls/firmware/STM32F10x.ld",
             "cpls/firmware/cortex.ld",
@@ -398,15 +347,6 @@
             "cpls/src/rerun.cpp",
             "cpls/src/sensors.cpp",
             "miniRerun/Makefile",
-            "miniRerun/bin/auto.o",
-            "miniRerun/bin/drive.o",
-            "miniRerun/bin/init.o",
-            "miniRerun/bin/opcontrol.o",
-            "miniRerun/bin/output.bin",
-            "miniRerun/bin/output.elf",
-            "miniRerun/bin/pid.o",
-            "miniRerun/bin/rerun.o",
-            "miniRerun/bin/sensors.o",
             "miniRerun/common.mk",
             "miniRerun/firmware/STM32F10x.ld",
             "miniRerun/firmware/cortex.ld",
@@ -446,9 +386,6 @@
         "filesDeleted": [],
         "filesModified": [
             ".gitignore",
-            "cpls/bin/drive.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
             "cpls/src/drive.cpp",
             "cpls/src/sensors.cpp"
         ]
@@ -508,9 +445,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "cpls/bin/motors.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
             "cpls/src/auto.cpp",
             "cpls/src/debug.cpp",
             "cpls/src/drive.cpp",
@@ -564,9 +498,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "cpls/bin/drive.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
             "cpls/include/drive.hpp",
             "cpls/src/drive.cpp",
             "cpls/src/opcontrol.cpp"
@@ -616,11 +547,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "cpls/bin/drive.o",
-            "cpls/bin/init.o",
-            "cpls/bin/motors.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
             "cpls/include/motors.hpp",
             "cpls/src/drive.cpp",
             "cpls/src/init.cpp",
@@ -648,22 +574,9 @@
         "filesDeleted": [],
         "filesModified": [
             "compile.sh",
-            "cpls/bin/auto.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
-            "cpls/bin/sensors.o",
             "cpls/include/sensors.hpp",
             "cpls/src/auto.cpp",
-            "cpls/src/sensors.cpp",
-            "miniRerun/bin/auto.o",
-            "miniRerun/bin/drive.o",
-            "miniRerun/bin/init.o",
-            "miniRerun/bin/opcontrol.o",
-            "miniRerun/bin/output.bin",
-            "miniRerun/bin/output.elf",
-            "miniRerun/bin/pid.o",
-            "miniRerun/bin/rerun.o",
-            "miniRerun/bin/sensors.o"
+            "cpls/src/sensors.cpp"
         ]
     },
     {
@@ -674,12 +587,7 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "compile.sh",
-            "cpls/bin/drive.o",
-            "cpls/bin/opcontrol.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
-            "cpls/bin/rerun.o"
+            "compile.sh"
         ]
     },
     {
@@ -690,9 +598,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
-            "cpls/bin/sensors.o",
             "cpls/include/rerun.hpp",
             "cpls/src/drive.cpp",
             "cpls/src/opcontrol.cpp",
@@ -719,10 +624,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "cpls/bin/init.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
-            "cpls/bin/sensors.o",
             "cpls/include/motors.hpp",
             "cpls/src/init.cpp"
         ]
@@ -748,12 +649,6 @@
         "filesDeleted": [],
         "filesModified": [
             "compile.py",
-            "cpls/bin/drive.o",
-            "cpls/bin/motors.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
-            "cpls/bin/pid.o",
-            "cpls/bin/sensors.o",
             "cpls/include/drive.hpp",
             "cpls/include/motors.hpp",
             "cpls/include/sensors.hpp",
@@ -844,7 +739,6 @@
             "cpls/log.txt"
         ],
         "filesModified": [
-            "cpls/bin/rerun.o",
             "cpls/include/API.h",
             "cpls/include/debug.h",
             "cpls/include/drive.h",
@@ -913,10 +807,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "cpls/bin/motors.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
-            "cpls/bin/rerun.o",
             "cpls/include/rerun.h",
             "cpls/src/rerun.cpp"
         ]
@@ -931,10 +821,6 @@
         ],
         "filesDeleted": [],
         "filesModified": [
-            "cpls/bin/drive.o",
-            "cpls/bin/motors.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
             "cpls/include/motors.h",
             "cpls/src/motors.cpp"
         ]
@@ -945,20 +831,11 @@
         "date": "  Sun May 7 20:54:30 2017 -0400",
         "description": "Fixed rerun issues, eliminated slewing (wasnt working), created debug mode to identify segfaults",
         "filesAdded": [
-            "cpls/bin/debug.o",
             "cpls/include/debug.h",
             "cpls/src/debug.cpp"
         ],
         "filesDeleted": [],
         "filesModified": [
-            "cpls/bin/auto.o",
-            "cpls/bin/drive.o",
-            "cpls/bin/motors.o",
-            "cpls/bin/opcontrol.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
-            "cpls/bin/pid.o",
-            "cpls/bin/rerun.o",
             "cpls/include/drive.h",
             "cpls/include/main.h",
             "cpls/include/motors.h",
@@ -980,12 +857,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "cpls/bin/drive.o",
-            "cpls/bin/motors.o",
-            "cpls/bin/opcontrol.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
-            "cpls/bin/rerun.o",
             "cpls/include/drive.h",
             "cpls/include/motors.h",
             "cpls/include/rerun.h",
@@ -1004,12 +875,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "cpls/bin/drive.o",
-            "cpls/bin/motors.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
-            "cpls/bin/pid.o",
-            "cpls/bin/sensors.o",
             "cpls/include/motors.h",
             "cpls/include/sensors.h",
             "cpls/src/drive.cpp",
@@ -1026,16 +891,11 @@
         "date": "  Sat May 6 20:20:20 2017 -0400",
         "description": "Added rerun functionality",
         "filesAdded": [
-            "cpls/bin/rerun.o",
             "cpls/include/rerun.h",
             "cpls/src/rerun.cpp"
         ],
         "filesDeleted": [],
         "filesModified": [
-            "cpls/bin/auto.o",
-            "cpls/bin/opcontrol.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
             "cpls/include/main.h",
             "cpls/src/auto.cpp",
             "cpls/src/opcontrol.cpp"
@@ -1082,9 +942,6 @@
         "date": "  Sat May 6 17:02:20 2017 -0400",
         "description": "Added easier motor support, PID",
         "filesAdded": [
-            "cpls/bin/drive.o",
-            "cpls/bin/motors.o",
-            "cpls/bin/pid.o",
             "cpls/include/motors.h",
             "cpls/include/pid.h",
             "cpls/src/motors.cpp",
@@ -1092,12 +949,6 @@
         ],
         "filesDeleted": [],
         "filesModified": [
-            "cpls/bin/auto.o",
-            "cpls/bin/init.o",
-            "cpls/bin/opcontrol.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
-            "cpls/bin/sensors.o",
             "cpls/include/drive.h",
             "cpls/include/main.h",
             "cpls/include/sensors.h",
@@ -1115,16 +966,11 @@
         "date": "  Mon May 1 19:31:59 2017 -0400",
         "description": "Fixed issue with sensors namespace and begun drive.cpp",
         "filesAdded": [
-            "cpls/bin/opcontrol.o",
-            "cpls/bin/output.elf",
             "cpls/src/drive.cpp",
             "log.json"
         ],
         "filesDeleted": [],
         "filesModified": [
-            "cpls/bin/init.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/sensors.o",
             "cpls/include/drive.h",
             "cpls/include/sensors.h",
             "cpls/src/sensors.cpp"
@@ -1151,17 +997,7 @@
             "resources/cone.png"
         ],
         "filesDeleted": [],
-        "filesModified": [
-            "miniRerun/bin/auto.o",
-            "miniRerun/bin/drive.o",
-            "miniRerun/bin/init.o",
-            "miniRerun/bin/opcontrol.o",
-            "miniRerun/bin/output.bin",
-            "miniRerun/bin/output.elf",
-            "miniRerun/bin/pid.o",
-            "miniRerun/bin/rerun.o",
-            "miniRerun/bin/sensors.o"
-        ]
+        "filesModified": []
     },
     {
         "author": " iuyte <iuyte@gmail.com>",
@@ -1186,18 +1022,14 @@
         "date": "  Sun Apr 30 09:36:00 2017 -0400",
         "description": "inclusion issue, attempting to fix",
         "filesAdded": [
-            "cpls/bin/sensors.o",
             "cpls/include/drive.h",
             "cpls/include/sensors.h",
             "cpls/src/sensors.cpp"
         ],
         "filesDeleted": [
-            "cpls/bin/opcontrol.o",
-            "cpls/bin/output.elf",
             "cpls/src/include/foo.h"
         ],
         "filesModified": [
-            "cpls/bin/init.o",
             "cpls/include/main.h",
             "cpls/src/init.cpp"
         ]
@@ -1209,11 +1041,6 @@
         "description": "new project for C++ code, works",
         "filesAdded": [
             "cpls/Makefile",
-            "cpls/bin/auto.o",
-            "cpls/bin/init.o",
-            "cpls/bin/opcontrol.o",
-            "cpls/bin/output.bin",
-            "cpls/bin/output.elf",
             "cpls/common.mk",
             "cpls/firmware/STM32F10x.ld",
             "cpls/firmware/cortex.ld",
@@ -1257,19 +1084,9 @@
         "commitkey": "be82604784a8a1165d4ebc89570a37ebd0219ade",
         "date": "  Sat Apr 29 15:51:31 2017 -0400",
         "description": "Changed management of whether pid is enabled, small pid changes and now adressing the right pid index in replay",
-        "filesAdded": [
-            "miniRerun/bin/drive.o",
-            "miniRerun/bin/pid.o"
-        ],
+        "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "miniRerun/bin/auto.o",
-            "miniRerun/bin/init.o",
-            "miniRerun/bin/opcontrol.o",
-            "miniRerun/bin/output.bin",
-            "miniRerun/bin/output.elf",
-            "miniRerun/bin/rerun.o",
-            "miniRerun/bin/sensors.o",
             "miniRerun/include/pid.h",
             "miniRerun/src/init.c",
             "miniRerun/src/pid.c",
@@ -1289,13 +1106,6 @@
         "filesModified": [
             "docs/__pycache__/cleanuphelp.cpython-35.pyc",
             "docs/__pycache__/commit.cpython-35.pyc",
-            "miniRerun/bin/auto.o",
-            "miniRerun/bin/init.o",
-            "miniRerun/bin/opcontrol.o",
-            "miniRerun/bin/output.bin",
-            "miniRerun/bin/output.elf",
-            "miniRerun/bin/rerun.o",
-            "miniRerun/bin/sensors.o",
             "miniRerun/include/main.h",
             "miniRerun/include/motors.h",
             "miniRerun/include/rerun.h",
@@ -1312,13 +1122,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "miniRerun/bin/auto.o",
-            "miniRerun/bin/init.o",
-            "miniRerun/bin/opcontrol.o",
-            "miniRerun/bin/output.bin",
-            "miniRerun/bin/output.elf",
-            "miniRerun/bin/rerun.o",
-            "miniRerun/bin/sensors.o",
             "miniRerun/src/rerun.c"
         ]
     },
@@ -1379,15 +1182,7 @@
         "commitkey": "fe3ffb19aa4921bb9058700e703e7872e620fdfa",
         "date": "  Sat Apr 22 23:02:51 2017 +0400",
         "description": "fixed inclusion issue with standard header guards",
-        "filesAdded": [
-            "miniRerun/bin/auto.o",
-            "miniRerun/bin/init.o",
-            "miniRerun/bin/opcontrol.o",
-            "miniRerun/bin/output.bin",
-            "miniRerun/bin/output.elf",
-            "miniRerun/bin/rerun.o",
-            "miniRerun/bin/sensors.o"
-        ],
+        "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
             "miniRerun/include/motors.h",

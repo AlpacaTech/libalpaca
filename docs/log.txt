@@ -1,3 +1,17 @@
+commit d30be5271eb69e1182303355d09919a9c0e09b97
+Author: iuyte <iuyte@gmail.com>
+Date:   Fri Jun 16 19:17:40 2017 -0400
+
+    Trying to ignore annoying vim temporary files in commits
+
+:100644 100644 3b7e98c... 63e2d10... M	.gitignore
+:100644 100644 4279e4f... 1fb577c... M	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:100644 100644 70d9e0e... 965f536... M	docs/cleanuphelp.py
+:100644 100644 fac9002... df0ec95... M	docs/index.html
+:100644 100644 005cfa1... f41ce95... M	docs/log.json
+:100644 100644 6a7f1dc... 26aed23... M	docs/log.txt
+:100644 000000 c6e2727... 0000000... D	include/.main.h.swp
+
 commit 5177e894760f89e036182ec02e233f888c20acc6
 Author: iuyte <iuyte@gmail.com>
 Date:   Fri Jun 16 19:08:58 2017 -0400

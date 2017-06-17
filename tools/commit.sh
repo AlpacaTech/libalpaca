@@ -6,7 +6,11 @@ cd docs/
 ./document.sh
 cd ../
 git add *
-git commit -m "$@"
+git rm include/*.swp -f
+git rm src/*.swp -f
+git rm *.swp -f
+git commit
 git push
 cd ~/VEX-709S-2018/docs
 ./document.sh
+git add docs/*
