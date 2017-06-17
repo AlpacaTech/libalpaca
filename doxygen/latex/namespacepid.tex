@@ -1,0 +1,133 @@
+\hypertarget{namespacepid}{}\section{pid Namespace Reference}
+\label{namespacepid}\index{pid@{pid}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacepid_ab65dc5974d66ecc9406878a375244f20}{controller} (void $\ast$none)
+\item 
+void \hyperlink{namespacepid_a4a4e5d1d2391a4ce24308442c4d69723}{enable} (void)
+\item 
+void \hyperlink{namespacepid_aba928d2e1b704af6cf1e652224411be5}{disable} (void)
+\item 
+void \hyperlink{namespacepid_aa59662d2f69d5a905a28f2ca9bc6bdcb}{init} (void)
+\item 
+void \hyperlink{namespacepid_a702bbb1d722eedebf32c55c89ff8afd6}{stop} (void)
+\item 
+void \hyperlink{namespacepid_a3a4e4a51df909f0aa3b2df01d35ff75b}{go} (void)
+\item 
+void \hyperlink{namespacepid_a8a2a0422275eb1a3310411a7eccda378}{request} (long l, long r)
+\item 
+void \hyperlink{namespacepid_ae415ddecc97484b1195e22a89b429506}{wait} (unsigned long precision, unsigned long block\+Time)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{namespacepid_ad77953fe15d091ff43f7bd3ddd2402b0}{Kp} = 0.\+8
+\item 
+float \hyperlink{namespacepid_ac63d639f53e93763cbf9f54838a3e325}{Ki} = 0.\+04
+\item 
+float \hyperlink{namespacepid_ab6d926f5578bc84849cd8306b32a7481}{Kd} = 0.\+35
+\item 
+\mbox{\Hypertarget{namespacepid_aa179832793655bda657144efab78d58a}\label{namespacepid_aa179832793655bda657144efab78d58a}} 
+unsigned int {\bfseries deadband} = 10
+\item 
+bool \hyperlink{namespacepid_a210c97219b84549120ef7b0a27d75971}{enabled} \mbox{[}2\mbox{]} = \{true, true\}
+\item 
+unsigned int \hyperlink{namespacepid_ab7ebcf570abd665235d5edd4e78c1d2a}{default\+\_\+precision} = 30
+\item 
+\hyperlink{API_8h_a23dca3c0de10682afb982677ff292f77}{Task\+Handle} \hyperlink{namespacepid_a14ac02223a13e370357cc0c8ded9864d}{pid\+Handle}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Consists of pid, and all subcomponents, etc 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepid_ab65dc5974d66ecc9406878a375244f20}\label{namespacepid_ab65dc5974d66ecc9406878a375244f20}} 
+\index{pid@{pid}!controller@{controller}}
+\index{controller@{controller}!pid@{pid}}
+\subsubsection{\texorpdfstring{controller()}{controller()}}
+{\footnotesize\ttfamily void pid\+::controller (\begin{DoxyParamCaption}\item[{void $\ast$}]{none }\end{DoxyParamCaption})}
+
+Task to manage pid \mbox{\Hypertarget{namespacepid_aba928d2e1b704af6cf1e652224411be5}\label{namespacepid_aba928d2e1b704af6cf1e652224411be5}} 
+\index{pid@{pid}!disable@{disable}}
+\index{disable@{disable}!pid@{pid}}
+\subsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily void pid\+::disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Disables all pid \mbox{\Hypertarget{namespacepid_a4a4e5d1d2391a4ce24308442c4d69723}\label{namespacepid_a4a4e5d1d2391a4ce24308442c4d69723}} 
+\index{pid@{pid}!enable@{enable}}
+\index{enable@{enable}!pid@{pid}}
+\subsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void pid\+::enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Enables all pid \mbox{\Hypertarget{namespacepid_a3a4e4a51df909f0aa3b2df01d35ff75b}\label{namespacepid_a3a4e4a51df909f0aa3b2df01d35ff75b}} 
+\index{pid@{pid}!go@{go}}
+\index{go@{go}!pid@{pid}}
+\subsubsection{\texorpdfstring{go()}{go()}}
+{\footnotesize\ttfamily void pid\+::go (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+(Re)starts the pid task \mbox{\Hypertarget{namespacepid_aa59662d2f69d5a905a28f2ca9bc6bdcb}\label{namespacepid_aa59662d2f69d5a905a28f2ca9bc6bdcb}} 
+\index{pid@{pid}!init@{init}}
+\index{init@{init}!pid@{pid}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void pid\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize pid. Call in \hyperlink{main_8h_a25a40b6614565f755233080a384c35f1}{initialize()} \mbox{\Hypertarget{namespacepid_a8a2a0422275eb1a3310411a7eccda378}\label{namespacepid_a8a2a0422275eb1a3310411a7eccda378}} 
+\index{pid@{pid}!request@{request}}
+\index{request@{request}!pid@{pid}}
+\subsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily void pid\+::request (\begin{DoxyParamCaption}\item[{long}]{l,  }\item[{long}]{r }\end{DoxyParamCaption})}
+
+Requests values for the left and right side of the drive \mbox{\Hypertarget{namespacepid_a702bbb1d722eedebf32c55c89ff8afd6}\label{namespacepid_a702bbb1d722eedebf32c55c89ff8afd6}} 
+\index{pid@{pid}!stop@{stop}}
+\index{stop@{stop}!pid@{pid}}
+\subsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void pid\+::stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Stops the pid task \mbox{\Hypertarget{namespacepid_ae415ddecc97484b1195e22a89b429506}\label{namespacepid_ae415ddecc97484b1195e22a89b429506}} 
+\index{pid@{pid}!wait@{wait}}
+\index{wait@{wait}!pid@{pid}}
+\subsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily void pid\+::wait (\begin{DoxyParamCaption}\item[{unsigned long}]{precision,  }\item[{unsigned long}]{block\+Time }\end{DoxyParamCaption})}
+
+Wait until pid reaches specified precision, for no longer than the specified block\+Time. If 0 is passed to block\+Time, it will wait indefinately until the requested values are met 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacepid_ab7ebcf570abd665235d5edd4e78c1d2a}\label{namespacepid_ab7ebcf570abd665235d5edd4e78c1d2a}} 
+\index{pid@{pid}!default\+\_\+precision@{default\+\_\+precision}}
+\index{default\+\_\+precision@{default\+\_\+precision}!pid@{pid}}
+\subsubsection{\texorpdfstring{default\+\_\+precision}{default\_precision}}
+{\footnotesize\ttfamily unsigned int pid\+::default\+\_\+precision = 30}
+
+Default precision for waiting on pid to reach value \mbox{\Hypertarget{namespacepid_a210c97219b84549120ef7b0a27d75971}\label{namespacepid_a210c97219b84549120ef7b0a27d75971}} 
+\index{pid@{pid}!enabled@{enabled}}
+\index{enabled@{enabled}!pid@{pid}}
+\subsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily bool pid\+::enabled = \{true, true\}}
+
+Whether or not each side of the drive\textquotesingle{}s pid is enabled, in the order of left to right \mbox{\Hypertarget{namespacepid_ab6d926f5578bc84849cd8306b32a7481}\label{namespacepid_ab6d926f5578bc84849cd8306b32a7481}} 
+\index{pid@{pid}!Kd@{Kd}}
+\index{Kd@{Kd}!pid@{pid}}
+\subsubsection{\texorpdfstring{Kd}{Kd}}
+{\footnotesize\ttfamily float pid\+::\+Kd = 0.\+35}
+
+d value \mbox{\Hypertarget{namespacepid_ac63d639f53e93763cbf9f54838a3e325}\label{namespacepid_ac63d639f53e93763cbf9f54838a3e325}} 
+\index{pid@{pid}!Ki@{Ki}}
+\index{Ki@{Ki}!pid@{pid}}
+\subsubsection{\texorpdfstring{Ki}{Ki}}
+{\footnotesize\ttfamily float pid\+::\+Ki = 0.\+04}
+
+i value \mbox{\Hypertarget{namespacepid_ad77953fe15d091ff43f7bd3ddd2402b0}\label{namespacepid_ad77953fe15d091ff43f7bd3ddd2402b0}} 
+\index{pid@{pid}!Kp@{Kp}}
+\index{Kp@{Kp}!pid@{pid}}
+\subsubsection{\texorpdfstring{Kp}{Kp}}
+{\footnotesize\ttfamily float pid\+::\+Kp = 0.\+8}
+
+p value \mbox{\Hypertarget{namespacepid_a14ac02223a13e370357cc0c8ded9864d}\label{namespacepid_a14ac02223a13e370357cc0c8ded9864d}} 
+\index{pid@{pid}!pid\+Handle@{pid\+Handle}}
+\index{pid\+Handle@{pid\+Handle}!pid@{pid}}
+\subsubsection{\texorpdfstring{pid\+Handle}{pidHandle}}
+{\footnotesize\ttfamily \hyperlink{API_8h_a23dca3c0de10682afb982677ff292f77}{Task\+Handle} pid\+::pid\+Handle}
+
+Task\+Handle for the pid task 

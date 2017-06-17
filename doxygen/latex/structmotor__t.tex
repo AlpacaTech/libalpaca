@@ -1,0 +1,78 @@
+\hypertarget{structmotor__t}{}\section{motor\+\_\+t Struct Reference}
+\label{structmotor__t}\index{motor\+\_\+t@{motor\+\_\+t}}
+
+
+{\ttfamily \#include $<$motors.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{structmotor__t_abbb5dde85e4548012cf8cf796093313f}{set} (int \hyperlink{structmotor__t_a7e84d55b013193d736b66bc4d213e98f}{power})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{structmotor__t_a5b2cb1644501c09be84743b375fd2071}{port}
+\item 
+char \hyperlink{structmotor__t_a151da94c1625feddc6dd621d7a97f64b}{inverted}
+\item 
+int \hyperlink{structmotor__t_a7e84d55b013193d736b66bc4d213e98f}{power}
+\item 
+float \hyperlink{structmotor__t_a313fd4008216d0d01b20dcf14ee83fb6}{scale}
+\item 
+\mbox{\Hypertarget{structmotor__t_a226db167970cfe00376b7fbaca6e8d13}\label{structmotor__t_a226db167970cfe00376b7fbaca6e8d13}} 
+float {\bfseries slew\+Rate}
+\item 
+unsigned long \hyperlink{structmotor__t_a4f00b961c42d53610d71bb90efdcd089}{tlast}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for motor objects 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structmotor__t_abbb5dde85e4548012cf8cf796093313f}\label{structmotor__t_abbb5dde85e4548012cf8cf796093313f}} 
+\index{motor\+\_\+t@{motor\+\_\+t}!set@{set}}
+\index{set@{set}!motor\+\_\+t@{motor\+\_\+t}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void motor\+\_\+t\+::set (\begin{DoxyParamCaption}\item[{int}]{power }\end{DoxyParamCaption})}
+
+Set the motor to the specified power 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structmotor__t_a151da94c1625feddc6dd621d7a97f64b}\label{structmotor__t_a151da94c1625feddc6dd621d7a97f64b}} 
+\index{motor\+\_\+t@{motor\+\_\+t}!inverted@{inverted}}
+\index{inverted@{inverted}!motor\+\_\+t@{motor\+\_\+t}}
+\subsubsection{\texorpdfstring{inverted}{inverted}}
+{\footnotesize\ttfamily char motor\+\_\+t\+::inverted}
+
+The invered status of the motor, should be 1 or -\/1 \mbox{\Hypertarget{structmotor__t_a5b2cb1644501c09be84743b375fd2071}\label{structmotor__t_a5b2cb1644501c09be84743b375fd2071}} 
+\index{motor\+\_\+t@{motor\+\_\+t}!port@{port}}
+\index{port@{port}!motor\+\_\+t@{motor\+\_\+t}}
+\subsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily unsigned char motor\+\_\+t\+::port}
+
+Port the motor is pluggin in to \mbox{\Hypertarget{structmotor__t_a7e84d55b013193d736b66bc4d213e98f}\label{structmotor__t_a7e84d55b013193d736b66bc4d213e98f}} 
+\index{motor\+\_\+t@{motor\+\_\+t}!power@{power}}
+\index{power@{power}!motor\+\_\+t@{motor\+\_\+t}}
+\subsubsection{\texorpdfstring{power}{power}}
+{\footnotesize\ttfamily int motor\+\_\+t\+::power}
+
+The requested power value of the motor \mbox{\Hypertarget{structmotor__t_a313fd4008216d0d01b20dcf14ee83fb6}\label{structmotor__t_a313fd4008216d0d01b20dcf14ee83fb6}} 
+\index{motor\+\_\+t@{motor\+\_\+t}!scale@{scale}}
+\index{scale@{scale}!motor\+\_\+t@{motor\+\_\+t}}
+\subsubsection{\texorpdfstring{scale}{scale}}
+{\footnotesize\ttfamily float motor\+\_\+t\+::scale}
+
+A multiplier for setting the motor values \mbox{\Hypertarget{structmotor__t_a4f00b961c42d53610d71bb90efdcd089}\label{structmotor__t_a4f00b961c42d53610d71bb90efdcd089}} 
+\index{motor\+\_\+t@{motor\+\_\+t}!tlast@{tlast}}
+\index{tlast@{tlast}!motor\+\_\+t@{motor\+\_\+t}}
+\subsubsection{\texorpdfstring{tlast}{tlast}}
+{\footnotesize\ttfamily unsigned long motor\+\_\+t\+::tlast}
+
+The last update time of the motor. Is managed by the slew task, so it shouldn\textquotesingle{}t need to be changed 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/motors.\+hpp\item 
+src/motors.\+cpp\end{DoxyCompactItemize}
