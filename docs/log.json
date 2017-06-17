@@ -1,13 +1,25 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "f150000d3f0f6c8c12fd2df44bb7f7551010c103",
+        "date": "  Sat Jun 17 15:16:17 2017 -0400",
+        "description": "Fixed headers",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/debug.hpp",
+            "include/lift.hpp",
+            "src/lift.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "ebd11bb1efa8334eaffb4a8333744cfd35968436",
         "date": "  Sat Jun 17 14:50:36 2017 -0400",
         "description": "Added lift::to function, using a simple loop to go to a desired value",
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
             "include/lift.hpp",
             "src/lift.cpp"
         ]
@@ -21,7 +33,6 @@
         "filesDeleted": [],
         "filesModified": [
             ".gitignore",
-            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
             "docs/cleanuphelp.py",
             "include/sensors.hpp",
             "src/sensors.cpp",
@@ -37,7 +48,6 @@
         "filesDeleted": [],
         "filesModified": [
             ".gitignore",
-            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
             "docs/cleanuphelp.py"
         ]
     },
@@ -108,8 +118,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
-            "docs/__pycache__/commit.cpython-35.pyc",
             "include/sensors.hpp",
             "src/pid.cpp"
         ]
@@ -123,8 +131,6 @@
         "filesDeleted": [],
         "filesModified": [
             ".gitignore",
-            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
-            "docs/__pycache__/commit.cpython-35.pyc",
             "docs/cleanup.py",
             "docs/cleanuphelp.py",
             "docs/commit.py"
@@ -311,9 +317,7 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "Makefile",
-            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
-            "docs/__pycache__/commit.cpython-35.pyc"
+            "Makefile"
         ]
     },
     {
@@ -427,7 +431,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
             "docs/cleanuphelp.py"
         ]
     },
@@ -503,7 +506,6 @@
             "compile.sh"
         ],
         "filesModified": [
-            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
             "docs/cleanuphelp.py"
         ]
     },
@@ -1133,8 +1135,6 @@
         ],
         "filesDeleted": [],
         "filesModified": [
-            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
-            "docs/__pycache__/commit.cpython-35.pyc",
             "miniRerun/include/main.h",
             "miniRerun/include/motors.h",
             "miniRerun/include/rerun.h",
@@ -1190,7 +1190,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "docs/__pycache__/cleanuphelp.cpython-36.pyc",
             "docs/cleanuphelp.py"
         ]
     },
@@ -1202,7 +1201,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "docs/__pycache__/cleanuphelp.cpython-36.pyc",
             "docs/cleanuphelp.py"
         ]
     },
@@ -1225,11 +1223,6 @@
         "date": "  Sat Apr 22 22:49:07 2017 +0400",
         "description": "added my webpage creater script in docs, generated log",
         "filesAdded": [
-            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
-            "docs/__pycache__/cleanuphelp.cpython-36.pyc",
-            "docs/__pycache__/commit.cpython-35.pyc",
-            "docs/__pycache__/commit.cpython-36.pyc",
-            "docs/__pycache__/dif.cpython-36.pyc",
             "docs/cleanup.py",
             "docs/cleanuphelp.py",
             "docs/commit.py",

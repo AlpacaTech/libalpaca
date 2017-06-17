@@ -1,3 +1,17 @@
+commit f150000d3f0f6c8c12fd2df44bb7f7551010c103
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat Jun 17 15:16:17 2017 -0400
+
+    Fixed headers
+
+:000000 100644 0000000... c817c3c... A	bin/gyro.o
+:100644 100644 b18a1ac... 9a4f104... M	docs/index.html
+:100644 100644 6475b87... 1f35f36... M	docs/log.json
+:100644 100644 6d17823... de02fda... M	docs/log.txt
+:100644 100644 f759a87... 6104ba5... M	include/debug.hpp
+:100644 100644 c3fd4b2... f2f8224... M	include/lift.hpp
+:100644 100644 a63a463... b945720... M	src/lift.cpp
+
 commit ebd11bb1efa8334eaffb4a8333744cfd35968436
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat Jun 17 14:50:36 2017 -0400
