@@ -33,11 +33,22 @@ namespace lift {
     sensors::pot_t* sensor;
   }; // struct side_t
 
+  /** Positions of the lift */
+  typedef enum {
+    bottom = 5,
+    mobile = 60,
+    one    = 100,
+    two    = 230,
+    three  = 450,
+  } position;
+
   extern double inch;
   /** The left side of the drive */
   extern side_t left;
   /** The right side of the drive */
   extern side_t right;
+  /** Sensor on the lift */
+  extern sensors::pot_t* sensor;
 
   /** Set both sides of the drive at their requested powers */
   void set(int lpower, int rpower);
@@ -45,6 +56,7 @@ namespace lift {
   /** Initialize the drive subsystem */
   void init(void);
 
-  /** Drive a specific number of inches */
-  void inches(long inches);
+  /** p control for the lift */
+  void to(position pos = bottom, int int_pos = -1, int tolerance = 50);
+
 } // namespace drive

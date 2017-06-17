@@ -19,6 +19,7 @@
 namespace lift {
   side_t left;
   side_t right;
+  sensors::pot_t* sensor = &sensors::lift;
 
   void side_t::set(int power) {
     side_t::topM.set(power);
@@ -40,5 +41,20 @@ namespace lift {
   void set(int power) {
     left.set(power);
     right.set(power);
+  }
+
+  void to(position pos, int int_pos, int tolerance) {
+    if (int_pos == -1)
+      int_pos = pos;
+    do {
+      set((int_pos > sensor->value() + tolerance ||
+           int_pos < sensor->value() - tolerance)
+              ? (sensor->value() - int_pos) * 2
+              : (sensor->value() - int_pos));
+      delay(15);
+    } while (int_pos > sensor->value() + tolerance ||
+             int_pos < sensor->value() - tolerance);
+    set(15);
+    return;
   }
 } // namespace drive

@@ -1,3 +1,22 @@
+commit f9e6c7dcf36d11c553177ff76b8e9dc39a156bf0
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat Jun 17 11:41:27 2017 -0400
+
+    Added a gyro to the robot
+
+:100644 100644 63e2d10... ad7d609... M	.gitignore
+:100755 100755 b1be3d3... e2340a6... M	bin/output.bin
+:100755 100755 1fb2903... bc9e836... M	bin/output.elf
+:100644 100644 f3d3802... 37f96e2... M	bin/sensors.o
+:100644 100644 1fb577c... bc6eb20... M	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:100644 100644 965f536... be1fa8a... M	docs/cleanuphelp.py
+:100644 100644 df0ec95... e1f3f45... M	docs/index.html
+:100644 100644 f41ce95... c953431... M	docs/log.json
+:100644 100644 26aed23... b2194ad... M	docs/log.txt
+:100644 100644 5cc514d... 4cb04b3... M	include/sensors.hpp
+:100644 100644 f03dee4... 3fd06e0... M	src/sensors.cpp
+:100755 100755 fc7f988... 5b12553... M	tools/commit.sh
+
 commit d30be5271eb69e1182303355d09919a9c0e09b97
 Author: iuyte <iuyte@gmail.com>
 Date:   Fri Jun 16 19:17:40 2017 -0400

@@ -1,6 +1,22 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "f9e6c7dcf36d11c553177ff76b8e9dc39a156bf0",
+        "date": "  Sat Jun 17 11:41:27 2017 -0400",
+        "description": "Added a gyro to the robot",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            ".gitignore",
+            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
+            "docs/cleanuphelp.py",
+            "include/sensors.hpp",
+            "src/sensors.cpp",
+            "tools/commit.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "d30be5271eb69e1182303355d09919a9c0e09b97",
         "date": "  Fri Jun 16 19:17:40 2017 -0400",
         "description": "Trying to ignore annoying vim temporary files in commits",
