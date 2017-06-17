@@ -1,4 +1,4 @@
-// drive.cpp: Source file for utilities relating to the drive
+// lift.cpp: Source file for utilities relating to the lift
 // Copyright (C) 2017 Ethan Wells
 //
 // This program is free software: you can redistribute it and/or modify

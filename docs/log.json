@@ -1,6 +1,19 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "ebd11bb1efa8334eaffb4a8333744cfd35968436",
+        "date": "  Sat Jun 17 14:50:36 2017 -0400",
+        "description": "Added lift::to function, using a simple loop to go to a desired value",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/__pycache__/cleanuphelp.cpython-35.pyc",
+            "include/lift.hpp",
+            "src/lift.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "f9e6c7dcf36d11c553177ff76b8e9dc39a156bf0",
         "date": "  Sat Jun 17 11:41:27 2017 -0400",
         "description": "Added a gyro to the robot",

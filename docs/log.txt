@@ -1,3 +1,17 @@
+commit ebd11bb1efa8334eaffb4a8333744cfd35968436
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat Jun 17 14:50:36 2017 -0400
+
+    Added lift::to function, using a simple loop to go to a desired value
+
+:100644 100644 5bdb9e3... 8c0c851... M	bin/lift.o
+:100644 100644 bc6eb20... 46ed711... M	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:100644 100644 e1f3f45... b18a1ac... M	docs/index.html
+:100644 100644 c953431... 6475b87... M	docs/log.json
+:100644 100644 b2194ad... 6d17823... M	docs/log.txt
+:100644 100644 f9ea65f... c3fd4b2... M	include/lift.hpp
+:100644 100644 ff023c9... a63a463... M	src/lift.cpp
+
 commit f9e6c7dcf36d11c553177ff76b8e9dc39a156bf0
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat Jun 17 11:41:27 2017 -0400
