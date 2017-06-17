@@ -1,6 +1,17 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "48aa05152ad553d95e8c0f11b660b1272e3d76d2",
+        "date": "  Sat Jun 17 15:33:32 2017 -0400",
+        "description": "Fixed displaying of pycache files in website",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/cleanuphelp.py"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "f150000d3f0f6c8c12fd2df44bb7f7551010c103",
         "date": "  Sat Jun 17 15:16:17 2017 -0400",
         "description": "Fixed headers",

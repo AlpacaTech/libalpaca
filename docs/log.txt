@@ -1,3 +1,15 @@
+commit 48aa05152ad553d95e8c0f11b660b1272e3d76d2
+Author: iuyte <iuyte@gmail.com>
+Date:   Sat Jun 17 15:33:32 2017 -0400
+
+    Fixed displaying of pycache files in website
+
+:100644 100644 46ed711... b01aae5... M	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:100644 100644 be1fa8a... b525b04... M	docs/cleanuphelp.py
+:100644 100644 9a4f104... 9cfe1ed... M	docs/index.html
+:100644 100644 1f35f36... afb37cb... M	docs/log.json
+:100644 100644 de02fda... c4da9e7... M	docs/log.txt
+
 commit f150000d3f0f6c8c12fd2df44bb7f7551010c103
 Author: iuyte <iuyte@gmail.com>
 Date:   Sat Jun 17 15:16:17 2017 -0400
