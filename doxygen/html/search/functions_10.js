@@ -4,7 +4,7 @@ var searchData=
   ['semaphoredelete',['semaphoreDelete',['../API_8h.html#af27ba79dc102f914d31a3c20136b1cd9',1,'API.h']]],
   ['semaphoregive',['semaphoreGive',['../API_8h.html#a9e5b0b6d5da138b4d5a077237894f96e',1,'API.h']]],
   ['semaphoretake',['semaphoreTake',['../API_8h.html#a7520baa9cf5c9ec2f43925b098e7b46a',1,'API.h']]],
-  ['set',['set',['../structdrive_1_1side__t.html#ab605b00c5f98faa239cab1b19b54e7e6',1,'drive::side_t::set()'],['../structlift_1_1side__t.html#af7e51af6ba1f15f1a522139e8c18f047',1,'lift::side_t::set()'],['../structmotor__t.html#abbb5dde85e4548012cf8cf796093313f',1,'motor_t::set()'],['../namespacedrive.html#a2df65772c3853804f68f3358b04420b2',1,'drive::set()'],['../namespacemotors.html#a1d018a7911884ab27f16d91f8c65d581',1,'motors::set()'],['../namespacelift.html#ac4499bdf3cd48c060118c4cbea45ff1c',1,'lift::set()']]],
+  ['set',['set',['../structdrive_1_1side__t.html#ab605b00c5f98faa239cab1b19b54e7e6',1,'drive::side_t::set()'],['../structlift_1_1side__t.html#af7e51af6ba1f15f1a522139e8c18f047',1,'lift::side_t::set()'],['../structmotor__t.html#abbb5dde85e4548012cf8cf796093313f',1,'motor_t::set()'],['../namespacedrive.html#a2df65772c3853804f68f3358b04420b2',1,'drive::set()'],['../namespacelift.html#ac4499bdf3cd48c060118c4cbea45ff1c',1,'lift::set()'],['../namespacemotors.html#a1d018a7911884ab27f16d91f8c65d581',1,'motors::set()']]],
   ['setteamname',['setTeamName',['../API_8h.html#a22269cefc22e487f7acdcc4737d58c4a',1,'API.h']]],
   ['snprintf',['snprintf',['../API_8h.html#ada81026ae730d990159aab26c302a3ad',1,'API.h']]],
   ['sonic_5ft',['sonic_t',['../structsensors_1_1sonic__t.html#a29685163eb3f2fd6335fbadbcf98901e',1,'sensors::sonic_t']]],

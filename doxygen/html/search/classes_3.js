@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['motor_5ft',['motor_t',['../structmotor__t.html',1,'']]]
+  ['gyro_5ft',['gyro_t',['../classsensors_1_1gyro__t.html',1,'sensors']]]
 ];
