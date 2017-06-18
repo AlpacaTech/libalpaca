@@ -4,7 +4,10 @@ pros make
 git add * -f
 cd docs/
 ./document.sh
-cd ../
+cd ../tools/
+doxygen
+./pdfMaker.sh
+cd ..
 git add *
 git rm include/*.swp -f
 git rm src/*.swp -f

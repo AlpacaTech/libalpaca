@@ -1,0 +1,89 @@
+\hypertarget{namespacedrive}{}\section{drive Namespace Reference}
+\label{namespacedrive}\index{drive@{drive}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacedrive_1_1accel}{accel}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdrive_1_1side__t}{side\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacedrive_a2df65772c3853804f68f3358b04420b2}{set} (int lpower, int rpower)
+\item 
+void \hyperlink{namespacedrive_afb11be06c88e18373ad210a65e146d53}{init} (void)
+\item 
+void \hyperlink{namespacedrive_ab1c99e0f944b404b036034bac0074ca6}{inches} (long inches)
+\item 
+void \hyperlink{namespacedrive_a4468fd8982ce72051c07b37cf1f91185}{tank} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{namespacedrive_ac57641567511fcbc0ce6bf72b1aff76e}{inch}
+\item 
+\hyperlink{structdrive_1_1side__t}{side\+\_\+t} \hyperlink{namespacedrive_abde1df4410c0d0bfc462f3fb33ab9c5d}{left}
+\item 
+\hyperlink{structdrive_1_1side__t}{side\+\_\+t} \hyperlink{namespacedrive_a6adcb98f34f373f5e1fae1c46b8d7269}{right}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains everything relating to the drive 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacedrive_ab1c99e0f944b404b036034bac0074ca6}\label{namespacedrive_ab1c99e0f944b404b036034bac0074ca6}} 
+\index{drive@{drive}!inches@{inches}}
+\index{inches@{inches}!drive@{drive}}
+\subsubsection{\texorpdfstring{inches()}{inches()}}
+{\footnotesize\ttfamily void drive\+::inches (\begin{DoxyParamCaption}\item[{long}]{inches }\end{DoxyParamCaption})}
+
+Drive a specific number of inches \mbox{\Hypertarget{namespacedrive_afb11be06c88e18373ad210a65e146d53}\label{namespacedrive_afb11be06c88e18373ad210a65e146d53}} 
+\index{drive@{drive}!init@{init}}
+\index{init@{init}!drive@{drive}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void drive\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize the drive subsystem \mbox{\Hypertarget{namespacedrive_a2df65772c3853804f68f3358b04420b2}\label{namespacedrive_a2df65772c3853804f68f3358b04420b2}} 
+\index{drive@{drive}!set@{set}}
+\index{set@{set}!drive@{drive}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void drive\+::set (\begin{DoxyParamCaption}\item[{int}]{lpower,  }\item[{int}]{rpower }\end{DoxyParamCaption})}
+
+Set both sides of the drive at their requested powers \mbox{\Hypertarget{namespacedrive_a4468fd8982ce72051c07b37cf1f91185}\label{namespacedrive_a4468fd8982ce72051c07b37cf1f91185}} 
+\index{drive@{drive}!tank@{tank}}
+\index{tank@{tank}!drive@{drive}}
+\subsubsection{\texorpdfstring{tank()}{tank()}}
+{\footnotesize\ttfamily void drive\+::tank (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Tank control that should be used in a while loop 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacedrive_ac57641567511fcbc0ce6bf72b1aff76e}\label{namespacedrive_ac57641567511fcbc0ce6bf72b1aff76e}} 
+\index{drive@{drive}!inch@{inch}}
+\index{inch@{inch}!drive@{drive}}
+\subsubsection{\texorpdfstring{inch}{inch}}
+{\footnotesize\ttfamily double drive\+::inch}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+      28.64788975654116043839907740705258516620273623328216077458012735
+\end{DoxyCode}
+Multiplier for which 1 inch is used to convert into degreees rotation on 4" wheels \mbox{\Hypertarget{namespacedrive_abde1df4410c0d0bfc462f3fb33ab9c5d}\label{namespacedrive_abde1df4410c0d0bfc462f3fb33ab9c5d}} 
+\index{drive@{drive}!left@{left}}
+\index{left@{left}!drive@{drive}}
+\subsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily \hyperlink{structdrive_1_1side__t}{side\+\_\+t} drive\+::left}
+
+The left side of the drive \mbox{\Hypertarget{namespacedrive_a6adcb98f34f373f5e1fae1c46b8d7269}\label{namespacedrive_a6adcb98f34f373f5e1fae1c46b8d7269}} 
+\index{drive@{drive}!right@{right}}
+\index{right@{right}!drive@{drive}}
+\subsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily \hyperlink{structdrive_1_1side__t}{side\+\_\+t} drive\+::right}
+
+The right side of the drive 

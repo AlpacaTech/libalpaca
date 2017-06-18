@@ -1,0 +1,91 @@
+\hypertarget{namespacesensors}{}\section{sensors Namespace Reference}
+\label{namespacesensors}\index{sensors@{sensors}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structsensors_1_1button__t}{button\+\_\+t}
+\item 
+class \hyperlink{classsensors_1_1gyro__t}{gyro\+\_\+t}
+\item 
+struct \hyperlink{structsensors_1_1pot__t}{pot\+\_\+t}
+\item 
+struct \hyperlink{structsensors_1_1quad__t}{quad\+\_\+t}
+\item 
+struct \hyperlink{structsensors_1_1sonic__t}{sonic\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespacesensors_a044693d89baff38c98f863ee503cde2e}{init} (void)
+\item 
+void \hyperlink{namespacesensors_a5d5bcadf00164a9db189d9bfa8d9dbb3}{reset} (void)
+\item 
+\mbox{\Hypertarget{namespacesensors_ad7f873d16ad074c11f1e4c4f474be8ba}\label{namespacesensors_ad7f873d16ad074c11f1e4c4f474be8ba}} 
+\hyperlink{structsensors_1_1quad__t}{quad\+\_\+t} {\bfseries left} (1, 2, false)
+\item 
+\mbox{\Hypertarget{namespacesensors_a53537b79680b539c5312bab3bf7d2eb8}\label{namespacesensors_a53537b79680b539c5312bab3bf7d2eb8}} 
+\hyperlink{structsensors_1_1quad__t}{quad\+\_\+t} {\bfseries right} (3, 4, false)
+\item 
+\mbox{\Hypertarget{namespacesensors_aadc3d3ede9ae5dc9a3c25bf89a113268}\label{namespacesensors_aadc3d3ede9ae5dc9a3c25bf89a113268}} 
+\hyperlink{structsensors_1_1pot__t}{pot\+\_\+t} {\bfseries lift} (1, false)
+\item 
+\mbox{\Hypertarget{namespacesensors_a76c3057efa993dfa91cf8870ea7c99e0}\label{namespacesensors_a76c3057efa993dfa91cf8870ea7c99e0}} 
+\hyperlink{classsensors_1_1gyro__t}{gyro\+\_\+t} {\bfseries gyro} (2, 197)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structsensors_1_1quad__t}{quad\+\_\+t} \hyperlink{namespacesensors_aa9b039f7a72fdb7faf156b830ca76772}{left}
+\item 
+\hyperlink{structsensors_1_1quad__t}{quad\+\_\+t} \hyperlink{namespacesensors_a06fce5712cbec0620a46dcf679f03e43}{right}
+\item 
+\hyperlink{structsensors_1_1pot__t}{pot\+\_\+t} \hyperlink{namespacesensors_a846dce2ebdbd35cd6abdbd3173dfb289}{lift}
+\item 
+\hyperlink{classsensors_1_1gyro__t}{gyro\+\_\+t} \hyperlink{namespacesensors_ad1473b3f557dd776bed79a4a739559e3}{gyro}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The namespace containing all information, functions, objects, relating to sensors 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacesensors_a044693d89baff38c98f863ee503cde2e}\label{namespacesensors_a044693d89baff38c98f863ee503cde2e}} 
+\index{sensors@{sensors}!init@{init}}
+\index{init@{init}!sensors@{sensors}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void sensors\+::init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initializes the sensor subsystem, calls all the funtions that need to be called in \hyperlink{main_8h_a25a40b6614565f755233080a384c35f1}{initialize()}. Call in \hyperlink{main_8h_a25a40b6614565f755233080a384c35f1}{initialize()} \mbox{\Hypertarget{namespacesensors_a5d5bcadf00164a9db189d9bfa8d9dbb3}\label{namespacesensors_a5d5bcadf00164a9db189d9bfa8d9dbb3}} 
+\index{sensors@{sensors}!reset@{reset}}
+\index{reset@{reset}!sensors@{sensors}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void sensors\+::reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Resets the important sensors 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacesensors_ad1473b3f557dd776bed79a4a739559e3}\label{namespacesensors_ad1473b3f557dd776bed79a4a739559e3}} 
+\index{sensors@{sensors}!gyro@{gyro}}
+\index{gyro@{gyro}!sensors@{sensors}}
+\subsubsection{\texorpdfstring{gyro}{gyro}}
+{\footnotesize\ttfamily \hyperlink{classsensors_1_1gyro__t}{gyro\+\_\+t} sensors\+::gyro(2, 197)}
+
+gyro on the drive \mbox{\Hypertarget{namespacesensors_aa9b039f7a72fdb7faf156b830ca76772}\label{namespacesensors_aa9b039f7a72fdb7faf156b830ca76772}} 
+\index{sensors@{sensors}!left@{left}}
+\index{left@{left}!sensors@{sensors}}
+\subsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily \hyperlink{structsensors_1_1quad__t}{quad\+\_\+t} sensors\+::left(1, 2, false)}
+
+left quad encoder on the drive \mbox{\Hypertarget{namespacesensors_a846dce2ebdbd35cd6abdbd3173dfb289}\label{namespacesensors_a846dce2ebdbd35cd6abdbd3173dfb289}} 
+\index{sensors@{sensors}!lift@{lift}}
+\index{lift@{lift}!sensors@{sensors}}
+\subsubsection{\texorpdfstring{lift}{lift}}
+{\footnotesize\ttfamily \hyperlink{structsensors_1_1pot__t}{pot\+\_\+t} sensors\+::lift(1, false)}
+
+potentiometer on the lift \mbox{\Hypertarget{namespacesensors_a06fce5712cbec0620a46dcf679f03e43}\label{namespacesensors_a06fce5712cbec0620a46dcf679f03e43}} 
+\index{sensors@{sensors}!right@{right}}
+\index{right@{right}!sensors@{sensors}}
+\subsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily \hyperlink{structsensors_1_1quad__t}{quad\+\_\+t} sensors\+::right(3, 4, false)}
+
+right quad encoder on the drive 
