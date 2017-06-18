@@ -109,11 +109,11 @@ def parseContent(content):
         for aline in range(aline, len(lines)):
             curline = lines[aline][39:]
             if ". M" in lines[aline]:
-                if "docs/index.html" not in curline and "docs/log.txt" not in curline and "docs/log.json" not in curline and "bin/" not in curline and "__pycache__" not in curline:
+                if "docs/index.html" not in curline and "docs/log.txt" not in curline and "docs/log.json" not in curline and "bin/" not in curline and "__pycache__" not in curline and "tools/doxygen" not in curline and "tools/PDFs" not in curline and "tools/LATEX" not in curline:
                     filesModified.append(curline)
-            elif ". A" in lines[aline] and ".swp" not in curline and "bin/" not in curline and "__pycache__" not in curline:
+            elif ". A" in lines[aline] and ".swp" not in curline and "bin/" not in curline and "__pycache__" not in curline and "tools/doxygen" not in curline and "tools/PDFs" not in curline and "tools/LATEX" not in curline:
                 filesAdded.append(curline)
-            elif ". D" in lines[aline] and ".swp" not in curline and "bin/" not in curline and "__pycache__" not in curline:
+            elif ". D" in lines[aline] and ".swp" not in curline and "bin/" not in curline and "__pycache__" not in curline and "tools/doxygen" not in curline and "tools/PDFs" not in curline and "tools/LATEX" not in curline:
                 filesDeleted.append(curline)
         tcommit = Commit(date, commitkey, author, description, filesModified,
                          filesAdded, filesDeleted)

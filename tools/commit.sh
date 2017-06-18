@@ -8,7 +8,7 @@ cd ../tools/
 doxygen
 ./pdfMaker.sh
 cd ..
-git add *
+git add -u
 git rm include/*.swp -f
 git rm src/*.swp -f
 git rm *.swp -f

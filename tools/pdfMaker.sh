@@ -30,6 +30,7 @@ then
 			q=$(basename $i .hpp)
 			# a2ps --user-option=lp --borders=no --pretty-print=gnuc --landscape $i | ps2pdf - PDFs/include/$q.pdf
 			pdflatex -shell-escape tools/LATEX/include/"$q".tex
+      mv "$q".pdf tools/PDFs/include/
 		done
 
 		rm *.log
@@ -48,6 +49,7 @@ then
 			echo "Making PDF of $i"
 			q=$(basename $i .cpp)
 			pdflatex -shell-escape tools/LATEX/src/"$q".tex
+      mv "$q".pdf tools/PDFs/src/
 		done
 
 		rm *.log
