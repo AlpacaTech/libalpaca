@@ -59,6 +59,7 @@ namespace pid {
           power[i] = (power[i] <= DRIVE_MIN)
                          ? DRIVE_MIN
                          : ((power[i] >= DRIVE_MAX) ? DRIVE_MAX : power[i]);
+          power[i] *= 8.1f / powerLevelMain();
           (i == 0) ? drive::left.set(power[i]) : drive::right.set(power[i]);
         }
       }

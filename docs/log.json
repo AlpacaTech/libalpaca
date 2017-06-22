@@ -1,6 +1,30 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "cc8ca4688dd225876ca3c02d44e434e433900d56",
+        "date": "  Wed Jun 21 20:30:58 2017 -0400",
+        "description": "Removed Doxygen, because it is of no use as of yet",
+        "filesAdded": [
+            "resources/AppendixB.pdf",
+            "resources/AppendixE.pdf",
+            "resources/Manual.pdf",
+            "resources/appendix_a.zip",
+            "resources/appendix_a/FieldSpecs.pdf",
+            "resources/appendix_a/LowCostFieldOptions-042217.pdf"
+        ],
+        "filesDeleted": [
+            "resources/VRC-InTheZone-AppendixA-042217.zip",
+            "resources/VRC-InTheZone-AppendixA-FieldSpecs-042217.pdf",
+            "resources/VRC-InTheZone-AppendixB-RobotSkills-042217.pdf",
+            "resources/VRC-InTheZone-AppendixE-VEXU-042217.pdf",
+            "resources/VRC-InTheZone-GameManual-042217.pdf",
+            "resources/VRC-InTheZone-LowCostFieldOptions-042217.pdf",
+            "tools/Doxyfile"
+        ],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "c37dcc0fb5165d4a70b7ea6abf4d5aa68ffd1cdf",
         "date": "  Sun Jun 18 02:09:33 2017 -0400",
         "description": "Fixed pdfs ending up in project root, changed git add * to -u, and",
