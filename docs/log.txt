@@ -1,3 +1,45 @@
+commit c37dcc0fb5165d4a70b7ea6abf4d5aa68ffd1cdf
+Author: iuyte <iuyte@gmail.com>
+Date:   Sun Jun 18 02:09:33 2017 -0400
+
+    Fixed pdfs ending up in project root, changed git add * to -u, and
+    doxygen stuff, pdfs, etc no longer show up in website
+
+:100644 000000 acc4b2e... 0000000... D	auto.pdf
+:100644 000000 a959887... 0000000... D	debug.pdf
+:100644 100644 b01aae5... 8dbe83c... M	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:100644 100644 b525b04... 60d79de... M	docs/cleanuphelp.py
+:100644 100644 f7690df... d08230d... M	docs/index.html
+:100644 100644 7b7f6ac... 1d07dae... M	docs/log.json
+:100644 100644 1d3d15a... 6a62f8b... M	docs/log.txt
+:100644 000000 155e717... 0000000... D	drive.pdf
+:100644 000000 b0df821... 0000000... D	gyro.pdf
+:100644 000000 4be8bd8... 0000000... D	init.pdf
+:100644 000000 c4fc47c... 0000000... D	lift.pdf
+:100644 000000 a9303ff... 0000000... D	motors.pdf
+:100644 000000 195f83d... 0000000... D	opcontrol.pdf
+:100644 000000 9029884... 0000000... D	pid.pdf
+:100644 000000 5f24a55... 0000000... D	sensors.pdf
+:000000 100644 0000000... 32d1f71... A	tools/PDFs/include/debug.pdf
+:000000 100644 0000000... 7d613a2... A	tools/PDFs/include/drive.pdf
+:000000 100644 0000000... b49ed45... A	tools/PDFs/include/gyro.pdf
+:000000 100644 0000000... 8c98f92... A	tools/PDFs/include/lift.pdf
+:000000 100644 0000000... 32d1c6b... A	tools/PDFs/include/motors.pdf
+:000000 100644 0000000... c20bc4b... A	tools/PDFs/include/pid.pdf
+:000000 100644 0000000... 6d9f18e... A	tools/PDFs/include/sensors.pdf
+:000000 100644 0000000... 4436305... A	tools/PDFs/src/auto.pdf
+:000000 100644 0000000... 4fba316... A	tools/PDFs/src/debug.pdf
+:000000 100644 0000000... 3a3f9b7... A	tools/PDFs/src/drive.pdf
+:000000 100644 0000000... fe58a32... A	tools/PDFs/src/gyro.pdf
+:000000 100644 0000000... 922c0ef... A	tools/PDFs/src/init.pdf
+:000000 100644 0000000... 28fbeaa... A	tools/PDFs/src/lift.pdf
+:000000 100644 0000000... 8873711... A	tools/PDFs/src/motors.pdf
+:000000 100644 0000000... 9b976e1... A	tools/PDFs/src/opcontrol.pdf
+:000000 100644 0000000... e92c2fb... A	tools/PDFs/src/pid.pdf
+:000000 100644 0000000... 4b76091... A	tools/PDFs/src/sensors.pdf
+:100755 100755 946a0a0... b44e50b... M	tools/commit.sh
+:100755 100755 28ccc76... aa5b053... M	tools/pdfMaker.sh
+
 commit 4d118b82180aecdb22632738e895caf010dd8187
 Author: iuyte <iuyte@gmail.com>
 Date:   Sun Jun 18 01:56:57 2017 -0400

@@ -1,6 +1,30 @@
 [
     {
         "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "c37dcc0fb5165d4a70b7ea6abf4d5aa68ffd1cdf",
+        "date": "  Sun Jun 18 02:09:33 2017 -0400",
+        "description": "Fixed pdfs ending up in project root, changed git add * to -u, and",
+        "filesAdded": [],
+        "filesDeleted": [
+            "auto.pdf",
+            "debug.pdf",
+            "drive.pdf",
+            "gyro.pdf",
+            "init.pdf",
+            "lift.pdf",
+            "motors.pdf",
+            "opcontrol.pdf",
+            "pid.pdf",
+            "sensors.pdf"
+        ],
+        "filesModified": [
+            "docs/cleanuphelp.py",
+            "tools/commit.sh",
+            "tools/pdfMaker.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
         "commitkey": "4d118b82180aecdb22632738e895caf010dd8187",
         "date": "  Sun Jun 18 01:56:57 2017 -0400",
         "description": "Moved pdf stuff, doxygen, etc into tools, other work with them as well",
