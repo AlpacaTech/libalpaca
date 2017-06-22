@@ -1,3 +1,35 @@
+commit 90ef0c60cfa17383c5e897b46affcbc88c468565
+Author: iuyte <iuyte@gmail.com>
+Date:   Thu Jun 22 15:38:18 2017 -0400
+
+    pid now takes battery i=voltage into account
+
+:100755 100755 e2340a6... dacaebe... M	bin/output.bin
+:100755 100755 bc9e836... 3337a59... M	bin/output.elf
+:100644 100644 63b42e3... ae04278... M	bin/pid.o
+:100644 100644 8dbe83c... 6fcdd88... M	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:100644 100644 3bbd867... 19f406c... M	docs/index.html
+:100644 100644 f0c4fda... 3d5ecee... M	docs/log.json
+:100644 100644 fb010e8... 611fe2b... M	docs/log.txt
+:100644 100644 845235e... 0897d11... M	src/pid.cpp
+:100644 100644 32d1f71... bd5227d... M	tools/PDFs/include/debug.pdf
+:100644 100644 7d613a2... 44f327c... M	tools/PDFs/include/drive.pdf
+:100644 100644 b49ed45... 069aaa8... M	tools/PDFs/include/gyro.pdf
+:100644 100644 8c98f92... e9434ab... M	tools/PDFs/include/lift.pdf
+:100644 100644 32d1c6b... 26bc678... M	tools/PDFs/include/motors.pdf
+:100644 100644 c20bc4b... f6a20b2... M	tools/PDFs/include/pid.pdf
+:100644 100644 6d9f18e... 40fcfa5... M	tools/PDFs/include/sensors.pdf
+:100644 100644 4436305... eeaf832... M	tools/PDFs/src/auto.pdf
+:100644 100644 4fba316... b2a4852... M	tools/PDFs/src/debug.pdf
+:100644 100644 3a3f9b7... 721c4e0... M	tools/PDFs/src/drive.pdf
+:100644 100644 fe58a32... 79fe538... M	tools/PDFs/src/gyro.pdf
+:100644 100644 922c0ef... c76f088... M	tools/PDFs/src/init.pdf
+:100644 100644 28fbeaa... 0518cc5... M	tools/PDFs/src/lift.pdf
+:100644 100644 8873711... 1f426f2... M	tools/PDFs/src/motors.pdf
+:100644 100644 9b976e1... 327d885... M	tools/PDFs/src/opcontrol.pdf
+:100644 100644 e92c2fb... bd73c6b... M	tools/PDFs/src/pid.pdf
+:100644 100644 4b76091... 16595a3... M	tools/PDFs/src/sensors.pdf
+
 commit cc8ca4688dd225876ca3c02d44e434e433900d56
 Author: iuyte <iuyte@gmail.com>
 Date:   Wed Jun 21 20:30:58 2017 -0400
