@@ -1,18 +1,16 @@
-#!/bin/sh
+#!/ bin / sh
 
-# Must be run in the root directory of your PROS Project
-# Creates PDFs of all .c and .h files and places them in [project directory]/PDFs
+#Must be run in the root directory of your PROS Project
+#Creates PDFs of all.c and.h files and places them in[project directory] / PDFs
 
-# Requires the 'a2ps' and 'ps2pdf' packages
+#Requires the 'a2ps' and 'ps2pdf' packages
 
-cd ..
+cd..
 
-if [ -e "project.pros" ]
-then
+    if[-e "project.pros"] then
 
-	if [ -d "PDFs" ]
-	then
-		rm -r tools/PDFs/*
+    if[-d "PDFs"] then rm -
+    r tools / PDFs/*
 		mkdir tools/PDFs/src
 		mkdir tools/PDFs/include
 	else
