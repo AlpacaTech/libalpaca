@@ -6,7 +6,7 @@ cd docs/
 ./document.sh
 cd ..
 tools/pdfMaker.sh
-cp docs/index.html 709S/content/Notebook/Programming.html -f
+cp docs/index.html 709S/content/notebook/programming/_index.html -f
 tools/htmlCopy.sh
 cd 709S
 ./deploy.sh

@@ -1,6 +1,20 @@
 [
     {
         "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "8f91b102fc55ab79733313c33e7415ef5419aa5e",
+        "date": "  Thu Jun 29 09:39:59 2017 -0400",
+        "description": "Changed .gitignore",
+        "filesAdded": [],
+        "filesDeleted": [
+            "vim.sh"
+        ],
+        "filesModified": [
+            ".gitignore",
+            "709S"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
         "commitkey": "47bd5067cc71c3b61e1a07b142349e017260833a",
         "date": "  Wed Jun 28 23:41:14 2017 -0400",
         "description": "Removed doxygen pages from notebook, as they take up a lot of unnecessary space",
