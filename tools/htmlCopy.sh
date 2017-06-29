@@ -2,9 +2,10 @@ cd $HOME/VEX-709S-2018/
 for q in include/*.h include/*.hpp src/*.cpp
 do
   echo "Copying $q..."
+  name=`basename $q`
   text="+++
-title='$q'
-description='Code for $q'
+title='$name'
+description='Code for $name'
 type='page'
 +++
 

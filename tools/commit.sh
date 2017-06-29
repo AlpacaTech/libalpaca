@@ -15,7 +15,11 @@ git add -u
 git rm include /*.swp -f
 git rm src/*.swp -f
 git rm *.swp -rf
-git commit
+if [ $# -eq 1 ]
+  then git commit -m "$1"
+else
+  git commit
+fi
 git push
 cd ~/VEX-709S-2018/iuyte.github.io/
 ./document.sh

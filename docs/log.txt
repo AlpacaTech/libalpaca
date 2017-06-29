@@ -1,3 +1,40 @@
+commit dc6db3aebbf6d73d4a249432407402bdb958e1d3
+Author: Ethan Wells <iuyte@gmx.com>
+Date:   Wed Jun 28 22:27:52 2017 -0400
+
+    Lots of web work
+
+:160000 160000 341ee8d... 2e2b897... M	709S
+:100644 100644 6fcdd88... 8733460... M	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:100644 100644 06793a5... b387241... M	docs/__pycache__/commit.cpython-35.pyc
+:100644 100644 60d79de... 603cce6... M	docs/cleanuphelp.py
+:100644 100644 ea00abc... ac753ed... M	docs/index.html
+:100644 100644 9f824a2... 7e6a9bd... M	docs/log.json
+:100644 100644 ae591b9... 6715cc8... M	docs/log.txt
+:100644 100644 b8e67d3... 413df8f... M	docs/style.css
+:100644 000000 ab75eef... 0000000... D	tools/LATEX/include/API.tex
+:100644 000000 db56482... 0000000... D	tools/LATEX/include/main.tex
+:100644 100644 bd5227d... 14b380a... M	tools/PDFs/include/debug.pdf
+:100644 100644 44f327c... deb166c... M	tools/PDFs/include/drive.pdf
+:100644 100644 069aaa8... 80099bb... M	tools/PDFs/include/gyro.pdf
+:100644 100644 e9434ab... 0c290ab... M	tools/PDFs/include/lift.pdf
+:100644 100644 26bc678... 5987de3... M	tools/PDFs/include/motors.pdf
+:100644 100644 f6a20b2... 17a3488... M	tools/PDFs/include/pid.pdf
+:100644 100644 40fcfa5... c5bae8d... M	tools/PDFs/include/sensors.pdf
+:100644 100644 eeaf832... 9de832f... M	tools/PDFs/src/auto.pdf
+:100644 100644 b2a4852... 2e50ee1... M	tools/PDFs/src/debug.pdf
+:100644 100644 721c4e0... 0db1c7e... M	tools/PDFs/src/drive.pdf
+:100644 100644 79fe538... 76f9e2d... M	tools/PDFs/src/gyro.pdf
+:100644 100644 c76f088... f35e926... M	tools/PDFs/src/init.pdf
+:100644 100644 0518cc5... 6cdf0df... M	tools/PDFs/src/lift.pdf
+:100644 100644 1f426f2... e2f665a... M	tools/PDFs/src/motors.pdf
+:100644 100644 327d885... 2dd16f0... M	tools/PDFs/src/opcontrol.pdf
+:100644 100644 bd73c6b... ce3587a... M	tools/PDFs/src/pid.pdf
+:100644 100644 16595a3... 075fd12... M	tools/PDFs/src/sensors.pdf
+:100644 100755 23c974b... 59184c8... M	tools/commit.sh
+:000000 100755 0000000... caa9606... A	tools/htmlCopy.sh
+:100644 100755 24fcfc5... 733d5a7... M	tools/pdfMaker.sh
+
 commit 29372b3f68893819060a9cebc4df1e66e8b51caf
 Author: Ethan Wells <iuyte@gmx.com>
 Date:   Tue Jun 27 21:17:20 2017 -0400

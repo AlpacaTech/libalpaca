@@ -1,6 +1,23 @@
 [
     {
         "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "dc6db3aebbf6d73d4a249432407402bdb958e1d3",
+        "date": "  Wed Jun 28 22:27:52 2017 -0400",
+        "description": "Lots of web work",
+        "filesAdded": [
+            "tools/htmlCopy.sh"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "709S",
+            "docs/cleanuphelp.py",
+            "docs/style.css",
+            "tools/commit.sh",
+            "tools/pdfMaker.sh"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
         "commitkey": "29372b3f68893819060a9cebc4df1e66e8b51caf",
         "date": "  Tue Jun 27 21:17:20 2017 -0400",
         "description": "Changed to the right submodule",
