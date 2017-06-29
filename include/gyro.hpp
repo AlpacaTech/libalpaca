@@ -19,13 +19,31 @@
 #include "pid.hpp"
 
 namespace gyro {
+  /** A driving that can allow an arc, or keep the robot straight */
   class drive {
-    public:
-      sensors::gyro_t* gyro;
-      int heading;
+  public:
+    /** A reference to the gyro which will be used to get values from */
+    sensors::gyro_t* gyro;
+    /** The ideal heading of the robot */
+    int heading;
+    /** The urgency/agressiveness of the arc */
+    float urgency;
+    /** Use to initialize and run the task */
+    drive(int _heading = 0, float _urgency = 11.6, bool absolute = false, sensors::gyro_t* _gyro = &sensors::gyro_t);
+    /** Turn the arc off */
+    void off(void);
 
-  };
+  private:
+    /** The task that runs, keeping the robot straight */
+    void task(void* none);
+    /** The initial  heading, as opposed to the ideal heading */
+    int iHeading;
+    /** TaskHandle for the gyro heading task */
+    TaskHandle handle;
+    /** The internal variable used for changing the pid values */
+    float changer;
+    /** Whether it is on or not */
+    bool on;
+  }; // class drive
 
-  /** TaskHandle for the gyro heading task */
-  extern TaskHandle handle;
 } // namespace gyro

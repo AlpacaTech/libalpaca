@@ -18,6 +18,35 @@
 #include "../include/main.h"
 
 namespace gyro {
-  extern TaskHandle handle;
+  void drive::task(void* none) {
+    float change[2] = {0};
+    int tolerance = 2;
+    while (on) {
+      changer = (abs(gyro->value() - iHeading) - tolerance) * 15;
+      if (rGyros() - startp > tolerance) {
+        lpower = power - changer;
+        rpower = power + changer;
+      } else if (rGyros() - startp < -tolerance) {
+        lpower = power + changer;
+        change[1] -= changer;
+      }
+      pid::request(change[0], change[1]);
+      delay(50);
+    }
+    free(none);
+  }
+
+  void drive::off(void) {
+    on = false;
+  }
+
+  drive::drive(int _heading, float _urgency, bool absolute,
+               sensors::gyro_t* _gyro) {
+    heading  = _heading;
+    urgency  = _urgency;
+    gyro     = _gyro;
+    on       = true;
+    iHeading = absolute ? heading : heading + gyro->value();
+  }
 
 } // namespace gyro
