@@ -1,6 +1,20 @@
 [
     {
         "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "2dc9ca6beb842ac72e5b53addba35632e7edde08",
+        "date": "  Wed Jun 28 23:26:39 2017 -0400",
+        "description": "Test commit, to be sure everything is working properly",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "709S",
+            "docs/style.css",
+            "tools/commit.sh",
+            "tools/htmlCopy.sh"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
         "commitkey": "dc6db3aebbf6d73d4a249432407402bdb958e1d3",
         "date": "  Wed Jun 28 22:27:52 2017 -0400",
         "description": "Lots of web work",

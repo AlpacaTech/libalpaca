@@ -21,6 +21,7 @@ else
   git commit
 fi
 git push
-cd ~/VEX-709S-2018/iuyte.github.io/
+cd docs/
 ./document.sh
 git add -u
+cd ..

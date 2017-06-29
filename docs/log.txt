@@ -1,3 +1,34 @@
+commit 2dc9ca6beb842ac72e5b53addba35632e7edde08
+Author: Ethan Wells <iuyte@gmx.com>
+Date:   Wed Jun 28 23:26:39 2017 -0400
+
+    Test commit, to be sure everything is working properly
+
+:160000 160000 2e2b897... f0316d7... M	709S
+:100644 100644 ac753ed... 530a20a... M	docs/index.html
+:100644 100644 7e6a9bd... 22fff16... M	docs/log.json
+:100644 100644 6715cc8... 316618e... M	docs/log.txt
+:100644 100644 413df8f... db4fd2b... M	docs/style.css
+:100644 100644 14b380a... 803e4a9... M	tools/PDFs/include/debug.pdf
+:100644 100644 deb166c... edf114c... M	tools/PDFs/include/drive.pdf
+:100644 100644 80099bb... 045e018... M	tools/PDFs/include/gyro.pdf
+:100644 100644 0c290ab... 90d2760... M	tools/PDFs/include/lift.pdf
+:100644 100644 5987de3... c22b5fd... M	tools/PDFs/include/motors.pdf
+:100644 100644 17a3488... 6ed1b4f... M	tools/PDFs/include/pid.pdf
+:100644 100644 c5bae8d... 0b4f00e... M	tools/PDFs/include/sensors.pdf
+:100644 100644 9de832f... b27125a... M	tools/PDFs/src/auto.pdf
+:100644 100644 2e50ee1... 7d63d01... M	tools/PDFs/src/debug.pdf
+:100644 100644 0db1c7e... b70d5f8... M	tools/PDFs/src/drive.pdf
+:100644 100644 76f9e2d... 3f7de21... M	tools/PDFs/src/gyro.pdf
+:100644 100644 f35e926... 19917f3... M	tools/PDFs/src/init.pdf
+:100644 100644 6cdf0df... 3a4383e... M	tools/PDFs/src/lift.pdf
+:100644 100644 e2f665a... 3370cd5... M	tools/PDFs/src/motors.pdf
+:100644 100644 2dd16f0... 2efd494... M	tools/PDFs/src/opcontrol.pdf
+:100644 100644 ce3587a... cde0009... M	tools/PDFs/src/pid.pdf
+:100644 100644 075fd12... dd35594... M	tools/PDFs/src/sensors.pdf
+:100755 100755 59184c8... 453130f... M	tools/commit.sh
+:100755 100755 caa9606... 83dd607... M	tools/htmlCopy.sh
+
 commit dc6db3aebbf6d73d4a249432407402bdb958e1d3
 Author: Ethan Wells <iuyte@gmx.com>
 Date:   Wed Jun 28 22:27:52 2017 -0400
