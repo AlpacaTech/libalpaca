@@ -1,21 +1,21 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <style>
-    .body {
+    body {
         align: center;
-        background-color: #bfbfdf;
+        background-color: white; //#bfbfdf;
         width: 100%;
         margin: 0px;
         font-family: 'Open Sans', sans-serif;
     }
 
     .link {
-       color: black;
+       color: #323232;
        text-decoration: none;
        word-wrap: break-word;
     }
 
     .link:visited {
-       color: black;
+       color: #323232;
        text-decoration: none;
        cursor: auto;
     }
@@ -28,7 +28,7 @@
 
     .commit {
         background-color: #efefef;
-        width: 50%;
+        width: 90%;
         align: center;
         align-self: center;
         align-content: center;
@@ -37,8 +37,7 @@
         border-style: groove inset;
         border-radius: 25px;
         padding: 20px;
-        margin-left: 25%;
-        margin-right: 25%;
+        margin: 5%;
         box-shadow: 10px 10px 5px #777777;
     }
 
@@ -67,7 +66,7 @@
     .browse:hover {
        background-color: #bfbfdf;
        border-color: #9d9dbf;
-       color: black;
+       color: #323232;
     }
 
     h1 {
@@ -82,5 +81,21 @@
        text-align: center;
     }
 
+#body-inner h1 {
+background-color: #efefef;
+        width: 90%;
+        color: #333333;
+        font-weight: lighter;
+        font-family: 'Open Sans', sans-serif;
+        align: center;
+        align-self: center;
+        align-content: center;
+        align-items: center;
+        border-color: #454585;
+        border-style: groove inset;
+        border-radius: 25px;
+        padding: 20px;
+        margin: 5%;
+        box-shadow: 10px 10px 5px #777777;
+}
 </style>
-

@@ -1,10 +1,15 @@
 #!/bin/bash
-cd $HOME/VEX-709S-2018/
-make -j4
+cd $VEX
+make -j2
 git add -u
 cd docs/
 ./document.sh
-./pdfMaker.sh
+cd ..
+tools/pdfMaker.sh
+cp docs/index.html 709S/content/Notebook/Programming.html -f
+tools/htmlCopy.sh
+cd 709S
+./deploy.sh
 cd ..
 git add -u
 git rm include /*.swp -f

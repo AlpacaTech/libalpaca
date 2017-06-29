@@ -1,11 +1,24 @@
 import sys, jsonpickle
 from commit import Commit, printCommit, saveList
 
+message = \
+"""
+"""
+
 year = "2018"
 
-style = ""
+style = \
+"""+++
+date = "2017-06-18T16:20:34-04:00"
+description = "A log off all that was programmed"
+title = "Programming Engineering Notebook"
++++
+
+<head>
+"""
+
 with open("style.css", mode="r") as stylefyle:
-    style = stylefyle.read()
+    style += stylefyle.read() + "</head>\n"
 
 script = ""
 with open("main.js", mode="r") as scriptfile:
@@ -35,19 +48,19 @@ def indexInStr(index, string):
 
 def styleContent(commit):
     out = "<div class='commit' id='" + commit.commitkey + "'>"
-    out += "<p><b style='cursor: pointer;' onclick='window.open(\"https://github.com/iuyte/VEX-709S-" + year + "/commit/" + commit.commitkey + "\")'>Commit:</b> <a class='link' href='https://iuyte.github.io/VEX-709S-" + year + "/#" + commit.commitkey + "'>" + commit.commitkey + "</a></p>"
+    out += "<p><b><a class='link' href='https://github.com/iuyte/VEX-709S-" + year + "/commit/" + commit.commitkey + "/' target='_blank'>Commit:</a></b> <a class='link' href='https://iuyte.github.io/notebook/programming/#" + commit.commitkey + "'>" + commit.commitkey + "</a></p>"
     out += "<p><b>Date:</b> " + commit.date + "</p>\n"
     out += "<p><b>Author:</b> " + commit.author + "</p>\n"
     out += "<p><b>Description:</b><br>" + commit.description + "</p>\n"
     if len(commit.filesAdded) > 0:
         out += "<b>Files added:</b>\n<ul>\n"
         for i in range(len(commit.filesAdded)):
-            out += "<li><span class='link' onclick='window.open(\"https://github.com/iuyte/VEX-709S-" + year + "/tree/" + commit.commitkey + "/" + commit.filesAdded[i] + "\")'>" + commit.filesAdded[i] + "</span></li>\n"
+            out += "<li><a class='link' href='https://github.com/iuyte/VEX-709S-" + year + "/tree/" + commit.commitkey + "/" + commit.filesAdded[i] + "'>" + commit.filesAdded[i] + "</a></li>\n"
         out += "</ul>"
     if len(commit.filesModified) > 0:
         out += "<b>Files modified:</b>\n<ul>\n"
         for i in range(len(commit.filesModified)):
-            out += "<li><span class='link' onclick='window.open(\"https://github.com/iuyte/VEX-709S-" + year + "/tree/" + commit.commitkey + "/" + commit.filesModified[i] + "\")'>" + commit.filesModified[i] + "</span></li>\n"
+            out += "<li><a class='link' href='https://github.com/iuyte/VEX-709S-" + year + "/tree/" + commit.commitkey + "/" + commit.filesModified[i] + "'>" + commit.filesModified[i] + "</a></li>\n"
         out += "</ul>"
     if len(commit.filesDeleted) > 0:
         out += "<b>Files deleted:</b>\n<ul>\n"
@@ -69,10 +82,9 @@ def removeSpaces(content):
 def parseContent(content):
     if content == "":
         assert False, "File is empty or does not exist"
-    out = "<html>\n<head>\n" + style + "<title>Git Commit history</title>\n</head>\n<body style='background-color: #bfbfdf;' class='body'>"
+    out = style
     count = 0
     commits = content.split("commit ")
-    out += "<div class='commit' id='top'>\n<h1 class='centered'>VEX Robotics Competition</h1>\n<h2 class='centered'>Team 709S Programming Log / Notebook<h2>\n</div>\n<br>\n"
     commit = 0
     lcom = ""
     lcommits = []

@@ -1,3 +1,30 @@
+commit 29372b3f68893819060a9cebc4df1e66e8b51caf
+Author: Ethan Wells <iuyte@gmx.com>
+Date:   Tue Jun 27 21:17:20 2017 -0400
+
+    Changed to the right submodule
+
+:100644 100644 2ab12d2... 1ca54bf... M	.gitmodules
+:000000 160000 0000000... 341ee8d... A	709S
+:160000 000000 da675b8... 0000000... D	iuyte.github.io
+:100644 100644 9e5b952... 4bfa0d6... M	src/Makefile
+:100644 100644 9d702da... a36a220... M	src/opcontrol.cpp
+:100755 100644 b44e50b... 23c974b... M	tools/commit.sh
+:100755 100644 aa5b053... 24fcfc5... M	tools/pdfMaker.sh
+:100755 100755 a3dc566... 876c0c1... M	vim.sh
+
+commit 7a57c0087cba08ccc26f9756203315edb8cba2ea
+Author: iuyte <iuyte@gmail.com>
+Date:   Thu Jun 22 18:39:09 2017 -0400
+
+    submodules
+
+:000000 100644 0000000... 2ab12d2... A	.gitmodules
+:100644 100644 19f406c... ea00abc... M	docs/index.html
+:100644 100644 3d5ecee... 9f824a2... M	docs/log.json
+:100644 100644 611fe2b... ae591b9... M	docs/log.txt
+:000000 160000 0000000... da675b8... A	iuyte.github.io
+
 commit 90ef0c60cfa17383c5e897b46affcbc88c468565
 Author: iuyte <iuyte@gmail.com>
 Date:   Thu Jun 22 15:38:18 2017 -0400
