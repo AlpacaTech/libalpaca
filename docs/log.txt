@@ -1,3 +1,31 @@
+commit b4130f783778d818fd2fd29187d5937a4a635b94
+Author: Ethan Wells <iuyte@gmx.com>
+Date:   Wed Jun 28 23:27:59 2017 -0400
+
+    Fixed weird end of commit.sh
+
+:100644 100644 530a20a... 9480e10... M	docs/index.html
+:100644 100644 22fff16... 4b2053d... M	docs/log.json
+:100644 100644 316618e... 8dbd405... M	docs/log.txt
+:100644 100644 803e4a9... 8b9bc22... M	tools/PDFs/include/debug.pdf
+:100644 100644 edf114c... 6653b73... M	tools/PDFs/include/drive.pdf
+:100644 100644 045e018... a341ed3... M	tools/PDFs/include/gyro.pdf
+:100644 100644 90d2760... cafdaba... M	tools/PDFs/include/lift.pdf
+:100644 100644 c22b5fd... 81d3c95... M	tools/PDFs/include/motors.pdf
+:100644 100644 6ed1b4f... 0262876... M	tools/PDFs/include/pid.pdf
+:100644 100644 0b4f00e... 3125fc1... M	tools/PDFs/include/sensors.pdf
+:100644 100644 b27125a... 337296b... M	tools/PDFs/src/auto.pdf
+:100644 100644 7d63d01... 4a54d4c... M	tools/PDFs/src/debug.pdf
+:100644 100644 b70d5f8... 72a3c75... M	tools/PDFs/src/drive.pdf
+:100644 100644 3f7de21... bea56a8... M	tools/PDFs/src/gyro.pdf
+:100644 100644 19917f3... 13672fb... M	tools/PDFs/src/init.pdf
+:100644 100644 3a4383e... df86e9c... M	tools/PDFs/src/lift.pdf
+:100644 100644 3370cd5... c72ecc1... M	tools/PDFs/src/motors.pdf
+:100644 100644 2efd494... 9e11f20... M	tools/PDFs/src/opcontrol.pdf
+:100644 100644 cde0009... dedd7b2... M	tools/PDFs/src/pid.pdf
+:100644 100644 dd35594... dfa717a... M	tools/PDFs/src/sensors.pdf
+:100755 100755 453130f... 0e00d54... M	tools/commit.sh
+
 commit 2dc9ca6beb842ac72e5b53addba35632e7edde08
 Author: Ethan Wells <iuyte@gmx.com>
 Date:   Wed Jun 28 23:26:39 2017 -0400
