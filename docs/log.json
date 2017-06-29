@@ -1,6 +1,18 @@
 [
     {
         "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "47bd5067cc71c3b61e1a07b142349e017260833a",
+        "date": "  Wed Jun 28 23:41:14 2017 -0400",
+        "description": "Removed doxygen pages from notebook, as they take up a lot of unnecessary space",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "709S",
+            "docs/cleanuphelp.py"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
         "commitkey": "b4130f783778d818fd2fd29187d5937a4a635b94",
         "date": "  Wed Jun 28 23:27:59 2017 -0400",
         "description": "Fixed weird end of commit.sh",

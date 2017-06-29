@@ -193,4 +193,7 @@ tags
 *.elf
 *.o
 
+### My settings ###
+vim.sh
+
 # End of https://www.gitignore.io/api/c,vim,c++,python
