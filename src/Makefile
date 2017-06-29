@@ -1,13 +1,13 @@
-# Makefile for compiling PROS projects
+#Makefile for compiling PROS projects
 
-# Path to project root (NO trailing slash!)
+#Path to project root(NO trailing slash !)
 ROOT=..
-# Binary output directory
+#Binary output directory
 BINDIR=$(ROOT)/bin
 
-# Nothing below here needs to be modified by typical users
+#Nothing below here needs to be modified by typical users
 
-# Include common aspects of this project
+#Include common aspects of this project
 -include $(ROOT)/common.mk
 
 ASMSRC:=$(wildcard *.$(ASMEXT))

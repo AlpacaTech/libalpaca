@@ -35,5 +35,4 @@ void operatorControl() {
     debug::debug();
     delay(50);
   }
-
 }

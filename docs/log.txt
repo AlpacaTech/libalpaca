@@ -1,3 +1,98 @@
+commit 2dc9ca6beb842ac72e5b53addba35632e7edde08
+Author: Ethan Wells <iuyte@gmx.com>
+Date:   Wed Jun 28 23:26:39 2017 -0400
+
+    Test commit, to be sure everything is working properly
+
+:160000 160000 2e2b897... f0316d7... M	709S
+:100644 100644 ac753ed... 530a20a... M	docs/index.html
+:100644 100644 7e6a9bd... 22fff16... M	docs/log.json
+:100644 100644 6715cc8... 316618e... M	docs/log.txt
+:100644 100644 413df8f... db4fd2b... M	docs/style.css
+:100644 100644 14b380a... 803e4a9... M	tools/PDFs/include/debug.pdf
+:100644 100644 deb166c... edf114c... M	tools/PDFs/include/drive.pdf
+:100644 100644 80099bb... 045e018... M	tools/PDFs/include/gyro.pdf
+:100644 100644 0c290ab... 90d2760... M	tools/PDFs/include/lift.pdf
+:100644 100644 5987de3... c22b5fd... M	tools/PDFs/include/motors.pdf
+:100644 100644 17a3488... 6ed1b4f... M	tools/PDFs/include/pid.pdf
+:100644 100644 c5bae8d... 0b4f00e... M	tools/PDFs/include/sensors.pdf
+:100644 100644 9de832f... b27125a... M	tools/PDFs/src/auto.pdf
+:100644 100644 2e50ee1... 7d63d01... M	tools/PDFs/src/debug.pdf
+:100644 100644 0db1c7e... b70d5f8... M	tools/PDFs/src/drive.pdf
+:100644 100644 76f9e2d... 3f7de21... M	tools/PDFs/src/gyro.pdf
+:100644 100644 f35e926... 19917f3... M	tools/PDFs/src/init.pdf
+:100644 100644 6cdf0df... 3a4383e... M	tools/PDFs/src/lift.pdf
+:100644 100644 e2f665a... 3370cd5... M	tools/PDFs/src/motors.pdf
+:100644 100644 2dd16f0... 2efd494... M	tools/PDFs/src/opcontrol.pdf
+:100644 100644 ce3587a... cde0009... M	tools/PDFs/src/pid.pdf
+:100644 100644 075fd12... dd35594... M	tools/PDFs/src/sensors.pdf
+:100755 100755 59184c8... 453130f... M	tools/commit.sh
+:100755 100755 caa9606... 83dd607... M	tools/htmlCopy.sh
+
+commit dc6db3aebbf6d73d4a249432407402bdb958e1d3
+Author: Ethan Wells <iuyte@gmx.com>
+Date:   Wed Jun 28 22:27:52 2017 -0400
+
+    Lots of web work
+
+:160000 160000 341ee8d... 2e2b897... M	709S
+:100644 100644 6fcdd88... 8733460... M	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:100644 100644 06793a5... b387241... M	docs/__pycache__/commit.cpython-35.pyc
+:100644 100644 60d79de... 603cce6... M	docs/cleanuphelp.py
+:100644 100644 ea00abc... ac753ed... M	docs/index.html
+:100644 100644 9f824a2... 7e6a9bd... M	docs/log.json
+:100644 100644 ae591b9... 6715cc8... M	docs/log.txt
+:100644 100644 b8e67d3... 413df8f... M	docs/style.css
+:100644 000000 ab75eef... 0000000... D	tools/LATEX/include/API.tex
+:100644 000000 db56482... 0000000... D	tools/LATEX/include/main.tex
+:100644 100644 bd5227d... 14b380a... M	tools/PDFs/include/debug.pdf
+:100644 100644 44f327c... deb166c... M	tools/PDFs/include/drive.pdf
+:100644 100644 069aaa8... 80099bb... M	tools/PDFs/include/gyro.pdf
+:100644 100644 e9434ab... 0c290ab... M	tools/PDFs/include/lift.pdf
+:100644 100644 26bc678... 5987de3... M	tools/PDFs/include/motors.pdf
+:100644 100644 f6a20b2... 17a3488... M	tools/PDFs/include/pid.pdf
+:100644 100644 40fcfa5... c5bae8d... M	tools/PDFs/include/sensors.pdf
+:100644 100644 eeaf832... 9de832f... M	tools/PDFs/src/auto.pdf
+:100644 100644 b2a4852... 2e50ee1... M	tools/PDFs/src/debug.pdf
+:100644 100644 721c4e0... 0db1c7e... M	tools/PDFs/src/drive.pdf
+:100644 100644 79fe538... 76f9e2d... M	tools/PDFs/src/gyro.pdf
+:100644 100644 c76f088... f35e926... M	tools/PDFs/src/init.pdf
+:100644 100644 0518cc5... 6cdf0df... M	tools/PDFs/src/lift.pdf
+:100644 100644 1f426f2... e2f665a... M	tools/PDFs/src/motors.pdf
+:100644 100644 327d885... 2dd16f0... M	tools/PDFs/src/opcontrol.pdf
+:100644 100644 bd73c6b... ce3587a... M	tools/PDFs/src/pid.pdf
+:100644 100644 16595a3... 075fd12... M	tools/PDFs/src/sensors.pdf
+:100644 100755 23c974b... 59184c8... M	tools/commit.sh
+:000000 100755 0000000... caa9606... A	tools/htmlCopy.sh
+:100644 100755 24fcfc5... 733d5a7... M	tools/pdfMaker.sh
+
+commit 29372b3f68893819060a9cebc4df1e66e8b51caf
+Author: Ethan Wells <iuyte@gmx.com>
+Date:   Tue Jun 27 21:17:20 2017 -0400
+
+    Changed to the right submodule
+
+:100644 100644 2ab12d2... 1ca54bf... M	.gitmodules
+:000000 160000 0000000... 341ee8d... A	709S
+:160000 000000 da675b8... 0000000... D	iuyte.github.io
+:100644 100644 9e5b952... 4bfa0d6... M	src/Makefile
+:100644 100644 9d702da... a36a220... M	src/opcontrol.cpp
+:100755 100644 b44e50b... 23c974b... M	tools/commit.sh
+:100755 100644 aa5b053... 24fcfc5... M	tools/pdfMaker.sh
+:100755 100755 a3dc566... 876c0c1... M	vim.sh
+
+commit 7a57c0087cba08ccc26f9756203315edb8cba2ea
+Author: iuyte <iuyte@gmail.com>
+Date:   Thu Jun 22 18:39:09 2017 -0400
+
+    submodules
+
+:000000 100644 0000000... 2ab12d2... A	.gitmodules
+:100644 100644 19f406c... ea00abc... M	docs/index.html
+:100644 100644 3d5ecee... 9f824a2... M	docs/log.json
+:100644 100644 611fe2b... ae591b9... M	docs/log.txt
+:000000 160000 0000000... da675b8... A	iuyte.github.io
+
 commit 90ef0c60cfa17383c5e897b46affcbc88c468565
 Author: iuyte <iuyte@gmail.com>
 Date:   Thu Jun 22 15:38:18 2017 -0400
