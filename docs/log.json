@@ -1,5 +1,30 @@
 [
     {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "afbfe805c5f17e7e3298f075e4a990c03b88ec58",
+        "date": "  Thu Jun 29 09:55:51 2017 -0400",
+        "description": "Gyro work",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            ".clang-format",
+            "include/gyro.hpp",
+            "src/gyro.cpp"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "1be5f493500d47c119279269dfd366ffc156924c",
+        "date": "  Thu Jun 29 09:42:37 2017 -0400",
+        "description": "fixed commit.sh such that the path for the programming notebook is",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "709S",
+            "tools/commit.sh"
+        ]
+    },
+    {
         "author": " Ethan Wells <iuyte@gmx.com>",
         "commitkey": "8f91b102fc55ab79733313c33e7415ef5419aa5e",
         "date": "  Thu Jun 29 09:39:59 2017 -0400",

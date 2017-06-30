@@ -24,14 +24,15 @@ namespace gyro {
   public:
     /** A reference to the gyro which will be used to get values from */
     sensors::gyro_t* gyro;
-    /** The ideal heading of the robot */
+    /** The ideal heading of the robot (is absolute)*/
     int heading;
     /** The urgency/agressiveness of the arc */
     float urgency;
-    /** Use to initialize and run the task */
-    drive(int _heading = 0, float _urgency = 11.6, bool absolute = false, sensors::gyro_t* _gyro = &sensors::gyro_t);
     /** Turn the arc off */
     void off(void);
+    /** Use to initialize and run the task */
+    drive(int heading, float urgency = 15.f, bool absolute = false,
+          sensors::gyro_t* gyro = &sensors::gyro, unsigned int tolerance = 3);
 
   private:
     /** The task that runs, keeping the robot straight */
@@ -44,6 +45,8 @@ namespace gyro {
     float changer;
     /** Whether it is on or not */
     bool on;
+    /** The tolerance for turning */
+    int tolerance;
   }; // class drive
 
 } // namespace gyro

@@ -1,3 +1,43 @@
+commit afbfe805c5f17e7e3298f075e4a990c03b88ec58
+Author: iuyte <iuyte@gmail.com>
+Date:   Thu Jun 29 09:55:51 2017 -0400
+
+    Gyro work
+
+:100644 100644 640ba8f... 7ab3d61... M	.clang-format
+:100644 100644 10ff415... bb0b05d... M	include/gyro.hpp
+:100644 100644 6a19640... 90923b9... M	src/gyro.cpp
+
+commit 1be5f493500d47c119279269dfd366ffc156924c
+Author: Ethan Wells <iuyte@gmx.com>
+Date:   Thu Jun 29 09:42:37 2017 -0400
+
+    fixed commit.sh such that the path for the programming notebook is
+    correct
+
+:160000 160000 c23f4f1... bb8ef8b... M	709S
+:100644 100644 448eb38... 7e47b8d... M	docs/index.html
+:100644 100644 9651a2d... f1cd62b... M	docs/log.json
+:100644 100644 6bf370d... f3a6b42... M	docs/log.txt
+:100644 100644 b176fc6... 050ba1a... M	tools/PDFs/include/debug.pdf
+:100644 100644 dbdbed3... 37cee5a... M	tools/PDFs/include/drive.pdf
+:100644 100644 cd6db50... 5d2586b... M	tools/PDFs/include/gyro.pdf
+:100644 100644 05a9fed... d45b1fd... M	tools/PDFs/include/lift.pdf
+:100644 100644 a72e96b... c96f6b0... M	tools/PDFs/include/motors.pdf
+:100644 100644 79c1ae8... d0799ee... M	tools/PDFs/include/pid.pdf
+:100644 100644 75a399a... 2929f4d... M	tools/PDFs/include/sensors.pdf
+:100644 100644 120efa8... 49e8738... M	tools/PDFs/src/auto.pdf
+:100644 100644 1c650a9... 4042972... M	tools/PDFs/src/debug.pdf
+:100644 100644 1300264... 59d4d75... M	tools/PDFs/src/drive.pdf
+:100644 100644 905c2f5... efca972... M	tools/PDFs/src/gyro.pdf
+:100644 100644 547219c... 4bdcbd7... M	tools/PDFs/src/init.pdf
+:100644 100644 c3cd53d... 65d6416... M	tools/PDFs/src/lift.pdf
+:100644 100644 704043c... 2612503... M	tools/PDFs/src/motors.pdf
+:100644 100644 f0160e4... 85b1760... M	tools/PDFs/src/opcontrol.pdf
+:100644 100644 295e377... dda4e91... M	tools/PDFs/src/pid.pdf
+:100644 100644 7e67d18... b7addb4... M	tools/PDFs/src/sensors.pdf
+:100755 100755 0e00d54... dbeb84f... M	tools/commit.sh
+
 commit 8f91b102fc55ab79733313c33e7415ef5419aa5e
 Author: Ethan Wells <iuyte@gmx.com>
 Date:   Thu Jun 29 09:39:59 2017 -0400
