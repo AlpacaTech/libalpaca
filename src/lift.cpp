@@ -49,12 +49,12 @@ namespace lift {
     do {
       set((int_pos > sensor->value() + tolerance ||
            int_pos < sensor->value() - tolerance)
-              ? (sensor->value() - int_pos) * 2
+              ? (sensor->value() - int_pos) * 1.5
               : (sensor->value() - int_pos));
       delay(15);
     } while (int_pos > sensor->value() + tolerance ||
              int_pos < sensor->value() - tolerance);
-    set(15);
+    set(lock);
     return;
   }
-} // namespace drive
+} // namespace lift

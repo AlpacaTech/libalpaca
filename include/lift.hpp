@@ -43,14 +43,16 @@ namespace lift {
   } position;
 
   extern double inch;
-  /** The left side of the drive */
+  /** The left side of the lift */
   extern side_t left;
-  /** The right side of the drive */
+  /** The right side of the lift */
   extern side_t right;
   /** Sensor on the lift */
   extern sensors::pot_t* sensor;
+  /** Default value for the lift to be set at when it is no tin use */
+  static const int lock = 15;
 
-  /** Set both sides of the drive at their requested powers */
+  /** Set the lift at their requested powers */
   void set(int lpower, int rpower);
 
   /** Initialize the drive subsystem */
@@ -59,4 +61,4 @@ namespace lift {
   /** p control for the lift */
   void to(position pos = bottom, int int_pos = -1, int tolerance = 50);
 
-} // namespace drive
+} // namespace lift
