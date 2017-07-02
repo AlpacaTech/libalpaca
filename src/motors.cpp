@@ -21,9 +21,13 @@ void motor_t::set(int _power) {
 }
 
 namespace motors {
-  void set(motor_t motor, int power) { motor.set(power); }
+  void set(motor_t motor, int power) {
+    motor.set(power);
+  }
 
-  int get(motor_t motor) { return motor.power; }
+  int get(motor_t motor) {
+    return motor.power;
+  }
 
   motor_t init(unsigned char port, int inverted, float slewRate, float scale) {
     motor_t motor;

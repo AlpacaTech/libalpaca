@@ -83,9 +83,13 @@ namespace pid {
                            TASK_PRIORITY_DEFAULT);
   }
 
-  void stop(void) { taskSuspend(pidHandle); }
+  void stop(void) {
+    taskSuspend(pidHandle);
+  }
 
-  void go(void) { taskResume(pidHandle); }
+  void go(void) {
+    taskResume(pidHandle);
+  }
 
   void request(long l, long r) {
     sensors::left.request  = l;
