@@ -1,6 +1,18 @@
 [
     {
         "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "e8c6b7ecd24ba50fac7e071c77a86536608fa208",
+        "date": "  Sun Jul 2 20:01:33 2017 -0400",
+        "description": "Quick change to commit.sh script (typo caused error)",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "709S",
+            "tools/commit.sh"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
         "commitkey": "2007b1a903ef023c1f679898a8771cbfad776653",
         "date": "  Sun Jul 2 19:59:08 2017 -0400",
         "description": "Changed style guide again",

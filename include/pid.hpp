@@ -14,7 +14,9 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#pragma once
+#ifndef PID_HPP
+#define PID_HPP
+
 #include "lift.hpp"
 
 /** Consists of pid, and all subcomponents, etc */
@@ -67,3 +69,5 @@ namespace pid {
   /** TaskHandle for the pid task */
   extern TaskHandle pidHandle;
 } // namespace pid
+
+#endif /* end of include guard: PID_HPP */

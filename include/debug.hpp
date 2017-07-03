@@ -14,7 +14,9 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#pragma once
+#ifndef DEBUG_HPP
+#define DEBUG_HPP
+
 #include "pid.hpp"
 
 /** Contains debugging funtions, etc */
@@ -35,3 +37,5 @@ namespace debug {
   /** Debug the Cortex if something goes wrong */
   void debug(void);
 } // namespace debug
+
+#endif /* end of include guard: DEBUG_HPP */

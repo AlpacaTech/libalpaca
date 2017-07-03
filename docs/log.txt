@@ -1,3 +1,30 @@
+commit e8c6b7ecd24ba50fac7e071c77a86536608fa208
+Author: Ethan Wells <iuyte@gmx.com>
+Date:   Sun Jul 2 20:01:33 2017 -0400
+
+    Quick change to commit.sh script (typo caused error)
+
+:160000 160000 b23bf98... 04b095e... M	709S
+:100644 100644 ea52ec8... bc36c58... M	docs/index.html
+:100644 100644 2c4fe68... 3ba0ec3... M	docs/log.json
+:100644 100644 eb1a82f... a75864e... M	docs/log.txt
+:100644 100644 9ab0179... 88f3b1d... M	tools/PDFs/include/debug.pdf
+:100644 100644 aa18ac0... 306f71b... M	tools/PDFs/include/drive.pdf
+:100644 100644 4b74de3... 6392e12... M	tools/PDFs/include/lift.pdf
+:100644 100644 738a636... c68dc3f... M	tools/PDFs/include/motors.pdf
+:100644 100644 17a9190... b0d5f3a... M	tools/PDFs/include/pid.pdf
+:100644 100644 2f4d6a8... 37158b1... M	tools/PDFs/include/sensors.pdf
+:100644 100644 de50a0d... 5dc41e7... M	tools/PDFs/src/auto.pdf
+:100644 100644 c7e6dbe... 65f391e... M	tools/PDFs/src/debug.pdf
+:100644 100644 1f6de9a... d9ca057... M	tools/PDFs/src/drive.pdf
+:100644 100644 9d9c28f... 8816e65... M	tools/PDFs/src/init.pdf
+:100644 100644 6eefff4... d79259d... M	tools/PDFs/src/lift.pdf
+:100644 100644 8c2be84... 9310db4... M	tools/PDFs/src/motors.pdf
+:100644 100644 582e7dc... 5872a9e... M	tools/PDFs/src/opcontrol.pdf
+:100644 100644 7d397a6... a29c602... M	tools/PDFs/src/pid.pdf
+:100644 100644 92beb9e... 65be7d7... M	tools/PDFs/src/sensors.pdf
+:100755 100755 dbeb84f... 666037e... M	tools/commit.sh
+
 commit 2007b1a903ef023c1f679898a8771cbfad776653
 Author: Ethan Wells <iuyte@gmx.com>
 Date:   Sun Jul 2 19:59:08 2017 -0400
