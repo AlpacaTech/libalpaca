@@ -12,8 +12,7 @@ cd 709S
 ./deploy.sh
 cd ..
 git add -u
-git rm include /*.swp -f
-git rm src/*.swp -f
+git rm include/*.swp src/*.swp -f
 git rm *.swp -rf
 if [ $# -eq 1 ]
   then git commit -m "$1"
