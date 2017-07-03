@@ -21,7 +21,7 @@ bool wpressed = false;
 void operatorControl() {
   sensors::reset();
 
-  while (true) {
+  while (isEnabled()) {
     if (tank) {
       drive::tank();
     } else {

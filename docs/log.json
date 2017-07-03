@@ -1,6 +1,23 @@
 [
     {
         "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "2094ae3db0e585f2d429e3de76d353be02ed31ad",
+        "date": "  Sun Jul 2 20:17:32 2017 -0400",
+        "description": "changed header guards",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "709S",
+            "include/debug.hpp",
+            "include/drive.hpp",
+            "include/lift.hpp",
+            "include/motors.hpp",
+            "include/pid.hpp",
+            "include/sensors.hpp"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
         "commitkey": "e8c6b7ecd24ba50fac7e071c77a86536608fa208",
         "date": "  Sun Jul 2 20:01:33 2017 -0400",
         "description": "Quick change to commit.sh script (typo caused error)",

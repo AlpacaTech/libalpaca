@@ -1,3 +1,36 @@
+commit 2094ae3db0e585f2d429e3de76d353be02ed31ad
+Author: Ethan Wells <iuyte@gmx.com>
+Date:   Sun Jul 2 20:17:32 2017 -0400
+
+    changed header guards
+
+:160000 160000 04b095e... 2b972d9... M	709S
+:100644 000000 83c9752... 0000000... D	bin/gyro.o
+:100644 100644 bc36c58... 37fb0da... M	docs/index.html
+:100644 100644 3ba0ec3... 57e63d7... M	docs/log.json
+:100644 100644 a75864e... 4979a25... M	docs/log.txt
+:100644 100644 f759a87... 7b09d37... M	include/debug.hpp
+:100644 100644 809177a... be2a06a... M	include/drive.hpp
+:100644 100644 21372fc... 8128667... M	include/lift.hpp
+:100644 100644 1632fb7... 68b6c48... M	include/motors.hpp
+:100644 100644 5d08459... 49878e5... M	include/pid.hpp
+:100644 100644 af96842... af5ed5f... M	include/sensors.hpp
+:100644 100644 88f3b1d... 3290d0a... M	tools/PDFs/include/debug.pdf
+:100644 100644 306f71b... 31bcc66... M	tools/PDFs/include/drive.pdf
+:100644 100644 6392e12... dd4a920... M	tools/PDFs/include/lift.pdf
+:100644 100644 c68dc3f... 5d0bd84... M	tools/PDFs/include/motors.pdf
+:100644 100644 b0d5f3a... 8ae42a0... M	tools/PDFs/include/pid.pdf
+:100644 100644 37158b1... 3f107cc... M	tools/PDFs/include/sensors.pdf
+:100644 100644 5dc41e7... d73bfc3... M	tools/PDFs/src/auto.pdf
+:100644 100644 65f391e... c9eade5... M	tools/PDFs/src/debug.pdf
+:100644 100644 d9ca057... 8b13163... M	tools/PDFs/src/drive.pdf
+:100644 100644 8816e65... 465f3cf... M	tools/PDFs/src/init.pdf
+:100644 100644 d79259d... c2b1b67... M	tools/PDFs/src/lift.pdf
+:100644 100644 9310db4... 5a516be... M	tools/PDFs/src/motors.pdf
+:100644 100644 5872a9e... f16c291... M	tools/PDFs/src/opcontrol.pdf
+:100644 100644 a29c602... 1c8b2d8... M	tools/PDFs/src/pid.pdf
+:100644 100644 65be7d7... 248c6d2... M	tools/PDFs/src/sensors.pdf
+
 commit e8c6b7ecd24ba50fac7e071c77a86536608fa208
 Author: Ethan Wells <iuyte@gmx.com>
 Date:   Sun Jul 2 20:01:33 2017 -0400

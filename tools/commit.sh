@@ -1,5 +1,6 @@
 #!/bin/bash
 cd $VEX
+make clean
 make -j2
 git add -u
 cd docs/
