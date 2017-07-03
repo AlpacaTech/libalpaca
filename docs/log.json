@@ -1,6 +1,21 @@
 [
     {
         "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "70697bb40a5025b983a048a1f8e5c813b2dcc2ec",
+        "date": "  Mon Jul 3 16:16:53 2017 -0400",
+        "description": "Created util.h for general utilities, lift now has a control function similar to that that the drive namespace posseses",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "709S",
+            "include/lift.hpp",
+            "include/sensors.hpp",
+            "src/lift.cpp",
+            "src/opcontrol.cpp"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
         "commitkey": "a21b8a8dfaf8df15d8a6d7fb594c1bde19e9ed28",
         "date": "  Sun Jul 2 20:26:07 2017 -0400",
         "description": "minor safety update in opcontrol",

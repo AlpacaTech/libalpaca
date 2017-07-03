@@ -1,3 +1,37 @@
+commit 70697bb40a5025b983a048a1f8e5c813b2dcc2ec
+Author: Ethan Wells <iuyte@gmx.com>
+Date:   Mon Jul 3 16:16:53 2017 -0400
+
+    Created util.h for general utilities, lift now has a control function similar to that that the drive namespace posseses
+
+:160000 160000 2cef3f1... 9a673de... M	709S
+:100644 100644 12cbe54... abd6a20... M	bin/lift.o
+:100644 100644 ce04b11... 607bb13... M	bin/opcontrol.o
+:100755 100755 8f89a37... a5f981e... M	bin/output.bin
+:100755 100755 4961aae... 5f67232... M	bin/output.elf
+:100644 100644 b362374... ba20fa0... M	docs/index.html
+:100644 100644 bf4bf20... 83c688b... M	docs/log.json
+:100644 100644 2f3ad12... 8a2df13... M	docs/log.txt
+:100644 100644 8128667... 959722a... M	include/lift.hpp
+:100644 100644 af5ed5f... 16a01b1... M	include/sensors.hpp
+:100644 100644 62e8c1e... 5876af7... M	src/lift.cpp
+:100644 100644 1092938... 660f460... M	src/opcontrol.cpp
+:100644 100644 f7a6993... 788e46b... M	tools/PDFs/include/debug.pdf
+:100644 100644 e7aa819... 1c5e9e6... M	tools/PDFs/include/drive.pdf
+:100644 100644 6b1ce7a... 2bd8e62... M	tools/PDFs/include/lift.pdf
+:100644 100644 2f0ff2d... 94ffc6a... M	tools/PDFs/include/motors.pdf
+:100644 100644 a3d2557... 73f3405... M	tools/PDFs/include/pid.pdf
+:100644 100644 1349416... 153991d... M	tools/PDFs/include/sensors.pdf
+:100644 100644 31e84a6... 3e9f782... M	tools/PDFs/src/auto.pdf
+:100644 100644 8badd22... 380de95... M	tools/PDFs/src/debug.pdf
+:100644 100644 b59c634... 4356a7a... M	tools/PDFs/src/drive.pdf
+:100644 100644 3064228... 6980e33... M	tools/PDFs/src/init.pdf
+:100644 100644 a739be0... 91690f9... M	tools/PDFs/src/lift.pdf
+:100644 100644 6d6aa6f... 5aafae5... M	tools/PDFs/src/motors.pdf
+:100644 100644 a28a568... 7f790e3... M	tools/PDFs/src/opcontrol.pdf
+:100644 100644 6e92a8f... 34ad168... M	tools/PDFs/src/pid.pdf
+:100644 100644 b408720... f64b74f... M	tools/PDFs/src/sensors.pdf
+
 commit a21b8a8dfaf8df15d8a6d7fb594c1bde19e9ed28
 Author: Ethan Wells <iuyte@gmx.com>
 Date:   Sun Jul 2 20:26:07 2017 -0400
