@@ -18,6 +18,7 @@
 #define SENSORS_HPP
 
 #include "API.h"
+#include "util.h"
 
 /** The namespace containing all information, functions, objects, relating to
  * sensors */

@@ -1,3 +1,34 @@
+commit a21b8a8dfaf8df15d8a6d7fb594c1bde19e9ed28
+Author: Ethan Wells <iuyte@gmx.com>
+Date:   Sun Jul 2 20:26:07 2017 -0400
+
+    minor safety update in opcontrol
+
+:160000 160000 2b972d9... 2cef3f1... M	709S
+:100644 100644 b793e67... ce04b11... M	bin/opcontrol.o
+:100755 100755 dacaebe... 8f89a37... M	bin/output.bin
+:100755 100755 3337a59... 4961aae... M	bin/output.elf
+:100644 100644 37fb0da... b362374... M	docs/index.html
+:100644 100644 57e63d7... bf4bf20... M	docs/log.json
+:100644 100644 4979a25... 2f3ad12... M	docs/log.txt
+:100644 100644 a36a220... 1092938... M	src/opcontrol.cpp
+:100644 100644 3290d0a... f7a6993... M	tools/PDFs/include/debug.pdf
+:100644 100644 31bcc66... e7aa819... M	tools/PDFs/include/drive.pdf
+:100644 100644 dd4a920... 6b1ce7a... M	tools/PDFs/include/lift.pdf
+:100644 100644 5d0bd84... 2f0ff2d... M	tools/PDFs/include/motors.pdf
+:100644 100644 8ae42a0... a3d2557... M	tools/PDFs/include/pid.pdf
+:100644 100644 3f107cc... 1349416... M	tools/PDFs/include/sensors.pdf
+:100644 100644 d73bfc3... 31e84a6... M	tools/PDFs/src/auto.pdf
+:100644 100644 c9eade5... 8badd22... M	tools/PDFs/src/debug.pdf
+:100644 100644 8b13163... b59c634... M	tools/PDFs/src/drive.pdf
+:100644 100644 465f3cf... 3064228... M	tools/PDFs/src/init.pdf
+:100644 100644 c2b1b67... a739be0... M	tools/PDFs/src/lift.pdf
+:100644 100644 5a516be... 6d6aa6f... M	tools/PDFs/src/motors.pdf
+:100644 100644 f16c291... a28a568... M	tools/PDFs/src/opcontrol.pdf
+:100644 100644 1c8b2d8... 6e92a8f... M	tools/PDFs/src/pid.pdf
+:100644 100644 248c6d2... b408720... M	tools/PDFs/src/sensors.pdf
+:100755 100755 666037e... 31a5296... M	tools/commit.sh
+
 commit 2094ae3db0e585f2d429e3de76d353be02ed31ad
 Author: Ethan Wells <iuyte@gmx.com>
 Date:   Sun Jul 2 20:17:32 2017 -0400

@@ -51,17 +51,25 @@ namespace lift {
   extern side_t right;
   /** Sensor on the lift */
   extern sensors::pot_t* sensor;
-  /** Default value for the lift to be set at when it is no tin use */
-  static const int lock = 15;
+  /** The value where the lift will stay up with a standard load */
+  static const char lockN = 17;
+  /** Any value below this point will result in the lift being set to 0 */
+  static const int threshold = 150;
 
   /** Set the lift at their requested powers */
-  void set(int lpower, int rpower);
+  void set(int power);
+
+  /** Default value for the lift to be set at when it is no tin use */
+  void lock(void);
 
   /** Initialize the drive subsystem */
   void init(void);
 
   /** p control for the lift */
   void to(position pos = bottom, int int_pos = -1, int tolerance = 50);
+
+  /** Lift control that should be used in a while loop */
+  void control(void);
 
 } // namespace lift
 

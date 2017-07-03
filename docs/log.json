@@ -1,6 +1,19 @@
 [
     {
         "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "a21b8a8dfaf8df15d8a6d7fb594c1bde19e9ed28",
+        "date": "  Sun Jul 2 20:26:07 2017 -0400",
+        "description": "minor safety update in opcontrol",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "709S",
+            "src/opcontrol.cpp",
+            "tools/commit.sh"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
         "commitkey": "2094ae3db0e585f2d429e3de76d353be02ed31ad",
         "date": "  Sun Jul 2 20:17:32 2017 -0400",
         "description": "changed header guards",
