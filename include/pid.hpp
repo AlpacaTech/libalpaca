@@ -36,9 +36,18 @@ namespace pid {
   /** Default precision for waiting on pid to reach value */
   extern unsigned int default_precision;
   /** Whether or not each side of the drive's pid is enabled, in the order of
-   * left
-   * to right */
+   * left to right */
   extern bool enabled[2];
+  /** A class for a single position on the drive */
+  struct pos_t {
+    long left;
+    long right;
+    void request(void);
+    pos_t(long left, long right);
+    bool operator=(pos_t pos);
+    pos_t operator+(pos_t pos);
+    pos_t operator-(pos_t pos);
+  };
 
   /** Enables all pid */
   void enable(void);
@@ -58,13 +67,18 @@ namespace pid {
   /** (Re)starts the pid task */
   void go(void);
 
+  /** Gets the current position */
+  pos_t get(void);
+
   /** Requests values for the left and right side of the drive */
   void request(long l, long r);
+  /** Requests a specific position */
+  void request(pos_t pos);
 
   /** Wait until pid reaches specified precision, for no longer than the
    * specified
-   * blockTime. If 0 is passed to blockTime, it will wait indefinately until the
-   * requested values are met */
+   * blockTime. If 0 is passed to blockTime, it will wait indefinately until
+   * the requested values are met */
   void wait(unsigned long precision, unsigned long blockTime);
   /** TaskHandle for the pid task */
   extern TaskHandle pidHandle;

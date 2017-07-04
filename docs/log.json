@@ -1,6 +1,20 @@
 [
     {
         "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "0e0039a8bda243402e28da6d772411705e09127e",
+        "date": "  Mon Jul 3 16:29:17 2017 -0400",
+        "description": "Fixed 1-commit-behind problem with commit.sh script (and renamed it to 'commit')",
+        "filesAdded": [
+            "include/util.h",
+            "tools/commit"
+        ],
+        "filesDeleted": [
+            "tools/commit.sh"
+        ],
+        "filesModified": []
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
         "commitkey": "70697bb40a5025b983a048a1f8e5c813b2dcc2ec",
         "date": "  Mon Jul 3 16:16:53 2017 -0400",
         "description": "Created util.h for general utilities, lift now has a control function similar to that that the drive namespace posseses",

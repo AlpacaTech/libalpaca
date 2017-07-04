@@ -18,6 +18,7 @@
 #define MOTORS_HPP
 
 #include "API.h"
+#include "util.h"
 
 /** Class for motor objects */
 struct motor_t {

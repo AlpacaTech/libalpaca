@@ -17,7 +17,9 @@
 #ifndef UTIL_H
 #define UTIL_H
 
-#define CLIPNUM(x, low, high) \
-  (((x) > (high)) ? (high) : (((x) < (low)) ? (low) : (x)))
+/** Clips iInput to a high of iHigh and a low of iLow - good for keeping a
+ * number to a maximum/minimum value */
+#define clipNum(iInput, iHigh, iLow) \
+  iInput <= iLow ? iLow : (iInput >= iHigh ? iHigh : iInput)
 
 #endif /* end of include guard: UTIL_H */

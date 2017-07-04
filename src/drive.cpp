@@ -109,33 +109,24 @@ namespace drive {
     pid::disable();
   }
 
-  namespace gyro {
-    void drive::task(void* none) {
-      float change[2] = {0};
-      while (on) {
-        changer = (abs(gyro->value() - iHeading) - tolerance) * urgency;
-        if (gyro->value() > iHeading + tolerance) {
-          change[0] -= changer;
-          change[1] += changer;
-        } else if (gyro->value() < iHeading - tolerance) {
-          change[0] += changer;
-          change[1] -= changer;
-        }
-        pid::request(change[0], change[1]);
-        delay(50);
+  void straightUntil(int heading, bool (*func)(int), float urgency,
+                     bool absolute, sensors::gyro_t* gyro, int tolerance) {
+    int iHeading      = absolute ? heading : heading + gyro->value();
+    pid::pos_t change = pid::get();
+    float changer;
+    while (func(gyro->value())) {
+      change  = pid::get();
+      changer = (abs(gyro->value() - iHeading) - tolerance) * urgency;
+      if (gyro->value() > iHeading + tolerance) {
+        change.left -= changer;
+        change.right += changer;
+      } else if (gyro->value() < iHeading - tolerance) {
+        change.left += changer;
+        change.right -= changer;
       }
+      pid::request(change);
+      delay(50);
     }
+  }
 
-    void drive::off(void) {
-      on = false;
-    }
-
-    drive::drive(int heading, float urgency, bool absolute,
-                 sensors::gyro_t* gyro, unsigned int tolerance)
-        : heading(heading),
-          urgency(urgency),
-          gyro(gyro),
-          iHeading(absolute ? heading : heading + gyro->value()) {
-    }
-  } // namespace gyro
 } // namespace drive

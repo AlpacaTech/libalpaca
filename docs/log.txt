@@ -1,3 +1,31 @@
+commit 0e0039a8bda243402e28da6d772411705e09127e
+Author: Ethan Wells <iuyte@gmx.com>
+Date:   Mon Jul 3 16:29:17 2017 -0400
+
+    Fixed 1-commit-behind problem with commit.sh script (and renamed it to 'commit')
+
+:100644 100644 ba20fa0... 45f1da5... M	docs/index.html
+:100644 100644 83c688b... 8d76414... M	docs/log.json
+:100644 100644 8a2df13... ba1404d... M	docs/log.txt
+:000000 100644 0000000... 0122891... A	include/util.h
+:100644 100644 788e46b... dc59eec... M	tools/PDFs/include/debug.pdf
+:100644 100644 1c5e9e6... bd2e331... M	tools/PDFs/include/drive.pdf
+:100644 100644 2bd8e62... b9808ac... M	tools/PDFs/include/lift.pdf
+:100644 100644 94ffc6a... 20a8e50... M	tools/PDFs/include/motors.pdf
+:100644 100644 73f3405... 3e92e0e... M	tools/PDFs/include/pid.pdf
+:100644 100644 153991d... 15551b1... M	tools/PDFs/include/sensors.pdf
+:100644 100644 3e9f782... 3855b7b... M	tools/PDFs/src/auto.pdf
+:100644 100644 380de95... e53887a... M	tools/PDFs/src/debug.pdf
+:100644 100644 4356a7a... 9c51dc3... M	tools/PDFs/src/drive.pdf
+:100644 100644 6980e33... 891cd50... M	tools/PDFs/src/init.pdf
+:100644 100644 91690f9... 55ead63... M	tools/PDFs/src/lift.pdf
+:100644 100644 5aafae5... 22a2365... M	tools/PDFs/src/motors.pdf
+:100644 100644 7f790e3... 4f6ab4e... M	tools/PDFs/src/opcontrol.pdf
+:100644 100644 34ad168... 1fd9b3a... M	tools/PDFs/src/pid.pdf
+:100644 100644 f64b74f... 2d61a28... M	tools/PDFs/src/sensors.pdf
+:000000 100755 0000000... fef64e0... A	tools/commit
+:100755 000000 31a5296... 0000000... D	tools/commit.sh
+
 commit 70697bb40a5025b983a048a1f8e5c813b2dcc2ec
 Author: Ethan Wells <iuyte@gmx.com>
 Date:   Mon Jul 3 16:16:53 2017 -0400
