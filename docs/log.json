@@ -1,6 +1,23 @@
 [
     {
         "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "53fe016f86024c8add156dacc2d3d11f6dc6035a",
+        "date": "  Tue Jul 4 11:32:48 2017 -0400",
+        "description": "Fixed gyro drive, added class for a pid position with operator overloading",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "709S",
+            "include/motors.hpp",
+            "include/pid.hpp",
+            "include/sensors.hpp",
+            "include/util.h",
+            "src/drive.cpp",
+            "src/pid.cpp"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
         "commitkey": "0e0039a8bda243402e28da6d772411705e09127e",
         "date": "  Mon Jul 3 16:29:17 2017 -0400",
         "description": "Fixed 1-commit-behind problem with commit.sh script (and renamed it to 'commit')",

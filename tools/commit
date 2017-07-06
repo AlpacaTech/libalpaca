@@ -2,9 +2,9 @@
 cd $VEX
 make clean
 make -j2
-git add -u
 tools/pdfMaker.sh
-git add -A
+git add *
+git add -u
 git rm include/*.swp src/*.swp -f
 git rm *.swp -rf
 if [ $# -eq 1 ]
