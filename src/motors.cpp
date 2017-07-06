@@ -43,7 +43,7 @@ namespace motors {
     motor_t list[11];
     TaskHandle handle;
 
-    void _slew(void* none) {
+    void slew(void* none) {
       unsigned long int current;
       while (true) {
         current = millis();
@@ -70,7 +70,7 @@ namespace motors {
         list[i]            = default_motor;
         default_motor.port = i;
       }
-      handle = taskCreate(&_slew, TASK_DEFAULT_STACK_SIZE, NULL,
+      handle = taskCreate(&slew, TASK_DEFAULT_STACK_SIZE, NULL,
                           TASK_PRIORITY_DEFAULT + 1);
     }
   } // namespace slew

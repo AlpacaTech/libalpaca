@@ -1,3 +1,31 @@
+commit 967d059d54880965daacbe4bcfae10ba66ba10d7
+Author: Ethan Wells <iuyte@gmx.com>
+Date:   Wed Jul 5 20:13:13 2017 -0400
+
+    Small changes to documentation scripts
+
+:160000 160000 a2b786f... 5ff3441... M	709S
+:100644 100644 f4e637c... e2e312b... M	docs/cleanuphelp.py
+:100644 100644 77e4e8f... 83c6ecd... M	docs/index.html
+:100644 100644 599fecb... 81573ea... M	docs/log.json
+:100644 100644 8cab019... c5fa1ca... M	docs/log.txt
+:100644 100644 e5f526b... c745646... M	tools/PDFs/include/debug.pdf
+:100644 100644 d5cdc12... 4d91e23... M	tools/PDFs/include/drive.pdf
+:100644 100644 6d4f683... bc93779... M	tools/PDFs/include/lift.pdf
+:100644 100644 871602c... 6e1f0bf... M	tools/PDFs/include/motors.pdf
+:100644 100644 28e8d19... df54aa6... M	tools/PDFs/include/pid.pdf
+:100644 100644 85d8227... dc7b11d... M	tools/PDFs/include/sensors.pdf
+:100644 100644 3c54c19... 4674dce... M	tools/PDFs/src/auto.pdf
+:100644 100644 3198146... c2fabb6... M	tools/PDFs/src/debug.pdf
+:100644 100644 9e219ba... 90386ff... M	tools/PDFs/src/drive.pdf
+:100644 100644 b48331b... ce9e747... M	tools/PDFs/src/init.pdf
+:100644 100644 9deb562... 761e655... M	tools/PDFs/src/lift.pdf
+:100644 100644 f79ee3c... 87c7ccd... M	tools/PDFs/src/motors.pdf
+:100644 100644 0b3a99d... a930f4a... M	tools/PDFs/src/opcontrol.pdf
+:100644 100644 bd8aa8b... 95c7f2c... M	tools/PDFs/src/pid.pdf
+:100644 100644 6cb2d2b... e33a9b5... M	tools/PDFs/src/sensors.pdf
+:100755 100755 fef64e0... 69039f2... M	tools/commit
+
 commit 53fe016f86024c8add156dacc2d3d11f6dc6035a
 Author: Ethan Wells <iuyte@gmx.com>
 Date:   Tue Jul 4 11:32:48 2017 -0400

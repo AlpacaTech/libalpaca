@@ -1,13 +1,24 @@
 [
     {
         "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "967d059d54880965daacbe4bcfae10ba66ba10d7",
+        "date": "  Wed Jul 5 20:13:13 2017 -0400",
+        "description": "Small changes to documentation scripts",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/cleanuphelp.py",
+            "tools/commit"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
         "commitkey": "53fe016f86024c8add156dacc2d3d11f6dc6035a",
         "date": "  Tue Jul 4 11:32:48 2017 -0400",
         "description": "Fixed gyro drive, added class for a pid position with operator overloading",
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "709S",
             "include/motors.hpp",
             "include/pid.hpp",
             "include/sensors.hpp",
@@ -38,7 +49,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "709S",
             "include/lift.hpp",
             "include/sensors.hpp",
             "src/lift.cpp",
@@ -53,7 +63,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "709S",
             "src/opcontrol.cpp",
             "tools/commit.sh"
         ]
@@ -66,7 +75,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "709S",
             "include/debug.hpp",
             "include/drive.hpp",
             "include/lift.hpp",
@@ -83,7 +91,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "709S",
             "tools/commit.sh"
         ]
     },
@@ -95,7 +102,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "709S",
             "include/sensors.hpp",
             "src/motors.cpp",
             "src/pid.cpp",
@@ -139,7 +145,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "709S",
             "include/gyro.hpp",
             "src/gyro.cpp"
         ]
@@ -165,7 +170,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "709S",
             "tools/commit.sh"
         ]
     },
@@ -179,8 +183,7 @@
             "vim.sh"
         ],
         "filesModified": [
-            ".gitignore",
-            "709S"
+            ".gitignore"
         ]
     },
     {
@@ -191,7 +194,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "709S",
             "docs/cleanuphelp.py"
         ]
     },
@@ -214,7 +216,6 @@
         "filesAdded": [],
         "filesDeleted": [],
         "filesModified": [
-            "709S",
             "docs/style.css",
             "tools/commit.sh",
             "tools/htmlCopy.sh"
@@ -230,7 +231,6 @@
         ],
         "filesDeleted": [],
         "filesModified": [
-            "709S",
             "docs/cleanuphelp.py",
             "docs/style.css",
             "tools/commit.sh",
@@ -242,9 +242,7 @@
         "commitkey": "29372b3f68893819060a9cebc4df1e66e8b51caf",
         "date": "  Tue Jun 27 21:17:20 2017 -0400",
         "description": "Changed to the right submodule",
-        "filesAdded": [
-            "709S"
-        ],
+        "filesAdded": [],
         "filesDeleted": [
             "iuyte.github.io"
         ],
