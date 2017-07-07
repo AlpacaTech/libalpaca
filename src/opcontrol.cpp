@@ -28,10 +28,10 @@ void operatorControl() {
     } else {
       drive::accel::drive();
     }
-    if (!wpressed && joystickGetDigital(1, 7, JOY_DOWN)) {
+    if (!wpressed && joystick::digital(7, joystick::Down)) {
       tank = !tank;
     } else {
-      wpressed = joystickGetDigital(1, 7, JOY_DOWN);
+      wpressed = joystick::digital(7, joystick::Down);
     }
     lift::control();
     delay(50);

@@ -1,5 +1,18 @@
 [
     {
+        "author": " Ethan <iuyte@gmx.com>",
+        "commitkey": "98506f317120991f50a270335eb25a5153852477",
+        "date": "  Thu Jul 6 13:27:54 2017 -0400",
+        "description": "Changed member initialization in constructors to be more efficient",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/sensors.hpp",
+            "src/motors.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
         "author": " Ethan Wells <iuyte@gmx.com>",
         "commitkey": "967d059d54880965daacbe4bcfae10ba66ba10d7",
         "date": "  Wed Jul 5 20:13:13 2017 -0400",

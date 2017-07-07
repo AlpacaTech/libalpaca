@@ -62,8 +62,8 @@ namespace lift {
   }
 
   void control(void) {
-    int power = (joystickGetDigital(1, 5, JOY_UP) * 127) +
-                (joystickGetDigital(1, 5, JOY_DOWN) * 127);
+    int power = (joystick::digital(5, joystick::Up) * 127) +
+                (joystick::digital(5, joystick::Down) * 127);
     power = (power == 0 && sensor->value() > threshold)
                 ? lockN
                 : ((sensor->value() < threshold) ? 0 : power);

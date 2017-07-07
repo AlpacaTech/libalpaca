@@ -1,3 +1,35 @@
+commit 98506f317120991f50a270335eb25a5153852477
+Author: Ethan <iuyte@gmx.com>
+Date:   Thu Jul 6 13:27:54 2017 -0400
+
+    Changed member initialization in constructors to be more efficient
+
+:160000 160000 5ff3441... e41f447... M	709S
+:100644 100644 f5ed9d6... 8002b33... M	bin/motors.o
+:100755 100755 5f67232... e3579ff... M	bin/output.elf
+:100644 100644 1646428... 0d0e4a0... M	docs/__pycache__/cleanuphelp.cpython-35.pyc
+:100644 100644 83c6ecd... f3c88cb... M	docs/index.html
+:100644 100644 81573ea... 9977634... M	docs/log.json
+:100644 100644 c5fa1ca... 8809dd8... M	docs/log.txt
+:100644 100644 af5ed5f... 69cc0bc... M	include/sensors.hpp
+:100644 100644 db28779... dbddefe... M	src/motors.cpp
+:100644 100644 a00e965... cafa560... M	src/sensors.cpp
+:100644 100644 c745646... fe687b5... M	tools/PDFs/include/debug.pdf
+:100644 100644 4d91e23... dd4be3f... M	tools/PDFs/include/drive.pdf
+:100644 100644 bc93779... 162b469... M	tools/PDFs/include/lift.pdf
+:100644 100644 6e1f0bf... dedc48e... M	tools/PDFs/include/motors.pdf
+:100644 100644 df54aa6... 9bd581e... M	tools/PDFs/include/pid.pdf
+:100644 100644 dc7b11d... 7f972e9... M	tools/PDFs/include/sensors.pdf
+:100644 100644 4674dce... c0045b1... M	tools/PDFs/src/auto.pdf
+:100644 100644 c2fabb6... 3e7c5ae... M	tools/PDFs/src/debug.pdf
+:100644 100644 90386ff... 6ab2e03... M	tools/PDFs/src/drive.pdf
+:100644 100644 ce9e747... 61dda17... M	tools/PDFs/src/init.pdf
+:100644 100644 761e655... 153a46c... M	tools/PDFs/src/lift.pdf
+:100644 100644 87c7ccd... cbef7db... M	tools/PDFs/src/motors.pdf
+:100644 100644 a930f4a... 5cf1203... M	tools/PDFs/src/opcontrol.pdf
+:100644 100644 95c7f2c... 41933b6... M	tools/PDFs/src/pid.pdf
+:100644 100644 e33a9b5... b0e8d11... M	tools/PDFs/src/sensors.pdf
+
 commit 967d059d54880965daacbe4bcfae10ba66ba10d7
 Author: Ethan Wells <iuyte@gmx.com>
 Date:   Wed Jul 5 20:13:13 2017 -0400
