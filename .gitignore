@@ -195,5 +195,11 @@ tags
 
 ### My settings ###
 vim.sh
+.tags
+.tags*
+alpaca.config
+alpaca.creator
+alpaca.files
+alpaca.includes
 
-# End of https://www.gitignore.io/api/c,vim,c++,python
+# End of https://www.gitignore.io/api/c,vim,c++,python,qt
