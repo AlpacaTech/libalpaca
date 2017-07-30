@@ -1,0 +1,288 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+MAKE_COMMAND	/home/ethan/libalpaca/common.mk	/^MAKE_COMMAND=make$/;"	macro	line:4
+DEVICE	/home/ethan/libalpaca/common.mk	/^DEVICE=VexCortex$/;"	macro	line:7
+LIBRARIES	/home/ethan/libalpaca/common.mk	/^LIBRARIES=$(wildcard $(ROOT)\/firmware\/*.a) -lgcc -lm$/;"	macro	line:9
+MCUPREFIX	/home/ethan/libalpaca/common.mk	/^MCUPREFIX=arm-none-eabi-$/;"	macro	line:11
+MCUAFLAGS	/home/ethan/libalpaca/common.mk	/^MCUAFLAGS=-mthumb -mcpu=cortex-m3 -mlittle-endian$/;"	macro	line:13
+MCUCFLAGS	/home/ethan/libalpaca/common.mk	/^MCUCFLAGS=-mthumb -mcpu=cortex-m3 -mlittle-endian -mfloat-abi=soft$/;"	macro	line:15
+MCULFLAGS	/home/ethan/libalpaca/common.mk	/^MCULFLAGS=-nostartfiles -Wl,-static -Bfirmware -Wl,-u,VectorTable -Wl,-T -Xlinker firmware\/cortex.ld$/;"	macro	line:17
+MCUPREPARE	/home/ethan/libalpaca/common.mk	/^MCUPREPARE=$(OBJCOPY) $(OUT) -O binary $(BINDIR)\/$(OUTBIN)$/;"	macro	line:19
+SIZEFLAGS	/home/ethan/libalpaca/common.mk	/^SIZEFLAGS=$/;"	macro	line:21
+UPLOAD	/home/ethan/libalpaca/common.mk	/^UPLOAD=@java -jar firmware\/uniflash.jar vex $(BINDIR)\/$(OUTBIN)$/;"	macro	line:23
+ASMEXT	/home/ethan/libalpaca/common.mk	/^ASMEXT=s$/;"	macro	line:26
+CEXT	/home/ethan/libalpaca/common.mk	/^CEXT=c$/;"	macro	line:27
+CPPEXT	/home/ethan/libalpaca/common.mk	/^CPPEXT=cpp$/;"	macro	line:28
+HEXT	/home/ethan/libalpaca/common.mk	/^HEXT=h$/;"	macro	line:29
+INCLUDE	/home/ethan/libalpaca/common.mk	/^INCLUDE=-I$(ROOT)\/include -I$(ROOT)\/src$/;"	macro	line:30
+OUTBIN	/home/ethan/libalpaca/common.mk	/^OUTBIN=output.bin$/;"	macro	line:31
+OUTNAME	/home/ethan/libalpaca/common.mk	/^OUTNAME=output.elf$/;"	macro	line:32
+AFLAGS	/home/ethan/libalpaca/common.mk	/^AFLAGS:=$(MCUAFLAGS)$/;"	macro	line:35
+ARFLAGS	/home/ethan/libalpaca/common.mk	/^ARFLAGS:=$(MCUCFLAGS)$/;"	macro	line:36
+CCFLAGS	/home/ethan/libalpaca/common.mk	/^CCFLAGS:=-c -Wall $(MCUCFLAGS) -Os -ffunction-sections -fsigned-char -fomit-frame-pointer -fsingle-precision-constant -std=c++14$/;"	macro	line:37
+CFLAGS	/home/ethan/libalpaca/common.mk	/^CFLAGS:=$(CCFLAGS) -std=gnu99 -Werror=implicit-function-declaration$/;"	macro	line:38
+CPPFLAGS	/home/ethan/libalpaca/common.mk	/^CPPFLAGS:=$(CCFLAGS) -fno-exceptions -fno-rtti -felide-constructors$/;"	macro	line:39
+LDFLAGS	/home/ethan/libalpaca/common.mk	/^LDFLAGS:=-Wall $(MCUCFLAGS) $(MCULFLAGS) -Wl,--gc-sections$/;"	macro	line:40
+AR	/home/ethan/libalpaca/common.mk	/^AR:=$(MCUPREFIX)ar$/;"	macro	line:43
+AS	/home/ethan/libalpaca/common.mk	/^AS:=$(MCUPREFIX)as$/;"	macro	line:44
+CC	/home/ethan/libalpaca/common.mk	/^CC:=$(MCUPREFIX)gcc$/;"	macro	line:45
+CPPCC	/home/ethan/libalpaca/common.mk	/^CPPCC:=$(MCUPREFIX)g++$/;"	macro	line:46
+OBJCOPY	/home/ethan/libalpaca/common.mk	/^OBJCOPY:=$(MCUPREFIX)objcopy$/;"	macro	line:47
+drive	/home/ethan/libalpaca/src/drive.cpp	/^namespace drive {$/;"	namespace	line:19	file:
+inch	/home/ethan/libalpaca/src/drive.cpp	/^  double inch =$/;"	member	line:20	namespace:drive	file:
+set	/home/ethan/libalpaca/src/drive.cpp	/^  void side_t::set(int power) {$/;"	function	line:23	class:drive::side_t	signature:(int power)
+tank	/home/ethan/libalpaca/src/drive.cpp	/^  void tank(void) {$/;"	function	line:29	namespace:drive	signature:(void)
+accel	/home/ethan/libalpaca/src/drive.cpp	/^  namespace accel {$/;"	namespace	line:49	namespace:drive	file:
+deadband	/home/ethan/libalpaca/src/drive.cpp	/^    int deadband = 20;$/;"	member	line:50	namespace:drive::accel	file:
+x	/home/ethan/libalpaca/src/drive.cpp	/^    int x        = 0;$/;"	member	line:51	namespace:drive::accel	file:
+y	/home/ethan/libalpaca/src/drive.cpp	/^    int y        = 0;$/;"	member	line:52	namespace:drive::accel	file:
+prevX	/home/ethan/libalpaca/src/drive.cpp	/^    int prevX    = 0;$/;"	member	line:53	namespace:drive::accel	file:
+prevY	/home/ethan/libalpaca/src/drive.cpp	/^    int prevY    = 0;$/;"	member	line:54	namespace:drive::accel	file:
+drive	/home/ethan/libalpaca/src/drive.cpp	/^    void drive(void) {$/;"	function	line:55	namespace:drive::accel	signature:(void)
+inches	/home/ethan/libalpaca/src/drive.cpp	/^  void inches(long inches) {$/;"	function	line:86	namespace:drive	signature:(long inches)
+straightUntil	/home/ethan/libalpaca/src/drive.cpp	/^  void straightUntil(int heading, bool (*func)(int), float urgency,$/;"	function	line:94	namespace:drive	signature:(int heading, bool (*func)(int), float urgency, bool absolute, sensors::gyro_t* gyro, int tolerance)
+pid	/home/ethan/libalpaca/src/pid.cpp	/^namespace pid {$/;"	namespace	line:21	file:
+Kp	/home/ethan/libalpaca/src/pid.cpp	/^  float Kp              = 0.8;$/;"	member	line:22	namespace:pid	file:
+Ki	/home/ethan/libalpaca/src/pid.cpp	/^  float Ki              = 0.04;$/;"	member	line:23	namespace:pid	file:
+Kd	/home/ethan/libalpaca/src/pid.cpp	/^  float Kd              = 0.35;$/;"	member	line:24	namespace:pid	file:
+deadband	/home/ethan/libalpaca/src/pid.cpp	/^  unsigned int deadband = 10;$/;"	member	line:25	namespace:pid	file:
+enabled	/home/ethan/libalpaca/src/pid.cpp	/^  bool enabled[2]                = {true};$/;"	member	line:27	namespace:pid	file:
+default_precision	/home/ethan/libalpaca/src/pid.cpp	/^  unsigned int default_precision = 30;$/;"	member	line:28	namespace:pid	file:
+pidHandle	/home/ethan/libalpaca/src/pid.cpp	/^  TaskHandle pidHandle;$/;"	member	line:29	namespace:pid	file:
+request	/home/ethan/libalpaca/src/pid.cpp	/^  void pos_t::request() {$/;"	function	line:31	class:pid::pos_t	signature:()
+pos_t	/home/ethan/libalpaca/src/pid.cpp	/^  pos_t::pos_t(long left, long right) : left(left), right(right) {$/;"	function	line:36	class:pid::pos_t	signature:(long left, long right)
+operator =	/home/ethan/libalpaca/src/pid.cpp	/^  bool pos_t::operator=(pos_t pos) {$/;"	function	line:39	class:pid::pos_t	signature:(pos_t pos)
+operator +	/home/ethan/libalpaca/src/pid.cpp	/^  pos_t pos_t::operator+(pid::pos_t pos) {$/;"	function	line:43	class:pid::pos_t	signature:(pid::pos_t pos)
+operator -	/home/ethan/libalpaca/src/pid.cpp	/^  pos_t pos_t::operator-(pid::pos_t pos) {$/;"	function	line:47	class:pid::pos_t	signature:(pid::pos_t pos)
+controller	/home/ethan/libalpaca/src/pid.cpp	/^  void controller(void* none) {$/;"	function	line:51	namespace:pid	signature:(void* none)
+enable	/home/ethan/libalpaca/src/pid.cpp	/^  void enable(void) {$/;"	function	line:91	namespace:pid	signature:(void)
+disable	/home/ethan/libalpaca/src/pid.cpp	/^  void disable(void) {$/;"	function	line:96	namespace:pid	signature:(void)
+init	/home/ethan/libalpaca/src/pid.cpp	/^  void init(void) {$/;"	function	line:101	namespace:pid	signature:(void)
+stop	/home/ethan/libalpaca/src/pid.cpp	/^  void stop(void) {$/;"	function	line:106	namespace:pid	signature:(void)
+go	/home/ethan/libalpaca/src/pid.cpp	/^  void go(void) {$/;"	function	line:110	namespace:pid	signature:(void)
+get	/home/ethan/libalpaca/src/pid.cpp	/^  pos_t get(void) {$/;"	function	line:114	namespace:pid	signature:(void)
+request	/home/ethan/libalpaca/src/pid.cpp	/^  void request(long l, long r) {$/;"	function	line:118	namespace:pid	signature:(long l, long r)
+request	/home/ethan/libalpaca/src/pid.cpp	/^  void request(pos_t pos) {$/;"	function	line:123	namespace:pid	signature:(pos_t pos)
+wait	/home/ethan/libalpaca/src/pid.cpp	/^  void wait(unsigned long precision, unsigned long blockTime) {$/;"	function	line:128	namespace:pid	signature:(unsigned long precision, unsigned long blockTime)
+sgn	/home/ethan/libalpaca/src/pid.cpp	/^int sgn(float __x) {$/;"	function	line:149	signature:(float __x)
+sensors	/home/ethan/libalpaca/src/sensors.cpp	/^namespace sensors {$/;"	namespace	line:19	file:
+quad_t	/home/ethan/libalpaca/src/sensors.cpp	/^  quad_t::quad_t(unsigned char port1, unsigned char port2, bool inverted)$/;"	function	line:20	class:sensors::quad_t	signature:(unsigned char port1, unsigned char port2, bool inverted)
+init	/home/ethan/libalpaca/src/sensors.cpp	/^  void quad_t::init(void) {$/;"	function	line:27	class:sensors::quad_t	signature:(void)
+value	/home/ethan/libalpaca/src/sensors.cpp	/^  long quad_t::value(void) {$/;"	function	line:30	class:sensors::quad_t	signature:(void)
+reset	/home/ethan/libalpaca/src/sensors.cpp	/^  void quad_t::reset(void) {$/;"	function	line:33	class:sensors::quad_t	signature:(void)
+gyro_t	/home/ethan/libalpaca/src/sensors.cpp	/^  gyro_t::gyro_t(unsigned char port, unsigned int calibration)$/;"	function	line:38	class:sensors::gyro_t	signature:(unsigned char port, unsigned int calibration)
+init	/home/ethan/libalpaca/src/sensors.cpp	/^  void gyro_t::init(void) {$/;"	function	line:43	class:sensors::gyro_t	signature:(void)
+value	/home/ethan/libalpaca/src/sensors.cpp	/^  long gyro_t::value(void) {$/;"	function	line:46	class:sensors::gyro_t	signature:(void)
+reset	/home/ethan/libalpaca/src/sensors.cpp	/^  void gyro_t::reset(void) {$/;"	function	line:49	class:sensors::gyro_t	signature:(void)
+pot_t	/home/ethan/libalpaca/src/sensors.cpp	/^  pot_t::pot_t(unsigned char port, bool inverted)$/;"	function	line:54	class:sensors::pot_t	signature:(unsigned char port, bool inverted)
+init	/home/ethan/libalpaca/src/sensors.cpp	/^  void pot_t::init(void) {$/;"	function	line:59	class:sensors::pot_t	signature:(void)
+value	/home/ethan/libalpaca/src/sensors.cpp	/^  long pot_t::value(void) {$/;"	function	line:62	class:sensors::pot_t	signature:(void)
+reset	/home/ethan/libalpaca/src/sensors.cpp	/^  void pot_t::reset(void) {$/;"	function	line:65	class:sensors::pot_t	signature:(void)
+sonic_t	/home/ethan/libalpaca/src/sensors.cpp	/^  sonic_t::sonic_t(unsigned char port1, unsigned char port2) {$/;"	function	line:70	class:sensors::sonic_t	signature:(unsigned char port1, unsigned char port2)
+init	/home/ethan/libalpaca/src/sensors.cpp	/^  void sonic_t::init(void) {$/;"	function	line:74	class:sensors::sonic_t	signature:(void)
+value	/home/ethan/libalpaca/src/sensors.cpp	/^  long sonic_t::value(void) {$/;"	function	line:77	class:sensors::sonic_t	signature:(void)
+button_t	/home/ethan/libalpaca/src/sensors.cpp	/^  button_t::button_t(unsigned char port, bool inverted)$/;"	function	line:81	class:sensors::button_t	signature:(unsigned char port, bool inverted)
+init	/home/ethan/libalpaca/src/sensors.cpp	/^  void button_t::init(void) {$/;"	function	line:84	class:sensors::button_t	signature:(void)
+value	/home/ethan/libalpaca/src/sensors.cpp	/^  bool button_t::value(void) {$/;"	function	line:87	class:sensors::button_t	signature:(void)
+reset	/home/ethan/libalpaca/src/sensors.cpp	/^  void reset(void) {$/;"	function	line:92	namespace:sensors	signature:(void)
+set	/home/ethan/libalpaca/src/motors.cpp	/^void motor_t::set(int _power) {$/;"	function	line:19	class:motor_t	signature:(int _power)
+motors	/home/ethan/libalpaca/src/motors.cpp	/^namespace motors {$/;"	namespace	line:23	file:
+set	/home/ethan/libalpaca/src/motors.cpp	/^  void set(motor_t motor, int power) {$/;"	function	line:24	namespace:motors	signature:(motor_t motor, int power)
+get	/home/ethan/libalpaca/src/motors.cpp	/^  int get(motor_t motor) {$/;"	function	line:28	namespace:motors	signature:(motor_t motor)
+init	/home/ethan/libalpaca/src/motors.cpp	/^  motor_t init(unsigned char port, int inverted, float slewRate, float scale) {$/;"	function	line:32	namespace:motors	signature:(unsigned char port, int inverted, float slewRate, float scale)
+slew	/home/ethan/libalpaca/src/motors.cpp	/^  namespace slew {$/;"	namespace	line:42	namespace:motors	file:
+list	/home/ethan/libalpaca/src/motors.cpp	/^    motor_t list[11];$/;"	member	line:43	namespace:motors::slew	file:
+handle	/home/ethan/libalpaca/src/motors.cpp	/^    TaskHandle handle;$/;"	member	line:44	namespace:motors::slew	file:
+slew	/home/ethan/libalpaca/src/motors.cpp	/^    void slew(void* none) {$/;"	function	line:46	namespace:motors::slew	signature:(void* none)
+init	/home/ethan/libalpaca/src/motors.cpp	/^    void init(void) {$/;"	function	line:64	namespace:motors::slew	signature:(void)
+ROOT	/home/ethan/libalpaca/src/Makefile	/^ROOT=..$/;"	macro	line:4
+BINDIR	/home/ethan/libalpaca/src/Makefile	/^BINDIR=$(ROOT)\/bin$/;"	macro	line:6
+ASMSRC	/home/ethan/libalpaca/src/Makefile	/^ASMSRC:=$(wildcard *.$(ASMEXT))$/;"	macro	line:13
+ASMOBJ	/home/ethan/libalpaca/src/Makefile	/^ASMOBJ:=$(patsubst %.o,$(BINDIR)\/%.o,$(ASMSRC:.$(ASMEXT)=.o))$/;"	macro	line:14
+HEADERS	/home/ethan/libalpaca/src/Makefile	/^HEADERS:=$(wildcard *.$(HEXT))$/;"	macro	line:15
+HEADERS_2	/home/ethan/libalpaca/src/Makefile	/^HEADERS_2:=$(wildcard ..\/include\/*.$(HEXT))$/;"	macro	line:17
+CSRC	/home/ethan/libalpaca/src/Makefile	/^CSRC=$(wildcard *.$(CEXT))$/;"	macro	line:19
+COBJ	/home/ethan/libalpaca/src/Makefile	/^COBJ:=$(patsubst %.o,$(BINDIR)\/%.o,$(CSRC:.$(CEXT)=.o))$/;"	macro	line:20
+CPPSRC	/home/ethan/libalpaca/src/Makefile	/^CPPSRC:=$(wildcard *.$(CPPEXT))$/;"	macro	line:21
+CPPOBJ	/home/ethan/libalpaca/src/Makefile	/^CPPOBJ:=$(patsubst %.o,$(BINDIR)\/%.o,$(CPPSRC:.$(CPPEXT)=.o))$/;"	macro	line:22
+OUT	/home/ethan/libalpaca/src/Makefile	/^OUT:=$(BINDIR)\/$(OUTNAME)$/;"	macro	line:23
+lift	/home/ethan/libalpaca/src/lift.cpp	/^namespace lift {$/;"	namespace	line:19	file:
+set	/home/ethan/libalpaca/src/lift.cpp	/^  void side_t::set(int power) {$/;"	function	line:20	class:lift::side_t	signature:(int power)
+lock	/home/ethan/libalpaca/src/lift.cpp	/^  void lock(void) {$/;"	function	line:26	namespace:lift	signature:(void)
+to	/home/ethan/libalpaca/src/lift.cpp	/^  void to(position pos, int int_pos, int tolerance) {$/;"	function	line:30	namespace:lift	signature:(position pos, int int_pos, int tolerance)
+control	/home/ethan/libalpaca/src/lift.cpp	/^  void control(void) {$/;"	function	line:44	namespace:lift	signature:(void)
+debug	/home/ethan/libalpaca/src/debug.cpp	/^namespace debug {$/;"	namespace	line:19	file:
+fault	/home/ethan/libalpaca/src/debug.cpp	/^  uint32_t fault = 0;$/;"	member	line:20	namespace:debug	file:
+debug	/home/ethan/libalpaca/src/debug.cpp	/^  void debug(void) {$/;"	function	line:21	namespace:debug	signature:(void)
+joystick	/home/ethan/libalpaca/src/joystick.cpp	/^namespace joystick {$/;"	namespace	line:19	file:
+analog	/home/ethan/libalpaca/src/joystick.cpp	/^  int analog(Channel channel) {$/;"	function	line:20	namespace:joystick	signature:(Channel channel)
+digital	/home/ethan/libalpaca/src/joystick.cpp	/^  bool digital(Group group, Button button) {$/;"	function	line:24	namespace:joystick	signature:(Group group, Button button)
+ROOT	/home/ethan/libalpaca/Makefile	/^ROOT=.$/;"	macro	line:4
+BINDIR	/home/ethan/libalpaca/Makefile	/^BINDIR=$(ROOT)\/bin$/;"	macro	line:6
+SUBDIRS	/home/ethan/libalpaca/Makefile	/^SUBDIRS=src$/;"	macro	line:8
+ASMSRC	/home/ethan/libalpaca/Makefile	/^ASMSRC:=$(wildcard *.$(ASMEXT))$/;"	macro	line:15
+ASMOBJ	/home/ethan/libalpaca/Makefile	/^ASMOBJ:=$(patsubst %.o,$(BINDIR)\/%.o,$(ASMSRC:.$(ASMEXT)=.o))$/;"	macro	line:16
+HEADERS	/home/ethan/libalpaca/Makefile	/^HEADERS:=$(wildcard *.$(HEXT))$/;"	macro	line:17
+CSRC	/home/ethan/libalpaca/Makefile	/^CSRC=$(wildcard *.$(CEXT))$/;"	macro	line:18
+COBJ	/home/ethan/libalpaca/Makefile	/^COBJ:=$(patsubst %.o,$(BINDIR)\/%.o,$(CSRC:.$(CEXT)=.o))$/;"	macro	line:19
+CPPSRC	/home/ethan/libalpaca/Makefile	/^CPPSRC:=$(wildcard *.$(CPPEXT))$/;"	macro	line:20
+CPPOBJ	/home/ethan/libalpaca/Makefile	/^CPPOBJ:=$(patsubst %.o,$(BINDIR)\/%.o,$(CPPSRC:.$(CPPEXT)=.o))$/;"	macro	line:21
+OUT	/home/ethan/libalpaca/Makefile	/^OUT:=$(BINDIR)\/$(OUTNAME)$/;"	macro	line:22
+MOTORS_HPP	/home/ethan/libalpaca/include/motors.hpp	/^#define MOTORS_HPP$/;"	macro	line:18
+motor_t	/home/ethan/libalpaca/include/motors.hpp	/^struct motor_t {$/;"	struct	line:24
+port	/home/ethan/libalpaca/include/motors.hpp	/^  unsigned char port;$/;"	member	line:26	struct:motor_t
+inverted	/home/ethan/libalpaca/include/motors.hpp	/^  char inverted;$/;"	member	line:28	struct:motor_t
+power	/home/ethan/libalpaca/include/motors.hpp	/^  int power;$/;"	member	line:30	struct:motor_t
+scale	/home/ethan/libalpaca/include/motors.hpp	/^  float scale;$/;"	member	line:32	struct:motor_t
+slewRate	/home/ethan/libalpaca/include/motors.hpp	/^  float slewRate;$/;"	member	line:35	struct:motor_t
+tlast	/home/ethan/libalpaca/include/motors.hpp	/^  unsigned long tlast;$/;"	member	line:38	struct:motor_t
+motors	/home/ethan/libalpaca/include/motors.hpp	/^namespace motors {$/;"	namespace	line:45
+slew	/home/ethan/libalpaca/include/motors.hpp	/^  namespace slew {$/;"	namespace	line:58	namespace:motors
+slewWait	/home/ethan/libalpaca/include/motors.hpp	/^    static const unsigned char slewWait = 10;$/;"	member	line:60	namespace:motors::slew
+PID_HPP	/home/ethan/libalpaca/include/pid.hpp	/^#define PID_HPP$/;"	macro	line:18
+pid	/home/ethan/libalpaca/include/pid.hpp	/^namespace pid {$/;"	namespace	line:23
+DRIVE_MAX	/home/ethan/libalpaca/include/pid.hpp	/^  static const int DRIVE_MAX = 127;$/;"	member	line:25	namespace:pid
+DRIVE_MIN	/home/ethan/libalpaca/include/pid.hpp	/^  static const int DRIVE_MIN = -127;$/;"	member	line:27	namespace:pid
+INTEGRAL_LIMIT	/home/ethan/libalpaca/include/pid.hpp	/^  static const int INTEGRAL_LIMIT = 50;$/;"	member	line:29	namespace:pid
+pos_t	/home/ethan/libalpaca/include/pid.hpp	/^  struct pos_t {$/;"	struct	line:42	namespace:pid
+left	/home/ethan/libalpaca/include/pid.hpp	/^    long left;$/;"	member	line:43	struct:pid::pos_t
+right	/home/ethan/libalpaca/include/pid.hpp	/^    long right;$/;"	member	line:44	struct:pid::pos_t
+LIFT_HPP	/home/ethan/libalpaca/include/lift.hpp	/^#define LIFT_HPP$/;"	macro	line:18
+lift	/home/ethan/libalpaca/include/lift.hpp	/^namespace lift {$/;"	namespace	line:23
+side_t	/home/ethan/libalpaca/include/lift.hpp	/^  struct side_t {$/;"	struct	line:25	namespace:lift
+topM	/home/ethan/libalpaca/include/lift.hpp	/^    motor_t topM;$/;"	member	line:27	struct:lift::side_t
+midM	/home/ethan/libalpaca/include/lift.hpp	/^    motor_t midM;$/;"	member	line:29	struct:lift::side_t
+lowM	/home/ethan/libalpaca/include/lift.hpp	/^    motor_t lowM;$/;"	member	line:31	struct:lift::side_t
+sensor	/home/ethan/libalpaca/include/lift.hpp	/^    sensors::pot_t* sensor;$/;"	member	line:35	struct:lift::side_t
+bottom	/home/ethan/libalpaca/include/lift.hpp	/^    bottom = 5,$/;"	enumerator	line:40	enum:lift::__anon1
+mobile	/home/ethan/libalpaca/include/lift.hpp	/^    mobile = 60,$/;"	enumerator	line:41	enum:lift::__anon1
+one	/home/ethan/libalpaca/include/lift.hpp	/^    one    = 100,$/;"	enumerator	line:42	enum:lift::__anon1
+two	/home/ethan/libalpaca/include/lift.hpp	/^    two    = 230,$/;"	enumerator	line:43	enum:lift::__anon1
+three	/home/ethan/libalpaca/include/lift.hpp	/^    three  = 450,$/;"	enumerator	line:44	enum:lift::__anon1
+position	/home/ethan/libalpaca/include/lift.hpp	/^  } position;$/;"	typedef	line:45	namespace:lift	typeref:enum:lift::__anon1
+lockN	/home/ethan/libalpaca/include/lift.hpp	/^  static const char lockN = 17;$/;"	member	line:49	namespace:lift
+threshold	/home/ethan/libalpaca/include/lift.hpp	/^  static const int threshold = 150;$/;"	member	line:51	namespace:lift
+SENSORS_HPP	/home/ethan/libalpaca/include/sensors.hpp	/^#define SENSORS_HPP$/;"	macro	line:18
+sensors	/home/ethan/libalpaca/include/sensors.hpp	/^namespace sensors {$/;"	namespace	line:24
+quad_t	/home/ethan/libalpaca/include/sensors.hpp	/^  struct quad_t {$/;"	struct	line:26	namespace:sensors
+enc	/home/ethan/libalpaca/include/sensors.hpp	/^    Encoder enc;$/;"	member	line:28	struct:sensors::quad_t
+ports	/home/ethan/libalpaca/include/sensors.hpp	/^    unsigned char ports[2];$/;"	member	line:32	struct:sensors::quad_t
+zero	/home/ethan/libalpaca/include/sensors.hpp	/^    long zero;$/;"	member	line:35	struct:sensors::quad_t
+inverted	/home/ethan/libalpaca/include/sensors.hpp	/^    bool inverted;$/;"	member	line:37	struct:sensors::quad_t
+request	/home/ethan/libalpaca/include/sensors.hpp	/^    float request;$/;"	member	line:44	struct:sensors::quad_t
+gyro_t	/home/ethan/libalpaca/include/sensors.hpp	/^  class gyro_t {$/;"	class	line:52	namespace:sensors
+gyro	/home/ethan/libalpaca/include/sensors.hpp	/^    Gyro gyro;$/;"	member	line:55	class:sensors::gyro_t
+port	/home/ethan/libalpaca/include/sensors.hpp	/^    unsigned char port;$/;"	member	line:57	class:sensors::gyro_t
+zero	/home/ethan/libalpaca/include/sensors.hpp	/^    long zero;$/;"	member	line:60	class:sensors::gyro_t
+request	/home/ethan/libalpaca/include/sensors.hpp	/^    float request;$/;"	member	line:66	class:sensors::gyro_t
+calibration	/home/ethan/libalpaca/include/sensors.hpp	/^    int calibration;$/;"	member	line:75	class:sensors::gyro_t
+pot_t	/home/ethan/libalpaca/include/sensors.hpp	/^  struct pot_t {$/;"	struct	line:79	namespace:sensors
+port	/home/ethan/libalpaca/include/sensors.hpp	/^    unsigned char port;$/;"	member	line:81	struct:sensors::pot_t
+zero	/home/ethan/libalpaca/include/sensors.hpp	/^    long zero;$/;"	member	line:84	struct:sensors::pot_t
+inverted	/home/ethan/libalpaca/include/sensors.hpp	/^    bool inverted;$/;"	member	line:86	struct:sensors::pot_t
+request	/home/ethan/libalpaca/include/sensors.hpp	/^    float request;$/;"	member	line:92	struct:sensors::pot_t
+sonic_t	/home/ethan/libalpaca/include/sensors.hpp	/^  struct sonic_t {$/;"	struct	line:102	namespace:sensors
+sonic	/home/ethan/libalpaca/include/sensors.hpp	/^    Ultrasonic sonic;$/;"	member	line:104	struct:sensors::sonic_t
+ports	/home/ethan/libalpaca/include/sensors.hpp	/^    unsigned char ports[2];$/;"	member	line:107	struct:sensors::sonic_t
+button_t	/home/ethan/libalpaca/include/sensors.hpp	/^  struct button_t {$/;"	struct	line:117	namespace:sensors
+port	/home/ethan/libalpaca/include/sensors.hpp	/^    unsigned char port;$/;"	member	line:119	struct:sensors::button_t
+inverted	/home/ethan/libalpaca/include/sensors.hpp	/^    bool inverted;$/;"	member	line:121	struct:sensors::button_t
+DRIVE_HPP	/home/ethan/libalpaca/include/drive.hpp	/^#define DRIVE_HPP$/;"	macro	line:18
+drive	/home/ethan/libalpaca/include/drive.hpp	/^namespace drive {$/;"	namespace	line:25
+side_t	/home/ethan/libalpaca/include/drive.hpp	/^  struct side_t {$/;"	struct	line:27	namespace:drive
+topM	/home/ethan/libalpaca/include/drive.hpp	/^    motor_t topM;$/;"	member	line:29	struct:drive::side_t
+midM	/home/ethan/libalpaca/include/drive.hpp	/^    motor_t midM;$/;"	member	line:31	struct:drive::side_t
+lowM	/home/ethan/libalpaca/include/drive.hpp	/^    motor_t lowM;$/;"	member	line:33	struct:drive::side_t
+sensor	/home/ethan/libalpaca/include/drive.hpp	/^    sensors::quad_t* sensor;$/;"	member	line:37	struct:drive::side_t
+accel	/home/ethan/libalpaca/include/drive.hpp	/^  namespace accel {$/;"	namespace	line:58	namespace:drive
+gyro	/home/ethan/libalpaca/include/drive.hpp	/^  namespace gyro {$/;"	namespace	line:73	namespace:drive
+drive	/home/ethan/libalpaca/include/drive.hpp	/^    class drive {$/;"	class	line:75	namespace:drive::gyro
+gyro	/home/ethan/libalpaca/include/drive.hpp	/^      sensors::gyro_t* gyro;$/;"	member	line:78	class:drive::gyro::drive
+heading	/home/ethan/libalpaca/include/drive.hpp	/^      int heading;$/;"	member	line:80	class:drive::gyro::drive
+urgency	/home/ethan/libalpaca/include/drive.hpp	/^      float urgency;$/;"	member	line:82	class:drive::gyro::drive
+iHeading	/home/ethan/libalpaca/include/drive.hpp	/^      int iHeading;$/;"	member	line:93	class:drive::gyro::drive
+handle	/home/ethan/libalpaca/include/drive.hpp	/^      TaskHandle handle;$/;"	member	line:95	class:drive::gyro::drive
+changer	/home/ethan/libalpaca/include/drive.hpp	/^      float changer;$/;"	member	line:97	class:drive::gyro::drive
+on	/home/ethan/libalpaca/include/drive.hpp	/^      bool on;$/;"	member	line:99	class:drive::gyro::drive
+tolerance	/home/ethan/libalpaca/include/drive.hpp	/^      int tolerance;$/;"	member	line:101	class:drive::gyro::drive
+UTIL_H	/home/ethan/libalpaca/include/util.h	/^#define UTIL_H$/;"	macro	line:18
+clipNum	/home/ethan/libalpaca/include/util.h	/^#define clipNum(/;"	macro	line:22
+API_H_	/home/ethan/libalpaca/include/API.h	/^#define API_H_$/;"	macro	line:26
+JOY_DOWN	/home/ethan/libalpaca/include/API.h	/^#define JOY_DOWN /;"	macro	line:42
+JOY_LEFT	/home/ethan/libalpaca/include/API.h	/^#define JOY_LEFT /;"	macro	line:44
+JOY_UP	/home/ethan/libalpaca/include/API.h	/^#define JOY_UP /;"	macro	line:46
+JOY_RIGHT	/home/ethan/libalpaca/include/API.h	/^#define JOY_RIGHT /;"	macro	line:48
+ACCEL_X	/home/ethan/libalpaca/include/API.h	/^#define ACCEL_X /;"	macro	line:50
+ACCEL_Y	/home/ethan/libalpaca/include/API.h	/^#define ACCEL_Y /;"	macro	line:52
+BOARD_NR_ADC_PINS	/home/ethan/libalpaca/include/API.h	/^#define BOARD_NR_ADC_PINS /;"	macro	line:126
+BOARD_NR_GPIO_PINS	/home/ethan/libalpaca/include/API.h	/^#define BOARD_NR_GPIO_PINS /;"	macro	line:140
+HIGH	/home/ethan/libalpaca/include/API.h	/^#define HIGH /;"	macro	line:147
+LOW	/home/ethan/libalpaca/include/API.h	/^#define LOW /;"	macro	line:153
+INPUT	/home/ethan/libalpaca/include/API.h	/^#define INPUT /;"	macro	line:164
+INPUT_ANALOG	/home/ethan/libalpaca/include/API.h	/^#define INPUT_ANALOG /;"	macro	line:173
+INPUT_FLOATING	/home/ethan/libalpaca/include/API.h	/^#define INPUT_FLOATING /;"	macro	line:181
+OUTPUT	/home/ethan/libalpaca/include/API.h	/^#define OUTPUT /;"	macro	line:189
+OUTPUT_OD	/home/ethan/libalpaca/include/API.h	/^#define OUTPUT_OD /;"	macro	line:197
+INTERRUPT_EDGE_RISING	/home/ethan/libalpaca/include/API.h	/^#define INTERRUPT_EDGE_RISING /;"	macro	line:352
+INTERRUPT_EDGE_FALLING	/home/ethan/libalpaca/include/API.h	/^#define INTERRUPT_EDGE_FALLING /;"	macro	line:357
+INTERRUPT_EDGE_BOTH	/home/ethan/libalpaca/include/API.h	/^#define INTERRUPT_EDGE_BOTH /;"	macro	line:363
+InterruptHandler	/home/ethan/libalpaca/include/API.h	/^typedef void (*InterruptHandler)(unsigned char pin);$/;"	typedef	line:369
+IME_ADDR_MAX	/home/ethan/libalpaca/include/API.h	/^#define IME_ADDR_MAX /;"	macro	line:529
+Gyro	/home/ethan/libalpaca/include/API.h	/^typedef void* Gyro;$/;"	typedef	line:645
+Encoder	/home/ethan/libalpaca/include/API.h	/^typedef void* Encoder;$/;"	typedef	line:714
+Ultrasonic	/home/ethan/libalpaca/include/API.h	/^typedef void* Ultrasonic;$/;"	typedef	line:771
+PROS_FILE	/home/ethan/libalpaca/include/API.h	/^typedef int PROS_FILE;$/;"	typedef	line:891
+SERIAL_DATABITS_8	/home/ethan/libalpaca/include/API.h	/^#define SERIAL_DATABITS_8 /;"	macro	line:895
+SERIAL_DATABITS_9	/home/ethan/libalpaca/include/API.h	/^#define SERIAL_DATABITS_9 /;"	macro	line:899
+SERIAL_STOPBITS_1	/home/ethan/libalpaca/include/API.h	/^#define SERIAL_STOPBITS_1 /;"	macro	line:903
+SERIAL_STOPBITS_2	/home/ethan/libalpaca/include/API.h	/^#define SERIAL_STOPBITS_2 /;"	macro	line:907
+SERIAL_PARITY_NONE	/home/ethan/libalpaca/include/API.h	/^#define SERIAL_PARITY_NONE /;"	macro	line:911
+SERIAL_PARITY_EVEN	/home/ethan/libalpaca/include/API.h	/^#define SERIAL_PARITY_EVEN /;"	macro	line:915
+SERIAL_PARITY_ODD	/home/ethan/libalpaca/include/API.h	/^#define SERIAL_PARITY_ODD /;"	macro	line:919
+SERIAL_8N1	/home/ethan/libalpaca/include/API.h	/^#define SERIAL_8N1 /;"	macro	line:923
+stdout	/home/ethan/libalpaca/include/API.h	/^#define stdout /;"	macro	line:966
+stdin	/home/ethan/libalpaca/include/API.h	/^#define stdin /;"	macro	line:970
+uart1	/home/ethan/libalpaca/include/API.h	/^#define uart1 /;"	macro	line:974
+uart2	/home/ethan/libalpaca/include/API.h	/^#define uart2 /;"	macro	line:978
+EOF	/home/ethan/libalpaca/include/API.h	/^#define EOF /;"	macro	line:984
+SEEK_SET	/home/ethan/libalpaca/include/API.h	/^#define SEEK_SET /;"	macro	line:993
+SEEK_CUR	/home/ethan/libalpaca/include/API.h	/^#define SEEK_CUR /;"	macro	line:1001
+SEEK_END	/home/ethan/libalpaca/include/API.h	/^#define SEEK_END /;"	macro	line:1009
+LCD_BTN_LEFT	/home/ethan/libalpaca/include/API.h	/^#define LCD_BTN_LEFT /;"	macro	line:1337
+LCD_BTN_CENTER	/home/ethan/libalpaca/include/API.h	/^#define LCD_BTN_CENTER /;"	macro	line:1341
+LCD_BTN_RIGHT	/home/ethan/libalpaca/include/API.h	/^#define LCD_BTN_RIGHT /;"	macro	line:1345
+TASK_MAX	/home/ethan/libalpaca/include/API.h	/^#define TASK_MAX /;"	macro	line:1442
+TASK_MAX_PRIORITIES	/home/ethan/libalpaca/include/API.h	/^#define TASK_MAX_PRIORITIES /;"	macro	line:1449
+TASK_PRIORITY_LOWEST	/home/ethan/libalpaca/include/API.h	/^#define TASK_PRIORITY_LOWEST /;"	macro	line:1456
+TASK_PRIORITY_DEFAULT	/home/ethan/libalpaca/include/API.h	/^#define TASK_PRIORITY_DEFAULT /;"	macro	line:1462
+TASK_PRIORITY_HIGHEST	/home/ethan/libalpaca/include/API.h	/^#define TASK_PRIORITY_HIGHEST /;"	macro	line:1468
+TASK_DEFAULT_STACK_SIZE	/home/ethan/libalpaca/include/API.h	/^#define TASK_DEFAULT_STACK_SIZE /;"	macro	line:1479
+TASK_MINIMAL_STACK_SIZE	/home/ethan/libalpaca/include/API.h	/^#define TASK_MINIMAL_STACK_SIZE /;"	macro	line:1489
+TASK_DEAD	/home/ethan/libalpaca/include/API.h	/^#define TASK_DEAD /;"	macro	line:1494
+TASK_RUNNING	/home/ethan/libalpaca/include/API.h	/^#define TASK_RUNNING /;"	macro	line:1498
+TASK_RUNNABLE	/home/ethan/libalpaca/include/API.h	/^#define TASK_RUNNABLE /;"	macro	line:1504
+TASK_SLEEPING	/home/ethan/libalpaca/include/API.h	/^#define TASK_SLEEPING /;"	macro	line:1510
+TASK_SUSPENDED	/home/ethan/libalpaca/include/API.h	/^#define TASK_SUSPENDED /;"	macro	line:1515
+TaskHandle	/home/ethan/libalpaca/include/API.h	/^typedef void* TaskHandle;$/;"	typedef	line:1522
+Mutex	/home/ethan/libalpaca/include/API.h	/^typedef void* Mutex;$/;"	typedef	line:1528
+Semaphore	/home/ethan/libalpaca/include/API.h	/^typedef void* Semaphore;$/;"	typedef	line:1534
+TaskCode	/home/ethan/libalpaca/include/API.h	/^typedef void (*TaskCode)(void*);$/;"	typedef	line:1546
+JOYSTICK_H	/home/ethan/libalpaca/include/joystick.hpp	/^#define JOYSTICK_H$/;"	macro	line:18
+joystick	/home/ethan/libalpaca/include/joystick.hpp	/^namespace joystick {$/;"	namespace	line:22
+Group	/home/ethan/libalpaca/include/joystick.hpp	/^  typedef unsigned char Group;$/;"	typedef	line:24	namespace:joystick
+Channel	/home/ethan/libalpaca/include/joystick.hpp	/^  typedef unsigned char Channel;$/;"	typedef	line:27	namespace:joystick
+Up	/home/ethan/libalpaca/include/joystick.hpp	/^    Up    = JOY_UP,$/;"	enumerator	line:31	enum:joystick::__anon2
+Down	/home/ethan/libalpaca/include/joystick.hpp	/^    Down  = JOY_DOWN,$/;"	enumerator	line:32	enum:joystick::__anon2
+Left	/home/ethan/libalpaca/include/joystick.hpp	/^    Left  = JOY_LEFT,$/;"	enumerator	line:33	enum:joystick::__anon2
+Right	/home/ethan/libalpaca/include/joystick.hpp	/^    Right = JOY_RIGHT,$/;"	enumerator	line:34	enum:joystick::__anon2
+Button	/home/ethan/libalpaca/include/joystick.hpp	/^  } Button;$/;"	typedef	line:35	namespace:joystick	typeref:enum:joystick::__anon2
+MAIN_H_	/home/ethan/libalpaca/include/main.h	/^#define MAIN_H_$/;"	macro	line:48
+DEBUG_HPP	/home/ethan/libalpaca/include/debug.hpp	/^#define DEBUG_HPP$/;"	macro	line:18
+debug	/home/ethan/libalpaca/include/debug.hpp	/^namespace debug {$/;"	namespace	line:23
+unserialize	/home/ethan/libalpaca/include/debug.hpp	/^  static inline T unserialize(PROS_FILE* stream) {$/;"	function	line:27	namespace:debug	signature:(PROS_FILE* stream)
+libalpaca	/home/ethan/libalpaca/README.md	/^# libalpaca$/;"	function	line:1
+TODO	/home/ethan/libalpaca/TODO.md	/^# TODO$/;"	function	line:1

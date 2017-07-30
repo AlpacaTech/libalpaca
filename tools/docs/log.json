@@ -1,0 +1,1769 @@
+[
+    {
+        "author": " Ethan <iuyte@gmx.com>",
+        "commitkey": "98506f317120991f50a270335eb25a5153852477",
+        "date": "  Thu Jul 6 13:27:54 2017 -0400",
+        "description": "Changed member initialization in constructors to be more efficient",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/sensors.hpp",
+            "src/motors.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "967d059d54880965daacbe4bcfae10ba66ba10d7",
+        "date": "  Wed Jul 5 20:13:13 2017 -0400",
+        "description": "Small changes to documentation scripts",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/cleanuphelp.py",
+            "tools/commit"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "53fe016f86024c8add156dacc2d3d11f6dc6035a",
+        "date": "  Tue Jul 4 11:32:48 2017 -0400",
+        "description": "Fixed gyro drive, added class for a pid position with operator overloading",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/motors.hpp",
+            "include/pid.hpp",
+            "include/sensors.hpp",
+            "include/util.h",
+            "src/drive.cpp",
+            "src/pid.cpp"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "0e0039a8bda243402e28da6d772411705e09127e",
+        "date": "  Mon Jul 3 16:29:17 2017 -0400",
+        "description": "Fixed 1-commit-behind problem with commit.sh script (and renamed it to 'commit')",
+        "filesAdded": [
+            "include/util.h",
+            "tools/commit"
+        ],
+        "filesDeleted": [
+            "tools/commit.sh"
+        ],
+        "filesModified": []
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "70697bb40a5025b983a048a1f8e5c813b2dcc2ec",
+        "date": "  Mon Jul 3 16:16:53 2017 -0400",
+        "description": "Created util.h for general utilities, lift now has a control function similar to that that the drive namespace posseses",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/lift.hpp",
+            "include/sensors.hpp",
+            "src/lift.cpp",
+            "src/opcontrol.cpp"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "a21b8a8dfaf8df15d8a6d7fb594c1bde19e9ed28",
+        "date": "  Sun Jul 2 20:26:07 2017 -0400",
+        "description": "minor safety update in opcontrol",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "src/opcontrol.cpp",
+            "tools/commit.sh"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "2094ae3db0e585f2d429e3de76d353be02ed31ad",
+        "date": "  Sun Jul 2 20:17:32 2017 -0400",
+        "description": "changed header guards",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/debug.hpp",
+            "include/drive.hpp",
+            "include/lift.hpp",
+            "include/motors.hpp",
+            "include/pid.hpp",
+            "include/sensors.hpp"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "e8c6b7ecd24ba50fac7e071c77a86536608fa208",
+        "date": "  Sun Jul 2 20:01:33 2017 -0400",
+        "description": "Quick change to commit.sh script (typo caused error)",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "tools/commit.sh"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "2007b1a903ef023c1f679898a8771cbfad776653",
+        "date": "  Sun Jul 2 19:59:08 2017 -0400",
+        "description": "Changed style guide again",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/sensors.hpp",
+            "src/motors.cpp",
+            "src/pid.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "9f276af6ab503b2b8fa0fd00ad44b31f683dc4bd",
+        "date": "  Sun Jul 2 14:47:48 2017 -0400",
+        "description": "Fixed up some lift code",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/lift.hpp",
+            "src/lift.cpp"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "4f4e3db56f4d09b865282570e36048dd58724e18",
+        "date": "  Sun Jul 2 14:39:03 2017 -0400",
+        "description": "Moved gyro namespace to drive",
+        "filesAdded": [],
+        "filesDeleted": [
+            "include/gyro.hpp",
+            "src/gyro.cpp"
+        ],
+        "filesModified": [
+            "include/debug.hpp",
+            "include/drive.hpp",
+            "src/drive.cpp",
+            "src/init.cpp"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "4b7f0508e2eb4b528309a8c6ea883a293e2c0c11",
+        "date": "  Thu Jun 29 23:42:25 2017 -0400",
+        "description": "gyro namespace work",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/gyro.hpp",
+            "src/gyro.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "afbfe805c5f17e7e3298f075e4a990c03b88ec58",
+        "date": "  Thu Jun 29 09:55:51 2017 -0400",
+        "description": "Gyro work",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            ".clang-format",
+            "include/gyro.hpp",
+            "src/gyro.cpp"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "1be5f493500d47c119279269dfd366ffc156924c",
+        "date": "  Thu Jun 29 09:42:37 2017 -0400",
+        "description": "fixed commit.sh such that the path for the programming notebook is",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "tools/commit.sh"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "8f91b102fc55ab79733313c33e7415ef5419aa5e",
+        "date": "  Thu Jun 29 09:39:59 2017 -0400",
+        "description": "Changed .gitignore",
+        "filesAdded": [],
+        "filesDeleted": [
+            "vim.sh"
+        ],
+        "filesModified": [
+            ".gitignore"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "47bd5067cc71c3b61e1a07b142349e017260833a",
+        "date": "  Wed Jun 28 23:41:14 2017 -0400",
+        "description": "Removed doxygen pages from notebook, as they take up a lot of unnecessary space",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/cleanuphelp.py"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "b4130f783778d818fd2fd29187d5937a4a635b94",
+        "date": "  Wed Jun 28 23:27:59 2017 -0400",
+        "description": "Fixed weird end of commit.sh",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "tools/commit.sh"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "2dc9ca6beb842ac72e5b53addba35632e7edde08",
+        "date": "  Wed Jun 28 23:26:39 2017 -0400",
+        "description": "Test commit, to be sure everything is working properly",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/style.css",
+            "tools/commit.sh",
+            "tools/htmlCopy.sh"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "dc6db3aebbf6d73d4a249432407402bdb958e1d3",
+        "date": "  Wed Jun 28 22:27:52 2017 -0400",
+        "description": "Lots of web work",
+        "filesAdded": [
+            "tools/htmlCopy.sh"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/cleanuphelp.py",
+            "docs/style.css",
+            "tools/commit.sh",
+            "tools/pdfMaker.sh"
+        ]
+    },
+    {
+        "author": " Ethan Wells <iuyte@gmx.com>",
+        "commitkey": "29372b3f68893819060a9cebc4df1e66e8b51caf",
+        "date": "  Tue Jun 27 21:17:20 2017 -0400",
+        "description": "Changed to the right submodule",
+        "filesAdded": [],
+        "filesDeleted": [
+            "iuyte.github.io"
+        ],
+        "filesModified": [
+            ".gitmodules",
+            "src/Makefile",
+            "src/opcontrol.cpp",
+            "tools/commit.sh",
+            "tools/pdfMaker.sh",
+            "vim.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "7a57c0087cba08ccc26f9756203315edb8cba2ea",
+        "date": "  Thu Jun 22 18:39:09 2017 -0400",
+        "description": "submodules",
+        "filesAdded": [
+            ".gitmodules",
+            "iuyte.github.io"
+        ],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "90ef0c60cfa17383c5e897b46affcbc88c468565",
+        "date": "  Thu Jun 22 15:38:18 2017 -0400",
+        "description": "pid now takes battery i=voltage into account",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "src/pid.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "cc8ca4688dd225876ca3c02d44e434e433900d56",
+        "date": "  Wed Jun 21 20:30:58 2017 -0400",
+        "description": "Removed Doxygen, because it is of no use as of yet",
+        "filesAdded": [
+            "resources/AppendixB.pdf",
+            "resources/AppendixE.pdf",
+            "resources/Manual.pdf",
+            "resources/appendix_a.zip",
+            "resources/appendix_a/FieldSpecs.pdf",
+            "resources/appendix_a/LowCostFieldOptions-042217.pdf"
+        ],
+        "filesDeleted": [
+            "resources/VRC-InTheZone-AppendixA-042217.zip",
+            "resources/VRC-InTheZone-AppendixA-FieldSpecs-042217.pdf",
+            "resources/VRC-InTheZone-AppendixB-RobotSkills-042217.pdf",
+            "resources/VRC-InTheZone-AppendixE-VEXU-042217.pdf",
+            "resources/VRC-InTheZone-GameManual-042217.pdf",
+            "resources/VRC-InTheZone-LowCostFieldOptions-042217.pdf",
+            "tools/Doxyfile"
+        ],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "c37dcc0fb5165d4a70b7ea6abf4d5aa68ffd1cdf",
+        "date": "  Sun Jun 18 02:09:33 2017 -0400",
+        "description": "Fixed pdfs ending up in project root, changed git add * to -u, and",
+        "filesAdded": [],
+        "filesDeleted": [
+            "auto.pdf",
+            "debug.pdf",
+            "drive.pdf",
+            "gyro.pdf",
+            "init.pdf",
+            "lift.pdf",
+            "motors.pdf",
+            "opcontrol.pdf",
+            "pid.pdf",
+            "sensors.pdf"
+        ],
+        "filesModified": [
+            "docs/cleanuphelp.py",
+            "tools/commit.sh",
+            "tools/pdfMaker.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "4d118b82180aecdb22632738e895caf010dd8187",
+        "date": "  Sun Jun 18 01:56:57 2017 -0400",
+        "description": "Moved pdf stuff, doxygen, etc into tools, other work with them as well",
+        "filesAdded": [
+            "auto.pdf",
+            "debug.pdf",
+            "drive.pdf",
+            "gyro.pdf",
+            "init.pdf",
+            "lift.pdf",
+            "motors.pdf",
+            "opcontrol.pdf",
+            "pid.pdf",
+            "sensors.pdf",
+            "tools/Doxyfile",
+            "tools/pdfMaker.sh"
+        ],
+        "filesDeleted": [
+            "Doxyfile",
+            "LATEX/include/API.tex",
+            "LATEX/include/debug.tex",
+            "LATEX/include/drive.tex",
+            "LATEX/include/gyro.tex",
+            "LATEX/include/lift.tex",
+            "LATEX/include/main.tex",
+            "LATEX/include/motors.tex",
+            "LATEX/include/pid.tex",
+            "LATEX/include/sensors.tex",
+            "LATEX/src/auto.tex",
+            "LATEX/src/debug.tex",
+            "LATEX/src/drive.tex",
+            "LATEX/src/gyro.tex",
+            "LATEX/src/init.tex",
+            "LATEX/src/lift.tex",
+            "LATEX/src/motors.tex",
+            "LATEX/src/opcontrol.tex",
+            "LATEX/src/pid.tex",
+            "LATEX/src/sensors.tex",
+            "PDFs/include/debug.pdf",
+            "PDFs/include/drive.pdf",
+            "PDFs/include/gyro.pdf",
+            "PDFs/include/lift.pdf",
+            "PDFs/include/motors.pdf",
+            "PDFs/include/pid.pdf",
+            "PDFs/include/sensors.pdf",
+            "PDFs/src/auto.pdf",
+            "PDFs/src/debug.pdf",
+            "PDFs/src/drive.pdf",
+            "PDFs/src/gyro.pdf",
+            "PDFs/src/init.pdf",
+            "PDFs/src/lift.pdf",
+            "PDFs/src/motors.pdf",
+            "PDFs/src/opcontrol.pdf",
+            "PDFs/src/pid.pdf",
+            "PDFs/src/sensors.pdf",
+            "pdfMaker.sh"
+        ],
+        "filesModified": [
+            "tools/commit.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "00173cea18b7bd0dc231a5693c1cb7b73ca73e0f",
+        "date": "  Sat Jun 17 22:05:37 2017 -0400",
+        "description": "Did doxygen more, and code PDFs",
+        "filesAdded": [
+            "LATEX/include/API.tex",
+            "LATEX/include/debug.tex",
+            "LATEX/include/drive.tex",
+            "LATEX/include/gyro.tex",
+            "LATEX/include/lift.tex",
+            "LATEX/include/main.tex",
+            "LATEX/include/motors.tex",
+            "LATEX/include/pid.tex",
+            "LATEX/include/sensors.tex",
+            "LATEX/src/auto.tex",
+            "LATEX/src/debug.tex",
+            "LATEX/src/drive.tex",
+            "LATEX/src/gyro.tex",
+            "LATEX/src/init.tex",
+            "LATEX/src/lift.tex",
+            "LATEX/src/motors.tex",
+            "LATEX/src/opcontrol.tex",
+            "LATEX/src/pid.tex",
+            "LATEX/src/sensors.tex",
+            "PDFs/include/debug.pdf",
+            "PDFs/include/drive.pdf",
+            "PDFs/include/gyro.pdf",
+            "PDFs/include/lift.pdf",
+            "PDFs/include/motors.pdf",
+            "PDFs/include/pid.pdf",
+            "PDFs/include/sensors.pdf",
+            "PDFs/src/auto.pdf",
+            "PDFs/src/debug.pdf",
+            "PDFs/src/drive.pdf",
+            "PDFs/src/gyro.pdf",
+            "PDFs/src/init.pdf",
+            "PDFs/src/lift.pdf",
+            "PDFs/src/motors.pdf",
+            "PDFs/src/opcontrol.pdf",
+            "PDFs/src/pid.pdf",
+            "PDFs/src/sensors.pdf",
+            "pdfMaker.sh"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "Doxyfile"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "cd0edb617d6aaf77e1656bf91acbc1f307d4fbcd",
+        "date": "  Sat Jun 17 18:41:40 2017 -0400",
+        "description": "Started with doxygen",
+        "filesAdded": [
+            "Doxyfile"
+        ],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "de91c1e5bc6865b76610d5553a9d08682ab0adb7",
+        "date": "  Sat Jun 17 18:14:26 2017 -0400",
+        "description": "Gyro work",
+        "filesAdded": [
+            "include/gyro.hpp",
+            "src/gyro.cpp"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            ".clang-format",
+            "vim.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "48aa05152ad553d95e8c0f11b660b1272e3d76d2",
+        "date": "  Sat Jun 17 15:33:32 2017 -0400",
+        "description": "Fixed displaying of pycache files in website",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/cleanuphelp.py"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "f150000d3f0f6c8c12fd2df44bb7f7551010c103",
+        "date": "  Sat Jun 17 15:16:17 2017 -0400",
+        "description": "Fixed headers",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/debug.hpp",
+            "include/lift.hpp",
+            "src/lift.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "ebd11bb1efa8334eaffb4a8333744cfd35968436",
+        "date": "  Sat Jun 17 14:50:36 2017 -0400",
+        "description": "Added lift::to function, using a simple loop to go to a desired value",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/lift.hpp",
+            "src/lift.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "f9e6c7dcf36d11c553177ff76b8e9dc39a156bf0",
+        "date": "  Sat Jun 17 11:41:27 2017 -0400",
+        "description": "Added a gyro to the robot",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            ".gitignore",
+            "docs/cleanuphelp.py",
+            "include/sensors.hpp",
+            "src/sensors.cpp",
+            "tools/commit.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "d30be5271eb69e1182303355d09919a9c0e09b97",
+        "date": "  Fri Jun 16 19:17:40 2017 -0400",
+        "description": "Trying to ignore annoying vim temporary files in commits",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            ".gitignore",
+            "docs/cleanuphelp.py"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "5177e894760f89e036182ec02e233f888c20acc6",
+        "date": "  Fri Jun 16 19:08:58 2017 -0400",
+        "description": "added lift, sensor for lift",
+        "filesAdded": [
+            "include/lift.hpp",
+            "src/lift.cpp",
+            "vim.sh"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/debug.hpp",
+            "include/pid.hpp",
+            "include/sensors.hpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "0da38ad7b2424ca3c77b6c89fb93e1f49a8d913d",
+        "date": "  Fri Jun 16 18:13:38 2017 -0400",
+        "description": "removed rerun (won't be accurate enough), will re-implement if it proves to be useful",
+        "filesAdded": [],
+        "filesDeleted": [
+            "include/rerun.hpp",
+            "src/rerun.cpp"
+        ],
+        "filesModified": [
+            "include/debug.hpp",
+            "include/main.h",
+            "src/auto.cpp",
+            "src/opcontrol.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "f3580040542f040e229136b2462cc61fce788b97",
+        "date": "  Fri Jun 16 18:07:59 2017 -0400",
+        "description": "Redid style",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            ".clang-format",
+            "include/API.h",
+            "include/debug.hpp",
+            "include/drive.hpp",
+            "include/motors.hpp",
+            "include/pid.hpp",
+            "include/rerun.hpp",
+            "include/sensors.hpp",
+            "src/debug.cpp",
+            "src/drive.cpp",
+            "src/motors.cpp",
+            "src/pid.cpp",
+            "src/rerun.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "f62df479c07d11dbabe9ce88596aed611ea69809",
+        "date": "  Fri Jun 9 22:27:45 2017 -0400",
+        "description": "Style fix in sensors.hpp and practice fix in pid.cpp",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/sensors.hpp",
+            "src/pid.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "7e770b10cd3a43ac3f1fa9a9c8bc98c38e1ab109",
+        "date": "  Fri Jun 9 15:57:13 2017 -0400",
+        "description": "fixed bad link",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            ".gitignore",
+            "docs/cleanup.py",
+            "docs/cleanuphelp.py",
+            "docs/commit.py"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "045f79181af1776ad59c720e3e26d75f1bc284eb",
+        "date": "  Thu Jun 8 21:16:23 2017 -0400",
+        "description": "Assignment optimizations in motors.cpp and style fixes elsewhere",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/motors.hpp",
+            "src/motors.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@users.noreply.github.com>",
+        "commitkey": "383155846c81dc9d00f6ceca74a42055da09791c",
+        "date": "  Thu Jun 8 21:10:40 2017 -0400",
+        "description": "Delete .opcontrol.cpp.swp",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "9b7ebe8db5860c13f596a2f62f2c6868bdd4634e",
+        "date": "  Thu Jun 8 19:23:03 2017 -0400",
+        "description": "fixed typo and removed unnessecary include",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            ".ycm_extra_conf.py",
+            "include/sensors.hpp",
+            "src/pid.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "9941f2826110ccab816b7d91cab4e82ddc5dc153",
+        "date": "  Thu Jun 8 18:02:47 2017 -0400",
+        "description": "Small bug fixes",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/sensors.hpp",
+            "src/rerun.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "1cece1fac3a0833019de68e5f90ae11614c95830",
+        "date": "  Tue Jun 6 22:08:40 2017 -0400",
+        "description": "Rerun and pid work",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/pid.hpp",
+            "include/rerun.hpp",
+            "src/pid.cpp",
+            "src/rerun.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "338e4f71b7cb81e724aa3d1052745d87689d5502",
+        "date": "  Tue Jun 6 21:25:54 2017 -0400",
+        "description": "Project management fixing",
+        "filesAdded": [
+            ".ycm_extra_conf.py"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            ".gitignore"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "64aaf8dbc4881e414a67dc0311dfe7f7d7ff0c9d",
+        "date": "  Tue Jun 6 21:18:49 2017 -0400",
+        "description": "Added namespace, class, function, variable and constant comments describing funtion of them",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/debug.hpp",
+            "include/drive.hpp",
+            "include/motors.hpp",
+            "include/pid.hpp",
+            "include/rerun.hpp",
+            "include/sensors.hpp",
+            "src/debug.cpp",
+            "src/motors.cpp",
+            "src/pid.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "25545ec9c215f06b15941218473a8fa3cbcec1f5",
+        "date": "  Tue Jun 6 17:28:54 2017 -0400",
+        "description": "added file boilerplates",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/debug.hpp",
+            "include/drive.hpp",
+            "include/motors.hpp",
+            "include/pid.hpp",
+            "include/rerun.hpp",
+            "include/sensors.hpp",
+            "src/auto.cpp",
+            "src/debug.cpp",
+            "src/drive.cpp",
+            "src/init.cpp",
+            "src/motors.cpp",
+            "src/opcontrol.cpp",
+            "src/pid.cpp",
+            "src/rerun.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "b29c8f1ab9c9dde1ff94cc2a393d4ef8553d08e7",
+        "date": "  Tue Jun 6 07:09:28 2017 -0400",
+        "description": "Started commenting functions, added switching between accel and tank drive",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/drive.hpp",
+            "src/drive.cpp",
+            "src/opcontrol.cpp",
+            "tools/commit.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "1d3446b2988038b8fedf4f86767eccc4f62c06c2",
+        "date": "  Mon Jun 5 15:28:15 2017 -0400",
+        "description": "small cleanup portions",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "include/drive.hpp",
+            "include/motors.hpp",
+            "include/sensors.hpp",
+            "src/drive.cpp",
+            "src/motors.cpp",
+            "src/pid.cpp",
+            "src/rerun.cpp",
+            "src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "5cee757caf15f96f1b1a463907b158247909ef50",
+        "date": "  Sun Jun 4 16:07:52 2017 -0400",
+        "description": "Removed trailing \"\"\" in main.css",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/style.css"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "4e76d380328a88557d84a71aa1d8296faa5d2847",
+        "date": "  Sun Jun 4 16:01:45 2017 -0400",
+        "description": "Re-added .clang-format for style that had dissappeared",
+        "filesAdded": [
+            ".clang-format"
+        ],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "21cd9813eb4ae0f741ccb9e96e0095e68b1aef8d",
+        "date": "  Sun Jun 4 15:21:26 2017 -0400",
+        "description": "Changed standard to C++14 in Makefile",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "Makefile"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "d3ee336a50bd391ff80cb4535f143092c62386e9",
+        "date": "  Sun Jun 4 14:12:12 2017 -0400",
+        "description": "Changed project structure",
+        "filesAdded": [
+            "Makefile",
+            "common.mk",
+            "firmware/STM32F10x.ld",
+            "firmware/cortex.ld",
+            "firmware/libpros.a",
+            "firmware/uniflash.jar",
+            "include/API.h",
+            "include/debug.hpp",
+            "include/drive.hpp",
+            "include/main.h",
+            "include/motors.hpp",
+            "include/pid.hpp",
+            "include/rerun.hpp",
+            "include/sensors.hpp",
+            "project.pros",
+            "src/Makefile",
+            "src/auto.cpp",
+            "src/debug.cpp",
+            "src/drive.cpp",
+            "src/init.cpp",
+            "src/motors.cpp",
+            "src/opcontrol.cpp",
+            "src/pid.cpp",
+            "src/rerun.cpp",
+            "src/sensors.cpp"
+        ],
+        "filesDeleted": [
+            "cpls/.clang-format",
+            "cpls/Makefile",
+            "cpls/common.mk",
+            "cpls/firmware/STM32F10x.ld",
+            "cpls/firmware/cortex.ld",
+            "cpls/firmware/libpros.a",
+            "cpls/firmware/uniflash.jar",
+            "cpls/include/API.h",
+            "cpls/include/debug.hpp",
+            "cpls/include/drive.hpp",
+            "cpls/include/main.h",
+            "cpls/include/motors.hpp",
+            "cpls/include/pid.hpp",
+            "cpls/include/rerun.hpp",
+            "cpls/include/sensors.hpp",
+            "cpls/project.pros",
+            "cpls/src/Makefile",
+            "cpls/src/auto.cpp",
+            "cpls/src/debug.cpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/init.cpp",
+            "cpls/src/motors.cpp",
+            "cpls/src/opcontrol.cpp",
+            "cpls/src/pid.cpp",
+            "cpls/src/rerun.cpp",
+            "cpls/src/sensors.cpp",
+            "miniRerun/Makefile",
+            "miniRerun/common.mk",
+            "miniRerun/firmware/STM32F10x.ld",
+            "miniRerun/firmware/cortex.ld",
+            "miniRerun/firmware/firmware/STM32F10x.ld",
+            "miniRerun/firmware/firmware/cortex.ld",
+            "miniRerun/firmware/firmware/uniflash.jar",
+            "miniRerun/firmware/libpros.a",
+            "miniRerun/firmware/uniflash.jar",
+            "miniRerun/include/API.h",
+            "miniRerun/include/main.h",
+            "miniRerun/include/motors.h",
+            "miniRerun/include/pid.h",
+            "miniRerun/include/rerun.h",
+            "miniRerun/include/sensors.h",
+            "miniRerun/project.pros",
+            "miniRerun/src/Makefile",
+            "miniRerun/src/auto.c",
+            "miniRerun/src/drive.c",
+            "miniRerun/src/init.c",
+            "miniRerun/src/opcontrol.c",
+            "miniRerun/src/pid.c",
+            "miniRerun/src/rerun.c",
+            "miniRerun/src/sensors.c",
+            "tools/compile.py",
+            "tools/compile.sh"
+        ],
+        "filesModified": [
+            "tools/commit.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "669b18131ee82bf3a8cddadb76c56823c0c1b89d",
+        "date": "  Sat Jun 3 12:16:02 2017 -0400",
+        "description": "Added PID drive support in accelerometer drive",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            ".gitignore",
+            "cpls/src/drive.cpp",
+            "cpls/src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "9b91d35702bfc3b9aee017a9408854015aa101f1",
+        "date": "  Sat Jun 3 10:55:21 2017 -0400",
+        "description": "Modified cleanuphelp.py such that the webpage no longer shows it's own files under files modified",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/cleanuphelp.py"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "a56487993a04a72e7e1097dd21fc4cbe14b770c6",
+        "date": "  Sat Jun 3 10:44:46 2017 -0400",
+        "description": "redid project .clang-format and applied changes",
+        "filesAdded": [
+            "cpls/.clang-format"
+        ],
+        "filesDeleted": [
+            "cpls/.atom-build.yml"
+        ],
+        "filesModified": [
+            "cpls/include/API.h",
+            "cpls/include/debug.hpp",
+            "cpls/include/drive.hpp",
+            "cpls/include/main.h",
+            "cpls/include/pid.hpp",
+            "cpls/include/sensors.hpp",
+            "cpls/src/debug.cpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/motors.cpp",
+            "cpls/src/pid.cpp",
+            "cpls/src/rerun.cpp",
+            "cpls/src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "5c38955616284fbf8d6abdd1db84729ef6f984a3",
+        "date": "  Thu Jun 1 20:25:54 2017 -0400",
+        "description": "deleted odd file",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "ce0c7b71920fb8e8e527e35dc12102fdb0362f89",
+        "date": "  Tue May 30 19:07:07 2017 -0400",
+        "description": "Changes include *.hpp to include ../include/*.hpp, also fixed extra iteration of slewing loop",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/src/auto.cpp",
+            "cpls/src/debug.cpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/init.cpp",
+            "cpls/src/motors.cpp",
+            "cpls/src/opcontrol.cpp",
+            "cpls/src/pid.cpp",
+            "cpls/src/rerun.cpp",
+            "cpls/src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "76ef13d5dd85d656a4862c58e2f6f8e8360f97ba",
+        "date": "  Sun May 28 20:29:42 2017 -0400",
+        "description": "reorganized commiting scripts, system, files",
+        "filesAdded": [
+            "docs/main.js",
+            "docs/style.css",
+            "tools/commit.sh",
+            "tools/compile.py",
+            "tools/compile.sh"
+        ],
+        "filesDeleted": [
+            "commit.sh",
+            "compile.py",
+            "compile.sh"
+        ],
+        "filesModified": [
+            "docs/cleanuphelp.py"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "56fe16f613509762b984328b03f6f4561e23d3ae",
+        "date": "  Sun May 28 20:05:47 2017 -0400",
+        "description": "Fixed minor logical optimization and removed unnecessary include",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/sensors.hpp",
+            "cpls/src/opcontrol.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "99417e376e0be846904cb0f59630aae89b425db4",
+        "date": "  Sun May 28 18:03:27 2017 -0400",
+        "description": "added ability to use accelerometers in joysticks to drive",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/drive.hpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/opcontrol.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "8727970b7682ebbdf1f81fc1f4f1ef891718065d",
+        "date": "  Sun May 28 17:35:03 2017 -0400",
+        "description": "added license",
+        "filesAdded": [
+            "LICENSE"
+        ],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "763e1053099ae354a8ae936975b3d8140ccc7d17",
+        "date": "  Sat May 27 20:17:05 2017 -0400",
+        "description": "Deleted odd file from beautification script error",
+        "filesAdded": [],
+        "filesDeleted": [
+            "cpls/include/.atom-beautify.motors.hpp"
+        ],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "11c20785e5a72e729e541ea92f2ec137c5680bf9",
+        "date": "  Sat May 27 20:13:17 2017 -0400",
+        "description": "Fixed bad practice",
+        "filesAdded": [
+            "cpls/include/.atom-beautify.motors.hpp"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/motors.hpp",
+            "cpls/src/motors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "4803fd41216658a77c013396da55078223487f48",
+        "date": "  Sat May 27 20:07:01 2017 -0400",
+        "description": "Finally got slewing working",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/motors.hpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/init.cpp",
+            "cpls/src/motors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "842d2831621a447128e6b9a5d1f91c622adcd54f",
+        "date": "  Sat May 27 15:51:42 2017 -0400",
+        "description": "removed unnecessary files",
+        "filesAdded": [],
+        "filesDeleted": [
+            "commit.py",
+            "projects.txt"
+        ],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "3b0397b3396f3ca115306ffd5dbaa5be6ca8eaa2",
+        "date": "  Sat May 27 15:28:54 2017 -0400",
+        "description": "made code runnable, added to autonomous",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "compile.sh",
+            "cpls/include/sensors.hpp",
+            "cpls/src/auto.cpp",
+            "cpls/src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "79f4d3b5cc8386e7b32fda2ff67380cf0bd2da33",
+        "date": "  Sat May 27 15:16:41 2017 -0400",
+        "description": "fixed compile.py",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "compile.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "081320b57acc357354a818958a2cc026ffe999f9",
+        "date": "  Sat May 27 14:40:37 2017 -0400",
+        "description": "added rerun::enabled bool, changed motors::set() to side_t::<motor>::set() in drive",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/rerun.hpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/opcontrol.cpp",
+            "cpls/src/rerun.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "76d1c5a87d1aa32b22828a89d503ec4ac9817bba",
+        "date": "  Sat May 27 07:33:22 2017 -0400",
+        "description": "Added class for ultrasonics",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/sensors.hpp",
+            "cpls/src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "42620000dab121220e5be649854a44cb44b15e41",
+        "date": "  Tue May 23 01:02:26 2017 -0400",
+        "description": "slewing fix and actually enabling it in init.cpp",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/motors.hpp",
+            "cpls/src/init.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "91666d0d582b3f1c99d5b9a303c94064a114df61",
+        "date": "  Tue May 23 01:01:40 2017 -0400",
+        "description": "More sensor classes",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/sensors.hpp",
+            "cpls/src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "d9c726384d0e4d25070110ccb8c0d22a5013ea29",
+        "date": "  Mon May 22 01:07:33 2017 -0400",
+        "description": "modified compile.py to automatically detect which folders are projects and compiles them on the running of my commitscript",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "compile.py",
+            "cpls/include/drive.hpp",
+            "cpls/include/motors.hpp",
+            "cpls/include/sensors.hpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/motors.cpp",
+            "cpls/src/pid.cpp",
+            "cpls/src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "264671714dfe84d7c6b5829d5fecd2491c723b84",
+        "date": "  Sun May 21 22:34:53 2017 -0400",
+        "description": "fixing commit.sh",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "commit.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "94d9f123dbeb3ead323be8e3353cef4c189808db",
+        "date": "  Sun May 21 22:24:59 2017 -0400",
+        "description": "fixing",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "commit.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "debbb02eb84ee365b491c89577c67b0170c22655",
+        "date": "  Sun May 21 22:23:40 2017 -0400",
+        "description": "changes to ",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "8b456fda3b22c38a7aa2a4b44a2f3a50e12b19fa",
+        "date": "  Sun May 21 21:15:55 2017 -0400",
+        "description": "Fixed minor ineffeciency",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/sensors.hpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "fd344715a2b2ba12a1d3e3d5b544f0faab387165",
+        "date": "  Sun May 21 18:44:18 2017 -0400",
+        "description": "Renamed files to .hpp",
+        "filesAdded": [
+            "cpls/include/debug.hpp",
+            "cpls/include/drive.hpp",
+            "cpls/include/motors.hpp",
+            "cpls/include/pid.hpp",
+            "cpls/include/rerun.hpp",
+            "cpls/include/sensors.hpp"
+        ],
+        "filesDeleted": [
+            "cpls/include/debug.h",
+            "cpls/include/drive.h",
+            "cpls/include/motors.h",
+            "cpls/include/pid.h",
+            "cpls/include/rerun.h",
+            "cpls/include/sensors.h"
+        ],
+        "filesModified": [
+            "commit.sh",
+            "cpls/include/main.h",
+            "cpls/src/debug.cpp",
+            "cpls/src/motors.cpp",
+            "cpls/src/pid.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "5853c9ea4748da3bfccd16a8da5b47d10f950ccf",
+        "date": "  Sun May 21 18:37:09 2017 -0400",
+        "description": "adopted new style",
+        "filesAdded": [],
+        "filesDeleted": [
+            "cpls/log.txt"
+        ],
+        "filesModified": [
+            "cpls/include/API.h",
+            "cpls/include/debug.h",
+            "cpls/include/drive.h",
+            "cpls/include/main.h",
+            "cpls/include/motors.h",
+            "cpls/include/pid.h",
+            "cpls/include/rerun.h",
+            "cpls/include/sensors.h",
+            "cpls/src/debug.cpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/init.cpp",
+            "cpls/src/motors.cpp",
+            "cpls/src/opcontrol.cpp",
+            "cpls/src/pid.cpp",
+            "cpls/src/rerun.cpp",
+            "cpls/src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "1988c03883b5c1b5d06d0088412e5e0a03f84f93",
+        "date": "  Sat May 20 18:37:08 2017 -0400",
+        "description": "Removed redundancy",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/document.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "66b65daa43257108774874a428702a2c606dab3e",
+        "date": "  Sat May 20 18:36:37 2017 -0400",
+        "description": "Fixing json prettification",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/document.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "916a17d9938257639eab28e8ad7e5bd2a0290f8e",
+        "date": "  Sat May 20 18:35:06 2017 -0400",
+        "description": "Added json prettifier to the auto-document script",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/document.sh"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "ad829d49547909dfe37b34eb842385d4c585bc3f",
+        "date": "  Sat May 20 18:16:10 2017 -0400",
+        "description": "created ",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "470082234b4eef9f8be84ecff3a66a1f96fb09c6",
+        "date": "  Sat May 20 18:06:14 2017 -0400",
+        "description": "Rerun work",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/rerun.h",
+            "cpls/src/rerun.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "cd8d13ebf494e94fcef62cb7f80f8063c13a8dfc",
+        "date": "  Sun May 7 21:12:31 2017 -0400",
+        "description": "Re-added slew functionality, hopeful of success.",
+        "filesAdded": [
+            ".gitignore"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/motors.h",
+            "cpls/src/motors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "104883373f900eab9cb0d02ac08fcacd5f61ff98",
+        "date": "  Sun May 7 20:54:30 2017 -0400",
+        "description": "Fixed rerun issues, eliminated slewing (wasnt working), created debug mode to identify segfaults",
+        "filesAdded": [
+            "cpls/include/debug.h",
+            "cpls/src/debug.cpp"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/drive.h",
+            "cpls/include/main.h",
+            "cpls/include/motors.h",
+            "cpls/include/pid.h",
+            "cpls/include/rerun.h",
+            "cpls/src/auto.cpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/motors.cpp",
+            "cpls/src/opcontrol.cpp",
+            "cpls/src/pid.cpp",
+            "cpls/src/rerun.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "976ba5da0b6d03483942e061f54fdc177b42270d",
+        "date": "  Sun May 7 17:15:54 2017 -0400",
+        "description": "Various code cleanups, abstracted to allow slewing",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/drive.h",
+            "cpls/include/motors.h",
+            "cpls/include/rerun.h",
+            "cpls/src/drive.cpp",
+            "cpls/src/init.cpp",
+            "cpls/src/motors.cpp",
+            "cpls/src/opcontrol.cpp",
+            "cpls/src/rerun.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "70fc1ca9eeaf0abcf35dd328d0e9860068d13cd5",
+        "date": "  Sun May 7 13:38:03 2017 -0400",
+        "description": "Tested code, all but rerun works",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/motors.h",
+            "cpls/include/sensors.h",
+            "cpls/src/drive.cpp",
+            "cpls/src/motors.cpp",
+            "cpls/src/opcontrol.cpp",
+            "cpls/src/pid.cpp",
+            "cpls/src/rerun.cpp",
+            "cpls/src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "732e7e6949e5bdc83e52f215806eb411634b5f97",
+        "date": "  Sat May 6 20:20:20 2017 -0400",
+        "description": "Added rerun functionality",
+        "filesAdded": [
+            "cpls/include/rerun.h",
+            "cpls/src/rerun.cpp"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/main.h",
+            "cpls/src/auto.cpp",
+            "cpls/src/opcontrol.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "34b5e5bac90c3c82e07e675605384cc5fba639be",
+        "date": "  Sat May 6 17:50:59 2017 -0400",
+        "description": "Added .atom-build.yml to enable my ability to build the project with CTRL + ALT + B",
+        "filesAdded": [
+            "cpls/.atom-build.yml"
+        ],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "4a4a588cc819a71bc9ecc8078227b9103063505f",
+        "date": "  Sat May 6 17:27:29 2017 -0400",
+        "description": "Changed CCFLAGS:=-c -Wall $(MCUCFLAGS) -Os -ffunction-sections -fsigned-char -fomit-frame-pointer -fsingle-precision-constant to CCFLAGS:=-c -Wall $(MCUCFLAGS) -Os -ffunction-sections -fsigned-char -fomit-frame-pointer -fsingle-precision-constant -std=c++14 in common.mk because it's C++",
+        "filesAdded": [],
+        "filesDeleted": [
+            "log.json"
+        ],
+        "filesModified": [
+            "cpls/common.mk"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "ac55f3ec527107a9f33a6208fe27bbff117ef157",
+        "date": "  Sat May 6 17:24:47 2017 -0400",
+        "description": "Created document.sh to almost completely automate documentation process",
+        "filesAdded": [
+            "docs/document.sh"
+        ],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "5529f7b01ba91e1faa74f157345161816805459e",
+        "date": "  Sat May 6 17:02:20 2017 -0400",
+        "description": "Added easier motor support, PID",
+        "filesAdded": [
+            "cpls/include/motors.h",
+            "cpls/include/pid.h",
+            "cpls/src/motors.cpp",
+            "cpls/src/pid.cpp"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/drive.h",
+            "cpls/include/main.h",
+            "cpls/include/sensors.h",
+            "cpls/src/auto.cpp",
+            "cpls/src/drive.cpp",
+            "cpls/src/init.cpp",
+            "cpls/src/opcontrol.cpp",
+            "cpls/src/sensors.cpp",
+            "resources/cone.png"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "5195914c6b2c4abc3c43069769756e971a47bf37",
+        "date": "  Mon May 1 19:31:59 2017 -0400",
+        "description": "Fixed issue with sensors namespace and begun drive.cpp",
+        "filesAdded": [
+            "cpls/src/drive.cpp",
+            "log.json"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/drive.h",
+            "cpls/include/sensors.h",
+            "cpls/src/sensors.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@users.noreply.github.com>",
+        "commitkey": "6e9de5d912b0f6dd5c04f7743d5b2501e36a0f7d",
+        "date": "  Mon May 1 00:29:58 2017 +0400",
+        "description": "Hopefully fixed inclusion problem",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "cpls/include/sensors.h"
+        ]
+    },
+    {
+        "author": " Ethan Wells <ethanialw@gmail.com>",
+        "commitkey": "76fc50bd0ab6be9ad4b23a5f0835af40ceb84c7e",
+        "date": "  Sun Apr 30 16:07:07 2017 +0400",
+        "description": "created cone image in resourses",
+        "filesAdded": [
+            "resources/cone.ipt",
+            "resources/cone.png"
+        ],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "772389c5ebde877dfea04a3d790b1aa46e9a886c",
+        "date": "  Sun Apr 30 10:04:25 2017 -0400",
+        "description": "Created resources folder for game resourced",
+        "filesAdded": [
+            "resources/276-5369-000 Rev2.STEP",
+            "resources/VRC-InTheZone-AppendixA-042217.zip",
+            "resources/VRC-InTheZone-AppendixA-FieldSpecs-042217.pdf",
+            "resources/VRC-InTheZone-AppendixB-RobotSkills-042217.pdf",
+            "resources/VRC-InTheZone-AppendixE-VEXU-042217.pdf",
+            "resources/VRC-InTheZone-GameManual-042217.pdf",
+            "resources/VRC-InTheZone-LowCostFieldOptions-042217.pdf"
+        ],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "f8c484c712e0be153ec6e7313e24a20ee4ff5ed3",
+        "date": "  Sun Apr 30 09:36:00 2017 -0400",
+        "description": "inclusion issue, attempting to fix",
+        "filesAdded": [
+            "cpls/include/drive.h",
+            "cpls/include/sensors.h",
+            "cpls/src/sensors.cpp"
+        ],
+        "filesDeleted": [
+            "cpls/src/include/foo.h"
+        ],
+        "filesModified": [
+            "cpls/include/main.h",
+            "cpls/src/init.cpp"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "34e3091fdab1d452daa84ba195facb7ff4d1b944",
+        "date": "  Sat Apr 29 22:36:31 2017 -0400",
+        "description": "new project for C++ code, works",
+        "filesAdded": [
+            "cpls/Makefile",
+            "cpls/common.mk",
+            "cpls/firmware/STM32F10x.ld",
+            "cpls/firmware/cortex.ld",
+            "cpls/firmware/libpros.a",
+            "cpls/firmware/uniflash.jar",
+            "cpls/include/API.h",
+            "cpls/include/main.h",
+            "cpls/project.pros",
+            "cpls/src/Makefile",
+            "cpls/src/auto.cpp",
+            "cpls/src/include/foo.h",
+            "cpls/src/init.cpp",
+            "cpls/src/opcontrol.cpp"
+        ],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "5fffbb586454534c27646ca9692b1d8e8d7df10b",
+        "date": "  Sat Apr 29 20:29:43 2017 -0400",
+        "description": "Fixed PID, now works, may need tuning",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "miniRerun/include/main.h",
+            "miniRerun/include/motors.h",
+            "miniRerun/include/pid.h",
+            "miniRerun/include/sensors.h",
+            "miniRerun/src/auto.c",
+            "miniRerun/src/drive.c",
+            "miniRerun/src/init.c",
+            "miniRerun/src/opcontrol.c",
+            "miniRerun/src/pid.c",
+            "miniRerun/src/rerun.c",
+            "miniRerun/src/sensors.c"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "be82604784a8a1165d4ebc89570a37ebd0219ade",
+        "date": "  Sat Apr 29 15:51:31 2017 -0400",
+        "description": "Changed management of whether pid is enabled, small pid changes and now adressing the right pid index in replay",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "miniRerun/include/pid.h",
+            "miniRerun/src/init.c",
+            "miniRerun/src/pid.c",
+            "miniRerun/src/rerun.c"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "04e01af7a61ee6641485896b94720d2e378ac01d",
+        "date": "  Sat Apr 29 13:28:41 2017 -0400",
+        "description": "Simplified rerun to use structs rather than text, making it easier to parse. Added PID draft to support rerun",
+        "filesAdded": [
+            "miniRerun/include/pid.h",
+            "miniRerun/src/pid.c"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "miniRerun/include/main.h",
+            "miniRerun/include/motors.h",
+            "miniRerun/include/rerun.h",
+            "miniRerun/src/drive.c",
+            "miniRerun/src/init.c",
+            "miniRerun/src/rerun.c"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@gmail.com>",
+        "commitkey": "29c55dc4d02c2e4bc634a3833b475ea5bef1fc10",
+        "date": "  Sun Apr 23 21:30:44 2017 -0400",
+        "description": "Added delay in replay function",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "miniRerun/src/rerun.c"
+        ]
+    },
+    {
+        "author": " Ethan Wells <ethanialw@gmail.com>",
+        "commitkey": "a687907d49d9f39b249b3e2a6b43a8bb96101664",
+        "date": "  Sun Apr 23 13:29:04 2017 +0400",
+        "description": "Automatic rerun enabling and disabling in opcontrol",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "miniRerun/src/opcontrol.c"
+        ]
+    },
+    {
+        "author": " Ethan Wells <ethanialw@gmail.com>",
+        "commitkey": "2955d9f2a3245a746ee18efe4fada6e14d26038a",
+        "date": "  Sun Apr 23 07:44:19 2017 +0400",
+        "description": "Adapted code for 4 motor drive",
+        "filesAdded": [
+            "miniRerun/src/drive.c"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "miniRerun/include/motors.h",
+            "miniRerun/include/sensors.h",
+            "miniRerun/src/opcontrol.c",
+            "miniRerun/src/rerun.c",
+            "miniRerun/src/sensors.c"
+        ]
+    },
+    {
+        "author": " Ethan Wells <ethanialw@gmail.com>",
+        "commitkey": "8810eb12fe271f730590b6b4e9ae9ae0517a7f4f",
+        "date": "  Sat Apr 22 23:20:34 2017 +0400",
+        "description": "Fixed still-broken links in webpage generator",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/cleanuphelp.py"
+        ]
+    },
+    {
+        "author": " Ethan Wells <ethanialw@gmail.com>",
+        "commitkey": "5f698f0f91d2580c141d7af06e842dd93cf41081",
+        "date": "  Sat Apr 22 23:14:16 2017 +0400",
+        "description": "fixed links in webpage generator script",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "docs/cleanuphelp.py"
+        ]
+    },
+    {
+        "author": " Ethan Wells <ethanialw@gmail.com>",
+        "commitkey": "fe3ffb19aa4921bb9058700e703e7872e620fdfa",
+        "date": "  Sat Apr 22 23:02:51 2017 +0400",
+        "description": "fixed inclusion issue with standard header guards",
+        "filesAdded": [],
+        "filesDeleted": [],
+        "filesModified": [
+            "miniRerun/include/motors.h",
+            "miniRerun/include/rerun.h",
+            "miniRerun/include/sensors.h"
+        ]
+    },
+    {
+        "author": " Ethan Wells <ethanialw@gmail.com>",
+        "commitkey": "5ad70ac34a2a80d0bb747b261d27930012ea0f68",
+        "date": "  Sat Apr 22 22:49:07 2017 +0400",
+        "description": "added my webpage creater script in docs, generated log",
+        "filesAdded": [
+            "docs/cleanup.py",
+            "docs/cleanuphelp.py",
+            "docs/commit.py",
+            "docs/index.html",
+            "docs/log.json",
+            "docs/log.txt"
+        ],
+        "filesDeleted": [],
+        "filesModified": []
+    },
+    {
+        "author": " Ethan Wells <ethanialw@gmail.com>",
+        "commitkey": "033b01a38ae59bbe1b8faa8ff4c366bdc2832629",
+        "date": "  Sat Apr 22 22:44:42 2017 +0400",
+        "description": "Created 2 motor pushbot rerun, modified README.md to be more descriptive",
+        "filesAdded": [
+            "miniRerun/Makefile",
+            "miniRerun/common.mk",
+            "miniRerun/firmware/STM32F10x.ld",
+            "miniRerun/firmware/cortex.ld",
+            "miniRerun/firmware/firmware/STM32F10x.ld",
+            "miniRerun/firmware/firmware/cortex.ld",
+            "miniRerun/firmware/firmware/uniflash.jar",
+            "miniRerun/firmware/libpros.a",
+            "miniRerun/firmware/uniflash.jar",
+            "miniRerun/include/API.h",
+            "miniRerun/include/main.h",
+            "miniRerun/include/motors.h",
+            "miniRerun/include/rerun.h",
+            "miniRerun/include/sensors.h",
+            "miniRerun/project.pros",
+            "miniRerun/src/Makefile",
+            "miniRerun/src/auto.c",
+            "miniRerun/src/init.c",
+            "miniRerun/src/opcontrol.c",
+            "miniRerun/src/rerun.c",
+            "miniRerun/src/sensors.c"
+        ],
+        "filesDeleted": [],
+        "filesModified": [
+            "README.md"
+        ]
+    },
+    {
+        "author": " iuyte <iuyte@users.noreply.github.com>",
+        "commitkey": "f8790d394f5f2aada2067e14ba6d26671d1cb935",
+        "date": "  Sun Apr 23 06:40:39 2017 +0400",
+        "description": "Initial commit",
+        "filesAdded": [
+            "README.md"
+        ],
+        "filesDeleted": [],
+        "filesModified": []
+    }
+]
