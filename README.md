@@ -1,3 +1,3 @@
-# VEX-709S-2018
+# libalpaca
 
-Repository for VEX Robotics Competition team 709S for the 2017-2018 game
+A PROS robot code framework to make it easier to get a robot up and running, quickly and efficiently, with as many features as possible right away.
