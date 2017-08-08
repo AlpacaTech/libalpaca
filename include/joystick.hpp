@@ -40,7 +40,7 @@ namespace joystick {
   } Button;
 
   /** Get the analog value of the specified channel */
-  int analog(Channel channel);
+  int  analog(Channel channel);
 
   /** Returns whether or not a button in a group is pressed */
   bool digital(Group  group,

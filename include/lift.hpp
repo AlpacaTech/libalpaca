@@ -26,31 +26,31 @@
 /** Contains everything relating to the drive */
 namespace lift {
   /** Class for a side of the drive */
-  struct side_t {
+  struct Side {
     /** Top motor on the the side */
-    motor_t topM;
+    Motor topM;
 
     /** Middle motor on the side */
-    motor_t midM;
+    Motor midM;
 
     /** Bottom motor on the side */
-    motor_t lowM;
+    Motor lowM;
 
     /** Sets all motors on the side to the given power */
     void set(int power);
 
     /** A pointer to the sensor on the side */
-    sensors::pot_t *sensor;
-  }; // struct side_t
+    sensors::Pot *sensor;
+  }; // struct Side
 
   /** Positions of the lift */
-  typedef enum {
+  typedef enum Position {
     bottom = 5,
     mobile = 60,
     one    = 100,
     two    = 230,
     three  = 450,
-  } position;
+  } Position;
 
   extern double inch;
 
@@ -70,7 +70,7 @@ namespace lift {
   void init(void);
 
   /** p control for the lift */
-  void to(position pos = bottom,
+  void to(Position pos = bottom,
           int      int_pos = -1,
           int      tolerance = 50);
 

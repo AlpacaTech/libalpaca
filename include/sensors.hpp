@@ -28,7 +28,7 @@
  * sensors */
 namespace sensors {
   /** A 2-wire quadrature encoder */
-  struct quad_t {
+  struct Quad {
     /** The encoder struct used by other member functions */
     Encoder enc;
 
@@ -58,13 +58,13 @@ namespace sensors {
     void init(void);
 
     /** Constructs the encoder object. Make sure init is also called */
-    quad_t(unsigned char port1,
-           unsigned char port2,
-           bool          inverted);
-  }; // struct quad_t
+    Quad(unsigned char port1,
+         unsigned char port2,
+         bool          inverted);
+  }; // struct Quad
 
   /** Class for gyro objects */
-  class gyro_t {
+  class Gyro {
     public:
 
       /** The gyro struct used in funtions */
@@ -91,22 +91,24 @@ namespace sensors {
       void init(void);
 
       /** Class constructor, but it must not be forgotten to call init() */
-      gyro_t(unsigned char port,
-             unsigned int  calibration);
+      Gyro(unsigned char port,
+           unsigned int  calibration);
 
     private:
 
       /** The calibration, a temporary placement between construction and
        * initialization */
       int calibration;
-  }; // class gyro_t
+  }; // class Gyro
 
-  // class gyro_t
+  // class Gyro
 
-  // struct gyro_t
+  // class Gyro
+
+  // struct Gyro
 
   /** Class for potentiometers */
-  struct pot_t {
+  struct Pot {
     /** The port that the pot is plugged in to */
     unsigned char port;
 
@@ -132,12 +134,12 @@ namespace sensors {
     void init(void);
 
     /** The class constructor for a potentiometer, also be sure to init() */
-    pot_t(unsigned char port,
-          bool          inverted);
-  }; // pot_t
+    Pot(unsigned char port,
+        bool          inverted);
+  }; // Pot
 
   /** Class for ultrasonic sensors */
-  struct sonic_t {
+  struct Sonic {
     /** The Ultrasonic struct that is referenced in member funtions */
     Ultrasonic sonic;
 
@@ -152,12 +154,12 @@ namespace sensors {
     void init(void);
 
     /** Class constructor, but init() must also be called */
-    sonic_t(unsigned char port1,
-            unsigned char port2);
-  }; // sonic_t
+    Sonic(unsigned char port1,
+          unsigned char port2);
+  }; // Sonic
 
   /** Class for buttons */
-  struct button_t {
+  struct Button {
     /** the port that the button is plugged in to */
     unsigned char port;
 
@@ -171,9 +173,9 @@ namespace sensors {
     void init(void);
 
     /** Class constructor, but init() must also be called */
-    button_t(unsigned char port,
-             bool          inverted);
-  }; // button_t
+    Button(unsigned char port,
+           bool          inverted);
+  }; // Button
 
   /** Initializes the sensor subsystem, calls all the funtions that need to be
    * called in initialize(). Call in initialize() */

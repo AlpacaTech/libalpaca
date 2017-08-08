@@ -21,7 +21,7 @@
 #include "../include/main.h"
 
 namespace sensors {
-  quad_t::quad_t(unsigned char port1, unsigned char port2, bool inverted)
+  Quad::Quad(unsigned char port1, unsigned char port2, bool inverted)
     : inverted(inverted) {
     ports[0] = port1;
     ports[1] = port2;
@@ -29,81 +29,81 @@ namespace sensors {
     request  = 0;
   }
 
-  void quad_t:: init(void) {
-    enc = encoderInit(quad_t::ports[0], quad_t::ports[1], quad_t::inverted);
-  } // quad_t::init
+  void Quad::init(void) {
+    enc = encoderInit(Quad::ports[0], Quad::ports[1], Quad::inverted);
+  } // Quad::init
 
-  long quad_t:: value(void) {
+  long Quad::value(void) {
     return encoderGet(enc) - zero;
-  } // quad_t::value
+  } // Quad::value
 
-  void quad_t:: reset(void) {
+  void Quad::reset(void) {
     zero    = encoderGet(enc);
     request = 0;
-  } // quad_t::reset
+  } // Quad::reset
 
-  gyro_t::gyro_t(unsigned char port, unsigned int calibration)
+  Gyro::Gyro(unsigned char port, unsigned int calibration)
     : port(port), calibration(calibration) {
     zero    = 0;
     request = 0;
   }
 
-  void gyro_t:: init(void) {
-    gyro_t::gyro = gyroInit(port, calibration);
-  } // gyro_t::init
+  void Gyro::init(void) {
+    Gyro::gyro = gyroInit(port, calibration);
+  } // Gyro::init
 
-  long gyro_t:: value(void) {
-    return gyroGet(gyro_t::gyro) - zero;
-  } // gyro_t::value
+  long Gyro::value(void) {
+    return gyroGet(Gyro::gyro) - zero;
+  } // Gyro::value
 
-  void gyro_t:: reset(void) {
-    zero    = gyroGet(gyro_t::gyro);
+  void Gyro::reset(void) {
+    zero    = gyroGet(Gyro::gyro);
     request = 0;
-  } // gyro_t::reset
+  } // Gyro::reset
 
-  pot_t::pot_t(unsigned char port, bool inverted)
+  Pot::Pot(unsigned char port, bool inverted)
     : port(port), inverted(inverted) {
     zero    = 0;
     request = 0;
   }
 
-  void pot_t:: init(void) {
+  void Pot::init(void) {
     analogCalibrate(port);
-  } // pot_t::init
+  } // Pot::init
 
-  long pot_t:: value(void) {
+  long Pot::value(void) {
     return (analogReadCalibrated(port) - zero) * ((inverted) ? -1 : 1);
-  } // pot_t::value
+  } // Pot::value
 
-  void pot_t:: reset(void) {
+  void Pot::reset(void) {
     zero    = analogReadCalibrated(port);
     request = 0;
-  } // pot_t::reset
+  } // Pot::reset
 
-  sonic_t::sonic_t(unsigned char port1, unsigned char port2) {
+  Sonic::Sonic(unsigned char port1, unsigned char port2) {
     ports[0] = port1;
     ports[1] = port2;
   }
 
-  void sonic_t:: init(void) {
-    sonic = ultrasonicInit(sonic_t::ports[0], sonic_t::ports[1]);
-  } // sonic_t::init
+  void Sonic::init(void) {
+    sonic = ultrasonicInit(Sonic::ports[0], Sonic::ports[1]);
+  } // Sonic::init
 
-  long sonic_t:: value(void) {
+  long Sonic::value(void) {
     return ultrasonicGet(sonic);
-  } // sonic_t::value
+  } // Sonic::value
 
-  button_t::button_t(unsigned char port, bool inverted)
+  Button::Button(unsigned char port, bool inverted)
     : port(port), inverted(inverted) {}
 
-  void button_t:: init(void) {
+  void Button::init(void) {
     pinMode(port, INPUT);
-  } // button_t::init
+  } // Button::init
 
-  bool button_t:: value(void) {
+  bool Button::value(void) {
     return (digitalRead(port)) ? ((inverted) ? false : true)
            : ((inverted) ? true : false);
-  } // button_t::value
+  } // Button::value
 
   void reset(void) {
     left.reset();

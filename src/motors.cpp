@@ -20,21 +20,21 @@
 
 #include "../include/motors.hpp"
 
-void motor_t:: set(int _power) {
+void Motor::set(int _power) {
   power = motors::slew::list[port].power = _power * inverted * scale;
-} // motor_t::set
+} // Motor::set
 
 namespace motors {
-  void set(motor_t motor, int power) {
+  void set(Motor motor, int power) {
     motor.set(power);
   } // set
 
-  int get(motor_t motor) {
+  int get(Motor motor) {
     return motor.power;
   } // get
 
-  motor_t init(unsigned char port, int inverted, float slewRate, float scale) {
-    motor_t motor;
+  Motor init(unsigned char port, int inverted, float slewRate, float scale) {
+    Motor motor;
 
     motor.port             = port;
     motor.inverted         = inverted;
@@ -44,43 +44,43 @@ namespace motors {
     return motor;
   } // init
 
-  namespace slew {
-    motor_t list[11];
-    TaskHandle handle;
+namespace slew {
+  Motor list[11];
+  TaskHandle handle;
 
-    void slew(void *none) {
-      unsigned long int current;
+  void slew(void *none) {
+    unsigned long int current;
 
-      while (true) {
-        current = millis();
+    while (true) {
+      current = millis();
 
-        for (size_t i = 1; i <= 10; i++) {
-          motorSet(i,
-                   (int)(((list[i].power - motorGet(i)) * list[i].slewRate) +
-                         ((list[i].power >= motorGet(i))
-                          ? (current - list[i].tlast - slewWait)
-                          : (-1 * (current - list[i].tlast - slewWait))) +
-                         motorGet(i)));
-          list[i].tlast = current;
-        }
-        delay(slewWait);
+      for (size_t i = 1; i <= 10; i++) {
+        motorSet(i,
+                 (int)(((list[i].power - motorGet(i)) * list[i].slewRate) +
+                       ((list[i].power >= motorGet(i))
+                        ? (current - list[i].tlast - slewWait)
+                        : (-1 * (current - list[i].tlast - slewWait))) +
+                       motorGet(i)));
+        list[i].tlast = current;
       }
-      free(none);
-    } // slew
+      delay(slewWait);
+    }
+    free(none);
+  } // slew
 
-    void init(void) {
-      motor_t default_motor;
+  void init(void) {
+    Motor default_motor;
 
-      default_motor.inverted = 1;
-      default_motor.slewRate = 1;
-      default_motor.scale    = 0;
+    default_motor.inverted = 1;
+    default_motor.slewRate = 1;
+    default_motor.scale    = 0;
 
-      for (size_t i = 1; i <= 11; i++) {
-        list[i]            = default_motor;
-        default_motor.port = i;
-      }
-      handle = taskCreate(&slew, TASK_DEFAULT_STACK_SIZE, NULL,
-                          TASK_PRIORITY_DEFAULT + 1);
-    } // init
-  }   // namespace slew
+    for (size_t i = 1; i <= 11; i++) {
+      list[i]            = default_motor;
+      default_motor.port = i;
+    }
+    handle = taskCreate(&slew, TASK_DEFAULT_STACK_SIZE, NULL,
+                        TASK_PRIORITY_DEFAULT + 1);
+  } // init
+}   // namespace slew
 }   // namespace motors

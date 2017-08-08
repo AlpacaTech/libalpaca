@@ -50,44 +50,44 @@ namespace pid {
    * left to right */
   extern bool enabled[2];
 
-  /** A class for a single position on the drive */
+  /** A class for a single Position on the drive */
   struct pos_t {
-    long left;
-    long right;
-    void request(void);
+    long  left;
+    long  right;
+    void  request(void);
     pos_t(long left,
           long right);
-    bool operator =(pos_t pos);
+    bool  operator=(pos_t pos);
     pos_t operator+(pos_t pos);
     pos_t operator-(pos_t pos);
   };
 
   /** Enables all pid */
-  void enable(void);
+  void  enable(void);
 
   /** Disables all pid */
-  void disable(void);
+  void  disable(void);
 
   /** Task to manage pid */
-  void controller(void *none);
+  void  controller(void *none);
 
   /** Initialize pid. Call in initialize() */
-  void init(void);
+  void  init(void);
 
   /** Stops the pid task */
-  void stop(void);
+  void  stop(void);
 
   /** (Re)starts the pid task */
-  void go(void);
+  void  go(void);
 
-  /** Gets the current position */
+  /** Gets the current Position */
   pos_t get(void);
 
   /** Requests values for the left and right side of the drive */
-  void request(long l,
-               long r);
+  void  request(long l,
+                long r);
 
-  /** Requests a specific position */
+  /** Requests a specific Position */
   void request(pos_t pos);
 
   /** Wait until pid reaches specified precision, for no longer than the

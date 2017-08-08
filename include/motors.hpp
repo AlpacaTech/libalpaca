@@ -26,7 +26,7 @@
 #include "util.h"
 
 /** Class for motor objects */
-struct motor_t {
+struct Motor {
   /** Port the motor is pluggin in to */
   unsigned char port;
 
@@ -49,40 +49,40 @@ struct motor_t {
 
   /** Set the motor to the specified power */
   void set(int power);
-}; // struct motor_t
+}; // struct Motor
 
 /** Namespace relating to the motors and setting them, initializing them,
  * slewing, etc */
 namespace motors {
   /** Sets the motor to the power */
-  void set(motor_t motor,
-           int     power);
+  void set(Motor motor,
+           int   power);
 
   /** Gets the current power value requested of the motor, analogous of
    * motor.power */
-  int get(motor_t motor);
+  int   get(Motor motor);
 
-  /** Returns an initialized motor_t object with the specified parameters, and
+  /** Returns an initialized Motor object with the specified parameters, and
    * adds a duplicate of the motor to the motor list for slewing */
-  motor_t init(unsigned char port,
-               int           inverted,
-               float         slewRate,
-               float         scale);
+  Motor init(unsigned char port,
+             int           inverted,
+             float         slewRate,
+             float         scale);
 
   /** Namespace relating to slewing the motors to save the gears and the PTCs */
-  namespace slew {
-    /** The wait time between each iteration of setting all of the motors */
-    static const unsigned char slewWait = 10;
+namespace slew {
+  /** The wait time between each iteration of setting all of the motors */
+  static const unsigned char slewWait = 10;
 
-    /** The list of motors, as added to in motors::init() */
-    extern motor_t list[11];
+  /** The list of motors, as added to in motors::init() */
+  extern Motor list[11];
 
-    /** The TaskHandle for handling the slewing task */
-    extern TaskHandle handle;
+  /** The TaskHandle for handling the slewing task */
+  extern TaskHandle handle;
 
-    /** Initialization function for slewing. Call in initialize() */
-    void init(void);
-  } // namespace slew
-}   // namespace motors
+  /** Initialization function for slewing. Call in initialize() */
+  void init(void);
+} // namespace slew
+} // namespace motors
 
 #endif /* end of include guard: MOTORS_HPP */

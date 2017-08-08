@@ -30,22 +30,22 @@ namespace pid {
   unsigned int default_precision = 30;
   TaskHandle   pidHandle;
 
-  void pos_t:: request() {
+  void pos_t::request() {
     sensors::left.request  = left;
     sensors::right.request = right;
   } // pos_t::request
 
   pos_t::pos_t(long left, long right) : left(left), right(right) {}
 
-  bool pos_t::operator =(pos_t pos) {
+  bool pos_t::operator=(pos_t pos) {
     return left == pos.left && right == pos.right;
   } // =
 
-  pos_t pos_t::operator +(pid::pos_t pos) {
+  pos_t pos_t::operator+(pid::pos_t pos) {
     return pos_t(left + pos.left, right + pos.right);
   } // +
 
-  pos_t pos_t::operator -(pid::pos_t pos) {
+  pos_t pos_t::operator-(pid::pos_t pos) {
     return pos_t(left - pos.left, right - pos.right);
   } // -
 
@@ -59,7 +59,7 @@ namespace pid {
 
     sensors::left.reset();
     sensors::right.reset();
-    sensors::quad_t *sides[2] = { &sensors::left, &sensors::right };
+    sensors::Quad *sides[2] = { &sensors::left, &sensors::right };
 
     while (true) {
       printf("| %ld | %ld |\n", sensors::left.value(), sensors::right.value());

@@ -21,17 +21,17 @@
 #include "../include/lift.hpp"
 
 namespace lift {
-  void side_t:: set(int power) {
-    side_t::topM.set(power);
-    side_t::midM.set(power);
-    side_t::lowM.set(power);
-  } // side_t::set
+  void Side::set(int power) {
+    Side::topM.set(power);
+    Side::midM.set(power);
+    Side::lowM.set(power);
+  } // Side::set
 
   void lock(void) {
     set(lockN);
   } // lock
 
-  void to(position pos, int int_pos, int tolerance) {
+  void to(Position pos, int int_pos, int tolerance) {
     if (int_pos == -1) int_pos = pos;
 
     do {
