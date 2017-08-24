@@ -21,66 +21,83 @@
 #include "../include/motors.hpp"
 
 void Motor::set(int _power) {
-  power = motors::slew::list[port].power = _power * inverted * scale;
+  power          = _power * inverted * scale;
+  slew->lastTime = millis();
+  slew->request  = power;
 } // Motor::set
 
 namespace motors {
-  void set(Motor motor, int power) {
-    motor.set(power);
+  void set(Motor *motor, int power) {
+    motor->set(power);
   } // set
 
-  int get(Motor motor) {
-    return motor.power;
+  int get(Motor *motor) {
+    return motor->power;
   } // get
 
-  Motor init(unsigned char port, int inverted, float slewRate, float scale) {
+  Motor init(char  port,
+             int   inverted,
+             bool  slew,
+             float slewRate,
+             float scale) {
+    static unsigned char p = 0;
     Motor motor;
 
-    motor.port             = port;
-    motor.inverted         = inverted;
-    motor.slewRate         = slewRate;
-    motor.scale            = scale;
-    slew::list[motor.port] = motor;
+    motor.port                 = (port != -1) ? port : p++;
+    motor.inverted             = inverted;
+    motor.scale                = scale;
+    slew::list[motor.port - 1] = MotorData();
+    motor.slew                 = &slew::list[motor.port - 1];
+    motor.slew->rate           = slewRate;
+    motor.slew->on             = slew;
     return motor;
   } // init
 
-namespace slew {
-  Motor list[11];
-  TaskHandle handle;
+  namespace slew {
+    MotorData  list[10];
+    TaskHandle handle;
 
-  void slew(void *none) {
-    unsigned long int current;
+    void slew(void *none) {
+      unsigned long int current;
 
-    while (true) {
-      current = millis();
+      while (true) {
+        current = millis();
 
-      for (size_t i = 1; i <= 10; i++) {
-        motorSet(i,
-                 (int)(((list[i].power - motorGet(i)) * list[i].slewRate) +
-                       ((list[i].power >= motorGet(i))
-                        ? (current - list[i].tlast - slewWait)
-                        : (-1 * (current - list[i].tlast - slewWait))) +
-                       motorGet(i)));
-        list[i].tlast = current;
+        for (size_t i = 0; i < 10; i++) {
+          auto m = &list[i];
+
+          if ((m->request == m->lastPower) || !m->on) {
+            motorSet(i + 1, m->request);
+            continue;
+          }
+
+          auto change =
+            (m->request >
+             m->lastPower) ? ((millis() -
+                               m->lastTime) *
+                              m->rate) : ((millis() - m->lastTime) * -m->rate);
+
+          list[i].lastPower += change;
+            motorSet(i + 1, list[i].lastPower);
+          list[i].lastTime = current;
+        }
+        delay(slewWait);
       }
-      delay(slewWait);
-    }
-    free(none);
-  } // slew
+      free(none);
+    } // slew
 
-  void init(void) {
-    Motor default_motor;
+    void init(void) {
+      MotorData default_motor;
 
-    default_motor.inverted = 1;
-    default_motor.slewRate = 1;
-    default_motor.scale    = 0;
+      default_motor.lastTime  = millis();
+      default_motor.lastPower = 0;
+      default_motor.request   = 0;
 
-    for (size_t i = 1; i <= 11; i++) {
-      list[i]            = default_motor;
-      default_motor.port = i;
-    }
-    handle = taskCreate(&slew, TASK_DEFAULT_STACK_SIZE, NULL,
-                        TASK_PRIORITY_DEFAULT + 1);
-  } // init
-}   // namespace slew
+      for (size_t i = 1; i <= 11; i++) {
+        list[i] = default_motor;
+      }
+      handle = taskCreate(&slew, TASK_DEFAULT_STACK_SIZE, NULL,
+                          TASK_PRIORITY_DEFAULT + 1);
+    } // init
+  }   // namespace slew
 }   // namespace motors
