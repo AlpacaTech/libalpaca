@@ -20,140 +20,80 @@
 
 #include "../include/main.h"
 
-namespace pid {
-  float Kp              = 0.8;
-  float Ki              = 0.04;
-  float Kd              = 0.35;
-  unsigned int deadband = 10;
+void Pid::loop() {
+	float current;
+	float error;
+	float lastError = 0;
+	float integral  = 0;
+	float derivative;
+	float power;
 
-  bool enabled[2]                = { true };
-  unsigned int default_precision = 30;
-  TaskHandle   pidHandle;
+	bool done = false;
 
-  void pos_t::request() {
-    sensors::left.request  = left;
-    sensors::right.request = right;
-  } // pos_t::request
+	std::vector<bool> success;
 
-  pos_t::pos_t(long left, long right) : left(left), right(right) {}
+	settings->system.sensor->reset();
 
-  bool pos_t::operator=(pos_t pos) {
-    return left == pos.left && right == pos.right;
-  } // =
+	do {
+		delay(25);
+		current = settings->system.sensor->value();
+		error   = settings->system.sensor->request() - current;
 
-  pos_t pos_t::operator+(pid::pos_t pos) {
-    return pos_t(left + pos.left, right + pos.right);
-  } // +
+		if ((unsigned int)abs((int)error) <= settings->precision) {
+			success.push_back(true);
 
-  pos_t pos_t::operator-(pid::pos_t pos) {
-    return pos_t(left - pos.left, right - pos.right);
-  } // -
+			if (success.size() > 4) {
+				return;
+			}
+			continue;
+		}
+		success.clear();
+		integral = (settings->Ki != 0 && abs((int)error) < settings->iLimit)
+		           ? (integral + error)
+							 : 0;
+		derivative = error - lastError;
+		lastError  = error;
+		power      =
+		  (settings->Kp *
+		   error) + (settings->Ki * integral) + (settings->Kd * derivative);
+		power = clipNum(power /* 8.1f / powerLevelMain() */,
+		                settings->max,
+		                settings->min);
 
-  void controller(void *none) {
-    float current[2];
-    float error[2];
-    float lastError[2] = { 0, 0 };
-    float integral[2]  = { 0, 0 };
-    float derivative[2];
-    float power[2];
+		for (auto m : *settings->system.motors) {
+			m.set(power);
+		}
+	} while (!done);
+} /* loop */
 
-    sensors::left.reset();
-    sensors::right.reset();
-    sensors::Quad *sides[2] = { &sensors::left, &sensors::right };
+Pid::Settings::Settings(float        Kp,
+                        float        Ki,
+                        float        Kd,
+                        System       system,
+                        int          max,
+                        int          min,
+                        int          iLimit,
+                        unsigned int precision):max(max), min(min),
+	                                              iLimit(iLimit), Kp(Kp),
+	                                              Ki(Ki), Kd(Kd),
+	                                              precision(precision),
+	                                              system(system) {}
 
-    while (true) {
-      printf("| %ld | %ld |\n", sensors::left.value(), sensors::right.value());
+Pid::Pid(float        Kp,
+         float        Ki,
+         float        Kd,
+         long         target,
+         System       system,
+         int          max,
+         int          min,
+         int          iLimit,
+         unsigned int precision):target(target) {
+	settings = new Settings { Kp, Ki, Kd, system, max, min, iLimit, precision };
+	loop();
+	delete settings;
+}
 
-      for (size_t i = 0; i < 2; i++) {
-        if (enabled[i]) {
-          current[i] = sides[i]->value();
-          error[i]   = sides[i]->request - current[i];
-
-          if ((unsigned int)abs((int)error[i]) <= deadband) {
-            continue;
-          }
-          integral[i] = (Ki != 0 && abs((int)error[i]) < INTEGRAL_LIMIT)
-                        ? (integral[i] + error[i])
-                        : 0;
-          derivative[i] = error[i] - lastError[i];
-          lastError[i]  = error[i];
-          power[i]      =
-            (Kp * error[i]) + (Ki * integral[i]) + (Kd * derivative[i]);
-          power[i] = (power[i] <= DRIVE_MIN)
-                     ? DRIVE_MIN
-                     : ((power[i] >= DRIVE_MAX) ? DRIVE_MAX : power[i]);
-          power[i] *= 8.1f / powerLevelMain();
-          (i == 0) ? drive::left.set(power[i]) : drive::right.set(power[i]);
-        }
-      }
-      delay(25);
-    }
-    free(none);
-  } // controller
-
-  void enable(void) {
-    enabled[0] = true;
-    enabled[1] = true;
-  } // enable
-
-  void disable(void) {
-    enabled[0] = false;
-    enabled[1] = false;
-  } // disable
-
-  void init(void) {
-    pidHandle = taskCreate(controller, TASK_DEFAULT_STACK_SIZE, NULL,
-                           TASK_PRIORITY_DEFAULT);
-  } // init
-
-  void stop(void) {
-    taskSuspend(pidHandle);
-  } // stop
-
-  void go(void) {
-    taskResume(pidHandle);
-  } // go
-
-  pos_t get(void) {
-    return pos_t(sensors::left.request, sensors::right.request);
-  } // get
-
-  void request(long l, long r) {
-    sensors::left.request  = l;
-    sensors::right.request = r;
-  } // request
-
-  void request(pos_t pos) {
-    sensors::left.request  = pos.left;
-    sensors::right.request = pos.right;
-  } // request
-
-  void wait(unsigned long precision, unsigned long blockTime) {
-    if (blockTime > 0) {
-      auto start = millis();
-
-      while ((sensors::left.value() > sensors::left.request + precision ||
-              sensors::left.value() < sensors::left.request - precision ||
-              sensors::right.value() > sensors::right.request + precision ||
-              sensors::right.value() < sensors::right.request - precision) &&
-             millis() - start <= blockTime) {
-        delay(50);
-      }
-    } else {
-      while ((sensors::left.value() > sensors::left.request + precision ||
-              sensors::left.value() < sensors::left.request - precision ||
-              sensors::right.value() > sensors::right.request + precision ||
-              sensors::right.value() < sensors::right.request - precision)) {
-        delay(50);
-      }
-    }
-  } // wait
-}   // namespace pid
-
-int sgn(float __x) {
-  if (__x > 0) return 1;
-
-  if (__x < 0) return -1;
-
-  return 0;
-} // namespace pid
+Pid::Pid(Settings *settings,
+         long      target):settings(settings), target(target) {
+	loop();
+}

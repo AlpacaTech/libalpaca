@@ -19,85 +19,86 @@
  */
 
 #include "../include/motors.hpp"
+#include <vector>
 
 void Motor::set(int _power) {
-  power          = _power * inverted * scale;
-  slew->lastTime = millis();
-  slew->request  = power;
+	power          = _power * inverted * scale;
+	slew->lastTime = millis();
+	slew->request  = power;
 } // Motor::set
 
 namespace motors {
-  void set(Motor *motor, int power) {
-    motor->set(power);
-  } // set
+	void set(Motor *motor, int power) {
+		motor->set(power);
+	} // set
 
-  int get(Motor *motor) {
-    return motor->power;
-  } // get
+	int get(Motor motor) {
+		return motor.power;
+	} // get
 
-  Motor init(char  port,
-             int   inverted,
-             bool  slew,
-             float slewRate,
-             float scale) {
-    static unsigned char p = 0;
-    Motor motor;
+	Motor init(char  port,
+	           int   inverted,
+	           bool  slew,
+	           float slewRate,
+	           float scale) {
+		static unsigned char p = 0;
+		Motor motor;
 
-    motor.port                 = (port != -1) ? port : p++;
-    motor.inverted             = inverted;
-    motor.scale                = scale;
-    slew::list[motor.port - 1] = MotorData();
-    motor.slew                 = &slew::list[motor.port - 1];
-    motor.slew->rate           = slewRate;
-    motor.slew->on             = slew;
-    return motor;
-  } // init
+		motor.port                 = (port != -1) ? port : p++;
+		motor.inverted             = inverted;
+		motor.scale                = scale;
+		slew::list[motor.port - 1] = MotorData();
+		motor.slew                 = &slew::list[motor.port - 1];
+		motor.slew->rate           = slewRate;
+		motor.slew->on             = slew;
+		return motor;
+	} // init
 
-  namespace slew {
-    MotorData  list[10];
-    TaskHandle handle;
+	namespace slew {
+		MotorData  list[10];
+		TaskHandle handle;
 
-    void slew(void *none) {
-      unsigned long int current;
+		void slew(void *none) {
+			unsigned long int current;
 
-      while (true) {
-        current = millis();
+			while (true) {
+				current = millis();
 
-        for (size_t i = 0; i < 10; i++) {
-          auto m = &list[i];
+				for (size_t i = 0; i < 10; i++) {
+					auto m = &list[i];
 
-          if ((m->request == m->lastPower) || !m->on) {
-            motorSet(i + 1, m->request);
-            continue;
-          }
+					if ((m->request == m->lastPower) || !m->on) {
+						motorSet(i + 1, m->request);
+						continue;
+					}
 
-          auto change =
-            (m->request >
-             m->lastPower) ? ((millis() -
-                               m->lastTime) *
-                              m->rate) : ((millis() - m->lastTime) * -m->rate);
+					auto change =
+					  (m->request >
+					   m->lastPower) ? ((millis() -
+					                     m->lastTime) *
+					                    m->rate) : ((millis() - m->lastTime) * -m->rate);
 
-          list[i].lastPower += change;
-            motorSet(i + 1, list[i].lastPower);
-          list[i].lastTime = current;
-        }
-        delay(slewWait);
-      }
-      free(none);
-    } // slew
+					list[i].lastPower += change;
+					  motorSet(i + 1, list[i].lastPower);
+					list[i].lastTime = current;
+				}
+				delay(slewWait);
+			}
+			free(none);
+		} // slew
 
-    void init(void) {
-      MotorData default_motor;
+		void init(void) {
+			MotorData default_motor;
 
-      default_motor.lastTime  = millis();
-      default_motor.lastPower = 0;
-      default_motor.request   = 0;
+			default_motor.lastTime  = millis();
+			default_motor.lastPower = 0;
+			default_motor.request   = 0;
 
-      for (size_t i = 1; i <= 11; i++) {
-        list[i] = default_motor;
-      }
-      handle = taskCreate(&slew, TASK_DEFAULT_STACK_SIZE, NULL,
-                          TASK_PRIORITY_DEFAULT + 1);
-    } // init
-  }   // namespace slew
-}   // namespace motors
+			for (size_t i = 1; i <= 11; i++) {
+				list[i] = default_motor;
+			}
+			handle = taskCreate(&slew, TASK_DEFAULT_STACK_SIZE, NULL,
+			                    TASK_PRIORITY_DEFAULT + 1);
+		} // init
+	}   // namespace slew
+}     // namespace motors

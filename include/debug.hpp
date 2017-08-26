@@ -26,22 +26,22 @@
 
 /** Contains debugging functions, etc */
 namespace debug {
-  extern unsigned long fault;
+	extern unsigned long fault;
 
-  template<class T>
-  static inline T unserialize(PROS_FILE *stream) {
-    alignas(alignof(T)) char buf[sizeof(T)];
-    size_t nread = fread((void *)buf, sizeof(T), 1, stream);
+	template<class T>
+	static inline T unserialize(PROS_FILE *stream) {
+		alignas(alignof(T)) char buf[sizeof(T)];
+		size_t nread = fread((void *)buf, sizeof(T), 1, stream);
 
-    if (nread < sizeof(T)) {
-      return T();
-    }
-    T *out = (T *)buf;
-    return *out;
-  } // unserialize
+		if (nread < sizeof(T)) {
+			return T();
+		}
+		T *out = (T *)buf;
+		return *out;
+	} // unserialize
 
-  /** Debug the Cortex if something goes wrong */
-  void debug(void);
+	/** Debug the Cortex if something goes wrong */
+	void debug(void);
 } // namespace debug
 
 #endif /* end of include guard: DEBUG_HPP */

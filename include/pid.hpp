@@ -22,83 +22,99 @@
 #define PID_HPP
 
 #include "lift.hpp"
+#include "motors.hpp"
+#include <list>
 
-/** Consists of pid, and all subcomponents, etc */
-namespace pid {
-  /** Maximum value for the drive */
-  static const int DRIVE_MAX = 127;
+/*
+ * Class for motors that are slave to a sensor
+ */
+struct System {
+	sensors::AnalogSensor *sensor;
+	std::list<Motor>      *motors;
+}; /* class System */
 
-  /** Minimum value for the drive */
-  static const int DRIVE_MIN = -127;
+/*
+ * Consists of pid, and all subcomponents, etc
+ */
+class Pid {
+	public:
 
-  /** Limit for the integral value */
-  static const int INTEGRAL_LIMIT = 50;
+		class Settings {
+			public:
 
-  /** p value */
-  extern float Kp;
+				Settings(float        Kp,
+				         float        Ki,
+				         float        Kd,
+				         System       system,
+				         int          max,
+				         int          min,
+				         int          iLimit,
+				         unsigned int precision);
 
-  /** i value */
-  extern float Ki;
+				friend Pid;
 
-  /** d value */
-  extern float Kd;
+			protected:
 
-  /** Default precision for waiting on pid to reach value */
-  extern unsigned int default_precision;
+				/*
+				 * Maximum value to be assigned to the controlled system
+				 */
+				int max = 127;
 
-  /** Whether or not each side of the drive's pid is enabled, in the order of
-   * left to right */
-  extern bool enabled[2];
+				/*
+				 * Minimum value to be assigned to the controlled system
+				 */
+				int min = -127;
 
-  /** A class for a single Position on the drive */
-  struct pos_t {
-    long  left;
-    long  right;
-    void  request(void);
-    pos_t(long left,
-          long right);
-    bool  operator=(pos_t pos);
-    pos_t operator+(pos_t pos);
-    pos_t operator-(pos_t pos);
-  };
+				/*
+				 * Limit for the integral value
+				 */
+				int iLimit = 50;
 
-  /** Enables all pid */
-  void  enable(void);
+				/*
+				 * p value
+				 */
+				float Kp;
 
-  /** Disables all pid */
-  void  disable(void);
+				/*
+				 * i value
+				 */
+				float Ki;
 
-  /** Task to manage pid */
-  void  controller(void *none);
+				/*
+				 * d value
+				 */
+				float Kd;
 
-  /** Initialize pid. Call in initialize() */
-  void  init(void);
+				/*
+				 * Precision for waiting on pid to reach value
+				 */
+				unsigned int precision;
 
-  /** Stops the pid task */
-  void  stop(void);
+				/*
+				 * The system the pid controls
+				 */
+				System system;
+		};
 
-  /** (Re)starts the pid task */
-  void  go(void);
+		Pid(float        Kp,
+		    float        Ki,
+		    float        Kd,
+		    long         target,
+		    System       system,
+		    int          max = 127,
+		    int          min = -127,
+		    int          iLimit = 50,
+		    unsigned int precision = 15);
 
-  /** Gets the current Position */
-  pos_t get(void);
+		Pid(Settings *settings,
+		    long      target);
 
-  /** Requests values for the left and right side of the drive */
-  void  request(long l,
-                long r);
+	private:
 
-  /** Requests a specific Position */
-  void request(pos_t pos);
+		void loop();
 
-  /** Wait until pid reaches specified precision, for no longer than the
-   * specified
-   * blockTime. If 0 is passed to blockTime, it will wait indefinately until
-   * the requested values are met */
-  void wait(unsigned long precision,
-            unsigned long blockTime);
-
-  /** TaskHandle for the pid task */
-  extern TaskHandle pidHandle;
-} // namespace pid
+		Settings *settings;
+		long      target;
+}; /* class Pid */
 
 #endif /* end of include guard: PID_HPP */
