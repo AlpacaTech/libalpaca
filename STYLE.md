@@ -30,7 +30,7 @@ Zoo mainZoo(MAIN_ZOO_NAME);
 ```
 
 ## Indentation
-Tabs shouldn't be tabs, they should be spaces. Two spaces, no more, no less.
+Tabs should be tabs, because any decent editor can configure a tab to any length.
 
 ### Switch/Case
 You should indent on both a switch statement and a case statement.
