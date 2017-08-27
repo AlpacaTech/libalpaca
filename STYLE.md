@@ -92,7 +92,7 @@ All lines are to be kept under 80 columbs. Use the `\` character to expand a mac
 #define p 394949.44989595959858598598598598959858958953444444444444444444444444\
     84848
 ```
-Tab in with 4 spaces when continuing a line longer than 80 columbs.
+Tab in when continuing a line longer than 80 columbs.
 
 ## A Note on Ternary Operators
 When using ternary operators, unless the evaluation into a boolean is itself a boolean, put this evaluation in parentheses, so it's likeness to an evaluation in a control statement is more easily recognized.
