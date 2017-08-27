@@ -22,7 +22,7 @@
 
 namespace drive {
 	double inch =
-	  28.64788975654116043839907740705258516620273623328216077458012735;
+		28.64788975654116043839907740705258516620273623328216077458012735;
 
 	void Side::set(int power) {
 		Side::topM->set(power);
@@ -32,80 +32,80 @@ namespace drive {
 
 	void tank(void) {
 		int deadband = 20;
-		int lj       = joystick::analog(3);
-		int rj       = joystick::analog(2);
+		int lj			 = joystick::analog(3);
+		int rj			 = joystick::analog(2);
 
 		if ((abs(lj) < deadband) && (abs(rj) < deadband)) {
 			pid::enable();
 			return;
 		}
-		lj              = (abs(lj) < deadband) ? 0 : lj;
-		rj              = (abs(rj) < deadband) ? 0 : rj;
+		lj							= (abs(lj) < deadband) ? 0 : lj;
+		rj							= (abs(rj) < deadband) ? 0 : rj;
 		pid::enabled[0] = (lj == 0);
 		pid::enabled[1] = (rj == 0);
 
 		if (lj != 0) left.set(lj);
 
 		if (rj != 0) right.set(rj); pid::request(
-		  (lj == 0) ? left.sensor->request : left.sensor->value(),
-		  (rj ==
-		   0) ? right.sensor->request :
-		  right.sensor->value());
+			(lj == 0) ? left.sensor->request : left.sensor->value(),
+			(rj ==
+			 0) ? right.sensor->request :
+			right.sensor->value());
 	} // tank
 
 	namespace accel {
 		int deadband = 20;
-		int x        = 0;
-		int y        = 0;
-		int prevX    = 0;
-		int prevY    = 0;
+		int x				 = 0;
+		int y				 = 0;
+		int prevX		 = 0;
+		int prevY		 = 0;
 		void drive(void) {
 			prevX = x;
 			prevY = y;
-			x     = 0 - joystick::analog(ACCEL_X);
-			y     = 0 - joystick::analog(ACCEL_Y);
-			int threshold     = 20;
+			x			= 0 - joystick::analog(ACCEL_X);
+			y			= 0 - joystick::analog(ACCEL_Y);
+			int threshold			= 20;
 			double multiplier = 1.1;
 
 			if (abs(x) < threshold) x = 0;
 
 			if (abs(y) < threshold) y = 0; x *= multiplier;
-			y                                *= (multiplier * 1.25);
+			y																 *= (multiplier * 1.25);
 
 			int lj = x - y;
 			int rj = x + y;
-			lj              = (abs(lj) < deadband) ? 0 : lj;
-			rj              = (abs(rj) < deadband) ? 0 : rj;
+			lj							= (abs(lj) < deadband) ? 0 : lj;
+			rj							= (abs(rj) < deadband) ? 0 : rj;
 			pid::enabled[0] = (lj == 0);
 			pid::enabled[1] = (rj == 0);
 
 			if (lj != 0) left.set(lj);
 
 			if (rj != 0) right.set(rj); pid::request(
-			  (lj == 0) ? left.sensor->request : left.sensor->value(),
-			  (rj ==
-			   0) ? right.sensor->request :
-			  right.sensor->value());
+				(lj == 0) ? left.sensor->request : left.sensor->value(),
+				(rj ==
+				 0) ? right.sensor->request :
+				right.sensor->value());
 		} // drive
-	}   // namespace accel
+	}		// namespace accel
 
 	void inches(long inches) {
 		pid::enable();
-		left.sensor->request  += inches * inch;
+		left.sensor->request	+= inches * inch;
 		right.sensor->request += inches * inch;
 		pid::wait(pid::default_precision, inches * inches * 8);
 		pid::disable();
 	} // inches
 
 	void straightUntil(int heading, bool (*func)(int), float urgency,
-	                   bool absolute, sensors::Gyroscope *gyro, int tolerance) {
+										 bool absolute, sensors::Gyroscope *gyro, int tolerance) {
 		int iHeading = absolute ? heading : heading + gyro->value();
 
 		pid::Pos change = pid::get();
-		float    changer;
+		float		 changer;
 
 		while (func(gyro->value())) {
-			change  = pid::get();
+			change	= pid::get();
 			changer = (abs((int)(gyro->value() - iHeading)) - tolerance) * urgency;
 
 			if (gyro->value() > iHeading + tolerance) {
@@ -119,4 +119,4 @@ namespace drive {
 			delay(50);
 		}
 	} // straightUntil
-}   // namespace drive
+}		// namespace drive

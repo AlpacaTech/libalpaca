@@ -22,9 +22,9 @@ Names should describe only the purpose or representation of something, not it's 
 ```Cpp
 #define MAIN_ZOO_NAME "Husnoklia"
 struct Zoo {
-  std::string name;
-  Zoo(std::string name) : name(name) {
-  };
+	std::string name;
+	Zoo(std::string name) : name(name) {
+	};
 };
 Zoo mainZoo(MAIN_ZOO_NAME);
 ```
@@ -36,12 +36,12 @@ Tabs shouldn't be tabs, they should be spaces. Two spaces, no more, no less.
 You should indent on both a switch statement and a case statement.
 ```Cpp
 switch (foo) {
-  case 1:
-    bar();
-    break;
-  case 2:
-    baz();
-    break;
+	case 1:
+		bar();
+		break;
+	case 2:
+		baz();
+		break;
  }
  ```
 
@@ -49,7 +49,7 @@ switch (foo) {
 The execution after control statements should always be on another line.
 ```Cpp
 if (zoo == 'at the')
-  goToExhibit('elephants');
+	goToExhibit('elephants');
 ```
 
 ## Spaces, Parentheses and Curly Braces
@@ -57,9 +57,9 @@ There should be no spaces at all seperating a function name and it's parameters.
 There should be a space seperating a control statement and the evaluation, as well as a space seperating it from the curly brace that follows *on the same line.*
 ```Cpp
 int foo(int bar) {
-  if (bar != 4) 
-    return baz(bar) * 2;
-  return 0;
+	if (bar != 4) 
+		return baz(bar) * 2;
+	return 0;
 }
 
 printf('%d', foo(3));
@@ -76,13 +76,13 @@ int six = ++four;
 Do not break before binary or ternary operators, unless it is a ternary operator that exceeds the line length. Then, you should break before the operator itself. Break after a curly brace, placed on the same line as what comes before it. Always break after a curly brace, regardless of the length of what follows.
 ```Cpp
 bool z(void) {
-  int a = 0;
-  int *b = &a;
-  if (a == *b) {
-    q = 5;
-    return true;
-  }
-  q = (y(a) == 0);
+	int a = 0;
+	int *b = &a;
+	if (a == *b) {
+		q = 5;
+		return true;
+	}
+	q = (y(a) == 0);
 }
 ```
 
@@ -90,7 +90,7 @@ bool z(void) {
 All lines are to be kept under 80 columbs. Use the `\` character to expand a macro as necessary.
 ```Cpp
 #define p 394949.44989595959858598598598598959858958953444444444444444444444444\
-    84848
+		84848
 ```
 Tab in with 4 spaces when continuing a line longer than 80 columbs.
 

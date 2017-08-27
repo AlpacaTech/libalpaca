@@ -28,4 +28,4 @@ namespace joystick {
 	bool digital(Group group, Button button) {
 		return joystickGetDigital(1, group, button);
 	} // digital
-}   // namespace joystick
+}		// namespace joystick

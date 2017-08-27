@@ -22,7 +22,7 @@
 #include <vector>
 
 void Motor::set(int _power) {
-	power          = _power * inverted * scale;
+	power					 = _power * inverted * scale;
 	slew->lastTime = millis();
 	slew->request  = power;
 } // Motor::set
@@ -37,20 +37,20 @@ namespace motors {
 	} // get
 
 	Motor init(char  port,
-	           int   inverted,
-	           bool  slew,
-	           float slewRate,
-	           float scale) {
+						 int	 inverted,
+						 bool  slew,
+						 float slewRate,
+						 float scale) {
 		static unsigned char p = 0;
 		Motor motor;
 
-		motor.port                 = (port != -1) ? port : p++;
-		motor.inverted             = inverted;
-		motor.scale                = scale;
+		motor.port								 = (port != -1) ? port : p++;
+		motor.inverted						 = inverted;
+		motor.scale								 = scale;
 		slew::list[motor.port - 1] = MotorData();
-		motor.slew                 = &slew::list[motor.port - 1];
-		motor.slew->rate           = slewRate;
-		motor.slew->on             = slew;
+		motor.slew								 = &slew::list[motor.port - 1];
+		motor.slew->rate					 = slewRate;
+		motor.slew->on						 = slew;
 		return motor;
 	} // init
 
@@ -73,13 +73,13 @@ namespace motors {
 					}
 
 					auto change =
-					  (m->request >
-					   m->lastPower) ? ((millis() -
-					                     m->lastTime) *
-					                    m->rate) : ((millis() - m->lastTime) * -m->rate);
+						(m->request >
+						 m->lastPower) ? ((millis() -
+															 m->lastTime) *
+															m->rate) : ((millis() - m->lastTime) * -m->rate);
 
 					list[i].lastPower += change;
-					  motorSet(i + 1, list[i].lastPower);
+						motorSet(i + 1, list[i].lastPower);
 					list[i].lastTime = current;
 				}
 				delay(slewWait);
@@ -90,15 +90,15 @@ namespace motors {
 		void init(void) {
 			MotorData default_motor;
 
-			default_motor.lastTime  = millis();
+			default_motor.lastTime	= millis();
 			default_motor.lastPower = 0;
-			default_motor.request   = 0;
+			default_motor.request		= 0;
 
 			for (size_t i = 1; i <= 11; i++) {
 				list[i] = default_motor;
 			}
 			handle = taskCreate(&slew, TASK_DEFAULT_STACK_SIZE, NULL,
-			                    TASK_PRIORITY_DEFAULT + 1);
+													TASK_PRIORITY_DEFAULT + 1);
 		} // init
-	}   // namespace slew
-}     // namespace motors
+	}		// namespace slew
+}			// namespace motors

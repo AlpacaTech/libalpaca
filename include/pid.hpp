@@ -30,7 +30,7 @@
  */
 struct System {
 	sensors::AnalogSensor *sensor;
-	std::list<Motor>      *motors;
+	std::list<Motor>			*motors;
 }; /* class System */
 
 /*
@@ -42,14 +42,14 @@ class Pid {
 		class Settings {
 			public:
 
-				Settings(float        Kp,
-				         float        Ki,
-				         float        Kd,
-				         System       system,
-				         int          max,
-				         int          min,
-				         int          iLimit,
-				         unsigned int precision);
+				Settings(float				Kp,
+								 float				Ki,
+								 float				Kd,
+								 System				system,
+								 int					max,
+								 int					min,
+								 int					iLimit,
+								 unsigned int precision);
 
 				friend Pid;
 
@@ -96,25 +96,25 @@ class Pid {
 				System system;
 		};
 
-		Pid(float        Kp,
-		    float        Ki,
-		    float        Kd,
-		    long         target,
-		    System       system,
-		    int          max = 127,
-		    int          min = -127,
-		    int          iLimit = 50,
-		    unsigned int precision = 15);
+		Pid(float				 Kp,
+				float				 Ki,
+				float				 Kd,
+				long				 target,
+				System			 system,
+				int					 max = 127,
+				int					 min = -127,
+				int					 iLimit = 50,
+				unsigned int precision = 15);
 
 		Pid(Settings *settings,
-		    long      target);
+				long			target);
 
 	private:
 
 		void loop();
 
 		Settings *settings;
-		long      target;
+		long			target;
 }; /* class Pid */
 
 #endif /* end of include guard: PID_HPP */

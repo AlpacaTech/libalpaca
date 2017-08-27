@@ -33,9 +33,9 @@ namespace joystick {
 
 	/** A set of buttons within a group */
 	typedef enum Button {
-		Up    = JOY_UP,
-		Down  = JOY_DOWN,
-		Left  = JOY_LEFT,
+		Up		= JOY_UP,
+		Down	= JOY_DOWN,
+		Left	= JOY_LEFT,
 		Right = JOY_RIGHT,
 	} Button;
 
@@ -43,8 +43,8 @@ namespace joystick {
 	int  analog(Channel channel);
 
 	/** Returns whether or not a button in a group is pressed */
-	bool digital(Group  group,
-	             Button button);
+	bool digital(Group	group,
+							 Button button);
 } // namespace joystick
 
 #endif /* end of include guard: JOYSTICK_H */

@@ -26,12 +26,12 @@
  *
  * @param	 input The number wanted clipped
  * @param	 high  Highest possible output
- * @param  low   Lowest possible output
+ * @param  low	 Lowest possible output
  *
  * @return value in between high and low
  */
 #define clipNum(input, high, low) \
-  input <= low ? low : (input >= high ? high : input)
+	input <= low ? low : (input >= high ? high : input)
 
 /**
  * Determines whether a number is positive, negative, or 0.
@@ -39,8 +39,8 @@
  * @param  input the number to be determined the sign of
  *
  * @return -1 if the number is negative,
- *          0 if the number is nuetral,
- *          1 if the number is positive.
+ *					0 if the number is nuetral,
+ *					1 if the number is positive.
  */
 #define sgn(input) input == 0 ? 0 : (input > 0 ? 1 : -1)
 #endif /* end of include guard: UTIL_H */

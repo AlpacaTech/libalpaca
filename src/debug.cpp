@@ -35,4 +35,4 @@ namespace debug {
 		}
 		printf("%lu", fault);
 	} // debug
-}   // namespace debug
+}		// namespace debug

@@ -52,7 +52,7 @@ namespace drive {
 
 	/** Set both sides of the drive at their requested powers */
 	void set(int lpower,
-	         int rpower);
+					 int rpower);
 
 	/** Initialize the drive subsystem */
 	void init(void);
@@ -100,11 +100,11 @@ namespace drive {
 				void off(void);
 
 				/** Use to initialize and run the task */
-				drive(int                 heading,
-				      float               urgency = 15.f,
-				      bool                absolute = false,
-				      sensors::Gyroscope *gyro,
-				      unsigned int        tolerance = 3);
+				drive(int									heading,
+							float								urgency = 15.f,
+							bool								absolute = false,
+							sensors::Gyroscope *gyro,
+							unsigned int				tolerance = 3);
 
 			private:
 
@@ -133,6 +133,6 @@ namespace drive {
 
 		// class drive
 	} // namespace gyro
-}   // namespace drive
+}		// namespace drive
 
 #endif /* end of include guard: DRIVE_HPP */

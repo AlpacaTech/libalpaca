@@ -28,7 +28,7 @@ namespace lift {
 	} // Side::set
 
 	void lock(void) {
-		  set(lockN);
+			set(lockN);
 	} // lock
 
 	void to(Position pos, int int_pos, int tolerance) {
@@ -36,22 +36,22 @@ namespace lift {
 
 		do {
 			set((int_pos > sensor->value() + tolerance ||
-			     int_pos < sensor->value() - tolerance)
-			    ? (sensor->value() - int_pos) * 1.5
+					 int_pos < sensor->value() - tolerance)
+					? (sensor->value() - int_pos) * 1.5
 					: (sensor->value() - int_pos));
 			delay(15);
 		} while (int_pos > sensor->value() + tolerance ||
-		         int_pos < sensor->value() - tolerance);
+						 int_pos < sensor->value() - tolerance);
 		lock();
 	} // to
 
 	void control(void) {
 		int power = (joystick::digital(5, joystick::Up) * 127) +
-		            (joystick::digital(5, joystick::Down) * 127);
+								(joystick::digital(5, joystick::Down) * 127);
 
 		power = (power == 0 && sensor->value() > threshold)
-		        ? lockN
+						? lockN
 						: ((sensor->value() < threshold) ? 0 : power);
 		set(power);
 	} // control
-}   // namespace lift
+}		// namespace lift

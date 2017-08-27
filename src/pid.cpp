@@ -24,7 +24,7 @@ void Pid::loop() {
 	float current;
 	float error;
 	float lastError = 0;
-	float integral  = 0;
+	float integral	= 0;
 	float derivative;
 	float power;
 
@@ -37,7 +37,7 @@ void Pid::loop() {
 	do {
 		delay(25);
 		current = settings->system.sensor->value();
-		error   = settings->system.sensor->request() - current;
+		error		= settings->system.sensor->request() - current;
 
 		if ((unsigned int)abs((int)error) <= settings->precision) {
 			success.push_back(true);
@@ -49,16 +49,16 @@ void Pid::loop() {
 		}
 		success.clear();
 		integral = (settings->Ki != 0 && abs((int)error) < settings->iLimit)
-		           ? (integral + error)
+							 ? (integral + error)
 							 : 0;
 		derivative = error - lastError;
 		lastError  = error;
-		power      =
-		  (settings->Kp *
-		   error) + (settings->Ki * integral) + (settings->Kd * derivative);
+		power			 =
+			(settings->Kp *
+			 error) + (settings->Ki * integral) + (settings->Kd * derivative);
 		power = clipNum(power /* 8.1f / powerLevelMain() */,
-		                settings->max,
-		                settings->min);
+										settings->max,
+										settings->min);
 
 		for (auto m : *settings->system.motors) {
 			m.set(power);
@@ -66,34 +66,34 @@ void Pid::loop() {
 	} while (!done);
 } /* loop */
 
-Pid::Settings::Settings(float        Kp,
-                        float        Ki,
-                        float        Kd,
-                        System       system,
-                        int          max,
-                        int          min,
-                        int          iLimit,
-                        unsigned int precision):max(max), min(min),
-	                                              iLimit(iLimit), Kp(Kp),
-	                                              Ki(Ki), Kd(Kd),
-	                                              precision(precision),
-	                                              system(system) {}
+Pid::Settings::Settings(float				 Kp,
+												float				 Ki,
+												float				 Kd,
+												System			 system,
+												int					 max,
+												int					 min,
+												int					 iLimit,
+												unsigned int precision):max(max), min(min),
+																								iLimit(iLimit), Kp(Kp),
+																								Ki(Ki), Kd(Kd),
+																								precision(precision),
+																								system(system) {}
 
-Pid::Pid(float        Kp,
-         float        Ki,
-         float        Kd,
-         long         target,
-         System       system,
-         int          max,
-         int          min,
-         int          iLimit,
-         unsigned int precision):target(target) {
+Pid::Pid(float				Kp,
+				 float				Ki,
+				 float				Kd,
+				 long					target,
+				 System				system,
+				 int					max,
+				 int					min,
+				 int					iLimit,
+				 unsigned int precision):target(target) {
 	settings = new Settings { Kp, Ki, Kd, system, max, min, iLimit, precision };
 	loop();
 	delete settings;
 }
 
 Pid::Pid(Settings *settings,
-         long      target):settings(settings), target(target) {
+				 long			 target):settings(settings), target(target) {
 	loop();
 }

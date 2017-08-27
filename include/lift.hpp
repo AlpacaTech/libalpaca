@@ -47,8 +47,8 @@ namespace lift {
 	typedef enum Position {
 		bottom = 5,
 		mobile = 60,
-		one    = 100,
-		two    = 230,
+		one		 = 100,
+		two		 = 230,
 		three  = 450,
 	} Position;
 
@@ -71,8 +71,8 @@ namespace lift {
 
 	/** p control for the lift */
 	void to(Position pos = bottom,
-	        int      int_pos = -1,
-	        int      tolerance = 50);
+					int			 int_pos = -1,
+					int			 tolerance = 50);
 
 	/** Lift control that should be used in a while loop */
 	void control(void);

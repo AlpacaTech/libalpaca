@@ -22,11 +22,11 @@
 
 namespace sensors {
 	Quad::Quad(unsigned char port1,
-	           unsigned char port2,
-	           bool          inverted):inverted(inverted) {
+						 unsigned char port2,
+						 bool					 inverted):inverted(inverted) {
 		ports[0] = port1;
 		ports[1] = port2;
-		zero     = 0;
+		zero		 = 0;
 		request  = 0;
 	}
 
@@ -39,14 +39,14 @@ namespace sensors {
 	} // Quad::value
 
 	void Quad::reset(void) {
-		zero    = encoderGet(enc);
+		zero		= encoderGet(enc);
 		request = 0;
 	} // Quad::reset
 
 	Gyroscope::Gyroscope(unsigned char port,
-	                     unsigned int  calibration):port(port),
-		                                              calibration(calibration) {
-		zero    = 0;
+											 unsigned int  calibration):port(port),
+																									calibration(calibration) {
+		zero		= 0;
 		request = 0;
 	}
 
@@ -59,13 +59,13 @@ namespace sensors {
 	} // Gyroscope::value
 
 	void Gyroscope::reset(void) {
-		zero    = gyroGet(Gyroscope::gyro);
+		zero		= gyroGet(Gyroscope::gyro);
 		request = 0;
 	} // Gyroscope::reset
 
 	Pot::Pot(unsigned char port,
-	         bool          inverted):port(port), inverted(inverted) {
-		zero    = 0;
+					 bool					 inverted):port(port), inverted(inverted) {
+		zero		= 0;
 		request = 0;
 	}
 
@@ -78,12 +78,12 @@ namespace sensors {
 	} // Pot::value
 
 	void Pot::reset(void) {
-		zero    = analogReadCalibrated(port);
+		zero		= analogReadCalibrated(port);
 		request = 0;
 	} // Pot::reset
 
 	Sonic::Sonic(unsigned char port1,
-	             unsigned char port2) {
+							 unsigned char port2) {
 		ports[0] = port1;
 		ports[1] = port2;
 	}
@@ -97,7 +97,7 @@ namespace sensors {
 	} // Sonic::value
 
 	Button::Button(unsigned char port,
-	               bool          inverted):port(port), inverted(inverted) {}
+								 bool					 inverted):port(port), inverted(inverted) {}
 
 	void Button::init(void) {
 		pinMode(port, INPUT);
@@ -112,4 +112,4 @@ namespace sensors {
 		left.reset();
 		right.reset();
 	} // reset
-}   // namespace sensors
+}		// namespace sensors

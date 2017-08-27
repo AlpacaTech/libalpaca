@@ -79,19 +79,19 @@ class Motor {
 namespace motors {
 	/** Sets the motor to the power */
 	void set(Motor motor,
-	         int   power);
+					 int	 power);
 
 	/** Gets the current power value requested of the motor, analogous of
 	 * motor.power */
-	int   get(Motor motor);
+	int		get(Motor motor);
 
 	/** Returns an initialized Motorobject with the specified parameters, and
 	 * adds a duplicate of the motor to the motor list for slewing */
 	Motor init(char  port = -1,
-	           int   inverted = false,
-	           bool  slew = false,
-	           int   slewRate = 0,
-	           float scale = 0.0);
+						 int	 inverted = false,
+						 bool  slew = false,
+						 int	 slewRate = 0,
+						 float scale = 0.0);
 
 	/** Namespace relating to slewing the motors to save the gears and the PTCs */
 	namespace slew {
@@ -107,6 +107,6 @@ namespace motors {
 		/** Initialization function for slewing. Call in initialize() */
 		void init(void);
 	} /* namespace slew */
-}   /* namespace motors */
+}		/* namespace motors */
 
 #endif /* end of include guard: MOTORS_HPP */

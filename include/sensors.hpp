@@ -36,14 +36,14 @@ namespace sensors {
 
 		public:
 
-			virtual long  zero();
-			virtual long  zero(long val);
-			virtual void  reset();
-			virtual bool  inverted();
-			virtual bool  inverted(bool val);
+			virtual long	zero();
+			virtual long	zero(long val);
+			virtual void	reset();
+			virtual bool	inverted();
+			virtual bool	inverted(bool val);
 			virtual float request();
 			virtual float request(float);
-			virtual long  value();
+			virtual long	value();
 	}; /* class AnalogSensor */
 
 
@@ -79,8 +79,8 @@ namespace sensors {
 
 		/** Constructs the encoder object. Make sure init is also called */
 		Quad(unsigned char port1,
-		     unsigned char port2,
-		     bool          inverted);
+				 unsigned char port2,
+				 bool					 inverted);
 	}; // struct Quad
 
 	/** Class for gyro objects */
@@ -112,7 +112,7 @@ namespace sensors {
 
 			/** Class constructor, but it must not be forgotten to call init() */
 			Gyroscope(unsigned char port,
-			          unsigned int  calibration);
+								unsigned int	calibration);
 
 		private:
 
@@ -159,7 +159,7 @@ namespace sensors {
 
 		/** The class constructor for a potentiometer, also be sure to init() */
 		Pot(unsigned char port,
-		    bool          inverted);
+				bool					inverted);
 	}; // Pot
 
 	/** Class for ultrasonic sensors */
@@ -179,7 +179,7 @@ namespace sensors {
 
 		/** Class constructor, but init() must also be called */
 		Sonic(unsigned char port1,
-		      unsigned char port2);
+					unsigned char port2);
 	}; // Sonic
 
 	/** Class for buttons */
@@ -198,7 +198,7 @@ namespace sensors {
 
 		/** Class constructor, but init() must also be called */
 		Button(unsigned char port,
-		       bool          inverted);
+					 bool					 inverted);
 	}; // Button
 
 	/** Initializes the sensor subsystem, calls all the funtions that need to be
