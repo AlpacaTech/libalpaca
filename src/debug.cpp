@@ -20,19 +20,21 @@
 
 #include "../include/debug.hpp"
 
-namespace debug {
-	unsigned long fault = 0;
-	void debug(void) {
-		PROS_FILE *fd = fopen("FAULT_PC", "r");
+namespace Alpaca {
+	namespace debug {
+		unsigned long fault = 0;
+		void debug(void) {
+			PROS_FILE *fd = fopen("FAULT_PC", "r");
 
-		if (fd) {
-			fault = unserialize<uint32_t>(fd);
+			if (fd) {
+				fault = unserialize<uint32_t>(fd);
 
-			if (!fault) {
-				fault = 0xFFFFFFFF;
+				if (!fault) {
+					fault = 0xFFFFFFFF;
+				}
+				fclose(fd);
 			}
-			fclose(fd);
-		}
-		printf("%lu", fault);
-	} // debug
-}		// namespace debug
+			printf("%lu", fault);
+		} /* debug */
+	}   /* namespace debug */
+}     /* namespace Alpaca */

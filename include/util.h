@@ -31,7 +31,7 @@
  * @return value in between high and low
  */
 #define clipNum(input, high, low) \
-	input <= low ? low : (input >= high ? high : input)
+  input <= low ? low : (input >= high ? high : input)
 
 /**
  * Determines whether a number is positive, negative, or 0.

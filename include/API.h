@@ -91,7 +91,7 @@ bool isOnline();
  * @param joystick the joystick slot to check
  * @param axis one of 1, 2, 3, 4, ACCEL_X, or ACCEL_Y */
 int  joystickGetAnalog(unsigned char joystick,
-											 unsigned char axis);
+                       unsigned char axis);
 
 /**
  * Gets the value of a button on the VEX joystick. Returns true if that button
@@ -106,8 +106,8 @@ int  joystickGetAnalog(unsigned char joystick,
  * JOY_LEFT or
  * JOY_RIGHT for groups 5 or 6 will cause an undefined value to be returned */
 bool joystickGetDigital(unsigned char joystick,
-												unsigned char buttonGroup,
-												unsigned char button);
+                        unsigned char buttonGroup,
+                        unsigned char button);
 
 /**
  * Returns the backup battery voltage in millivolts.
@@ -132,7 +132,7 @@ unsigned int powerLevelMain();
  * @param name a string containing the team name; only the first eight
  * characters will be shown
  */
-void				 setTeamName(const char *name);
+void         setTeamName(const char *name);
 
 // -------------------- Pin control functions --------------------
 
@@ -354,7 +354,7 @@ bool digitalRead(unsigned char pin);
  * respectively, or the constants HIGH or LOW themselves
  */
 void digitalWrite(unsigned char pin,
-									bool					value);
+                  bool          value);
 
 /**
  * Configures the pin as an input or output with a variety of settings.
@@ -369,7 +369,7 @@ void digitalWrite(unsigned char pin,
  * @param mode one of INPUT, INPUT_ANALOG, INPUT_FLOATING, OUTPUT, or OUTPUT_OD
  */
 void pinMode(unsigned char pin,
-						 unsigned char mode);
+             unsigned char mode);
 
 /*
  * Digital port 10 cannot be used as an interrupt port, or for an encoder. Plan
@@ -441,9 +441,9 @@ void ioClearInterrupt(unsigned char pin);
  * INTERRUPT_EDGE_BOTH
  * @param handler the function to call when the condition is satisfied
  */
-void ioSetInterrupt(unsigned char		 pin,
-										unsigned char		 edges,
-										InterruptHandler handler);
+void ioSetInterrupt(unsigned char    pin,
+                    unsigned char    edges,
+                    InterruptHandler handler);
 
 // -------------------- Physical output control functions --------------------
 
@@ -480,7 +480,7 @@ int  motorGet(unsigned char channel);
  * being off
  */
 void motorSet(unsigned char channel,
-							int						speed);
+              int           speed);
 
 /**
  * Stops the motor on the specified channel, equivalent to calling motorSet()
@@ -626,8 +626,8 @@ unsigned int imeInitializeAll();
  * *value is valid;
  * false otherwise
  */
-bool				 imeGet(unsigned char address,
-										int					 *value);
+bool         imeGet(unsigned char address,
+                    int          *value);
 
 /**
  * Gets the current rotational velocity of the specified IME.
@@ -660,7 +660,7 @@ bool				 imeGet(unsigned char address,
  * false otherwise
  */
 bool imeGetVelocity(unsigned char address,
-										int					 *value);
+                    int          *value);
 
 /**
  * Resets the specified IME's counters to zero.
@@ -688,7 +688,7 @@ void imeShutdown();
  * Reference type for an initialized gyro.
  *
  * Gyroscope information is stored as an opaque pointer to a structure in
- ***memory; as
+ ******memory; as
  * this is a
  * pointer type, it can be safely passed or stored by value.
  */
@@ -732,10 +732,10 @@ int  gyroGet(Gyro gyro);
  * the default
  * value
  * @return a Gyroscope object to be stored and used for later calls to gyro
- ***functions
+ ******functions
  */
 Gyro gyroInit(unsigned char  port,
-							unsigned short multiplier);
+              unsigned short multiplier);
 
 /**
  * Resets the gyro to zero.
@@ -777,7 +777,7 @@ typedef void *Encoder;
  * @return the signed and cumulative number of counts since the last start or
  * reset
  */
-int			encoderGet(Encoder enc);
+int     encoderGet(Encoder enc);
 
 /**
  * Initializes and enables a quadrature encoder on two digital ports.
@@ -796,8 +796,8 @@ int			encoderGet(Encoder enc);
  * functions
  */
 Encoder encoderInit(unsigned char portTop,
-										unsigned char portBottom,
-										bool					reverse);
+                    unsigned char portBottom,
+                    bool          reverse);
 
 /**
  * Resets the encoder to zero.
@@ -842,7 +842,7 @@ typedef void *Ultrasonic;
  * @param ult the Ultrasonic object from ultrasonicInit() to read
  * @return the distance to the nearest object in centimeters
  */
-int				 ultrasonicGet(Ultrasonic ult);
+int        ultrasonicGet(Ultrasonic ult);
 
 /**
  * Initializes an ultrasonic sensor on the specified digital ports.
@@ -859,7 +859,7 @@ int				 ultrasonicGet(Ultrasonic ult);
  * ultrasonic functions
  */
 Ultrasonic ultrasonicInit(unsigned char portEcho,
-													unsigned char portPing);
+                          unsigned char portPing);
 
 /**
  * Stops and disables the ultrasonic sensor.
@@ -891,9 +891,9 @@ void ultrasonicShutdown(Ultrasonic ult);
  * usefulness. Consider i2cReadRegister instead for the vast majority of
  * applications.
  */
-bool i2cRead(uint8_t	addr,
-						 uint8_t *data,
-						 uint16_t count);
+bool i2cRead(uint8_t  addr,
+             uint8_t *data,
+             uint16_t count);
 
 /**
  * i2cReadRegister - Reads the specified amount of data from the given register
@@ -913,10 +913,10 @@ bool i2cRead(uint8_t	addr,
  * to improve code
  * reliability, even if a few intermediate values need to be thrown away.
  */
-bool i2cReadRegister(uint8_t	addr,
-										 uint8_t	reg,
-										 uint8_t *value,
-										 uint16_t count);
+bool i2cReadRegister(uint8_t  addr,
+                     uint8_t  reg,
+                     uint8_t *value,
+                     uint16_t count);
 
 /**
  * i2cWrite - Writes the specified number of data bytes to the specified 7-bit
@@ -938,8 +938,8 @@ bool i2cReadRegister(uint8_t	addr,
  * to use.
  */
 bool i2cWrite(uint8_t  addr,
-							uint8_t *data,
-							uint16_t count);
+              uint8_t *data,
+              uint16_t count);
 
 /**
  * i2cWriteRegister - Writes the specified data byte to a register address on
@@ -955,8 +955,8 @@ bool i2cWrite(uint8_t  addr,
  * i2cWrite method.
  */
 bool i2cWriteRegister(uint8_t  addr,
-											uint8_t  reg,
-											uint16_t value);
+                      uint8_t  reg,
+                      uint16_t value);
 
 /**
  * FILE is an integer referring to a stream for the standard I/O functions.
@@ -1029,9 +1029,9 @@ typedef int PROS_FILE;
  * stop, and data
  * bits
  */
-void usartInit(PROS_FILE	 *usart,
-							 unsigned int baud,
-							 unsigned int flags);
+void usartInit(PROS_FILE   *usart,
+               unsigned int baud,
+               unsigned int flags);
 
 /**
  * Disables the specified USART interface.
@@ -1111,7 +1111,7 @@ void usartShutdown(PROS_FILE *usart);
  *
  * @param stream the file descriptor to close from fopen()
  */
-void	fclose(PROS_FILE *stream);
+void  fclose(PROS_FILE *stream);
 
 /**
  * Returns the number of characters that can be read without blocking (the
@@ -1130,7 +1130,7 @@ void	fclose(PROS_FILE *stream);
  * cannot be
  * determined, returns 0
  */
-int		fcount(PROS_FILE *stream);
+int   fcount(PROS_FILE *stream);
 
 /**
  * Delete the specified file if it exists and is not currently open.
@@ -1144,7 +1144,7 @@ int		fcount(PROS_FILE *stream);
  * @param file the file name to erase
  * @return 0 if the file was deleted, or 1 if the file could not be found
  */
-int		fdelete(const char *file);
+int   fdelete(const char *file);
 
 /**
  * Checks to see if the specified stream is at its end. This only works for
@@ -1155,7 +1155,7 @@ int		fdelete(const char *file);
  * Read mode)
  * @return 0 if the stream is not at EOF, or 1 otherwise.
  */
-int		feof(PROS_FILE *stream);
+int   feof(PROS_FILE *stream);
 
 /**
  * Flushes the data on the specified file channel open in Write mode. This
@@ -1171,7 +1171,7 @@ int		feof(PROS_FILE *stream);
  * @param stream the channel to flush (an open file in Write mode)
  * @return 0 if the data was successfully flushed, EOF otherwise
  */
-int		fflush(PROS_FILE *stream);
+int   fflush(PROS_FILE *stream);
 
 /**
  * Reads and returns one character from the specified stream, blocking until
@@ -1183,7 +1183,7 @@ int		fflush(PROS_FILE *stream);
  * Read mode)
  * @return the next character from 0 to 255, or -1 if no character can be read
  */
-int		fgetc(PROS_FILE *stream);
+int   fgetc(PROS_FILE *stream);
 
 /**
  * Reads a string from the specified stream, storing the characters into the
@@ -1204,9 +1204,9 @@ int		fgetc(PROS_FILE *stream);
  * Read mode)
  * @return str, or NULL if zero characters could be read
  */
-char* fgets(char			*str,
-						int				 num,
-						PROS_FILE *stream);
+char* fgets(char      *str,
+            int        num,
+            PROS_FILE *stream);
 
 /**
  * Opens the given file in the specified mode. The file name is truncated to
@@ -1244,7 +1244,7 @@ char* fgets(char			*str,
  * not be opened
  */
 PROS_FILE* fopen(const char *file,
-								 const char *mode);
+                 const char *mode);
 
 /**
  * Prints the simple string to the specified stream.
@@ -1258,7 +1258,7 @@ PROS_FILE* fopen(const char *file,
  * Write mode)
  */
 void fprint(const char *string,
-						PROS_FILE  *stream);
+            PROS_FILE  *stream);
 
 /**
  * Writes one character to the specified stream.
@@ -1270,8 +1270,8 @@ void fprint(const char *string,
  * Write mode)
  * @return the character written
  */
-int fputc(int				 value,
-					PROS_FILE *stream);
+int fputc(int        value,
+          PROS_FILE *stream);
 
 /**
  * Behaves the same as the "fprint" function, and appends a trailing newline
@@ -1285,7 +1285,7 @@ int fputc(int				 value,
  * @return the number of characters written, excluding the new line
  */
 int fputs(const char *string,
-					PROS_FILE  *stream);
+          PROS_FILE  *stream);
 
 /**
  * Reads data from a stream into memory. Returns the number of bytes thus read.
@@ -1300,10 +1300,10 @@ int fputs(const char *string,
  * Read mode)
  * @return the number of bytes successfully read
  */
-size_t fread(void			 *ptr,
-						 size_t			size,
-						 size_t			count,
-						 PROS_FILE *stream);
+size_t fread(void      *ptr,
+             size_t     size,
+             size_t     count,
+             PROS_FILE *stream);
 
 /**
  * Seeks within a file open in Read mode. This function will fail when used on a
@@ -1317,8 +1317,8 @@ size_t fread(void			 *ptr,
  * @return 0 if the seek was successful, or 1 otherwise
  */
 int fseek(PROS_FILE *stream,
-					long int	 offset,
-					int				 origin);
+          long int   offset,
+          int        origin);
 
 /**
  * Returns the current Position of the stream. This function works on files in
@@ -1344,10 +1344,10 @@ long int ftell(PROS_FILE *stream);
  * Write mode)
  * @return the number of bytes successfully written
  */
-size_t	 fwrite(const void *ptr,
-								size_t			size,
-								size_t			count,
-								PROS_FILE  *stream);
+size_t   fwrite(const void *ptr,
+                size_t      size,
+                size_t      count,
+                PROS_FILE  *stream);
 
 /**
  * Reads and returns one character from "stdin", which is the PC debug terminal.
@@ -1421,9 +1421,9 @@ int  puts(const char *string);
  * @param formatString the format string as specified above
  * @return the number of characters written
  */
-int  fprintf(PROS_FILE	*stream,
-						 const char *formatString,
-						 ...);
+int  fprintf(PROS_FILE  *stream,
+             const char *formatString,
+             ...);
 
 /**
  * Prints the formatted string to the debug stream (the PC terminal).
@@ -1432,7 +1432,7 @@ int  fprintf(PROS_FILE	*stream,
  * @return the number of characters written
  */
 int printf(const char *formatString,
-					 ...);
+           ...);
 
 /**
  * Prints the formatted string to the string buffer with the specified length
@@ -1449,10 +1449,10 @@ int printf(const char *formatString,
  * @param formatString the format string as specified in fprintf()
  * @return the number of characters stored
  */
-int snprintf(char				*buffer,
-						 size_t			 limit,
-						 const char *formatString,
-						 ...);
+int snprintf(char       *buffer,
+             size_t      limit,
+             const char *formatString,
+             ...);
 
 /**
  * Prints the formatted string to the string buffer.
@@ -1465,9 +1465,9 @@ int snprintf(char				*buffer,
  * @param formatString the format string as specified in fprintf()
  * @return the number of characters stored
  */
-int sprintf(char			 *buffer,
-						const char *formatString,
-						...);
+int sprintf(char       *buffer,
+            const char *formatString,
+            ...);
 
 /**
  * LEFT button on LCD for use with lcdReadButtons()
@@ -1521,16 +1521,16 @@ void lcdInit(PROS_FILE *lcdPort);
  * @param formatString the format string as specified in fprintf()
  */
 #ifdef DOXYGEN
-void lcdPrint(PROS_FILE		 *lcdPort,
-							unsigned char line,
-							const char	 *formatString,
-							...);
+void lcdPrint(PROS_FILE    *lcdPort,
+              unsigned char line,
+              const char   *formatString,
+              ...);
 #else // ifdef DOXYGEN
 void __attribute__((format(printf, 3, 4)))
-lcdPrint(PROS_FILE		*lcdPort,
-				 unsigned char line,
-				 const char		*formatString,
-				 ...);
+lcdPrint(PROS_FILE    *lcdPort,
+         unsigned char line,
+         const char   *formatString,
+         ...);
 #endif // ifdef DOXYGEN
 
 /**
@@ -1554,8 +1554,8 @@ unsigned int lcdReadButtons(PROS_FILE *lcdPort);
  * @param lcdPort the LCD to adjust, either uart1 or uart2
  * @param backlight true to turn the backlight on, or false to turn it off
  */
-void				 lcdSetBacklight(PROS_FILE *lcdPort,
-														 bool				backlight);
+void         lcdSetBacklight(PROS_FILE *lcdPort,
+                             bool       backlight);
 
 /**
  * Prints the string buffer to the attached LCD.
@@ -1570,9 +1570,9 @@ void				 lcdSetBacklight(PROS_FILE *lcdPort,
  * @param line the LCD line to write, either 1 or 2
  * @param buffer the string to write
  */
-void lcdSetText(PROS_FILE		 *lcdPort,
-								unsigned char line,
-								const char	 *buffer);
+void lcdSetText(PROS_FILE    *lcdPort,
+                unsigned char line,
+                const char   *buffer);
 
 /**
  * Shut down the specified LCD port.
@@ -1726,10 +1726,10 @@ typedef void (*TaskCode)(void *);
  * initial priority of the task
  * @return a handle to the created task, or NULL if an error occurred
  */
-TaskHandle taskCreate(TaskCode					 taskCode,
-											const unsigned int stackDepth,
-											void							*parameters,
-											const unsigned int priority);
+TaskHandle taskCreate(TaskCode           taskCode,
+                      const unsigned int stackDepth,
+                      void              *parameters,
+                      const unsigned int priority);
 
 /**
  * Delays the current task for a given number of milliseconds.
@@ -1782,8 +1782,8 @@ void taskDelay(const unsigned long msToDelay);
  * @param cycleTime the number of milliseconds to wait, with 1000 milliseconds
  * per second
  */
-void taskDelayUntil(unsigned long			 *previousWakeTime,
-										const unsigned long cycleTime);
+void taskDelayUntil(unsigned long      *previousWakeTime,
+                    const unsigned long cycleTime);
 
 /**
  * Kills and removes the specified task from the kernel task list.
@@ -1802,7 +1802,7 @@ void taskDelayUntil(unsigned long			 *previousWakeTime,
  *
  * @param taskToDelete the task to kill; passing NULL kills the current task
  */
-void				 taskDelete(TaskHandle taskToDelete);
+void         taskDelete(TaskHandle taskToDelete);
 
 /**
  * Determines the number of tasks that are currently being managed.
@@ -1855,8 +1855,8 @@ unsigned int taskPriorityGet(const TaskHandle task);
  * TASK_PRIORITY_HIGHEST inclusive
  * indicating the new task priority
  */
-void				 taskPrioritySet(TaskHandle					task,
-														 const unsigned int newPriority);
+void         taskPrioritySet(TaskHandle         task,
+                             const unsigned int newPriority);
 
 /**
  * Resumes the specified task.
@@ -1871,7 +1871,7 @@ void				 taskPrioritySet(TaskHandle					task,
  * current task
  * cannot be suspended (it is obviously running if this function is called)
  */
-void			 taskResume(TaskHandle taskToResume);
+void       taskResume(TaskHandle taskToResume);
 
 /**
  * Starts a task which will periodically call the specified function.
@@ -1893,8 +1893,8 @@ void			 taskResume(TaskHandle taskToResume);
  * function is used for accurate cycle timing
  * @return a handle to the task, or NULL if an error occurred
  */
-TaskHandle taskRunLoop(void								 (*fn)(void),
-											 const unsigned long increment);
+TaskHandle taskRunLoop(void                (*fn)(void),
+                       const unsigned long increment);
 
 /**
  * Suspends the specified task.
@@ -1906,7 +1906,7 @@ TaskHandle taskRunLoop(void								 (*fn)(void),
  * @param taskToSuspend the task to suspend; passing NULL suspends the current
  * task
  */
-void			taskSuspend(TaskHandle taskToSuspend);
+void      taskSuspend(TaskHandle taskToSuspend);
 
 /**
  * Creates a semaphore intended for synchronizing tasks. To prevent some
@@ -1940,7 +1940,7 @@ Semaphore semaphoreCreate();
  * semaphore was not
  * taken since the last give
  */
-bool			semaphoreGive(Semaphore semaphore);
+bool      semaphoreGive(Semaphore semaphore);
 
 /**
  * Waits on a semaphore. If the semaphore is already in the "taken" state, the
@@ -1955,8 +1955,8 @@ bool			semaphoreGive(Semaphore semaphore);
  * @return true if the semaphore was successfully taken, or false if the timeout
  * expired
  */
-bool			semaphoreTake(Semaphore						semaphore,
-												const unsigned long blockTime);
+bool      semaphoreTake(Semaphore           semaphore,
+                        const unsigned long blockTime);
 
 /**
  * Deletes the specified semaphore. This function can be dangerous; deleting
@@ -1965,7 +1965,7 @@ bool			semaphoreTake(Semaphore						semaphore,
  *
  * @param semaphore the semaphore to destroy
  */
-void	semaphoreDelete(Semaphore semaphore);
+void  semaphoreDelete(Semaphore semaphore);
 
 /**
  * Creates a mutex intended to allow only one task to use a resource at a time.
@@ -1993,7 +1993,7 @@ Mutex mutexCreate();
  * @return true if the mutex was released, or false if the mutex was not already
  * held
  */
-bool	mutexGive(Mutex mutex);
+bool  mutexGive(Mutex mutex);
 
 /**
  * Requests a mutex so that other tasks cannot simultaneously use the resource
@@ -2011,8 +2011,8 @@ bool	mutexGive(Mutex mutex);
  * @return true if the mutex was successfully taken, or false if the timeout
  * expired
  */
-bool	mutexTake(Mutex								mutex,
-								const unsigned long blockTime);
+bool  mutexTake(Mutex               mutex,
+                const unsigned long blockTime);
 
 /**
  * Deletes the specified mutex. This function can be dangerous; deleting
@@ -2021,7 +2021,7 @@ bool	mutexTake(Mutex								mutex,
  *
  * @param mutex the mutex to destroy
  */
-void					mutexDelete(Mutex mutex);
+void          mutexDelete(Mutex mutex);
 
 /**
  * Wiring-compatible alias of taskDelay().
@@ -2029,7 +2029,7 @@ void					mutexDelete(Mutex mutex);
  * @param time the duration of the delay in milliseconds (1 000 milliseconds per
  * second)
  */
-void					delay(const unsigned long time);
+void          delay(const unsigned long time);
 
 /**
  * Wait for approximately the given number of microseconds.
@@ -2045,7 +2045,7 @@ void					delay(const unsigned long time);
  * @param us the duration of the delay in microseconds (1 000 000 microseconds
  * per second)
  */
-void					delayMicroseconds(const unsigned long us);
+void          delayMicroseconds(const unsigned long us);
 
 /**
  * Returns the number of microseconds since Cortex power-up. There are 10^6
@@ -2078,7 +2078,7 @@ unsigned long millis();
  * @param time the duration of the delay in milliseconds (1 000 milliseconds per
  * second)
  */
-void					wait(const unsigned long time);
+void          wait(const unsigned long time);
 
 /**
  * Alias of taskDelayUntil() intended to help EasyC users.
@@ -2087,8 +2087,8 @@ void					wait(const unsigned long time);
  * @param time the duration of the delay in milliseconds (1 000 milliseconds per
  * second)
  */
-void					waitUntil(unsigned long			 *previousWakeTime,
-												const unsigned long time);
+void          waitUntil(unsigned long      *previousWakeTime,
+                        const unsigned long time);
 
 /**
  * Enables IWDG watchdog timer which will reset the cortex if it locks up due to

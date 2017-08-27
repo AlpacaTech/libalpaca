@@ -25,96 +25,97 @@
 #include "motors.hpp"
 #include <list>
 
-/*
- * Class for motors that are slave to a sensor
- */
-struct System {
-	sensors::AnalogSensor *sensor;
-	std::list<Motor>			*motors;
-}; /* class System */
+namespace Alpaca {
+	/*
+	 * Class for motors that are slave to a sensor
+	 */
+	struct System {
+		sensors::AnalogSensor *sensor;
+		std::list<Motor>      *motors;
+	}; /* class System */
 
-/*
- * Consists of pid, and all subcomponents, etc
- */
-class Pid {
-	public:
+	/*
+	 * Consists of pid, and all subcomponents, etc
+	 */
+	class Pid {
+		public:
 
-		class Settings {
-			public:
+			class Settings {
+				public:
 
-				Settings(float				Kp,
-								 float				Ki,
-								 float				Kd,
-								 System				system,
-								 int					max,
-								 int					min,
-								 int					iLimit,
-								 unsigned int precision);
+					Settings(float        Kp,
+					         float        Ki,
+					         float        Kd,
+					         System       system,
+					         int          max,
+					         int          min,
+					         int          iLimit,
+					         unsigned int precision);
 
-				friend Pid;
+					friend Pid;
 
-			protected:
+				protected:
 
-				/*
-				 * Maximum value to be assigned to the controlled system
-				 */
-				int max = 127;
+					/*
+					 * Maximum value to be assigned to the controlled system
+					 */
+					int max = 127;
 
-				/*
-				 * Minimum value to be assigned to the controlled system
-				 */
-				int min = -127;
+					/*
+					 * Minimum value to be assigned to the controlled system
+					 */
+					int min = -127;
 
-				/*
-				 * Limit for the integral value
-				 */
-				int iLimit = 50;
+					/*
+					 * Limit for the integral value
+					 */
+					int iLimit = 50;
 
-				/*
-				 * p value
-				 */
-				float Kp;
+					/*
+					 * p value
+					 */
+					float Kp;
 
-				/*
-				 * i value
-				 */
-				float Ki;
+					/*
+					 * i value
+					 */
+					float Ki;
 
-				/*
-				 * d value
-				 */
-				float Kd;
+					/*
+					 * d value
+					 */
+					float Kd;
 
-				/*
-				 * Precision for waiting on pid to reach value
-				 */
-				unsigned int precision;
+					/*
+					 * Precision for waiting on pid to reach value
+					 */
+					unsigned int precision;
 
-				/*
-				 * The system the pid controls
-				 */
-				System system;
-		};
+					/*
+					 * The system the pid controls
+					 */
+					System system;
+			};
 
-		Pid(float				 Kp,
-				float				 Ki,
-				float				 Kd,
-				long				 target,
-				System			 system,
-				int					 max = 127,
-				int					 min = -127,
-				int					 iLimit = 50,
-				unsigned int precision = 15);
+			Pid(float        Kp,
+			    float        Ki,
+			    float        Kd,
+			    long         target,
+			    System       system,
+			    int          max = 127,
+			    int          min = -127,
+			    int          iLimit = 50,
+			    unsigned int precision = 15);
 
-		Pid(Settings *settings,
-				long			target);
+			Pid(Settings *settings,
+			    long      target);
 
-	private:
+		private:
 
-		void loop();
+			void loop();
 
-		Settings *settings;
-		long			target;
-}; /* class Pid */
-
+			Settings *settings;
+			long target;
+	}; /* class Pid */
+} /* namespace Alpaca */
 #endif /* end of include guard: PID_HPP */
