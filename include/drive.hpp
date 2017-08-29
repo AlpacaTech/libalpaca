@@ -26,82 +26,90 @@
 #include "sensors.hpp"
 
 namespace Alpaca {
-	/** Contains everything relating to the drive */
+	/*
+	 * Contains everything relating to the drive
+	 */
 	namespace drive {
-		/** Class for a side of the drive */
-		struct Side {
-			/** Top motor on the the side */
-			Motor topM;
-
-			/** Middle motor on the side */
-			Motor midM;
-
-			/** Bottom motor on the side */
-			Motor lowM;
-
-			/** Sets all motors on the side to the given power */
-			void set(int power);
-
-			/** A pointer to the sensor on the side */
-			sensors::Quad *sensor;
-		}; // struct Side
-
-		/** Multiplier for which 1 inch is used to convert into degreees rotation on
-		 * 4"
-		 * wheels */
+		/*
+		 * Multiplier for which 1 inch is used to convert into degreees rotation on
+		 * 4" wheels
+		 */
 		extern double inch;
 
-		/** Set both sides of the drive at their requested powers */
+		/*
+		 * Set both sides of the drive at their requested powers
+		 */
 		void set(int lpower,
 		         int rpower);
 
-		/** Initialize the drive subsystem */
+		/*
+		 * Initialize the drive subsystem */
 		void init(void);
 
-		/** Drive a specific number of inches */
+		/*
+		 * Drive a specific number of inches */
 		void inches(long inches);
 
-		/** Tank control that should be used in a while loop */
+		/*
+		 * Tank control that should be used in a while loop */
 		void tank(void);
 
-		/** Joystick accelerometer driving! */
+		/*
+		 * Joystick accelerometer driving! */
 		namespace accel {
-			/** Current x value of the joystick accel */
+			/*
+			 * Current x value of the joystick accel */
 			extern int x;
 
-			/** Current y value of the joystick accel */
+			/*
+			 * Current y value of the joystick accel */
 			extern int y;
 
-			/** Previous joystick accel x value */
+			/*
+			 * Previous joystick accel x value */
 			extern int prevX;
 
-			/** Previous joystick accel y value */
+			/*
+			 * Previous joystick accel y value */
 			extern int prevY;
 
-			/** Tilt control using the josytick accelerometer. Should be used in a
-			 * while
-			 * loop */
+			/*
+			 * Tilt control using the josytick accelerometer. Should be used in a
+			 * while loop
+			 */
 			void drive(void);
-		} // namespace accel
+		} /* namespace accel */
 
 		namespace gyro {
-			/** A driving that can allow an arc, or keep the robot straight */
+			/*
+			 * A driving that can allow an arc, or keep the robot straight
+			 */
 			class drive {
 				public:
 
-					/** A reference to the gyro which will be used to get values from */
+					/*
+					 * A reference to the gyro which will be used to get values from
+					 */
 					sensors::Gyroscope *gyro;
 
-					/** The ideal heading of the robot (is absolute)*/
+					/*
+					 * The ideal heading of the robot (is absolute)
+					 */
 					int heading;
 
-					/** The urgency/agressiveness of the arc */
+					/*
+					 * The urgency/agressiveness of the arc
+					 */
 					float urgency;
 
-					/** Turn the arc off */
+					/*
+					 * Turn the arc off
+					 */
 					void off(void);
 
-					/** Use to initialize and run the task */
+					/*
+					 * Use to initialize and run the task
+					 */
 					drive(int                 heading,
 					      sensors::Gyroscope *gyro,
 					      float               urgency = 15.f,
@@ -110,32 +118,34 @@ namespace Alpaca {
 
 				private:
 
-					/** The task that runs, keeping the robot straight */
+					/*
+					 * The task that runs, keeping the robot straight */
 					void task(void *none);
 
-					/** The initial  heading, as opposed to the ideal heading */
+					/*
+					 * The initial  heading, as opposed to the ideal heading */
 					int iHeading;
 
-					/** TaskHandle for the gyro heading task */
+					/*
+					 * TaskHandle for the gyro heading task */
 					TaskHandle handle;
 
-					/** The internal variable used for changing the pid values */
+					/*
+					 * The internal variable used for changing the pid values */
 					float changer;
 
-					/** Whether it is on or not */
+					/*
+					 * Whether it is on or not */
 					bool on;
 
-					/** The tolerance for turning */
+					/*
+					 * The tolerance for turning */
 					int tolerance;
-			}; // class drive
-
-			// class drive
-
-			// class drive
-
-			/* class drive */
-		} /* namespace gyro */
-	}   /* namespace drive */
-}     /* namespace Alpaca */
+			}; /*
+			    * class drive
+			    */
+		}    /* namespace gyro */
+	}      /* namespace drive */
+}        /* namespace Alpaca */
 
 #endif /* end of include guard: DRIVE_HPP */

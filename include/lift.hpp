@@ -26,24 +26,6 @@
 namespace Alpaca {
 	/** Contains everything relating to the drive */
 	namespace lift {
-		/** Class for a side of the drive */
-		struct Side {
-			/** Top motor on the the side */
-			Motor topM;
-
-			/** Middle motor on the side */
-			Motor midM;
-
-			/** Bottom motor on the side */
-			Motor lowM;
-
-			/** Sets all motors on the side to the given power */
-			void set(int power);
-
-			/** A pointer to the sensor on the side */
-			sensors::Sensor *sensor;
-		}; // struct Side
-
 		/** Positions of the lift */
 		typedef enum Position {
 			bottom = 5,

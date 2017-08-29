@@ -22,29 +22,24 @@
 
 namespace Alpaca {
 	namespace lift {
-		void Side::set(int power) {
-			Side::topM->set(power);
-			Side::midM->set(power);
-			Side::lowM->set(power);
-		} // Side::set
-
 		void lock(void) {
-			  set(lockN);
+			set(lockN);
 		} // lock
 
-		void to(Position pos, int int_pos, int tolerance) {
-			if (int_pos == -1) int_pos = pos;
-
-			do {
-				set((int_pos > sensor->value() + tolerance ||
-				     int_pos < sensor->value() - tolerance)
-				    ? (sensor->value() - int_pos) * 1.5
-						: (sensor->value() - int_pos));
-				delay(15);
-			} while (int_pos > sensor->value() + tolerance ||
-			         int_pos < sensor->value() - tolerance);
-			lock();
-		} // to
+		/*
+		 *   void to(Position pos, int int_pos, int tolerance) {
+		 *        if (int_pos == -1) int_pos = pos;
+		 *
+		 *        do {
+		 *                set((int_pos > sensor->value() + tolerance ||
+		 *                     int_pos < sensor->value() - tolerance)
+		 *                    ? (sensor->value() - int_pos) * 1.5
+		 *                                : (sensor->value() - int_pos));
+		 *                delay(15);
+		 *        } while (int_pos > sensor->value() + tolerance ||
+		 *                 int_pos < sensor->value() - tolerance);
+		 *        lock();
+		 *   } // to
 
 		void control(void) {
 			int power = (joystick::digital(5, joystick::Up) * 127) +
@@ -54,6 +49,6 @@ namespace Alpaca {
 			        ? lockN
 							: ((sensor->value() < threshold) ? 0 : power);
 			set(power);
-		} /* control */
+		} * control */
 	}   /* namespace lift */
 }     /* namespace Alpaca */
