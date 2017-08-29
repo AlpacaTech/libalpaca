@@ -31,13 +31,13 @@ namespace Alpaca {
 		/** Class for a side of the drive */
 		struct Side {
 			/** Top motor on the the side */
-			Motor *topM;
+			Motor topM;
 
 			/** Middle motor on the side */
-			Motor *midM;
+			Motor midM;
 
 			/** Bottom motor on the side */
-			Motor *lowM;
+			Motor lowM;
 
 			/** Sets all motors on the side to the given power */
 			void set(int power);
@@ -103,9 +103,9 @@ namespace Alpaca {
 
 					/** Use to initialize and run the task */
 					drive(int                 heading,
+					      sensors::Gyroscope *gyro,
 					      float               urgency = 15.f,
 					      bool                absolute = false,
-					      sensors::Gyroscope *gyro,
 					      unsigned int        tolerance = 3);
 
 				private:

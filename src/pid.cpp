@@ -38,17 +38,18 @@ namespace Alpaca {
 		do {
 			delay(25);
 			current = settings->system.sensor->value();
-			error   = settings->system.sensor->request() - current;
+			error   = target - current;
 
 			if ((unsigned int)abs((int)error) <= settings->precision) {
 				success.push_back(true);
 
-				if (success.size() > 4) {
+				if ((success.size() > 4) && settings->terminates) {
 					return;
 				}
 				continue;
+			} else {
+				success.clear();
 			}
-			success.clear();
 			integral = (settings->Ki != 0 && abs((int)error) < settings->iLimit)
 			           ? (integral + error)
 								 : 0;
@@ -71,31 +72,43 @@ namespace Alpaca {
 	                        float        Ki,
 	                        float        Kd,
 	                        System       system,
+	                        bool         terminates,
 	                        int          max,
 	                        int          min,
 	                        int          iLimit,
-	                        unsigned int precision):max(max), min(min),
-		                                              iLimit(iLimit), Kp(Kp),
-		                                              Ki(Ki), Kd(Kd),
-		                                              precision(precision),
-		                                              system(system) {}
+	                        unsigned int precision) : max(max), min(min),
+		                                                iLimit(iLimit),
+		                                                terminates(terminates),
+		                                                Kp(Kp),
+		                                                Ki(Ki), Kd(Kd),
+		                                                precision(precision),
+		                                                system(system) {}
 
 	Pid::Pid(float        Kp,
 	         float        Ki,
 	         float        Kd,
 	         long         target,
 	         System       system,
+	         bool         terminates,
 	         int          max,
 	         int          min,
 	         int          iLimit,
-	         unsigned int precision):target(target) {
-		settings = new Settings { Kp, Ki, Kd, system, max, min, iLimit, precision };
+	         unsigned int precision) : target(target) {
+		settings = new Settings(Kp,
+		                        Ki,
+		                        Kd,
+		                        system,
+		                        terminates,
+		                        max,
+		                        min,
+		                        iLimit,
+		                        precision);
 		loop();
 		delete settings;
 	}
 
 	Pid::Pid(Settings *settings,
-	         long      target):settings(settings), target(target) {
+	         long      target) : settings(settings), target(target) {
 		loop();
 	}
 } /* namespace Alpaca */

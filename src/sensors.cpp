@@ -22,96 +22,90 @@
 
 namespace Alpaca {
 	namespace sensors {
-		Quad::Quad(unsigned char port1,
-		           unsigned char port2,
-		           bool          inverted):inverted(inverted) {
-			ports[0] = port1;
+		void Sensor::init() {
+			analogCalibrate(ports[0]);
+		} /* init */
+
+		long Sensor::zero() {
+			return _zero;
+		} /* zero */
+
+		long Sensor::zero(long val) {
+			_zero = val;
+			return _zero;
+		} /* zero */
+
+		void Sensor::reset() {
+			_zero = value();
+		} /* reset */
+
+		bool Sensor::inverted() {
+			return _inverted;
+		} /* inverted */
+
+		bool Sensor::inverted(bool val) {
+			return _inverted = val;
+		} /* inverted */
+
+		long Sensor::value() {
+			return analogRead(ports[0]) - _zero;
+		} /* value */
+
+		Sensor::Sensor(unsigned char port,
+		               bool          inverted,
+		               unsigned char port2) : _inverted(inverted) {
+			_zero    = 0;
+			ports[0] = port;
 			ports[1] = port2;
-			zero     = 0;
-			request  = 0;
 		}
 
 		void Quad::init(void) {
-			enc = encoderInit(Quad::ports[0], Quad::ports[1], Quad::inverted);
-		} // Quad::init
+			enc = encoderInit(ports[0], ports[1], _inverted);
+		} /* Quad::init */
 
 		long Quad::value(void) {
-			return encoderGet(enc) - zero;
-		} // Quad::value
-
-		void Quad::reset(void) {
-			zero    = encoderGet(enc);
-			request = 0;
-		} // Quad::reset
+			return encoderGet(enc) - _zero;
+		} /* Quad::value */
 
 		Gyroscope::Gyroscope(unsigned char port,
-		                     unsigned int  calibration):port(port),
-			                                              calibration(calibration) {
-			zero    = 0;
-			request = 0;
-		}
+		                     unsigned int  calibration,
+		                     bool          inverted) : Sensor(port, inverted),
+			                                             calibration(calibration) {}
 
 		void Gyroscope::init(void) {
-			Gyroscope::gyro = gyroInit(port, calibration);
-		} // Gyroscope::init
+			Gyroscope::gyro = gyroInit(ports[0], calibration);
+		} /* Gyroscope::init */
 
 		long Gyroscope::value(void) {
-			return gyroGet(Gyroscope::gyro) - zero;
-		} // Gyroscope::value
-
-		void Gyroscope::reset(void) {
-			zero    = gyroGet(Gyroscope::gyro);
-			request = 0;
-		} // Gyroscope::reset
-
-		Pot::Pot(unsigned char port,
-		         bool          inverted):port(port), inverted(inverted) {
-			zero    = 0;
-			request = 0;
-		}
-
-		void Pot::init(void) {
-			analogCalibrate(port);
-		} // Pot::init
-
-		long Pot::value(void) {
-			return (analogReadCalibrated(port) - zero) * ((inverted) ? -1 : 1);
-		} // Pot::value
-
-		void Pot::reset(void) {
-			zero    = analogReadCalibrated(port);
-			request = 0;
-		} // Pot::reset
-
-		Sonic::Sonic(unsigned char port1,
-		             unsigned char port2) {
-			ports[0] = port1;
-			ports[1] = port2;
-		}
+			return gyroGet(Gyroscope::gyro) - _zero;
+		} /* Gyroscope::value */
 
 		void Sonic::init(void) {
 			sonic = ultrasonicInit(Sonic::ports[0], Sonic::ports[1]);
-		} // Sonic::init
+		} /* Sonic::init */
 
 		long Sonic::value(void) {
 			return ultrasonicGet(sonic);
-		} // Sonic::value
+		} /* Sonic::value */
 
-		Button::Button(unsigned char port,
-		               bool          inverted):port(port), inverted(inverted) {}
+		Digital::Digital(unsigned char port,
+		                 bool          inverted) : port(port),
+			                                         _inverted(inverted) {}
 
-		void Button::init(void) {
+		void Digital::init(void) {
 			pinMode(port, INPUT);
-		} // Button::init
+		} /* Button::init */
 
-		bool Button::value(void) {
-			return (digitalRead(port)) ? ((inverted) ? false : true)
-						 : ((inverted) ? true : false);
-		} // Button::value
+		bool Digital::value(void) {
+			return (_inverted) ? digitalRead(port) : !digitalRead(port);
+		} /* Button::value */
 
-		void reset(void) {
-			left.reset();
-			right.reset();
-		} /* reset */
+		bool Digital::inverted(bool val) {
+			return _inverted = val;
+		} /* inverted */
+
+		bool Digital::inverted() {
+			return _inverted;
+		} /* inverted */
 	}   /* namespace sensors */
 }     /* namespace Alpaca */

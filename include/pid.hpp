@@ -30,8 +30,15 @@ namespace Alpaca {
 	 * Class for motors that are slave to a sensor
 	 */
 	struct System {
-		sensors::AnalogSensor *sensor;
-		std::list<Motor>      *motors;
+		/*
+		 * The sensor that the system uses
+		 */
+		sensors::Sensor *sensor;
+
+		/*
+		 * The motors that are slave to the sensor
+		 */
+		std::list<Motor> *motors;
 	}; /* class System */
 
 	/*
@@ -40,17 +47,24 @@ namespace Alpaca {
 	class Pid {
 		public:
 
+			/*
+			 * The settings for a PID instance, to keep them reusable
+			 */
 			class Settings {
 				public:
 
+					/*
+					 * The PID settings that make multiple PIDs easier
+					 */
 					Settings(float        Kp,
 					         float        Ki,
 					         float        Kd,
 					         System       system,
-					         int          max,
-					         int          min,
-					         int          iLimit,
-					         unsigned int precision);
+					         bool         terminates = true,
+					         int          max = 127,
+					         int          min = -127,
+					         int          iLimit = 50,
+					         unsigned int precision = 15);
 
 					friend Pid;
 
@@ -70,6 +84,11 @@ namespace Alpaca {
 					 * Limit for the integral value
 					 */
 					int iLimit = 50;
+
+					/*
+					 * Whether or not the PID loop ends
+					 */
+					bool terminates;
 
 					/*
 					 * p value
@@ -97,21 +116,33 @@ namespace Alpaca {
 					System system;
 			};
 
+			/*
+			 * A PID object that finishes when it's goal is met, or, forever if
+			 * specified
+			 */
 			Pid(float        Kp,
 			    float        Ki,
 			    float        Kd,
 			    long         target,
 			    System       system,
+			    bool         terminates = true,
 			    int          max = 127,
 			    int          min = -127,
 			    int          iLimit = 50,
 			    unsigned int precision = 15);
 
+			/*
+			 * A PID object that finishes when it's goal is met, or, forever if
+			 * specified
+			 */
 			Pid(Settings *settings,
 			    long      target);
 
 		private:
 
+			/*
+			 * The looping part of a pid running
+			 */
 			void loop();
 
 			Settings *settings;
