@@ -454,7 +454,7 @@ void ioSetInterrupt(unsigned char    pin,
  * not guaranteed
  * to be the speed that the motor is actually running at, or even the speed
  * currently being
- * sent to the motor, due to latency in the Motor Controller 29 protocol and
+ * sent to the motor, due to latency in the MotorController 29 protocol and
  * physical loading.
  * To measure actual motor shaft revolution speed, attach a VEX Integrated Motor
  * Encoder or
@@ -638,7 +638,7 @@ bool         imeGet(unsigned char address,
  * internal encoder
  * wheel. Since checking the IME for its type cannot reveal whether the motor
  * gearing is
- * high speed or high torque (in the 2-Wire Motor 393 case), the user must
+ * high speed or high torque (in the 2-Wire Motor393 case), the user must
  * divide the return
  * value by the number of output revolutions per encoder revolution:
  *
@@ -687,7 +687,8 @@ void imeShutdown();
 /**
  * Reference type for an initialized gyro.
  *
- * Gyro information is stored as an opaque pointer to a structure in memory; as
+ * Gyroscope information is stored as an opaque pointer to a structure in
+ ******memory; as
  * this is a
  * pointer type, it can be safely passed or stored by value.
  */
@@ -698,7 +699,7 @@ typedef void *Gyro;
  *
  * There are 360 degrees in a circle.
  *
- * @param gyro the Gyro object from gyroInit() to read
+ * @param gyro the Gyroscope object from gyroInit() to read
  * @return the signed and cumulative number of degrees rotated around the gyro's
  * vertical axis
  * since the last start or reset
@@ -730,7 +731,8 @@ int  gyroGet(Gyro gyro);
  * @param multiplier an optional constant to tune the gyro readings; use 0 for
  * the default
  * value
- * @return a Gyro object to be stored and used for later calls to gyro functions
+ * @return a Gyroscope object to be stored and used for later calls to gyro
+ ******functions
  */
 Gyro gyroInit(unsigned char  port,
               unsigned short multiplier);
@@ -742,18 +744,18 @@ Gyro gyroInit(unsigned char  port,
  * call this
  * method before stopping or starting a gyro.
  *
- * @param gyro the Gyro object from gyroInit() to reset
+ * @param gyro the Gyroscope object from gyroInit() to reset
  */
 void gyroReset(Gyro gyro);
 
 /**
  * Stops and disables the gyro.
  *
- * Gyros use processing power, so disabling unused gyros increases code
+ * Gyroscopes use processing power, so disabling unused gyros increases code
  * performance.
  * The gyro's Position will be retained.
  *
- * @param gyro the Gyro object from gyroInit() to stop
+ * @param gyro the Gyroscope object from gyroInit() to stop
  */
 void gyroShutdown(Gyro gyro);
 
@@ -1403,7 +1405,7 @@ int  puts(const char *string);
  * * @c 0: Zero-pad, instead of space-pad
  * * @c a.b: Make the field at least "a" characters wide. If "b" is specified
  * for "%f", changes the
- *           number of digits after the decimal point
+ *					 number of digits after the decimal point
  * * @c -: Left-align, instead of right-align
  * * @c +: Always display the sign character (displays a leading "+" for
  * positive numbers)
@@ -1706,7 +1708,7 @@ typedef void *Semaphore;
  * For example:
  *
  * void MyTask(void *ignore) {
- *     while (1);
+ *		 while (1);
  * }
  */
 typedef void (*TaskCode)(void *);
@@ -1891,7 +1893,7 @@ void       taskResume(TaskHandle taskToResume);
  * function is used for accurate cycle timing
  * @return a handle to the task, or NULL if an error occurred
  */
-TaskHandle taskRunLoop(void (             *fn)(void),
+TaskHandle taskRunLoop(void                (*fn)(void),
                        const unsigned long increment);
 
 /**

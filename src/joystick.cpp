@@ -20,12 +20,14 @@
 
 #include "../include/joystick.hpp"
 
-namespace joystick {
-  int analog(Channel channel) {
-    return joystickGetAnalog(1, channel);
-  } // analog
+namespace Alpaca {
+	namespace joystick {
+		int analog(Channel channel) {
+			return joystickGetAnalog(1, channel);
+		} // analog
 
-  bool digital(Group group, Button button) {
-    return joystickGetDigital(1, group, button);
-  } // digital
-}   // namespace joystick
+		bool digital(Group group, Button button) {
+			return joystickGetDigital(1, group, button);
+		} /* digital */
+	}   /* namespace joystick */
+}     /* namespace Alpaca */

@@ -24,165 +24,154 @@
 
 #include "API.h"
 
-/** The namespace containing all information, functions, objects, relating to
- * sensors */
-namespace sensors {
-  /** A 2-wire quadrature encoder */
-  struct Quad {
-    /** The encoder struct used by other member functions */
-    Encoder enc;
+namespace Alpaca {
+	/*
+	 * The namespace containing all information, functions, objects, relating to
+	 * sensors
+	 */
+	namespace sensors {
+		/*
+		 * Sensors enable the program to gather data about the surrounding
+		 * environment
+		 */
+		class Sensor {
+			protected:
 
-    /** The ports the encoder is connected to, in order of top, then bottom,
-     * when
-     * the removable cover is facing up */
-    unsigned char ports[2];
+				unsigned char ports[2];
+				long _zero;
+				bool _inverted;
 
-    /** The relative zero from which the encoder's value will be returned. Can
-     * be added to returned value to produce a true value for the encoder */
-    long zero;
+			public:
 
-    /** Whether or not the encoder is inverted */
-    bool inverted;
+				virtual void init();
+				virtual long zero();
+				virtual long zero(long val);
+				virtual void reset();
+				virtual bool inverted();
+				virtual bool inverted(bool val);
+				virtual long value();
 
-    /** Reset the value to zero */
-    void reset(void);
+				Sensor(unsigned char port,
+				       bool          inverted = false,
+				       unsigned char port2 = 0);
+		}; /* class Sensor */
 
-    /** Returns the relative value of the encoder. If added to the encoder's
-     * zero, produces an absolute value of the encoder */
-    long value(void);
+		/*
+		 * Optical Quadrature encoders measure distance traveled in ticks, which can
+		 * be converted to degrees by multiplying by 4. This is often useful on a
+		 * lift or a drive to control position
+		 */
+		class Quad : Sensor {
+			protected:
 
-    /** The pid requested value of the encoder */
-    float request;
+				/*
+				 * The encoder struct used by other member functions
+				 */
+				Encoder enc;
 
-    /** The initialization function for the encoder. Call in initialize() */
-    void init(void);
+			public:
 
-    /** Constructs the encoder object. Make sure init is also called */
-    Quad(unsigned char port1,
-         unsigned char port2,
-         bool          inverted);
-  }; // struct Quad
+				void init();
+				long value();
+		}; /* class Quad */
 
-  /** Class for gyro objects */
-  class Gyro {
-    public:
+		/*
+		 * Gyroscopes measure degrees rotated, and can be instrumental in doing
+		 * complex maneuvers and even keeping as straight as possible
+		 */
+		class Gyroscope : Sensor {
+			public:
 
-      /** The gyro struct used in funtions */
-      Gyro gyro;
+				/*
+				 * Initialization funtion for the gyro, call in initialize()
+				 */
+				void init();
 
-      /** The port the gyro is plugged into */
-      unsigned char port;
+				/*
+				 * Returns the current value of the gyro, relative to the zero
+				 */
+				long value();
 
-      /** The relative zero of the gyro, such that you can add it to the
-       * returned
-       * value to obtain an absolute value */
-      long zero;
+				/*
+				 * Create a new Gyroscope object
+				 */
+				Gyroscope(unsigned char port,
+				          unsigned int  calibration = 0,
+				          bool          inverted = false);
 
-      /** Resets the value to 0 */
-      void reset(void);
+			protected:
 
-      /** Returns the current value of the gyro, relative to the zero */
-      long value(void);
+				/*
+				 * The calibration to be used in init
+				 */
+				unsigned int calibration;
 
-      /** The pid requested value of the gyro */
-      float request;
+				/*
+				 * The Gyro struct to be used internally to interact with PROS
+				 */
+				Gyro gyro;
+		}; /* class Gyroscope */
 
-      /** Initialization funtion for the gyro, call in initialize() */
-      void init(void);
+		/*
+		 * Ultrasonics, also known as sonar sensors, sense the distance from the
+		 * nearest object in front of it
+		 */
+		class Sonic : Sensor {
+			public:
 
-      /** Class constructor, but it must not be forgotten to call init() */
-      Gyro(unsigned char port,
-           unsigned int  calibration);
+				void init();
+				long value();
 
-    private:
+			protected:
 
-      /** The calibration, a temporary placement between construction and
-       * initialization */
-      int calibration;
-  }; // class Gyro
+				/*
+				 * The Ultrasonic struct used to interact with PROS
+				 */
+				Ultrasonic sonic;
+		}; /* class Sonic */
 
-  // class Gyro
+		/*
+		 * Standard digital sensors have 2 states - on and off. This allows you to
+		 * detect that state, and invert it if needed
+		 */
+		class Digital {
+			public:
 
-  // class Gyro
+				/*
+				 * Initializes the button. Call in initialize()
+				 */
+				void init(void);
 
-  // struct Gyro
+				/*
+				 * Returns true if the button is pressed
+				 */
+				bool value(void);
 
-  /** Class for potentiometers */
-  struct Pot {
-    /** The port that the pot is plugged in to */
-    unsigned char port;
+				/*
+				 * Whether or not the return value should be inverted
+				 */
+				bool inverted(bool val);
+				bool inverted();
 
-    /** The relative zero, that can be added to the returned value() to find the
-     * absolute value */
-    long zero;
+				/*
+				 * Class constructor, but init() must also be called
+				 */
+				Digital(unsigned char port,
+				        bool          inverted);
 
-    /** Whether or not the potentioeter's value should be inverted */
-    bool inverted;
+			protected:
 
-    /** Resets the value to 0 */
-    void reset(void);
+				/*
+				 * The port that the sensor is plugged in to
+				 */
+				unsigned char port;
 
-    /** Returns the relative value of the potentiometer */
-    long value(void);
-
-    /** The pid requested value of the pot */
-    float request;
-
-    /** The initialization funtion for the potentiometer, which must be called
-     * in
-     * initialize() */
-    void init(void);
-
-    /** The class constructor for a potentiometer, also be sure to init() */
-    Pot(unsigned char port,
-        bool          inverted);
-  }; // Pot
-
-  /** Class for ultrasonic sensors */
-  struct Sonic {
-    /** The Ultrasonic struct that is referenced in member funtions */
-    Ultrasonic sonic;
-
-    /** The two ports the sensor is plugged in to, in order of the echo (aka
-     * orange) cable, then the ping (aka yellow) cable */
-    unsigned char ports[2];
-
-    /** The value of the ultrasonic sensor */
-    long value(void);
-
-    /** Initializes the sensor. Call in initialize() */
-    void init(void);
-
-    /** Class constructor, but init() must also be called */
-    Sonic(unsigned char port1,
-          unsigned char port2);
-  }; // Sonic
-
-  /** Class for buttons */
-  struct Button {
-    /** the port that the button is plugged in to */
-    unsigned char port;
-
-    /** Whether or not the button's value should be inverted */
-    bool inverted;
-
-    /** Returns true if the button is pressed */
-    bool value(void);
-
-    /** Initializes the button. Call in initialize() */
-    void init(void);
-
-    /** Class constructor, but init() must also be called */
-    Button(unsigned char port,
-           bool          inverted);
-  }; // Button
-
-  /** Initializes the sensor subsystem, calls all the funtions that need to be
-   * called in initialize(). Call in initialize() */
-  void init(void);
-
-  /** Resets the important sensors */
-  void reset(void);
-} // namespace sensors
+				/*
+				 * Whether or not the button's value should be inverted
+				 */
+				bool _inverted;
+		}; /* class Digital */
+	}    /* namespace sensors */
+}      /* namespace Alpaca */
 
 #endif /* end of include guard: SENSORS_HPP */

@@ -23,59 +23,61 @@
 
 #include "drive.hpp"
 
-/** Contains everything relating to the drive */
-namespace lift {
-  /** Class for a side of the drive */
-  struct Side {
-    /** Top motor on the the side */
-    Motor topM;
+namespace Alpaca {
+	/** Contains everything relating to the drive */
+	namespace lift {
+		/** Class for a side of the drive */
+		struct Side {
+			/** Top motor on the the side */
+			Motor topM;
 
-    /** Middle motor on the side */
-    Motor midM;
+			/** Middle motor on the side */
+			Motor midM;
 
-    /** Bottom motor on the side */
-    Motor lowM;
+			/** Bottom motor on the side */
+			Motor lowM;
 
-    /** Sets all motors on the side to the given power */
-    void set(int power);
+			/** Sets all motors on the side to the given power */
+			void set(int power);
 
-    /** A pointer to the sensor on the side */
-    sensors::Pot *sensor;
-  }; // struct Side
+			/** A pointer to the sensor on the side */
+			sensors::Sensor *sensor;
+		}; // struct Side
 
-  /** Positions of the lift */
-  typedef enum Position {
-    bottom = 5,
-    mobile = 60,
-    one    = 100,
-    two    = 230,
-    three  = 450,
-  } Position;
+		/** Positions of the lift */
+		typedef enum Position {
+			bottom = 5,
+			mobile = 60,
+			one    = 100,
+			two    = 230,
+			three  = 450,
+		} Position;
 
-  extern double inch;
+		extern double inch;
 
-  /** The value where the lift will stay up with a standard load */
-  static const char lockN = 17;
+		/** The value where the lift will stay up with a standard load */
+		static const char lockN = 17;
 
-  /** Any value below this point will result in the lift being set to 0 */
-  static const int threshold = 150;
+		/** Any value below this point will result in the lift being set to 0 */
+		static const int threshold = 150;
 
-  /** Set the lift at their requested powers */
-  void set(int power);
+		/** Set the lift at their requested powers */
+		void set(int power);
 
-  /** Default value for the lift to be set at when it is no tin use */
-  void lock(void);
+		/** Default value for the lift to be set at when it is no tin use */
+		void lock(void);
 
-  /** Initialize the drive subsystem */
-  void init(void);
+		/** Initialize the drive subsystem */
+		void init(void);
 
-  /** p control for the lift */
-  void to(Position pos = bottom,
-          int      int_pos = -1,
-          int      tolerance = 50);
+		/** p control for the lift */
+		void to(Position pos = bottom,
+		        int      int_pos = -1,
+		        int      tolerance = 50);
 
-  /** Lift control that should be used in a while loop */
-  void control(void);
-} // namespace lift
+		/** Lift control that should be used in a while loop */
+		void control(void);
+	} /* namespace lift */
+}   /* namespace Alpaca */
 
 #endif /* end of include guard: LIFT_HPP */

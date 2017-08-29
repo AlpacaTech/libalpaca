@@ -22,83 +22,131 @@
 #define PID_HPP
 
 #include "lift.hpp"
+#include "motors.hpp"
+#include <list>
 
-/** Consists of pid, and all subcomponents, etc */
-namespace pid {
-  /** Maximum value for the drive */
-  static const int DRIVE_MAX = 127;
+namespace Alpaca {
+	/*
+	 * Class for motors that are slave to a sensor
+	 */
+	struct System {
+		/*
+		 * The sensor that the system uses
+		 */
+		sensors::Sensor *sensor;
 
-  /** Minimum value for the drive */
-  static const int DRIVE_MIN = -127;
+		/*
+		 * The motors that are slave to the sensor
+		 */
+		std::list<Motor> *motors;
+	}; /* class System */
 
-  /** Limit for the integral value */
-  static const int INTEGRAL_LIMIT = 50;
+	/*
+	 * Consists of pid, and all subcomponents, etc
+	 */
+	class Pid {
+		public:
 
-  /** p value */
-  extern float Kp;
+			/*
+			 * The settings for a PID instance, to keep them reusable
+			 */
+			class Settings {
+				public:
 
-  /** i value */
-  extern float Ki;
+					/*
+					 * The PID settings that make multiple PIDs easier
+					 */
+					Settings(float        Kp,
+					         float        Ki,
+					         float        Kd,
+					         System       system,
+					         bool         terminates = true,
+					         int          max = 127,
+					         int          min = -127,
+					         int          iLimit = 50,
+					         unsigned int precision = 15);
 
-  /** d value */
-  extern float Kd;
+					friend Pid;
 
-  /** Default precision for waiting on pid to reach value */
-  extern unsigned int default_precision;
+				protected:
 
-  /** Whether or not each side of the drive's pid is enabled, in the order of
-   * left to right */
-  extern bool enabled[2];
+					/*
+					 * Maximum value to be assigned to the controlled system
+					 */
+					int max = 127;
 
-  /** A class for a single Position on the drive */
-  struct pos_t {
-    long  left;
-    long  right;
-    void  request(void);
-    pos_t(long left,
-          long right);
-    bool  operator=(pos_t pos);
-    pos_t operator+(pos_t pos);
-    pos_t operator-(pos_t pos);
-  };
+					/*
+					 * Minimum value to be assigned to the controlled system
+					 */
+					int min = -127;
 
-  /** Enables all pid */
-  void  enable(void);
+					/*
+					 * Limit for the integral value
+					 */
+					int iLimit = 50;
 
-  /** Disables all pid */
-  void  disable(void);
+					/*
+					 * Whether or not the PID loop ends
+					 */
+					bool terminates;
 
-  /** Task to manage pid */
-  void  controller(void *none);
+					/*
+					 * p value
+					 */
+					float Kp;
 
-  /** Initialize pid. Call in initialize() */
-  void  init(void);
+					/*
+					 * i value
+					 */
+					float Ki;
 
-  /** Stops the pid task */
-  void  stop(void);
+					/*
+					 * d value
+					 */
+					float Kd;
 
-  /** (Re)starts the pid task */
-  void  go(void);
+					/*
+					 * Precision for waiting on pid to reach value
+					 */
+					unsigned int precision;
 
-  /** Gets the current Position */
-  pos_t get(void);
+					/*
+					 * The system the pid controls
+					 */
+					System system;
+			};
 
-  /** Requests values for the left and right side of the drive */
-  void  request(long l,
-                long r);
+			/*
+			 * A PID object that finishes when it's goal is met, or, forever if
+			 * specified
+			 */
+			Pid(float        Kp,
+			    float        Ki,
+			    float        Kd,
+			    long         target,
+			    System       system,
+			    bool         terminates = true,
+			    int          max = 127,
+			    int          min = -127,
+			    int          iLimit = 50,
+			    unsigned int precision = 15);
 
-  /** Requests a specific Position */
-  void request(pos_t pos);
+			/*
+			 * A PID object that finishes when it's goal is met, or, forever if
+			 * specified
+			 */
+			Pid(Settings *settings,
+			    long      target);
 
-  /** Wait until pid reaches specified precision, for no longer than the
-   * specified
-   * blockTime. If 0 is passed to blockTime, it will wait indefinately until
-   * the requested values are met */
-  void wait(unsigned long precision,
-            unsigned long blockTime);
+		private:
 
-  /** TaskHandle for the pid task */
-  extern TaskHandle pidHandle;
-} // namespace pid
+			/*
+			 * The looping part of a pid running
+			 */
+			void loop();
 
+			Settings *settings;
+			long target;
+	}; /* class Pid */
+} /* namespace Alpaca */
 #endif /* end of include guard: PID_HPP */

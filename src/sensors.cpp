@@ -20,93 +20,92 @@
 
 #include "../include/main.h"
 
-namespace sensors {
-  Quad::Quad(unsigned char port1, unsigned char port2, bool inverted)
-    : inverted(inverted) {
-    ports[0] = port1;
-    ports[1] = port2;
-    zero     = 0;
-    request  = 0;
-  }
+namespace Alpaca {
+	namespace sensors {
+		void Sensor::init() {
+			analogCalibrate(ports[0]);
+		} /* init */
 
-  void Quad::init(void) {
-    enc = encoderInit(Quad::ports[0], Quad::ports[1], Quad::inverted);
-  } // Quad::init
+		long Sensor::zero() {
+			return _zero;
+		} /* zero */
 
-  long Quad::value(void) {
-    return encoderGet(enc) - zero;
-  } // Quad::value
+		long Sensor::zero(long val) {
+			_zero = val;
+			return _zero;
+		} /* zero */
 
-  void Quad::reset(void) {
-    zero    = encoderGet(enc);
-    request = 0;
-  } // Quad::reset
+		void Sensor::reset() {
+			_zero = value();
+		} /* reset */
 
-  Gyro::Gyro(unsigned char port, unsigned int calibration)
-    : port(port), calibration(calibration) {
-    zero    = 0;
-    request = 0;
-  }
+		bool Sensor::inverted() {
+			return _inverted;
+		} /* inverted */
 
-  void Gyro::init(void) {
-    Gyro::gyro = gyroInit(port, calibration);
-  } // Gyro::init
+		bool Sensor::inverted(bool val) {
+			return _inverted = val;
+		} /* inverted */
 
-  long Gyro::value(void) {
-    return gyroGet(Gyro::gyro) - zero;
-  } // Gyro::value
+		long Sensor::value() {
+			return analogRead(ports[0]) - _zero;
+		} /* value */
 
-  void Gyro::reset(void) {
-    zero    = gyroGet(Gyro::gyro);
-    request = 0;
-  } // Gyro::reset
+		Sensor::Sensor(unsigned char port,
+		               bool          inverted,
+		               unsigned char port2) : _inverted(inverted) {
+			_zero    = 0;
+			ports[0] = port;
+			ports[1] = port2;
+		}
 
-  Pot::Pot(unsigned char port, bool inverted)
-    : port(port), inverted(inverted) {
-    zero    = 0;
-    request = 0;
-  }
+		void Quad::init(void) {
+			enc = encoderInit(ports[0], ports[1], _inverted);
+		} /* Quad::init */
 
-  void Pot::init(void) {
-    analogCalibrate(port);
-  } // Pot::init
+		long Quad::value(void) {
+			return encoderGet(enc) - _zero;
+		} /* Quad::value */
 
-  long Pot::value(void) {
-    return (analogReadCalibrated(port) - zero) * ((inverted) ? -1 : 1);
-  } // Pot::value
+		Gyroscope::Gyroscope(unsigned char port,
+		                     unsigned int  calibration,
+		                     bool          inverted) : Sensor(port, inverted),
+			                                             calibration(calibration) {}
 
-  void Pot::reset(void) {
-    zero    = analogReadCalibrated(port);
-    request = 0;
-  } // Pot::reset
+		void Gyroscope::init(void) {
+			Gyroscope::gyro = gyroInit(ports[0], calibration);
+		} /* Gyroscope::init */
 
-  Sonic::Sonic(unsigned char port1, unsigned char port2) {
-    ports[0] = port1;
-    ports[1] = port2;
-  }
+		long Gyroscope::value(void) {
+			return gyroGet(Gyroscope::gyro) - _zero;
+		} /* Gyroscope::value */
 
-  void Sonic::init(void) {
-    sonic = ultrasonicInit(Sonic::ports[0], Sonic::ports[1]);
-  } // Sonic::init
+		void Sonic::init(void) {
+			sonic = ultrasonicInit(Sonic::ports[0], Sonic::ports[1]);
+		} /* Sonic::init */
 
-  long Sonic::value(void) {
-    return ultrasonicGet(sonic);
-  } // Sonic::value
+		long Sonic::value(void) {
+			return ultrasonicGet(sonic);
+		} /* Sonic::value */
 
-  Button::Button(unsigned char port, bool inverted)
-    : port(port), inverted(inverted) {}
+		Digital::Digital(unsigned char port,
+		                 bool          inverted) : port(port),
+			                                         _inverted(inverted) {}
 
-  void Button::init(void) {
-    pinMode(port, INPUT);
-  } // Button::init
+		void Digital::init(void) {
+			pinMode(port, INPUT);
+		} /* Button::init */
 
-  bool Button::value(void) {
-    return (digitalRead(port)) ? ((inverted) ? false : true)
-           : ((inverted) ? true : false);
-  } // Button::value
+		bool Digital::value(void) {
+			return (_inverted) ? digitalRead(port) : !digitalRead(port);
+		} /* Button::value */
 
-  void reset(void) {
-    left.reset();
-    right.reset();
-  } // reset
-}   // namespace sensors
+		bool Digital::inverted(bool val) {
+			return _inverted = val;
+		} /* inverted */
+
+		bool Digital::inverted() {
+			return _inverted;
+		} /* inverted */
+	}   /* namespace sensors */
+}     /* namespace Alpaca */
