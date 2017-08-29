@@ -21,6 +21,13 @@
 #include "../include/main.h"
 
 namespace Alpaca {
+	void System::set(int power) {
+		for (auto m : motors) {
+			auto motor = (Motor *)m;
+			motor->set(power);
+		}
+	} /* set */
+
 	void Pid::loop() {
 		float current;
 		float error;
@@ -62,9 +69,7 @@ namespace Alpaca {
 			                settings->max,
 			                settings->min);
 
-			for (auto m : *settings->system.motors) {
-				m.set(power);
-			}
+			settings->system.set(power);
 		} while (!done);
 	} /* loop */
 

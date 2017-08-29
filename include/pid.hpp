@@ -38,7 +38,12 @@ namespace Alpaca {
 		/*
 		 * The motors that are slave to the sensor
 		 */
-		std::list<Motor> *motors;
+		std::list<std::size_t>motors;
+
+		/*
+		 * Set all of the motors in the System
+		 */
+		void set(int power);
 	}; /* class System */
 
 	/*

@@ -26,17 +26,9 @@ namespace Alpaca {
 		power          = _power * inverted * scale;
 		slew->lastTime = millis();
 		slew->request  = power;
-	} // Motor::set
+	} /* Motor::set */
 
 	namespace motors {
-		void set(Motor *motor, int power) {
-			motor->set(power);
-		} // set
-
-		int get(Motor motor) {
-			return motor.power;
-		} // get
-
 		Motor init(char  port,
 		           int   inverted,
 		           bool  slew,
@@ -53,7 +45,7 @@ namespace Alpaca {
 			motor.slew->rate           = slewRate;
 			motor.slew->on             = slew;
 			return motor;
-		} // init
+		} /* init */
 
 		namespace slew {
 			MotorData  list[10];
@@ -86,7 +78,7 @@ namespace Alpaca {
 					delay(slewWait);
 				}
 				free(none);
-			} // slew
+			} /* slew */
 
 			void init(void) {
 				MotorData default_motor;
