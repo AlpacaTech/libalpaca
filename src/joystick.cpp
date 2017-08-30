@@ -21,13 +21,17 @@
 #include "../include/joystick.hpp"
 
 namespace Alpaca {
-	namespace joystick {
-		int analog(Channel channel) {
-			return joystickGetAnalog(1, channel);
-		} // analog
+	Joystick::Joystick() {
+		static unsigned char j;
 
-		bool digital(Group group, Button button) {
-			return joystickGetDigital(1, group, button);
-		} /* digital */
-	}   /* namespace joystick */
-}     /* namespace Alpaca */
+		joyNum = ++j;
+	}
+
+	int Joystick::analog(unsigned char channel) {
+		return joystickGetAnalog(joyNum, channel);
+	} /* analog */
+
+	bool Joystick::digital(unsigned char group, unsigned char button) {
+		return joystickGetDigital(joyNum, group, button);
+	} /* digital */
+}   /* namespace Alpaca */

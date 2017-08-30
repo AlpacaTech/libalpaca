@@ -21,7 +21,8 @@
 #ifndef PID_HPP
 #define PID_HPP
 
-#include "lift.hpp"
+#include "joystick.hpp"
+#include "sensors.hpp"
 #include "motors.hpp"
 #include <list>
 
@@ -36,7 +37,8 @@ namespace Alpaca {
 		sensors::Sensor *sensor;
 
 		/*
-		 * Pointers to the motors that are slave to the sensor casted into a std::size_t
+		 * Pointers to the motors that are slave to the sensor casted into a
+		 ***std::size_t
 		 */
 		std::list<std::size_t>motors;
 

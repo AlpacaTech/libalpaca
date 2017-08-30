@@ -84,7 +84,6 @@ namespace Alpaca {
 			sonic = ultrasonicInit(Sonic::ports[0], Sonic::ports[1]);
 		} /* Sonic::init */
 
-		
 		Digital::Digital(unsigned char port,
 		                 bool          inverted) : port(port),
 			                                         _inverted(inverted) {}

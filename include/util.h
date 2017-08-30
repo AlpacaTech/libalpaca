@@ -21,7 +21,7 @@
 #ifndef UTIL_H
 #define UTIL_H
 
-/**
+/*
  * "Clips" a number between a high and low value
  *
  * @param	 input The number wanted clipped
@@ -33,7 +33,7 @@
 #define clipNum(input, high, low) \
   input <= low ? low : (input >= high ? high : input)
 
-/**
+/*
  * Determines whether a number is positive, negative, or 0.
  *
  * @param  input the number to be determined the sign of
@@ -43,4 +43,5 @@
  *					1 if the number is positive.
  */
 #define sgn(input) input == 0 ? 0 : (input > 0 ? 1 : -1)
+
 #endif /* end of include guard: UTIL_H */
