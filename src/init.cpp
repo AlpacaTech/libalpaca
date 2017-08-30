@@ -1,6 +1,6 @@
 /*
- * @file joystick.cpp
- * @brief Source file that makes joystick stuff easier
+ * @file init.cpp
+ * @brief Source file of initialization
  *
  * Copyright (C) 2017 Contributors to Alpaca Tech
  *
@@ -18,20 +18,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "../include/joystick.hpp"
+#include "../include/main.h"
 
-namespace Alpaca {
-	Joystick::Joystick() {
-		static unsigned char j;
+void initilizeIO() {}
 
-		joyNum = ++j;
-	}
-
-	int Joystick::analog(unsigned char channel) {
-		return joystickGetAnalog(joyNum, channel);
-	} /* analog */
-
-	bool Joystick::digital(unsigned char group, unsigned char button) {
-		return joystickGetDigital(joyNum, group, button);
-	} /* digital */
-}   /* namespace Alpaca */
+void initialize()  {}

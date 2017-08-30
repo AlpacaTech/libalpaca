@@ -24,29 +24,40 @@
 #include "../include/API.h"
 
 namespace Alpaca {
-	/** The joystick class */
-	namespace joystick {
-		/** A group of buttons on the joystick */
-		typedef unsigned char Group;
+	/*
+	 * A simple interaction with VEX Joysticks
+	 */
+	class Joystick {
+		public:
 
-		/** An analog channel on the joystick */
-		typedef unsigned char Channel;
+			const unsigned char Up    = JOY_UP;
+			const unsigned char Down  = JOY_DOWN;
+			const unsigned char Left  = JOY_LEFT;
+			const unsigned char Right = JOY_RIGHT;
 
-		/** A set of buttons within a group */
-		typedef enum Button {
-			Up    = JOY_UP,
-			Down  = JOY_DOWN,
-			Left  = JOY_LEFT,
-			Right = JOY_RIGHT,
-		} Button;
+			/*
+			 * Get the analog value of the specified channel
+			 */
+			int  analog(unsigned char channel);
 
-		/** Get the analog value of the specified channel */
-		int  analog(Channel channel);
+			/*
+			 * Returns whether or not a button in a group is pressed
+			 */
+			bool digital(unsigned char group,
+									unsigned char button);
 
-		/** Returns whether or not a button in a group is pressed */
-		bool digital(Group  group,
-		             Button button);
-	} /* namespace joystick */
-}   /* namespace Alpaca */
+			/*
+			 * Automatically increments the joystick number with each joystick created
+			 */
+			Joystick();
+
+		private:
+
+			/*
+			 * The joystick number
+			 */
+		unsigned char joyNum;
+	}; /* class joystick */
+}    /* namespace Alpaca */
 
 #endif /* end of include guard: JOYSTICK_H */

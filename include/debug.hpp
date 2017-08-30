@@ -25,7 +25,9 @@
 #include "pid.hpp"
 
 namespace Alpaca {
-	/** Contains debugging functions, etc */
+	/*
+	 * Contains debugging functions, etc
+	 */
 	namespace debug {
 		extern unsigned long fault;
 
@@ -39,9 +41,11 @@ namespace Alpaca {
 			}
 			T *out = (T *)buf;
 			return *out;
-		} // unserialize
+		} /* unserialize */
 
-		/** Debug the Cortex if something goes wrong */
+		/*
+		 * Debug the Cortex if something goes wrong
+		 */
 		void debug(void);
 	} /* namespace debug */
 }   /* namespace Alpaca */
