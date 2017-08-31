@@ -50,14 +50,19 @@ class LcdScreen {
 	private:
 
 		/*
-		 * The two lines of Lcd content
+		 * The first line of Lcd content
 		 */
-		std::string _content[2];
+		std::string line1;
+
+		/*
+		 * The second line of Lcd content
+		 */
+		std::string line2;
 }; /* class LcdScreen */
 
 /*
  * Lcd screens can be very useful for displaying basic information, and possibly
- ******selecting something based on that information.
+ * selecting something based on that information.
  */
 class Lcd {
 	public:

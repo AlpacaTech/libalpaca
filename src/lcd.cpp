@@ -21,17 +21,32 @@
 #include "../include/lcd.hpp"
 
 LcdScreen::LcdScreen(std::string line1,
-                     std::string line2) {
-	_content[0] = line1;
-	_content[1] = line2;
-}
+                     std::string line2) : line1(line1), line2(line2) {}
 
 std::string LcdScreen::content(int line) {
-	return _content[line];
+	switch (line) {
+	case 1:
+		return line1;
+
+	case 2:
+		return line2;
+
+	default:
+		return std::string("0");
+	} /* switch */
 } /* content */
 
 std::string LcdScreen::content(int line, std::string newContent) {
-	return _content[line] = newContent;
+	switch (line) {
+	case 1:
+		return line1 = newContent;
+
+	case 2:
+		return line2 = newContent;
+
+	default:
+		return std::string("0");
+	} /* switch */
 } /* content */
 
 Lcd::Lcd(PROS_FILE *port,
@@ -43,7 +58,6 @@ void Lcd::init() {
 } /* init */
 
 void Lcd::set(LcdScreen *screen) {
-	for (int line = 0; line < 2; line++) {
-		lcdSetText(port, line, screen->content(line).c_str());
-	}
+	lcdSetText(port, 1, screen->content(1).c_str());
+	lcdSetText(port, 2, screen->content(2).c_str());
 } /* set */
