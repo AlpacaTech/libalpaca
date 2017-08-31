@@ -38,7 +38,7 @@ namespace Alpaca {
 
 		/*
 		 * Pointers to the motors that are slave to the sensor casted into a
-		 ***std::size_t
+		 * std::size_t
 		 */
 		std::list<std::size_t>motors;
 
@@ -80,17 +80,17 @@ namespace Alpaca {
 					/*
 					 * Maximum value to be assigned to the controlled system
 					 */
-					int max = 127;
+					int max;
 
 					/*
 					 * Minimum value to be assigned to the controlled system
 					 */
-					int min = -127;
+					int min;
 
 					/*
 					 * Limit for the integral value
 					 */
-					int iLimit = 50;
+					int iLimit;
 
 					/*
 					 * Whether or not the PID loop ends

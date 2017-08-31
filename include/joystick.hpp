@@ -30,10 +30,10 @@ namespace Alpaca {
 	class Joystick {
 		public:
 
-			const unsigned char Up    = JOY_UP;
-			const unsigned char Down  = JOY_DOWN;
-			const unsigned char Left  = JOY_LEFT;
-			const unsigned char Right = JOY_RIGHT;
+			static const unsigned char Up    = JOY_UP;
+			static const unsigned char Down  = JOY_DOWN;
+			static const unsigned char Left  = JOY_LEFT;
+			static const unsigned char Right = JOY_RIGHT;
 
 			/*
 			 * Get the analog value of the specified channel

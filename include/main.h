@@ -35,6 +35,7 @@
 #include "API.h"
 #include "debug.hpp"
 #include "pid.hpp"
+#include "lcd.hpp"
 
 // Allow usage of this file in C++ programs
 #ifdef __cplusplus

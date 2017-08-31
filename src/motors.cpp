@@ -58,14 +58,14 @@ namespace Alpaca {
 					current = millis();
 
 					for (size_t i = 0; i < 10; i++) {
-						auto m = &list[i];
+						MotorData *m = &list[i];
 
 						if ((m->request == m->lastPower) || !m->on) {
 							motorSet(i + 1, m->request);
 							continue;
 						}
 
-						auto change =
+						int change =
 						  (m->request >
 						   m->lastPower) ? ((millis() -
 						                     m->lastTime) *
