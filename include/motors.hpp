@@ -24,8 +24,6 @@
 
 #include "API.h"
 #include "util.h"
-#include <vector>
-#include <cstdarg>
 
 namespace Alpaca {
 	/*

@@ -20,33 +20,23 @@
 
 #include "../include/lcd.hpp"
 
-LcdScreen::LcdScreen(std::string line1,
-                     std::string line2) : line1(line1), line2(line2) {}
+LcdFrame::LcdFrame(const char *line1,
+                   const char *line2,
+                   LcdFrame   *parent,
+                   LcdFrame   *prev,
+                   LcdFrame   *next,
+                   LcdFrame   *child) : parent(parent), prev(prev), next(next),
+	                                      child(child) {
+	_content[0] = line1;
+	_content[1] = line2;
+}
 
-std::string LcdScreen::content(int line) {
-	switch (line) {
-	case 1:
-		return line1;
-
-	case 2:
-		return line2;
-
-	default:
-		return std::string("0");
-	} /* switch */
+const char * LcdFrame::content(int line) {
+	return _content[line - 1];
 } /* content */
 
-std::string LcdScreen::content(int line, std::string newContent) {
-	switch (line) {
-	case 1:
-		return line1 = newContent;
-
-	case 2:
-		return line2 = newContent;
-
-	default:
-		return std::string("0");
-	} /* switch */
+const char * LcdFrame::content(int line, const char *newContent) {
+	return _content[line - 1] = newContent;
 } /* content */
 
 Lcd::Lcd(PROS_FILE *port,
@@ -57,7 +47,8 @@ void Lcd::init() {
 	lcdSetBacklight(port, backlight);
 } /* init */
 
-void Lcd::set(LcdScreen *screen) {
-	lcdSetText(port, 1, screen->content(1).c_str());
-	lcdSetText(port, 2, screen->content(2).c_str());
+void Lcd::set(LcdFrame *screen) {
+	current = screen;
+	lcdSetText(port, 1, screen->content(1));
+	lcdSetText(port, 2, screen->content(2));
 } /* set */

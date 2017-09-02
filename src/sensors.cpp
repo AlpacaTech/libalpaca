@@ -84,24 +84,12 @@ namespace Alpaca {
 			sonic = ultrasonicInit(Sonic::ports[0], Sonic::ports[1]);
 		} /* Sonic::init */
 
-		Digital::Digital(unsigned char port,
-		                 bool          inverted) : port(port),
-			                                         _inverted(inverted) {}
-
 		void Digital::init(void) {
-			pinMode(port, INPUT);
+			pinMode(ports[0], INPUT);
 		} /* Button::init */
 
-		bool Digital::value(void) {
-			return (_inverted) ? digitalRead(port) : !digitalRead(port);
+		long Digital::value(void) {
+			return (long)((_inverted) ? digitalRead(ports[0]) : !digitalRead(ports[0]));
 		} /* Button::value */
-
-		bool Digital::inverted(bool val) {
-			return _inverted = val;
-		} /* inverted */
-
-		bool Digital::inverted() {
-			return _inverted;
-		} /* inverted */
 	}   /* namespace sensors */
 }     /* namespace Alpaca */

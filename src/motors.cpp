@@ -19,7 +19,6 @@
  */
 
 #include "../include/motors.hpp"
-#include <vector>
 
 namespace Alpaca {
 	void Motor::set(int _power) {

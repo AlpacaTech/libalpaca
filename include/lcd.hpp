@@ -21,44 +21,57 @@
 #ifndef LCD_HPP
 #define LCD_HPP
 
-#include <map>
-#include <string>
 #include "API.h"
 #include "util.h"
 
 /*
- * An LcdScreen is a node in a tree of LcdScreens, and can be set to the Lcd
+ * An LcdFrame is a node in a linked list of LcdFrames, and has a child node
+ * as well
  */
-class LcdScreen {
+class LcdFrame {
 	public:
 
-		/*
-		 * The children of this node
-		 */
-		std::map<std::string, LcdScreen> c;
+		LcdFrame(const char *line1,
+		         const char *line2,
+		         LcdFrame   *parent = NULL,
+		         LcdFrame   *prev   = NULL,
+		         LcdFrame   *next   = NULL,
+		         LcdFrame   *child  = NULL);
 
 		/*
 		 * Get the content on the specified line
 		 */
-		std::string content(int line);
-		std::string content(int         line,
-		                    std::string newContent);
+		const char* content(int line);
+		const char* content(int         line,
+		                    const char *newContent);
 
-		LcdScreen(std::string line1,
-		          std::string line2);
+		/*
+		 * The parent LcdFrame
+		 */
+		LcdFrame *parent;
+
+		/*
+		 * The previous screen in the linked list
+		 */
+		LcdFrame *prev;
+
+		/*
+		 * The next screen in the linked list
+		 */
+		LcdFrame *next;
+
+		/*
+		 * The child of this node
+		 */
+		LcdFrame *child;
 
 	private:
 
 		/*
-		 * The first line of Lcd content
+		 * The content of this screen
 		 */
-		std::string line1;
-
-		/*
-		 * The second line of Lcd content
-		 */
-		std::string line2;
-}; /* class LcdScreen */
+		const char *_content[2];
+}; /* class LcdFrame */
 
 /*
  * Lcd screens can be very useful for displaying basic information, and possibly
@@ -75,7 +88,7 @@ class Lcd {
 		/*
 		 * Set the Lcd to display a given screen
 		 */
-		void set(LcdScreen *screen);
+		void set(LcdFrame *screen);
 
 		Lcd(PROS_FILE *port = uart1,
 		    bool       backlight = true);
@@ -91,6 +104,11 @@ class Lcd {
 		 * Whether or not the Lcd should have a backlight
 		 */
 		bool backlight;
+
+		/*
+		 * The current screen the Lcd is displaying
+		 */
+		LcdFrame *current;
 }; /* class Lcd */
 
 #endif /* end of include guard: LCD_HPP */
