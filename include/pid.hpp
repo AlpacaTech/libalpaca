@@ -37,8 +37,7 @@ namespace Alpaca {
 		sensors::Sensor *sensor;
 
 		/*
-		 * Pointers to the motors that are slave to the sensor casted into a
-		 * std::size_t
+		 * Pointers to the motors that are slave to the sensor
 		 */
 		std::list<Motor*>motors;
 
