@@ -1,7 +1,5 @@
 # Universal C Makefile for MCU targets
 
-LIBNAME=libalpaca
-
 # Path to project root (for top-level, so the project is in ./; first-level, ../; etc.)
 ROOT=.
 # Binary output directory
@@ -23,20 +21,10 @@ CPPSRC:=$(wildcard *.$(CPPEXT))
 CPPOBJ:=$(patsubst %.o,$(BINDIR)/%.o,$(CPPSRC:.$(CPPEXT)=.o))
 OUT:=$(BINDIR)/$(OUTNAME)
 
-.PHONY: all clean documentation library template flash upload upload-legacy _force_look release develop
-
-# default version just uses the latest tag
-VERSION := `git describe --abbrev=0`
+.PHONY: all clean flash upload upload-legacy _force_look
 
 # By default, compile program
 all: $(BINDIR) $(OUT)
-
-release:
-	$(eval CCFLAGS += -D FW_VERSION="$(VERSION)")
-
-develop:
-	$(eval VERSION := `git describe --abbrev=1`)
-	$(eval CCFLAGS += -D FW_VERSION="$(VERSION)")
 
 # Remove all intermediate object files (remove the binary directory)
 clean:
@@ -57,27 +45,6 @@ upload-legacy: all
 # Phony force-look target
 _force_look:
 	@true
-
-# Compiles library for general HS use
-library: clean $(BINDIR) $(SUBDIRS) $(ASMOBJ) $(COBJ) $(CPPOBJ)
-	# Get rid of junk that the user should be doing
-	-rm -f $(BINDIR)/opcontrol.o
-	-rm -f $(BINDIR)/init.o
-	-rm -f $(BINDIR)/auto.o
-	$(MCUPREFIX)ar rvs $(BINDIR)/$(LIBNAME)_sym.a $(BINDIR)/*.o
-	$(MCUPREFIX)objcopy -S -g $(BINDIR)/$(LIBNAME)_sym.a $(BINDIR)/$(LIBNAME).a
-
-TEMPLATEFILES:=src/auto.cpp src/init.cpp src/opcontrol.cpp src/Makefile include/API.h include/main.h include/alpaca firmware common.mk
-template: library
-	-rm -rf $(addprefix $(ROOT)/template/,$(TEMPLATEFILES))
-	mkdir -p $(ROOT)/template/src $(ROOT)/template/include $(ROOT)/template/firmware
-	$(foreach f,$(TEMPLATEFILES),cp -r $(ROOT)/$(f) $(ROOT)/template/$(f); )
-	cp $(BINDIR)/$(LIBNAME).a $(ROOT)/template/firmware/$(LIBNAME).a
-	pros conduct create-template libalpaca $(VERSION) libalpaca --location $(ROOT)/template -u "firmware/$(LIBNAME).a" -u "include/API.h" -u "common.mk" -i "template.pros"
-
-# Builds the documentation
-documentation:
-	doxygen Doxyfile
 
 # Looks in subdirectories for things to make
 $(SUBDIRS): %: _force_look
