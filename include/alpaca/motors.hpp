@@ -22,10 +22,8 @@
 #ifndef MOTORS_HPP
 #define MOTORS_HPP
 
-#include "API.h"
+#include "../API.h"
 #include "util.h"
-#include <vector>
-#include <cstdarg>
 
 namespace Alpaca {
 	/*
@@ -150,4 +148,5 @@ namespace Alpaca {
 		} /* namespace slew */
 	}   /* namespace motors */
 }     /* namespace Alpaca */
+
 #endif /* end of include guard: MOTORS_HPP */

@@ -22,7 +22,7 @@
 #ifndef SENSORS_HPP
 #define SENSORS_HPP
 
-#include "API.h"
+#include "../API.h"
 
 namespace Alpaca {
 	/*
@@ -134,7 +134,7 @@ namespace Alpaca {
 		 * Standard digital sensors have 2 states - on and off. This allows you to
 		 * detect that state, and invert it if needed
 		 */
-		class Digital {
+		class Digital : Sensor {
 			public:
 
 				/*
@@ -145,31 +145,7 @@ namespace Alpaca {
 				/*
 				 * Returns true if the button is pressed
 				 */
-				bool value(void);
-
-				/*
-				 * Whether or not the return value should be inverted
-				 */
-				bool inverted(bool val);
-				bool inverted();
-
-				/*
-				 * Class constructor, but init() must also be called
-				 */
-				Digital(unsigned char port,
-				        bool          inverted);
-
-			protected:
-
-				/*
-				 * The port that the sensor is plugged in to
-				 */
-				unsigned char port;
-
-				/*
-				 * Whether or not the button's value should be inverted
-				 */
-				bool _inverted;
+				long value(void);
 		}; /* class Digital */
 	}    /* namespace sensors */
 }      /* namespace Alpaca */

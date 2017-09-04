@@ -19,12 +19,12 @@
  */
 
 #include "../include/main.h"
+#include <vector>
 
 namespace Alpaca {
 	void System::set(int power) {
-		for (auto m : motors) {
-			auto motor = (Motor *)m;
-			motor->set(power);
+		for (Motor *m : motors) {
+			m->set(power);
 		}
 	} /* set */
 

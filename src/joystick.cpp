@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "../include/joystick.hpp"
+#include "../include/alpaca/joystick.hpp"
 
 namespace Alpaca {
 	Joystick::Joystick() {

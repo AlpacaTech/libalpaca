@@ -33,8 +33,9 @@
 #define MAIN_H_
 
 #include "API.h"
-#include "debug.hpp"
-#include "pid.hpp"
+#include "alpaca/debug.hpp"
+#include "alpaca/pid.hpp"
+#include "alpaca/lcd.hpp"
 
 // Allow usage of this file in C++ programs
 #ifdef __cplusplus

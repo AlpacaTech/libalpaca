@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "../include/debug.hpp"
+#include "../include/alpaca/debug.hpp"
 
 namespace Alpaca {
 	namespace debug {

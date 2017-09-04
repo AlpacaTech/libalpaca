@@ -18,8 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "../include/motors.hpp"
-#include <vector>
+#include "../include/alpaca/motors.hpp"
 
 namespace Alpaca {
 	void Motor::set(int _power) {
@@ -58,14 +57,14 @@ namespace Alpaca {
 					current = millis();
 
 					for (size_t i = 0; i < 10; i++) {
-						auto m = &list[i];
+						MotorData *m = &list[i];
 
 						if ((m->request == m->lastPower) || !m->on) {
 							motorSet(i + 1, m->request);
 							continue;
 						}
 
-						auto change =
+						int change =
 						  (m->request >
 						   m->lastPower) ? ((millis() -
 						                     m->lastTime) *
