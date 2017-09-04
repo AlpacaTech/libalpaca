@@ -167,6 +167,6 @@ int y;
 bool z; // A short description of the bool z
 ```
 
-## Reccomendations
+## Recommendations
 If you need to know about something not listed here, then feel free to drop us an email [here](mailto:alpacatech@gmx.com).
 
