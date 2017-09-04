@@ -21,7 +21,7 @@
 
 #ifndef JOYSTICK_H
 #define JOYSTICK_H
-#include "../include/API.h"
+#include "../API.h"
 
 namespace Alpaca {
 	/*

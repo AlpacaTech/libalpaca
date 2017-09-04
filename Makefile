@@ -67,13 +67,13 @@ library: clean $(BINDIR) $(SUBDIRS) $(ASMOBJ) $(COBJ) $(CPPOBJ)
 	$(MCUPREFIX)ar rvs $(BINDIR)/$(LIBNAME)_sym.a $(BINDIR)/*.o
 	$(MCUPREFIX)objcopy -S -g $(BINDIR)/$(LIBNAME)_sym.a $(BINDIR)/$(LIBNAME).a
 
-TEMPLATEFILES:=src/auto.c src/init.c src/opcontrol.c include/API.h include/main.h firmware
+TEMPLATEFILES:=src/auto.cpp src/init.cpp src/opcontrol.cpp src/Makefile include/API.h include/main.h include/alpaca firmware Makefile common.mk
 template: library
 	-rm -rf $(addprefix $(ROOT)/template/,$(TEMPLATEFILES))
 	mkdir -p $(ROOT)/template/src $(ROOT)/template/include $(ROOT)/template/firmware
 	$(foreach f,$(TEMPLATEFILES),cp -r $(ROOT)/$(f) $(ROOT)/template/$(f); )
 	cp $(BINDIR)/$(LIBNAME).a $(ROOT)/template/firmware/$(LIBNAME).a
-	pros conduct create-template kernel $(VERSION) pros-mainline --location $(ROOT)/template -u "firmware/$(LIBNAME).a" -u "include/API.h" -u "common.mk" -i "template.pros"
+	pros conduct create-template libalpaca $(VERSION) libalpaca --location $(ROOT)/template -u "firmware/$(LIBNAME).a" -u "include/API.h" -u "common.mk" -i "template.pros"
 
 # Builds the documentation
 documentation:

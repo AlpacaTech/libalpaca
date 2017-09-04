@@ -22,7 +22,7 @@
 #ifndef MOTORS_HPP
 #define MOTORS_HPP
 
-#include "API.h"
+#include "../API.h"
 #include "util.h"
 
 namespace Alpaca {

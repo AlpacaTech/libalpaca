@@ -22,7 +22,7 @@
 #ifndef SENSORS_HPP
 #define SENSORS_HPP
 
-#include "API.h"
+#include "../API.h"
 
 namespace Alpaca {
 	/*

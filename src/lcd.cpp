@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "../include/lcd.hpp"
+#include "../include/alpaca/lcd.hpp"
 
 LcdFrame::LcdFrame(const char *line1,
                    const char *line2,

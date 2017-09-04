@@ -21,7 +21,7 @@
 #ifndef LCD_HPP
 #define LCD_HPP
 
-#include "API.h"
+#include "../API.h"
 #include "util.h"
 
 /*

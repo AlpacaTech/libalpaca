@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "../include/motors.hpp"
+#include "../include/alpaca/motors.hpp"
 
 namespace Alpaca {
 	void Motor::set(int _power) {
