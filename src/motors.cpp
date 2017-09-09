@@ -76,7 +76,7 @@ namespace Alpaca {
 					}
 					delay(slewWait);
 				}
-				free(none);
+				(void)none;
 			} /* slew */
 
 			void init(void) {

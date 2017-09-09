@@ -32,7 +32,7 @@
 // practice
 #define MAIN_H_
 
-#include "API.h"
+#include "API.hpp"
 #include "alpaca/debug.hpp"
 #include "alpaca/pid.hpp"
 #include "alpaca/lcd.hpp"

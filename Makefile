@@ -67,13 +67,14 @@ library: clean $(BINDIR) $(SUBDIRS) $(ASMOBJ) $(COBJ) $(CPPOBJ)
 	$(MCUPREFIX)ar rvs $(BINDIR)/$(LIBNAME)_sym.a $(BINDIR)/*.o
 	$(MCUPREFIX)objcopy -S -g $(BINDIR)/$(LIBNAME)_sym.a $(BINDIR)/$(LIBNAME).a
 
-TEMPLATEFILES:=src/auto.cpp src/init.cpp src/opcontrol.cpp src/Makefile include/API.h include/main.h include/alpaca firmware common.mk
+TEMPLATEFILES:=src/auto.cpp src/init.cpp src/opcontrol.cpp src/Makefile include/API.hpp include/main.hpp include/alpaca firmware common.mk
 template: library
 	-rm -rf $(addprefix $(ROOT)/template/,$(TEMPLATEFILES))
 	mkdir -p $(ROOT)/template/src $(ROOT)/template/include $(ROOT)/template/firmware
 	$(foreach f,$(TEMPLATEFILES),cp -r $(ROOT)/$(f) $(ROOT)/template/$(f); )
 	cp $(BINDIR)/$(LIBNAME).a $(ROOT)/template/firmware/$(LIBNAME).a
-	pros conduct create-template libalpaca $(VERSION) libalpaca --location $(ROOT)/template -u "firmware/$(LIBNAME).a" -u "include/API.h" -u "common.mk" -i "template.pros"
+	mv template/firmware/firmware/* template/firmware/
+	rm template/firmware/firmware/ -rf
 
 # Builds the documentation
 documentation:

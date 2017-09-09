@@ -21,8 +21,8 @@
 #ifndef LCD_HPP
 #define LCD_HPP
 
-#include "../API.h"
-#include "util.h"
+#include "../API.hpp"
+#include "util.hpp"
 
 /*
  * An LcdFrame is a node in a linked list of LcdFrames, and has a child node
