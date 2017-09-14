@@ -21,77 +21,71 @@
 #include "../include/alpaca/motors.hpp"
 
 namespace Alpaca {
-	void Motor::set(int _power) {
-		power          = _power * inverted * scale;
+	void Motor::set(int p) {
+		power          = (int)(scale(p * inverted));
 		slew->lastTime = millis();
 		slew->request  = power;
 	} /* Motor::set */
 
-	namespace motors {
-		Motor init(char  port,
-		           int   inverted,
-		           bool  slew,
-		           float slewRate,
-		           float scale) {
-			static unsigned char p = 0;
-			Motor motor;
+	Motor::Motor(char  inverted,
+	             char  motorPort,
+	             bool  isSlew,
+	             float slewRate,
+	             float(*scale)(int)) : inverted(inverted), scale(scale) {
+		static unsigned char p = 1;
 
-			motor.port                 = (port != -1) ? port : p++;
-			motor.inverted             = inverted;
-			motor.scale                = scale;
-			slew::list[motor.port - 1] = MotorData();
-			motor.slew                 = &slew::list[motor.port - 1];
-			motor.slew->rate           = slewRate;
-			motor.slew->on             = slew;
-			return motor;
-		} /* init */
+		port                       = (motorPort != -1) ? motorPort : p++;
+		slew::list[port - 1] = MotorData();
+		this->slew                       = &slew::list[port - 1];
+		this->slew->rate                 = slewRate;
+		this->slew->on                   = isSlew;
+	}
 
-		namespace slew {
-			MotorData  list[10];
-			TaskHandle handle;
+	namespace slew {
+		Motor::MotorData  list[10];
+		TaskHandle handle;
 
-			void slew(void *none) {
-				unsigned long int current;
+		void slew(void *none) {
+			unsigned long int current;
 
-				while (true) {
-					current = millis();
+			while (true) {
+				current = millis();
 
-					for (size_t i = 0; i < 10; i++) {
-						MotorData *m = &list[i];
+				for (size_t i = 0; i < 10; i++) {
+					Motor::MotorData *m = &list[i];
 
-						if ((m->request == m->lastPower) || !m->on) {
-							motorSet(i + 1, m->request);
-							continue;
-						}
-
-						int change =
-						  (m->request >
-						   m->lastPower) ? ((millis() -
-						                     m->lastTime) *
-						                    m->rate) : ((millis() - m->lastTime) * -m->rate);
-
-						list[i].lastPower += change;
-						  motorSet(i + 1, list[i].lastPower);
-						list[i].lastTime = current;
+					if ((m->request == m->lastPower) || !m->on) {
+						motorSet(i + 1, m->request);
+						continue;
 					}
-					delay(slewWait);
+
+					int change =
+						(m->request >
+						 m->lastPower) ? ((millis() -
+															 m->lastTime) *
+															m->rate) : ((millis() - m->lastTime) * -m->rate);
+
+					list[i].lastPower += change;
+						motorSet(i + 1, list[i].lastPower);
+					list[i].lastTime = current;
 				}
-				(void)none;
-			} /* slew */
+				delay(slewWait);
+			}
+			(void)none;
+		} /* slew */
 
-			void init(void) {
-				MotorData default_motor;
+		void init(void) {
+			Motor::MotorData default_motor;
 
-				default_motor.lastTime  = millis();
-				default_motor.lastPower = 0;
-				default_motor.request   = 0;
+			default_motor.lastTime  = millis();
+			default_motor.lastPower = 0;
+			default_motor.request   = 0;
 
-				for (size_t i = 1; i <= 11; i++) {
-					list[i] = default_motor;
-				}
-				handle = taskCreate(&slew, TASK_DEFAULT_STACK_SIZE, NULL,
-				                    TASK_PRIORITY_DEFAULT + 1);
-			} /* init */
-		}   /* namespace slew */
-	}     /* namespace motors */
-}       /* namespace Alpaca */
+			for (size_t i = 1; i <= 11; i++) {
+				list[i] = default_motor;
+			}
+			handle = taskCreate(&slew, TASK_DEFAULT_STACK_SIZE, NULL,
+													TASK_PRIORITY_DEFAULT + 1);
+		} /* init */
+	}   /* namespace slew */
+}     /* namespace Alpaca */

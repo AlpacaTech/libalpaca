@@ -688,7 +688,7 @@ void imeShutdown();
  * Reference type for an initialized gyro.
  *
  * Gyroscope information is stored as an opaque pointer to a structure in
- *********memory; as
+ **********memory; as
  * this is a
  * pointer type, it can be safely passed or stored by value.
  */
@@ -732,7 +732,7 @@ int  gyroGet(Gyro gyro);
  * the default
  * value
  * @return a Gyroscope object to be stored and used for later calls to gyro
- *********functions
+ **********functions
  */
 Gyro gyroInit(unsigned char  port,
               unsigned short multiplier);

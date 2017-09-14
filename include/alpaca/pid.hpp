@@ -39,18 +39,18 @@ namespace Alpaca {
 		/*
 		 * Pointers to the motors that are slave to the sensor
 		 */
-		std::list<Motor*>motors;
+		std::list<Motor *>motors;
 
 		/*
 		 * Set all of the motors in the System
 		 */
 		virtual void set(int power);
 
-    /*
-     * A new system
-     */
-    System(sensors::Sensor *sensor,
-           std::initializer_list<Motor*> motors);
+		/*
+		 * A new system
+		 */
+		System(sensors::Sensor              *sensor,
+		       std::initializer_list<Motor *>motors);
 	}; /* class System */
 
 	/*

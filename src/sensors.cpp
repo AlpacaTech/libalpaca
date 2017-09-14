@@ -22,7 +22,7 @@
 
 namespace Alpaca {
 	namespace sensors {
-    std::vector<Sensor*> sensors;
+		std::vector<Sensor *> sensors;
 		void Sensor::init() {
 			analogCalibrate(ports[0]);
 		} /* init */
@@ -98,8 +98,9 @@ namespace Alpaca {
 	}   /* namespace sensors */
 
 	void init() {
+		slew::init();
 		for (auto s : sensors::sensors) {
 			s->init();
 		}
 	} /* init */
-}     /* namespace Alpaca */
+}   /* namespace Alpaca */
