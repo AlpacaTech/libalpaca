@@ -150,6 +150,18 @@ namespace Alpaca {
 			Pid(Settings *settings,
 			    long      target);
 
+			/*
+			 * Get the current request
+			 */
+			long request();
+
+			/*
+			 * Request a new target position, or with no arguments get the current
+			 * target
+			 */
+			long request(long r = 0,
+			             bool abs = false);
+
 		private:
 
 			/*
@@ -157,6 +169,9 @@ namespace Alpaca {
 			 */
 			void loop();
 
+			/*
+			 * A pointer to the settings to be used
+			 */
 			Settings *settings;
 			long target;
 	}; /* class Pid */

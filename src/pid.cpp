@@ -120,4 +120,13 @@ namespace Alpaca {
 	         long      target) : settings(settings), target(target) {
 		loop();
 	}
+
+	long Pid::request() {
+		return target;
+	} /* request */
+
+	long Pid::request(long v, bool abs) {
+		target = (abs) ? v : target + v;
+		return target;
+	} /* request */
 } /* namespace Alpaca */

@@ -99,6 +99,7 @@ namespace Alpaca {
 
 	void init() {
 		slew::init();
+
 		for (auto s : sensors::sensors) {
 			s->init();
 		}
