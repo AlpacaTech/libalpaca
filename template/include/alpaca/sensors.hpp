@@ -74,7 +74,7 @@ namespace Alpaca {
 
 				void init();
 				long value();
-        using Sensor::Sensor;
+				using Sensor::Sensor;
 		}; /* class Quad */
 
 		/*
@@ -123,7 +123,7 @@ namespace Alpaca {
 
 				void init();
 				long value();
-        using Sensor::Sensor;
+				using Sensor::Sensor;
 
 			protected:
 
@@ -148,21 +148,21 @@ namespace Alpaca {
 				/*
 				 * Returns true if the button is pressed
 				 */
-        long value(void);
-        using Sensor::Sensor;
+				long value(void);
+				using Sensor::Sensor;
 		}; /* class Digital */
 
 		/*
 		 * A list of all the sensors, such that Alpaca::init can be called in
 		 * initialiaze to init all of the sensors
 		 */
-		extern std::vector<Sensor*> sensors;
+		extern std::vector<Sensor *> sensors;
 	} /* namespace sensors */
 
 	/*
 	 * Initialize all of the sensors and stuff
 	 */
 	void init();
-}      /* namespace Alpaca */
+} /* namespace Alpaca */
 
 #endif /* end of include guard: SENSORS_HPP */

@@ -24,12 +24,12 @@
  * Fix a linking issue
  */
 extern "C" {
-  void __libc_init_array();
-	void * __dso_handle;
+void __libc_init_array();
+void *__dso_handle;
 }
 
 void initializeIO() {
-  __libc_init_array();
-}
+	__libc_init_array();
+} // initializeIO
 
-void initialize()  {}
+void initialize() {}

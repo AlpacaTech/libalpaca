@@ -32,7 +32,7 @@ namespace Alpaca {
 	             bool  isSlew,
 	             float slewRate,
 	             float(*scale)(int)) : inverted(inverted), scale(scale) {
-		static unsigned char p = 1;
+		static unsigned char p = motorPort;
 
 		port                       = (motorPort != -1) ? motorPort : p++;
 		slew::list[port - 1] = MotorData();
