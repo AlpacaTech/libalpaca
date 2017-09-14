@@ -45,6 +45,12 @@ namespace Alpaca {
 		 * Set all of the motors in the System
 		 */
 		virtual void set(int power);
+
+    /*
+     * A new system
+     */
+    System(sensors::Sensor *sensor,
+           std::initializer_list<Motor*> motors);
 	}; /* class System */
 
 	/*

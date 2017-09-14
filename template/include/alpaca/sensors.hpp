@@ -23,6 +23,7 @@
 #define SENSORS_HPP
 
 #include "../API.hpp"
+#include <vector>
 
 namespace Alpaca {
 	/*
@@ -61,7 +62,7 @@ namespace Alpaca {
 		 * be converted to degrees by multiplying by 4. This is often useful on a
 		 * lift or a drive to control position
 		 */
-		class Quad : Sensor {
+		class Quad : public Sensor {
 			protected:
 
 				/*
@@ -73,13 +74,14 @@ namespace Alpaca {
 
 				void init();
 				long value();
+        using Sensor::Sensor;
 		}; /* class Quad */
 
 		/*
 		 * Gyroscopes measure degrees rotated, and can be instrumental in doing
 		 * complex maneuvers and even keeping as straight as possible
 		 */
-		class Gyroscope : Sensor {
+		class Gyroscope : public Sensor {
 			public:
 
 				/*
@@ -116,11 +118,12 @@ namespace Alpaca {
 		 * Ultrasonics, also known as sonar sensors, sense the distance from the
 		 * nearest object in front of it
 		 */
-		class Sonic : Sensor {
+		class Sonic : public Sensor {
 			public:
 
 				void init();
 				long value();
+        using Sensor::Sensor;
 
 			protected:
 
@@ -134,7 +137,7 @@ namespace Alpaca {
 		 * Standard digital sensors have 2 states - on and off. This allows you to
 		 * detect that state, and invert it if needed
 		 */
-		class Digital : Sensor {
+		class Digital : public Sensor {
 			public:
 
 				/*
@@ -145,9 +148,21 @@ namespace Alpaca {
 				/*
 				 * Returns true if the button is pressed
 				 */
-				long value(void);
+        long value(void);
+        using Sensor::Sensor;
 		}; /* class Digital */
-	}    /* namespace sensors */
+
+		/*
+		 * A list of all the sensors, such that Alpaca::init can be called in
+		 * initialiaze to init all of the sensors
+		 */
+		extern std::vector<Sensor*> sensors;
+	} /* namespace sensors */
+
+	/*
+	 * Initialize all of the sensors and stuff
+	 */
+	void init();
 }      /* namespace Alpaca */
 
 #endif /* end of include guard: SENSORS_HPP */

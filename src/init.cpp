@@ -20,6 +20,16 @@
 
 #include "../include/main.hpp"
 
-void initilizeIO() {}
+/*
+ * Fix a linking issue
+ */
+extern "C" {
+  void __libc_init_array();
+	void * __dso_handle;
+}
+
+void initializeIO() {
+  __libc_init_array();
+}
 
 void initialize()  {}

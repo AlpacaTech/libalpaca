@@ -28,6 +28,10 @@ namespace Alpaca {
 		}
 	} /* set */
 
+  System::System(sensors::Sensor *sensor,
+                 std::initializer_list<Motor*> motors) : sensor(sensor),
+                                                              motors(motors) {}
+
 	void Pid::loop() {
 		float current;
 		float error;

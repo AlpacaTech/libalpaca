@@ -22,6 +22,7 @@
 
 namespace Alpaca {
 	namespace sensors {
+    std::vector<Sensor*> sensors;
 		void Sensor::init() {
 			analogCalibrate(ports[0]);
 		} /* init */
@@ -57,6 +58,7 @@ namespace Alpaca {
 			_zero    = 0;
 			ports[0] = port;
 			ports[1] = port2;
+			sensors.push_back(this);
 		}
 
 		void Quad::init(void) {
@@ -70,7 +72,9 @@ namespace Alpaca {
 		Gyroscope::Gyroscope(unsigned char port,
 		                     unsigned int  calibration,
 		                     bool          inverted) : Sensor(port, inverted),
-			                                             calibration(calibration) {}
+			                                             calibration(calibration) {
+			sensors.push_back(this);
+		}
 
 		void Gyroscope::init(void) {
 			Gyroscope::gyro = gyroInit(ports[0], calibration);
@@ -92,4 +96,10 @@ namespace Alpaca {
 			return (long)((_inverted) ? digitalRead(ports[0]) : !digitalRead(ports[0]));
 		} /* Button::value */
 	}   /* namespace sensors */
+
+	void init() {
+		for (auto s : sensors::sensors) {
+			s->init();
+		}
+	} /* init */
 }     /* namespace Alpaca */
